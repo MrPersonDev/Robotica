@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b85r3f0g03ssl"
+path="res://.godot/imported/8mm_Plastic_Spacer__276-2019_.obj-a0046d7eb1f6e7ffb02a4471ef53b7bd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/8mm_Plastic_Spacer__276-2019_.obj-a0046d7eb1f6e7ffb02a4471ef53b7bd.mesh"]
+
+source_file="res://assets/models/Spacer/8mm_Plastic_Spacer__276-2019_.obj"
+dest_files=["res://.godot/imported/8mm_Plastic_Spacer__276-2019_.obj-a0046d7eb1f6e7ffb02a4471ef53b7bd.mesh", "res://.godot/imported/8mm_Plastic_Spacer__276-2019_.obj-a0046d7eb1f6e7ffb02a4471ef53b7bd.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

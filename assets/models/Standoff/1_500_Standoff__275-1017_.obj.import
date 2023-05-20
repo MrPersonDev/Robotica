@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://5ldw3hqo0u0g"
+path="res://.godot/imported/1_500_Standoff__275-1017_.obj-f47fc9ed6702a0750b72a07887a5e8eb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/1_500_Standoff__275-1017_.obj-f47fc9ed6702a0750b72a07887a5e8eb.mesh"]
+
+source_file="res://assets/models/Standoff/1_500_Standoff__275-1017_.obj"
+dest_files=["res://.godot/imported/1_500_Standoff__275-1017_.obj-f47fc9ed6702a0750b72a07887a5e8eb.mesh", "res://.godot/imported/1_500_Standoff__275-1017_.obj-f47fc9ed6702a0750b72a07887a5e8eb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

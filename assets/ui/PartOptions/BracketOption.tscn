@@ -1,0 +1,15 @@
+[gd_scene load_steps=7 format=3 uid="uid://cmoanjmjob2ex"]
+
+[ext_resource type="PackedScene" uid="uid://jra6u2riunsq" path="res://assets/ui/PartOption.tscn" id="1_56mwl"]
+[ext_resource type="Script" path="res://src/part_option/BracketOption.cs" id="2_8ao5q"]
+[ext_resource type="Material" uid="uid://c8u6ykcdce7t0" path="res://assets/materials/Steel.tres" id="3_bya3y"]
+[ext_resource type="PackedScene" uid="uid://1squ6wwvul5f" path="res://assets/objects/Parts/Bracket/BracketBevel.tscn" id="4_ha7o8"]
+[ext_resource type="PackedScene" uid="uid://cepr042ij4tun" path="res://assets/objects/Parts/Bracket/BracketRack.tscn" id="5_gl8qa"]
+[ext_resource type="PackedScene" uid="uid://chjvir6o1kf0p" path="res://assets/objects/Parts/Bracket/BracketWorm.tscn" id="6_wd8v7"]
+
+[node name="BracketOption" instance=ExtResource("1_56mwl")]
+script = ExtResource("2_8ao5q")
+steelMaterial = ExtResource("3_bya3y")
+bevelPartScene = ExtResource("4_ha7o8")
+rackPartScene = ExtResource("5_gl8qa")
+wormPartScene = ExtResource("6_wd8v7")

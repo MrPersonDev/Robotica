@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://cu5js2sf0kkjm"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_0w0se"]
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="2_oafxf"]
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="3_iumql"]
+[ext_resource type="ArrayMesh" uid="uid://bthb122urjtt0" path="res://assets/models/Gussets/90_Degree_Flat_Gusset__276-7761-001_.obj" id="4_cv7g7"]
+
+[node name="Part" instance=ExtResource("1_0w0se")]
+
+[node name="TwoSidedCircleHole" parent="Holes" index="0" instance=ExtResource("2_oafxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18102, 0.252978, -0.0921505)
+length = 0.051
+isDefaultHole = true
+
+[node name="TwoSidedSquareHole" parent="Holes" index="1" instance=ExtResource("3_iumql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1795, 0.252729, -0.0921091)
+length = 0.052
+width = 1.055
+
+[node name="TwoSidedSquareHole6" parent="Holes" index="2" instance=ExtResource("3_iumql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6795, 0.252729, -0.0921091)
+length = 0.052
+width = 1.055
+
+[node name="TwoSidedSquareHole2" parent="Holes" index="3" instance=ExtResource("3_iumql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6795, 0.252729, -0.0921091)
+length = 0.052
+width = 1.055
+
+[node name="TwoSidedSquareHole3" parent="Holes" index="4" instance=ExtResource("3_iumql")]
+transform = Transform3D(-2.98023e-08, 1, 0, -1, -2.98023e-08, 0, 0, 0, 1, 1.18088, 0.751597, -0.0921091)
+length = 0.052
+width = 1.055
+
+[node name="TwoSidedSquareHole4" parent="Holes" index="5" instance=ExtResource("3_iumql")]
+transform = Transform3D(-2.98023e-08, 1, 0, -1, -2.98023e-08, 0, 0, 0, 1, 1.18088, 1.2516, -0.0921091)
+length = 0.052
+width = 1.055
+
+[node name="TwoSidedSquareHole5" parent="Holes" index="6" instance=ExtResource("3_iumql")]
+transform = Transform3D(-2.98023e-08, 1, 0, -1, -2.98023e-08, 0, 0, 0, 1, 1.18088, 1.7516, -0.0921091)
+length = 0.052
+width = 1.055
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("4_cv7g7")

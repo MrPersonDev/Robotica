@@ -1,0 +1,11 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3y7ds4ijicce"]
+
+[ext_resource type="PackedScene" uid="uid://jra6u2riunsq" path="res://assets/ui/PartOption.tscn" id="1_jmv67"]
+[ext_resource type="Script" path="res://src/part_option/BatteryClipOption.cs" id="2_c6muw"]
+[ext_resource type="Material" uid="uid://dn4nw8tsc8deb" path="res://assets/materials/PlasticBlack.tres" id="3_mfmud"]
+[ext_resource type="PackedScene" uid="uid://bk7bvbr1mnof2" path="res://assets/objects/Parts/Battery Clip/BatteryClip.tscn" id="4_wtk22"]
+
+[node name="BatteryClipOption" instance=ExtResource("1_jmv67")]
+script = ExtResource("2_c6muw")
+blackPlasticMaterial = ExtResource("3_mfmud")
+defaultPartScene = ExtResource("4_wtk22")

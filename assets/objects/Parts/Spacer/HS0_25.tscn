@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://biyvs2fd866m8"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_plh0g"]
+[ext_resource type="PackedScene" uid="uid://cdggdbp51hwv0" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="2_ccp3o"]
+[ext_resource type="ArrayMesh" uid="uid://cjwtt6irkrmdv" path="res://assets/models/Spacer/1_4_High_Strength_Shaft_Spacer__276-3441-003_.obj" id="3_lgqlg"]
+
+[node name="Part" instance=ExtResource("1_plh0g")]
+
+[node name="TwoSidedSquareHole" parent="Holes" index="0" instance=ExtResource("2_ccp3o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.256198, 0.250552, -0.126051)
+length = 0.239
+width = 1.472
+isDefaultHole = true
+isHighStrength = true
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_lgqlg")

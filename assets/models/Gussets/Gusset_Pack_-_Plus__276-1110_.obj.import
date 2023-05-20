@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://1t2ub7rno7c5"
+path="res://.godot/imported/Gusset_Pack_-_Plus__276-1110_.obj-fb4e8ecaf877c03eb4828bd61afd0a9a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Gusset_Pack_-_Plus__276-1110_.obj-fb4e8ecaf877c03eb4828bd61afd0a9a.mesh"]
+
+source_file="res://assets/models/Gussets/Gusset_Pack_-_Plus__276-1110_.obj"
+dest_files=["res://.godot/imported/Gusset_Pack_-_Plus__276-1110_.obj-fb4e8ecaf877c03eb4828bd61afd0a9a.mesh", "res://.godot/imported/Gusset_Pack_-_Plus__276-1110_.obj-fb4e8ecaf877c03eb4828bd61afd0a9a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

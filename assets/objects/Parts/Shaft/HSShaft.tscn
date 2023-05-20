@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0ix5l1nr48s4"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_52sac"]
+[ext_resource type="PackedScene" uid="uid://bslvrhvh02lo3" path="res://assets/objects/Holes/OneSidedSquareHole.tscn" id="2_y25bp"]
+[ext_resource type="PackedScene" path="res://assets/objects/Insert.tscn" id="3_0muxl"]
+[ext_resource type="ArrayMesh" uid="uid://ciplvlpg0xrwr" path="res://assets/models/Shaft/12_High_Strength_Shaft__276-3524_.obj" id="4_kjr5j"]
+
+[node name="Part" instance=ExtResource("1_52sac")]
+isHighStrengthShaft = true
+enableMeshCutter = true
+
+[node name="OneSidedHole" parent="Holes" index="0" instance=ExtResource("2_y25bp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.123049, 0.114048, -6.00495)
+isDefaultHole = true
+isNonInteractive = true
+
+[node name="Insert" parent="Inserts" index="0" instance=ExtResource("3_0muxl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125593, 0.121987, -6)
+length = 12.0
+width = 0.2
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("4_kjr5j")

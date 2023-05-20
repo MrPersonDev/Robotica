@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://beg7txfh2oldh"
+path="res://.godot/imported/CubeWithHole.obj-f2b4b0b7beae5e16fdada043c09d3610.mesh"
+
+[deps]
+
+files=["res://.godot/imported/CubeWithHole.obj-f2b4b0b7beae5e16fdada043c09d3610.mesh"]
+
+source_file="res://assets/models/Random/CubeWithHole.obj"
+dest_files=["res://.godot/imported/CubeWithHole.obj-f2b4b0b7beae5e16fdada043c09d3610.mesh", "res://.godot/imported/CubeWithHole.obj-f2b4b0b7beae5e16fdada043c09d3610.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

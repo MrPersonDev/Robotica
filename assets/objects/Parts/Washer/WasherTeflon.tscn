@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://ca1sn5tw2ruv4"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_o0o87"]
+[ext_resource type="PackedScene" uid="uid://ckikj6lchnhtx" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="2_syqs1"]
+[ext_resource type="ArrayMesh" uid="uid://cgo556qgb2q5h" path="res://assets/models/Washer/Teflon_Washer__275-1025_.obj" id="3_vhc3x"]
+
+[node name="Part" instance=ExtResource("1_o0o87")]
+
+[node name="TwoSidedCircleHole" parent="Holes" index="0" instance=ExtResource("2_syqs1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.187274, 0.187885, -0.0208984)
+length = 0.032
+isDefaultHole = true
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_vhc3x")

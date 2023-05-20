@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://byyvn8vdgnj3q"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_bmymn"]
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="2_vxhah"]
+[ext_resource type="ArrayMesh" uid="uid://mxg3a0l04mqr" path="res://assets/models/Gear/12T_High_Strength_Metal_Pinion__276-2251_.obj" id="3_q5jm0"]
+[ext_resource type="ArrayMesh" uid="uid://kod8hv72sosy" path="res://assets/models/Gear/Long_Shaft_Insert.obj" id="4_x3ojv"]
+
+[node name="Part" instance=ExtResource("1_bmymn")]
+
+[node name="TwoSidedHole" parent="Holes" index="0" instance=ExtResource("2_vxhah")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.791, 1.795, -0.252)
+length = 0.49
+width = 0.75
+isDefaultHole = true
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_q5jm0")
+
+[node name="Converter" type="CSGMesh3D" parent="AdditionalMeshes" index="0"]
+mesh = ExtResource("4_x3ojv")

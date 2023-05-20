@@ -1,0 +1,17 @@
+[gd_scene load_steps=8 format=3 uid="uid://bdf2dqyal48x8"]
+
+[ext_resource type="PackedScene" uid="uid://jra6u2riunsq" path="res://assets/ui/PartOption.tscn" id="1_y0ok0"]
+[ext_resource type="Script" path="res://src/part_option/MotorOption.cs" id="2_o0u0y"]
+[ext_resource type="Material" uid="uid://ctdx77a2s8flw" path="res://assets/materials/CartridgeGreen.tres" id="3_263k1"]
+[ext_resource type="Material" uid="uid://dn4nw8tsc8deb" path="res://assets/materials/PlasticBlack.tres" id="4_8dekh"]
+[ext_resource type="Material" uid="uid://2ggf5cjg5pwi" path="res://assets/materials/CartridgeBlue.tres" id="4_uccn8"]
+[ext_resource type="Material" uid="uid://rbbkldgpmc58" path="res://assets/materials/CartridgeRed.tres" id="5_2dm4c"]
+[ext_resource type="PackedScene" uid="uid://cgrgraknajvem" path="res://assets/objects/Parts/Control System/Motor.tscn" id="7_4qkb6"]
+
+[node name="MotorOption" instance=ExtResource("1_y0ok0")]
+script = ExtResource("2_o0u0y")
+greenCartridgeMaterial = ExtResource("3_263k1")
+blueCartridgeMaterial = ExtResource("4_uccn8")
+redCartridgeMaterial = ExtResource("5_2dm4c")
+blackPlasticMaterial = ExtResource("4_8dekh")
+defaultPartScene = ExtResource("7_4qkb6")

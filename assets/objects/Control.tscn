@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5rgonqg1tot"]
+
+[ext_resource type="Script" path="res://src/control/Control.cs" id="1_0tcrs"]
+
+[node name="Control" type="Node3D"]
+script = ExtResource("1_0tcrs")

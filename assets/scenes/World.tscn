@@ -1,0 +1,70 @@
+[gd_scene load_steps=12 format=3 uid="uid://de1minar7x8wo"]
+
+[ext_resource type="Script" path="res://src/World.cs" id="1_c6srm"]
+[ext_resource type="PackedScene" uid="uid://bku66pba6qcjn" path="res://assets/ui/Interface.tscn" id="2_0a4el"]
+[ext_resource type="PackedScene" uid="uid://b12cbfdjsyn0s" path="res://assets/objects/Pivot.tscn" id="2_858ij"]
+[ext_resource type="PackedScene" uid="uid://c5rgonqg1tot" path="res://assets/objects/Control.tscn" id="2_d3jbn"]
+[ext_resource type="PackedScene" uid="uid://duuppeyfhxshm" path="res://assets/objects/Transform.tscn" id="3_8srr3"]
+[ext_resource type="PackedScene" uid="uid://b0kk0s2wsi7l7" path="res://assets/objects/Grid.tscn" id="3_cd01h"]
+[ext_resource type="PackedScene" uid="uid://wt73s0wxsj07" path="res://assets/objects/Parts.tscn" id="6_sudwb"]
+[ext_resource type="PackedScene" uid="uid://bjxfyphnxxbo3" path="res://assets/models/*GLTF Imports/Field.glb" id="8_6u3ur"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rf30q"]
+sky_top_color = Color(0.886275, 0.886275, 0.886275, 1)
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+sky_energy_multiplier = 0.4
+ground_bottom_color = Color(0.603922, 0.603922, 0.603922, 1)
+ground_horizon_color = Color(0.647059, 0.654902, 0.670588, 1)
+ground_energy_multiplier = 0.1
+
+[sub_resource type="Sky" id="Sky_i62t1"]
+sky_material = SubResource("ProceduralSkyMaterial_rf30q")
+
+[sub_resource type="Environment" id="Environment_u1f4n"]
+background_mode = 1
+background_color = Color(0.152941, 0.152941, 0.152941, 1)
+sky = SubResource("Sky_i62t1")
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.4
+reflected_light_source = 2
+tonemap_mode = 2
+ssao_radius = 0.25
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_c6srm")
+pivotPath = NodePath("Pivot")
+gridPath = NodePath("Grid")
+controlPath = NodePath("Control")
+partsPath = NodePath("Parts")
+uiPath = NodePath("Interface")
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.515906, 0.856645, 0, -0.856645, 0.515906, 0, 7.77277, 6.0578)
+sky_mode = 1
+
+[node name="Environment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_u1f4n")
+
+[node name="Control" parent="." instance=ExtResource("2_d3jbn")]
+pivotPath = NodePath("../Pivot")
+transformPath = NodePath("../Transform")
+partsPath = NodePath("../Parts")
+uiPath = NodePath("../Interface")
+
+[node name="Transform" parent="." instance=ExtResource("3_8srr3")]
+
+[node name="Pivot" parent="." instance=ExtResource("2_858ij")]
+
+[node name="Grid" parent="." instance=ExtResource("3_cd01h")]
+
+[node name="Parts" parent="." instance=ExtResource("6_sudwb")]
+
+[node name="Field" parent="." instance=ExtResource("8_6u3ur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
+visible = false
+
+[node name="Interface" parent="." instance=ExtResource("2_0a4el")]
+fieldPath = NodePath("../Field")
+controlPath = NodePath("../Control")
+partsPath = NodePath("../Parts")

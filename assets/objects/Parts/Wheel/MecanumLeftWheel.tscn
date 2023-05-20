@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmtmtwoaaa001"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_sw08i"]
+[ext_resource type="PackedScene" uid="uid://cdggdbp51hwv0" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="2_v65q4"]
+[ext_resource type="ArrayMesh" uid="uid://x8jhjarcc0qd" path="res://assets/models/Wheel/4_Mecanum_Wheel_Left_4 Mecanum Wheel (276-1447).res" id="3_kvtjh"]
+
+[node name="Part" instance=ExtResource("1_sw08i")]
+
+[node name="TwoSidedSquareHole" parent="Holes" index="0" instance=ExtResource("2_v65q4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.63209, 2.88257, -1.02696)
+length = 0.935
+width = 1.45
+isDefaultHole = true
+isHighStrength = true
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_kvtjh")

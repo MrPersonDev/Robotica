@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dj5paivfvdvt1"]
+
+[ext_resource type="Script" path="res://src/part/Insert.cs" id="1_3358e"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_3rpno"]
+height = 1.0
+radius = 0.1
+
+[node name="Insert" type="Area3D" groups=["INSERT_COLLIDER"]]
+script = ExtResource("1_3358e")
+length = 1.0
+width = 0.1
+colliderPath = NodePath("CollisionShape3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+shape = SubResource("CylinderShape3D_3rpno")

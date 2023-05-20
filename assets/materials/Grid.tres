@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b7ykyocvs3vbo"]
+
+[ext_resource type="Texture2D" uid="uid://bvlxyqc223t6f" path="res://assets/images/grid.png" id="1_6eu5b"]
+
+[resource]
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_6eu5b")
+uv1_triplanar = true
+texture_filter = 4
+distance_fade_mode = 1
+distance_fade_min_distance = 60.0
+distance_fade_max_distance = 0.0

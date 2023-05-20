@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bq5xftnocnaph"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_gw8mo"]
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="2_18mxb"]
+[ext_resource type="ArrayMesh" uid="uid://br6f1okmj8b32" path="res://assets/models/Gear/12T_Gear__276-2169-001_.obj" id="3_vfe1w"]
+
+[node name="Part" instance=ExtResource("1_gw8mo")]
+
+[node name="TwoSidedHole" parent="Holes" index="0" instance=ExtResource("2_18mxb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.791, 1.795, -0.252)
+length = 0.365
+width = 0.75
+isDefaultHole = true
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_vfe1w")

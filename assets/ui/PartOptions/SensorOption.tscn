@@ -1,0 +1,37 @@
+[gd_scene load_steps=18 format=3 uid="uid://bvcnxtu83rh6r"]
+
+[ext_resource type="PackedScene" uid="uid://jra6u2riunsq" path="res://assets/ui/PartOption.tscn" id="1_gfoi5"]
+[ext_resource type="Script" path="res://src/part_option/SensorOption.cs" id="2_w51k2"]
+[ext_resource type="PackedScene" uid="uid://bmwonl1b50jmb" path="res://assets/objects/Parts/Sensor/BumperSwitchV2.tscn" id="3_8c42q"]
+[ext_resource type="Material" uid="uid://c8u6ykcdce7t0" path="res://assets/materials/Steel.tres" id="3_804py"]
+[ext_resource type="PackedScene" uid="uid://bc4of066cfm3l" path="res://assets/objects/Parts/Sensor/DistanceSensor.tscn" id="4_ox5he"]
+[ext_resource type="PackedScene" uid="uid://yqobxlyg401h" path="res://assets/objects/Parts/Sensor/GPSSensor.tscn" id="5_7b1xt"]
+[ext_resource type="PackedScene" uid="uid://msfwsj7eq1ia" path="res://assets/objects/Parts/Sensor/InertialSensor.tscn" id="6_8nqqg"]
+[ext_resource type="PackedScene" uid="uid://bxcco7ebnltkp" path="res://assets/objects/Parts/Sensor/LightSensor.tscn" id="7_l6orb"]
+[ext_resource type="PackedScene" uid="uid://b7onhwp3wmkqs" path="res://assets/objects/Parts/Sensor/LimitSwitch.tscn" id="8_wj1le"]
+[ext_resource type="PackedScene" uid="uid://ber4h0nehm38h" path="res://assets/objects/Parts/Sensor/LineTracker.tscn" id="9_m620b"]
+[ext_resource type="PackedScene" uid="uid://mjkfn2p13uiq" path="res://assets/objects/Parts/Sensor/OpticalSensor.tscn" id="10_qj2fu"]
+[ext_resource type="PackedScene" uid="uid://ch4ymnyhqc6i3" path="res://assets/objects/Parts/Sensor/Potentiometer.tscn" id="11_clkns"]
+[ext_resource type="PackedScene" uid="uid://drfnr8s5v81qp" path="res://assets/objects/Parts/Sensor/RotationSensor.tscn" id="12_x04w7"]
+[ext_resource type="PackedScene" uid="uid://c6t4fnm0sp06f" path="res://assets/objects/Parts/Sensor/ConvertedRotationSensor.tscn" id="13_6p1ts"]
+[ext_resource type="PackedScene" uid="uid://dlexcpp74vmn7" path="res://assets/objects/Parts/Sensor/ShaftEncoder.tscn" id="13_uuqjk"]
+[ext_resource type="PackedScene" uid="uid://dwlib17nhy5ia" path="res://assets/objects/Parts/Sensor/UltrasonicRangeFinder.tscn" id="14_ce08h"]
+[ext_resource type="PackedScene" uid="uid://ckrktl85cnctl" path="res://assets/objects/Parts/Sensor/VisionSensor.tscn" id="15_q7n23"]
+
+[node name="SensorOption" instance=ExtResource("1_gfoi5")]
+script = ExtResource("2_w51k2")
+metalMaterial = ExtResource("3_804py")
+bumperSwitchPartScene = ExtResource("3_8c42q")
+distanceSensorPartScene = ExtResource("4_ox5he")
+GPSSensorPartScene = ExtResource("5_7b1xt")
+InertialSensorPartScene = ExtResource("6_8nqqg")
+LightSensorPartScene = ExtResource("7_l6orb")
+limitSwitchPartScene = ExtResource("8_wj1le")
+lineTrackerPartScene = ExtResource("9_m620b")
+opticalSensorPartScene = ExtResource("10_qj2fu")
+potentiometerPartScene = ExtResource("11_clkns")
+rotationSensorPartScene = ExtResource("12_x04w7")
+convertedRotationSensorPartScene = ExtResource("13_6p1ts")
+shaftEncoderPartScene = ExtResource("13_uuqjk")
+ultrasonicRangeFinderPartScene = ExtResource("14_ce08h")
+visionSensorPartScene = ExtResource("15_q7n23")

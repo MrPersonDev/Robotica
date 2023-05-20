@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dnon60qsituox"
+path="res://.godot/imported/8T_Sprocket__6P__276-8030_.obj-486069e682af1fdd93295535cc74fab9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/8T_Sprocket__6P__276-8030_.obj-486069e682af1fdd93295535cc74fab9.mesh"]
+
+source_file="res://assets/models/Sprocket/8T_Sprocket__6P__276-8030_.obj"
+dest_files=["res://.godot/imported/8T_Sprocket__6P__276-8030_.obj-486069e682af1fdd93295535cc74fab9.mesh", "res://.godot/imported/8T_Sprocket__6P__276-8030_.obj-486069e682af1fdd93295535cc74fab9.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://qxgjfgdnedi0"
+path="res://.godot/imported/Gusset_Pack_-_Angle__276-1110_.obj-6c81013dc15df1dbdee43e70f288dc4f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Gusset_Pack_-_Angle__276-1110_.obj-6c81013dc15df1dbdee43e70f288dc4f.mesh"]
+
+source_file="res://assets/models/Gussets/Gusset_Pack_-_Angle__276-1110_.obj"
+dest_files=["res://.godot/imported/Gusset_Pack_-_Angle__276-1110_.obj-6c81013dc15df1dbdee43e70f288dc4f.mesh", "res://.godot/imported/Gusset_Pack_-_Angle__276-1110_.obj-6c81013dc15df1dbdee43e70f288dc4f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

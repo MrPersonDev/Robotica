@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://b12cbfdjsyn0s"]
+
+[ext_resource type="Script" path="res://src/Pivot.cs" id="1_ct8oe"]
+[ext_resource type="Shader" path="res://assets/shaders/Outline.gdshader" id="2_6xw5f"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j4qbg"]
+shader = ExtResource("2_6xw5f")
+
+[sub_resource type="Environment" id="Environment_v61ko"]
+
+[node name="Pivot" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 0.879142, 0.47656, 0, -0.47656, 0.879142, 0, 0, 0)
+script = ExtResource("1_ct8oe")
+camPosPath = NodePath("CameraPos")
+mainCamPath = NodePath("MainViewportContainer/MainViewport/MainCamera")
+outlineCamPath = NodePath("OutlineViewportContainer/OutlineViewport/OutlineCamera")
+
+[node name="CameraPos" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.999962, 0.00872654, 0, -0.00872654, 0.999962, 0, 0, 5)
+
+[node name="MainViewportContainer" type="SubViewportContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="MainViewport" type="SubViewport" parent="MainViewportContainer"]
+handle_input_locally = false
+gui_disable_input = true
+size = Vector2i(1280, 720)
+render_target_update_mode = 4
+
+[node name="MainCamera" type="Camera3D" parent="MainViewportContainer/MainViewport"]
+current = true
+fov = 60.0
+near = 0.001
+
+[node name="OutlineViewportContainer" type="SubViewportContainer" parent="."]
+material = SubResource("ShaderMaterial_j4qbg")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="OutlineViewport" type="SubViewport" parent="OutlineViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+gui_disable_input = true
+positional_shadow_atlas_size = 0
+size = Vector2i(1280, 720)
+render_target_update_mode = 4
+
+[node name="OutlineCamera" type="Camera3D" parent="OutlineViewportContainer/OutlineViewport"]
+cull_mask = 2
+environment = SubResource("Environment_v61ko")
+fov = 60.0
+near = 0.001

@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsr478tblixmx"]
+
+[ext_resource type="StyleBox" uid="uid://7d2bypeodxc0" path="res://assets/ui/theme/panels/MenuPanel.tres" id="1_5rfqm"]
+
+[node name="PanelContainer" type="PanelContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
+theme_override_styles/panel = ExtResource("1_5rfqm")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="FileButton" type="MenuButton" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "File"
+flat = false
+
+[node name="EditButton" type="MenuButton" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Edit"
+flat = false
+
+[node name="SelectButton" type="MenuButton" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Select"
+flat = false
+
+[node name="CenterLabel" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Rightmost" type="HSplitContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+collapsed = true
+
+[node name="FPSCounter" type="Label" parent="MarginContainer/Rightmost"]
+layout_mode = 2
+text = "FPS: 999"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="FieldButton" type="Button" parent="MarginContainer/Rightmost" groups=["INPUT"]]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Field"

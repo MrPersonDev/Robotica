@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bly6upofu3xe0"
+path="res://.godot/imported/24T_High_Strength_Sprocket__HS_Bore___276-3879_.obj-837ef2be23ba40cdc4d29b0883912661.mesh"
+
+[deps]
+
+files=["res://.godot/imported/24T_High_Strength_Sprocket__HS_Bore___276-3879_.obj-837ef2be23ba40cdc4d29b0883912661.mesh"]
+
+source_file="res://assets/models/Sprocket/24T_High_Strength_Sprocket__HS_Bore___276-3879_.obj"
+dest_files=["res://.godot/imported/24T_High_Strength_Sprocket__HS_Bore___276-3879_.obj-837ef2be23ba40cdc4d29b0883912661.mesh", "res://.godot/imported/24T_High_Strength_Sprocket__HS_Bore___276-3879_.obj-837ef2be23ba40cdc4d29b0883912661.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

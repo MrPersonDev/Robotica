@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckikj6lchnhtx"]
+
+[ext_resource type="Script" path="res://src/part/TwoSidedHole.cs" id="1_8kra5"]
+[ext_resource type="PackedScene" uid="uid://bbpc1jiqxl8o" path="res://assets/objects/HoleBodies/CircleHoleBody.tscn" id="2_2hcaw"]
+
+[node name="TwoSidedCircleHole" type="Node3D"]
+script = ExtResource("1_8kra5")
+length = 0.035
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+
+[node name="TopBody" parent="." instance=ExtResource("2_2hcaw")]
+
+[node name="BottomBody" parent="." instance=ExtResource("2_2hcaw")]

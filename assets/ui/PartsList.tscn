@@ -1,0 +1,140 @@
+[gd_scene load_steps=29 format=3 uid="uid://bk3hpxa6tawec"]
+
+[ext_resource type="Script" path="res://src/ui/PartsList.cs" id="1_gq88v"]
+[ext_resource type="PackedScene" path="res://assets/ui/PartOptions/StandoffOption.tscn" id="2_0ij1x"]
+[ext_resource type="PackedScene" path="res://assets/ui/PartOptions/WheelOption.tscn" id="2_0iyy3"]
+[ext_resource type="PackedScene" path="res://assets/ui/PartOptions/CChannelOption.tscn" id="2_4pe4e"]
+[ext_resource type="PackedScene" path="res://assets/ui/PartOptions/GussetOption.tscn" id="2_32580"]
+[ext_resource type="PackedScene" path="res://assets/ui/PartOptions/ConnectorPinOption.tscn" id="2_dcgqj"]
+[ext_resource type="PackedScene" path="res://assets/ui/PartOptions/SprocketOption.tscn" id="2_u0f2x"]
+[ext_resource type="PackedScene" path="res://assets/ui/PartOptions/ScrewOption.tscn" id="3_i5gop"]
+[ext_resource type="PackedScene" path="res://assets/ui/PartOptions/GearOption.tscn" id="4_7k8f6"]
+[ext_resource type="PackedScene" path="res://assets/ui/PartOptions/ShaftOption.tscn" id="5_roewl"]
+[ext_resource type="PackedScene" path="res://assets/ui/PartOptions/AngleOption.tscn" id="5_yufbw"]
+[ext_resource type="PackedScene" path="res://assets/ui/PartOptions/UChannelOption.tscn" id="6_58ha3"]
+[ext_resource type="PackedScene" path="res://assets/ui/PartOptions/MotorOption.tscn" id="6_ff0hg"]
+[ext_resource type="PackedScene" path="res://assets/ui/PartOptions/SpacerOption.tscn" id="6_s0rri"]
+[ext_resource type="PackedScene" path="res://assets/ui/PartOptions/ShaftCollarOption.tscn" id="7_jdadb"]
+[ext_resource type="PackedScene" path="res://assets/ui/PartOptions/BearingOption.tscn" id="8_1jxik"]
+[ext_resource type="PackedScene" path="res://assets/ui/PartOptions/PlateOption.tscn" id="8_8dcsw"]
+[ext_resource type="PackedScene" path="res://assets/ui/PartOptions/BasePlateOption.tscn" id="8_dv5sj"]
+[ext_resource type="PackedScene" path="res://assets/ui/PartOptions/NutOption.tscn" id="8_liwag"]
+[ext_resource type="PackedScene" path="res://assets/ui/PartOptions/NutRetainerOption.tscn" id="8_ysxwl"]
+[ext_resource type="PackedScene" path="res://assets/ui/PartOptions/WasherOption.tscn" id="15_8ltqi"]
+[ext_resource type="PackedScene" path="res://assets/ui/PartOptions/BracketOption.tscn" id="18_spssp"]
+[ext_resource type="PackedScene" path="res://assets/ui/PartOptions/BrainOption.tscn" id="20_fcokv"]
+[ext_resource type="PackedScene" path="res://assets/ui/PartOptions/BatteryOption.tscn" id="21_3r2ng"]
+[ext_resource type="PackedScene" path="res://assets/ui/PartOptions/RadioOption.tscn" id="22_2uij3"]
+[ext_resource type="PackedScene" path="res://assets/ui/PartOptions/SensorOption.tscn" id="23_mn3ig"]
+[ext_resource type="PackedScene" path="res://assets/ui/PartOptions/TriballOption.tscn" id="25_7sktg"]
+[ext_resource type="PackedScene" path="res://assets/ui/PartOptions/BatteryClipOption.tscn" id="25_dmo6e"]
+
+[node name="PartsList" type="PanelContainer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -232.0
+offset_top = -539.0
+offset_right = -32.0
+offset_bottom = -270.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("1_gq88v")
+partOptionsPath = NodePath("MarginContainer/ScrollContainer/VBoxContainer")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CChannelOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_4pe4e")]
+layout_mode = 2
+
+[node name="UChannelOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("6_58ha3")]
+layout_mode = 2
+
+[node name="AngleOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_yufbw")]
+layout_mode = 2
+
+[node name="ScrewOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("3_i5gop")]
+layout_mode = 2
+
+[node name="NutOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("8_liwag")]
+layout_mode = 2
+
+[node name="SpacerOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("6_s0rri")]
+layout_mode = 2
+
+[node name="WasherOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("15_8ltqi")]
+layout_mode = 2
+
+[node name="ShaftCollarOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("7_jdadb")]
+layout_mode = 2
+
+[node name="ShaftOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_roewl")]
+layout_mode = 2
+
+[node name="MotorOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("6_ff0hg")]
+layout_mode = 2
+
+[node name="WheelOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_0iyy3")]
+layout_mode = 2
+
+[node name="GearOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("4_7k8f6")]
+layout_mode = 2
+
+[node name="SprocketOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_u0f2x")]
+layout_mode = 2
+
+[node name="StandoffOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_0ij1x")]
+layout_mode = 2
+
+[node name="PlateOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("8_8dcsw")]
+layout_mode = 2
+
+[node name="GussetOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_32580")]
+layout_mode = 2
+
+[node name="BracketOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("18_spssp")]
+layout_mode = 2
+
+[node name="ConnectorPinOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_dcgqj")]
+layout_mode = 2
+
+[node name="BasePlateOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("8_dv5sj")]
+layout_mode = 2
+
+[node name="BearingOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("8_1jxik")]
+layout_mode = 2
+
+[node name="NutRetainerOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("8_ysxwl")]
+layout_mode = 2
+
+[node name="SensorOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("23_mn3ig")]
+layout_mode = 2
+
+[node name="BrainOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("20_fcokv")]
+layout_mode = 2
+
+[node name="BatteryOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("21_3r2ng")]
+layout_mode = 2
+
+[node name="BatteryClipOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("25_dmo6e")]
+layout_mode = 2
+
+[node name="RadioOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("22_2uij3")]
+layout_mode = 2
+
+[node name="TriballOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("25_7sktg")]
+layout_mode = 2

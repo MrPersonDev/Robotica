@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dvo3qbv6pjh1p"
+path="res://.godot/imported/45_Degree_Bent_Gusset__276-7759-002_.obj-b5ca9d5af322a0624995481565922137.mesh"
+
+[deps]
+
+files=["res://.godot/imported/45_Degree_Bent_Gusset__276-7759-002_.obj-b5ca9d5af322a0624995481565922137.mesh"]
+
+source_file="res://assets/models/Gussets/45_Degree_Bent_Gusset__276-7759-002_.obj"
+dest_files=["res://.godot/imported/45_Degree_Bent_Gusset__276-7759-002_.obj-b5ca9d5af322a0624995481565922137.mesh", "res://.godot/imported/45_Degree_Bent_Gusset__276-7759-002_.obj-b5ca9d5af322a0624995481565922137.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

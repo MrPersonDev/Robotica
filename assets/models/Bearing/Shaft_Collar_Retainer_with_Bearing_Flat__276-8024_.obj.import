@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dw1wrwtfj0vwq"
+path="res://.godot/imported/Shaft_Collar_Retainer_with_Bearing_Flat__276-8024_.obj-162588fc28c3473696394f4612871e10.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Shaft_Collar_Retainer_with_Bearing_Flat__276-8024_.obj-162588fc28c3473696394f4612871e10.mesh"]
+
+source_file="res://assets/models/Bearing/Shaft_Collar_Retainer_with_Bearing_Flat__276-8024_.obj"
+dest_files=["res://.godot/imported/Shaft_Collar_Retainer_with_Bearing_Flat__276-8024_.obj-162588fc28c3473696394f4612871e10.mesh", "res://.godot/imported/Shaft_Collar_Retainer_with_Bearing_Flat__276-8024_.obj-162588fc28c3473696394f4612871e10.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

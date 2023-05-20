@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://drvwsx2maffai"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_siq7s"]
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="2_ammoe"]
+[ext_resource type="ArrayMesh" uid="uid://qxgjfgdnedi0" path="res://assets/models/Gussets/Gusset_Pack_-_Angle__276-1110_.obj" id="3_j1jwl"]
+
+[node name="Part" instance=ExtResource("1_siq7s")]
+
+[node name="TwoSidedSquareHole" parent="Holes" index="0" instance=ExtResource("2_ammoe")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.205711, 0.0180431, -0.27788)
+length = 0.021
+
+[node name="TwoSidedSquareHole3" parent="Holes" index="1" instance=ExtResource("2_ammoe")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.705711, 0.0180431, -0.27788)
+length = 0.021
+isDefaultHole = true
+
+[node name="TwoSidedSquareHole4" parent="Holes" index="2" instance=ExtResource("2_ammoe")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.20571, 0.0180431, -0.27788)
+length = 0.021
+
+[node name="TwoSidedSquareHole2" parent="Holes" index="3" instance=ExtResource("2_ammoe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.705711, 0.703865, -0.0196492)
+length = 0.021
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_j1jwl")

@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfc5n4nvb8r8q"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_qmhno"]
+[ext_resource type="PackedScene" uid="uid://cdggdbp51hwv0" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="2_axbyl"]
+[ext_resource type="PackedScene" uid="uid://ckikj6lchnhtx" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="3_3brwe"]
+[ext_resource type="ArrayMesh" uid="uid://0kt0o3ahni4c" path="res://assets/models/Sprocket/32T_Sprocket__6P__276-8330_.obj" id="4_ke8yh"]
+
+[node name="Part" instance=ExtResource("1_qmhno")]
+
+[node name="TwoSidedSquareHole" parent="Holes" index="0" instance=ExtResource("2_axbyl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.93519, 1.94868, -0.314927)
+length = 0.493
+width = 1.5
+isDefaultHole = true
+isHighStrength = true
+
+[node name="TwoSidedCircleHole" parent="Holes" index="1" instance=ExtResource("3_3brwe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.43637, 1.94786, -0.314076)
+length = 0.247
+
+[node name="TwoSidedCircleHole4" parent="Holes" index="2" instance=ExtResource("3_3brwe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43808, 1.94786, -0.314076)
+length = 0.247
+
+[node name="TwoSidedCircleHole2" parent="Holes" index="3" instance=ExtResource("3_3brwe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.93768, 2.44745, -0.314076)
+length = 0.247
+
+[node name="TwoSidedCircleHole5" parent="Holes" index="4" instance=ExtResource("3_3brwe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43768, 2.44745, -0.314076)
+length = 0.247
+
+[node name="TwoSidedCircleHole6" parent="Holes" index="5" instance=ExtResource("3_3brwe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.43768, 2.44745, -0.314076)
+length = 0.247
+
+[node name="TwoSidedCircleHole7" parent="Holes" index="6" instance=ExtResource("3_3brwe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.43768, 1.44745, -0.314076)
+length = 0.247
+
+[node name="TwoSidedCircleHole8" parent="Holes" index="7" instance=ExtResource("3_3brwe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43768, 1.44745, -0.314076)
+length = 0.247
+
+[node name="TwoSidedCircleHole3" parent="Holes" index="8" instance=ExtResource("3_3brwe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.93768, 1.4469, -0.314076)
+length = 0.247
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("4_ke8yh")

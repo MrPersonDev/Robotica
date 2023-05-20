@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bo7qwh3wbgmy1"
+path="res://.godot/imported/1_2_Nylon_Spacer__275-1066-004_.obj-87d0e7970770e5d0d3c694e5ab34b69c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/1_2_Nylon_Spacer__275-1066-004_.obj-87d0e7970770e5d0d3c694e5ab34b69c.mesh"]
+
+source_file="res://assets/models/Spacer/1_2_Nylon_Spacer__275-1066-004_.obj"
+dest_files=["res://.godot/imported/1_2_Nylon_Spacer__275-1066-004_.obj-87d0e7970770e5d0d3c694e5ab34b69c.mesh", "res://.godot/imported/1_2_Nylon_Spacer__275-1066-004_.obj-87d0e7970770e5d0d3c694e5ab34b69c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

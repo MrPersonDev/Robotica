@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cwa1aq1o16a5a"
+path="res://.godot/imported/Gusset_Pack_-_Pivot__276-1110_.obj-bd43896897f8f8ad7a1c60778fee2c61.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Gusset_Pack_-_Pivot__276-1110_.obj-bd43896897f8f8ad7a1c60778fee2c61.mesh"]
+
+source_file="res://assets/models/Gussets/Gusset_Pack_-_Pivot__276-1110_.obj"
+dest_files=["res://.godot/imported/Gusset_Pack_-_Pivot__276-1110_.obj-bd43896897f8f8ad7a1c60778fee2c61.mesh", "res://.godot/imported/Gusset_Pack_-_Pivot__276-1110_.obj-bd43896897f8f8ad7a1c60778fee2c61.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

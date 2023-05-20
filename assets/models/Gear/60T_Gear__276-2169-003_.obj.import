@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://clf3p6pb1s7sb"
+path="res://.godot/imported/60T_Gear__276-2169-003_.obj-1d56fc6e8b39d49df6c152b292b4c64f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/60T_Gear__276-2169-003_.obj-1d56fc6e8b39d49df6c152b292b4c64f.mesh"]
+
+source_file="res://assets/models/Gear/60T_Gear__276-2169-003_.obj"
+dest_files=["res://.godot/imported/60T_Gear__276-2169-003_.obj-1d56fc6e8b39d49df6c152b292b4c64f.mesh", "res://.godot/imported/60T_Gear__276-2169-003_.obj-1d56fc6e8b39d49df6c152b292b4c64f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3qdmsa3vrctp"]
+
+[ext_resource type="Script" path="res://src/parameter/ParameterInput.cs" id="1_qr5lh"]
+
+[node name="ParameterInput" type="HSplitContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qr5lh")
+labelPath = NodePath("Label")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2

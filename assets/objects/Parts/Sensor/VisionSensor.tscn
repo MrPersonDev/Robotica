@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckrktl85cnctl"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_6py68"]
+[ext_resource type="PackedScene" uid="uid://c4reyv6extm5i" path="res://assets/objects/Holes/OneSidedCircleHole.tscn" id="2_ifmex"]
+[ext_resource type="ArrayMesh" uid="uid://cub0awd6gsg0j" path="res://assets/models/Sensor/Vision_Sensor__276-4850__Vision Sensor (276-4850).res" id="3_ewa2g"]
+
+[node name="Part" instance=ExtResource("1_6py68")]
+
+[node name="OneSidedCircleHole" parent="Holes" index="0" instance=ExtResource("2_ifmex")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.26666, 0.864813, -0.0261039)
+
+[node name="OneSidedCircleHole2" parent="Holes" index="1" instance=ExtResource("2_ifmex")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.26666, 1.36481, -0.0261039)
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_ewa2g")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=8 format=3 uid="uid://gp15y75svpwk"]
+
+[ext_resource type="PackedScene" uid="uid://jra6u2riunsq" path="res://assets/ui/PartOption.tscn" id="1_omw5q"]
+[ext_resource type="Script" path="res://src/part_option/ConnectorPinOption.cs" id="2_v4ohh"]
+[ext_resource type="Material" uid="uid://dn4nw8tsc8deb" path="res://assets/materials/PlasticBlack.tres" id="3_dtkip"]
+[ext_resource type="PackedScene" uid="uid://b8vfeqvpig8vk" path="res://assets/objects/Parts/Connector Pins/ConnectorPinCapped.tscn" id="4_lywpe"]
+[ext_resource type="PackedScene" uid="uid://uhued5g6lunv" path="res://assets/objects/Parts/Connector Pins/ConnectorPin1x1.tscn" id="5_a2csc"]
+[ext_resource type="PackedScene" uid="uid://0rs6atheonds" path="res://assets/objects/Parts/Connector Pins/MountingFlangeShort.tscn" id="6_am6sm"]
+[ext_resource type="PackedScene" uid="uid://ccpujifi3xhev" path="res://assets/objects/Parts/Connector Pins/MountingFlangeLong.tscn" id="6_lc5xq"]
+
+[node name="ConnectorPinOption" instance=ExtResource("1_omw5q")]
+script = ExtResource("2_v4ohh")
+defaultMaterial = ExtResource("3_dtkip")
+cappedPartScene = ExtResource("4_lywpe")
+pinPartScene = ExtResource("5_a2csc")
+flangeShortPartScene = ExtResource("6_am6sm")
+flangeLongPartScene = ExtResource("6_lc5xq")

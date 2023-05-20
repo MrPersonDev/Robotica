@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bc720e4p081s4"]
+
+[node name="SettingsPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Options" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="SettingsOption" type="HSplitContainer" parent="Options"]
+layout_mode = 2
+split_offset = 300
+dragger_visibility = 1
+
+[node name="OptionLabel" type="Label" parent="Options/SettingsOption"]
+layout_mode = 2
+text = "VSync"
+
+[node name="OptionButton" type="OptionButton" parent="Options/SettingsOption"]
+layout_mode = 2

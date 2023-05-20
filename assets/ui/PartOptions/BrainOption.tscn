@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://xcwy2qrl2no7"]
+
+[ext_resource type="PackedScene" uid="uid://jra6u2riunsq" path="res://assets/ui/PartOption.tscn" id="1_c7kwn"]
+[ext_resource type="Script" path="res://src/part_option/BrainOption.cs" id="2_csnqt"]
+[ext_resource type="PackedScene" uid="uid://domxojpfn3n63" path="res://assets/objects/Parts/Control System/Brain.tscn" id="3_mdw0q"]
+
+[node name="BrainOption" instance=ExtResource("1_c7kwn")]
+script = ExtResource("2_csnqt")
+defaultPartScene = ExtResource("3_mdw0q")

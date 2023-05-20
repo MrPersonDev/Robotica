@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://drfnr8s5v81qp"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_5dcwn"]
+[ext_resource type="PackedScene" uid="uid://ckikj6lchnhtx" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="2_k7bds"]
+[ext_resource type="ArrayMesh" uid="uid://cvki04ry1lrcf" path="res://assets/models/Sensor/V5_Rotation_Sensor__276-6050__V5 Rotation Sensor (276-6050).res" id="3_hbunf"]
+[ext_resource type="PackedScene" uid="uid://cdggdbp51hwv0" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="3_y15o6"]
+
+[node name="Part" instance=ExtResource("1_5dcwn")]
+
+[node name="TwoSidedCircleHole" parent="Holes" index="0" instance=ExtResource("2_k7bds")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4474, 0.449793, -0.419936)
+length = 0.806
+width = 1.1
+
+[node name="TwoSidedSquareHole" parent="Holes" index="1" instance=ExtResource("3_y15o6")]
+transform = Transform3D(0.785317, -0.619094, 0, 0.619094, 0.785317, 0, 0, 0, 1, 0.445394, 0.45, -0.416958)
+length = 0.643
+width = 1.441
+isHighStrength = true
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_hbunf")

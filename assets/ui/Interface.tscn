@@ -1,0 +1,159 @@
+[gd_scene load_steps=12 format=3 uid="uid://bku66pba6qcjn"]
+
+[ext_resource type="Script" path="res://src/ui/Interface.cs" id="1_0qpga"]
+[ext_resource type="Theme" uid="uid://cwkikht3340e5" path="res://assets/ui/theme/GlobalTheme.tres" id="1_6hyhk"]
+[ext_resource type="PackedScene" uid="uid://bk3hpxa6tawec" path="res://assets/ui/PartsList.tscn" id="1_apj7p"]
+[ext_resource type="PackedScene" uid="uid://dbss66n3wnyex" path="res://assets/ui/PartSettings.tscn" id="1_t16sb"]
+[ext_resource type="StyleBox" uid="uid://7d2bypeodxc0" path="res://assets/ui/theme/panels/MenuPanel.tres" id="3_k0te5"]
+[ext_resource type="StyleBox" uid="uid://d1s3y7a48i0fv" path="res://assets/ui/theme/panels/SelectionBoxPanel.tres" id="3_xatuu"]
+[ext_resource type="PackedScene" uid="uid://ckpkagupqbdfv" path="res://assets/ui/FileDialogWrapper.tscn" id="4_4ro5i"]
+[ext_resource type="PackedScene" uid="uid://d2y3ko2wfcrqi" path="res://assets/ui/HotBox.tscn" id="5_88y0h"]
+[ext_resource type="PackedScene" uid="uid://w14vqfjtsojv" path="res://assets/ui/ErrorWrapper.tscn" id="5_tch3p"]
+[ext_resource type="PackedScene" uid="uid://cuoo2o88wqta1" path="res://assets/ui/Settings.tscn" id="7_3acxu"]
+[ext_resource type="StyleBox" uid="uid://blaaxkcagu3jf" path="res://assets/ui/theme/panels/OverlayPanel.tres" id="8_gxidw"]
+
+[node name="Interface" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("1_6hyhk")
+script = ExtResource("1_0qpga")
+fieldPath = NodePath("PanelContainer/MarginContainer/Rightmost/FieldButton")
+fieldButtonPath = NodePath("PanelContainer/MarginContainer/Rightmost/FieldButton")
+selectionBoxPath = NodePath("SelectionBox")
+fpsCounterPath = NodePath("PanelContainer/MarginContainer/Rightmost/FPSCounter")
+partsListPath = NodePath("PartsList")
+saveDialogPath = NodePath("SaveDialog")
+loadDialogPath = NodePath("LoadDialog")
+errorPath = NodePath("Error")
+settingsPath = NodePath("Settings")
+overlayPath = NodePath("Overlay")
+hotBoxPath = NodePath("HotBox")
+fileButtonPath = NodePath("PanelContainer/MarginContainer/HBoxContainer/FileButton")
+editButtonPath = NodePath("PanelContainer/MarginContainer/HBoxContainer/EditButton")
+selectButtonPath = NodePath("PanelContainer/MarginContainer/HBoxContainer/SelectButton")
+
+[node name="SelectionBox" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 287.0
+offset_top = 282.0
+offset_right = 772.0
+offset_bottom = 520.0
+theme_override_styles/panel = ExtResource("3_xatuu")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
+theme_override_styles/panel = ExtResource("3_k0te5")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="FileButton" type="MenuButton" parent="PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "File"
+flat = false
+
+[node name="EditButton" type="MenuButton" parent="PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Edit"
+flat = false
+
+[node name="SelectButton" type="MenuButton" parent="PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Select"
+flat = false
+
+[node name="CenterLabel" type="Label" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Rightmost" type="HSplitContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+collapsed = true
+
+[node name="FPSCounter" type="Label" parent="PanelContainer/MarginContainer/Rightmost"]
+layout_mode = 2
+text = "FPS: 999"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="FieldButton" type="Button" parent="PanelContainer/MarginContainer/Rightmost" groups=["INPUT"]]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Field"
+
+[node name="HotBox" parent="." instance=ExtResource("5_88y0h")]
+visible = false
+offset_left = 540.0
+offset_top = 383.0
+offset_right = 580.0
+offset_bottom = 423.0
+
+[node name="PartsList" parent="." instance=ExtResource("1_apj7p")]
+layout_mode = 1
+anchors_preset = 11
+anchor_top = 0.0
+offset_left = -250.0
+offset_top = 150.0
+offset_right = -33.0
+offset_bottom = -177.0
+grow_vertical = 2
+partSettingsPath = NodePath("../PartSettings")
+
+[node name="PartSettings" parent="." instance=ExtResource("1_t16sb")]
+visible = false
+layout_mode = 1
+offset_top = -52.0
+
+[node name="Overlay" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("8_gxidw")
+
+[node name="Settings" parent="." instance=ExtResource("7_3acxu")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.169
+anchor_top = 0.162
+anchor_right = 0.831
+anchor_bottom = 0.838
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="SaveDialog" parent="." instance=ExtResource("4_4ro5i")]
+mouse_filter = 2
+
+[node name="LoadDialog" parent="." instance=ExtResource("4_4ro5i")]
+mouse_filter = 2
+
+[node name="Error" parent="." instance=ExtResource("5_tch3p")]
+mouse_filter = 2

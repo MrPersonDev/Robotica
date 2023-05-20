@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ci460r673wrhq"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_sp7ef"]
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="2_eqi0x"]
+[ext_resource type="ArrayMesh" uid="uid://dw1wrwtfj0vwq" path="res://assets/models/Bearing/Shaft_Collar_Retainer_with_Bearing_Flat__276-8024_.obj" id="3_1n7fq"]
+
+[node name="Part" instance=ExtResource("1_sp7ef")]
+
+[node name="TwoSidedCircleHole" parent="Holes" index="0" instance=ExtResource("2_eqi0x")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -0.20772, 0.288001, 0.0496525)
+length = 0.049
+
+[node name="TwoSidedCircleHole2" parent="Holes" index="1" instance=ExtResource("2_eqi0x")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -0.707678, 0.288001, 0.0496525)
+length = 0.049
+isDefaultHole = true
+
+[node name="TwoSidedCircleHole3" parent="Holes" index="2" instance=ExtResource("2_eqi0x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.209, 0.289945, 0.335014)
+length = 0.109
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_1n7fq")

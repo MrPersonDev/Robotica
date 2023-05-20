@@ -1,0 +1,2670 @@
+[gd_scene load_steps=4 format=3 uid="uid://btoxg1kp0utrt"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_d2qa0"]
+[ext_resource type="ArrayMesh" uid="uid://cf2qgmpjgawgv" path="res://assets/models/Base Plate/15x30_Base_Plate__276-1341_.obj" id="2_74gt5"]
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="2_vom2h"]
+
+[node name="Part" instance=ExtResource("1_d2qa0")]
+
+[node name="TwoSidedSquareHole" parent="Holes" index="0" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.249778, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole2" parent="Holes" index="1" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.749778, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole3" parent="Holes" index="2" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.24978, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole4" parent="Holes" index="3" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.74978, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole5" parent="Holes" index="4" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.24978, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole6" parent="Holes" index="5" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.74978, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole7" parent="Holes" index="6" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.24978, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole8" parent="Holes" index="7" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.74978, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole9" parent="Holes" index="8" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.24978, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole10" parent="Holes" index="9" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.74978, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole11" parent="Holes" index="10" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.24978, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole12" parent="Holes" index="11" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.74978, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole13" parent="Holes" index="12" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.24978, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole14" parent="Holes" index="13" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.74978, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole15" parent="Holes" index="14" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.24978, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole16" parent="Holes" index="15" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.74978, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole17" parent="Holes" index="16" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.24978, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole18" parent="Holes" index="17" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.74978, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole19" parent="Holes" index="18" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.24978, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole20" parent="Holes" index="19" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.74978, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole21" parent="Holes" index="20" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.2498, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole22" parent="Holes" index="21" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.7498, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole23" parent="Holes" index="22" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.2498, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole24" parent="Holes" index="23" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.7498, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole25" parent="Holes" index="24" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.2498, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole26" parent="Holes" index="25" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.7498, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole27" parent="Holes" index="26" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.2498, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole28" parent="Holes" index="27" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.7498, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole29" parent="Holes" index="28" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.2498, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole30" parent="Holes" index="29" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.7498, 0.522807, -0.249359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole31" parent="Holes" index="30" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.249778, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole32" parent="Holes" index="31" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.749778, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole33" parent="Holes" index="32" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.24978, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole34" parent="Holes" index="33" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.74978, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole35" parent="Holes" index="34" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.24978, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole36" parent="Holes" index="35" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.74978, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole37" parent="Holes" index="36" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.24978, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole38" parent="Holes" index="37" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.74978, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole39" parent="Holes" index="38" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.24978, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole40" parent="Holes" index="39" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.74978, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole41" parent="Holes" index="40" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.24978, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole42" parent="Holes" index="41" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.74978, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole43" parent="Holes" index="42" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.24978, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole44" parent="Holes" index="43" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.74978, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole45" parent="Holes" index="44" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.24978, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole46" parent="Holes" index="45" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.74978, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole47" parent="Holes" index="46" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.24978, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole48" parent="Holes" index="47" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.74978, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole49" parent="Holes" index="48" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.24978, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole50" parent="Holes" index="49" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.74978, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole51" parent="Holes" index="50" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.2498, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole52" parent="Holes" index="51" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.7498, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole53" parent="Holes" index="52" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.2498, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole54" parent="Holes" index="53" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.7498, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole55" parent="Holes" index="54" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.2498, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole56" parent="Holes" index="55" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.7498, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole57" parent="Holes" index="56" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.2498, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole58" parent="Holes" index="57" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.7498, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole59" parent="Holes" index="58" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.2498, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole60" parent="Holes" index="59" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.7498, 0.522807, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole61" parent="Holes" index="60" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.249778, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole62" parent="Holes" index="61" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.749778, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole63" parent="Holes" index="62" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.24978, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole64" parent="Holes" index="63" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.74978, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole65" parent="Holes" index="64" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.24978, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole66" parent="Holes" index="65" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.74978, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole67" parent="Holes" index="66" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.24978, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole68" parent="Holes" index="67" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.74978, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole69" parent="Holes" index="68" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.24978, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole70" parent="Holes" index="69" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.74978, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole71" parent="Holes" index="70" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.24978, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole72" parent="Holes" index="71" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.74978, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole73" parent="Holes" index="72" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.24978, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole74" parent="Holes" index="73" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.74978, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole75" parent="Holes" index="74" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.24978, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole76" parent="Holes" index="75" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.74978, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole77" parent="Holes" index="76" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.24978, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole78" parent="Holes" index="77" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.74978, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole79" parent="Holes" index="78" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.24978, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole80" parent="Holes" index="79" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.74978, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole81" parent="Holes" index="80" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.2498, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole82" parent="Holes" index="81" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.7498, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole83" parent="Holes" index="82" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.2498, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole84" parent="Holes" index="83" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.7498, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole85" parent="Holes" index="84" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.2498, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole86" parent="Holes" index="85" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.7498, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole87" parent="Holes" index="86" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.2498, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole88" parent="Holes" index="87" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.7498, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole89" parent="Holes" index="88" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.2498, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole90" parent="Holes" index="89" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.7498, 0.522807, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole91" parent="Holes" index="90" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.249778, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole92" parent="Holes" index="91" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.749778, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole93" parent="Holes" index="92" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.24978, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole94" parent="Holes" index="93" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.74978, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole95" parent="Holes" index="94" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.24978, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole96" parent="Holes" index="95" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.74978, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole97" parent="Holes" index="96" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.24978, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole98" parent="Holes" index="97" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.74978, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole99" parent="Holes" index="98" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.24978, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole100" parent="Holes" index="99" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.74978, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole101" parent="Holes" index="100" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.24978, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole102" parent="Holes" index="101" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.74978, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole103" parent="Holes" index="102" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.24978, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole104" parent="Holes" index="103" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.74978, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole105" parent="Holes" index="104" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.24978, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole106" parent="Holes" index="105" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.74978, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole107" parent="Holes" index="106" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.24978, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole108" parent="Holes" index="107" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.74978, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole109" parent="Holes" index="108" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.24978, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole110" parent="Holes" index="109" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.74978, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole111" parent="Holes" index="110" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.2498, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole112" parent="Holes" index="111" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.7498, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole113" parent="Holes" index="112" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.2498, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole114" parent="Holes" index="113" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.7498, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole115" parent="Holes" index="114" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.2498, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole116" parent="Holes" index="115" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.7498, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole117" parent="Holes" index="116" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.2498, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole118" parent="Holes" index="117" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.7498, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole119" parent="Holes" index="118" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.2498, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole120" parent="Holes" index="119" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.7498, 0.522807, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole121" parent="Holes" index="120" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.249778, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole122" parent="Holes" index="121" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.749778, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole123" parent="Holes" index="122" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.24978, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole124" parent="Holes" index="123" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.74978, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole125" parent="Holes" index="124" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.24978, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole126" parent="Holes" index="125" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.74978, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole127" parent="Holes" index="126" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.24978, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole128" parent="Holes" index="127" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.74978, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole129" parent="Holes" index="128" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.24978, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole130" parent="Holes" index="129" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.74978, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole131" parent="Holes" index="130" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.24978, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole132" parent="Holes" index="131" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.74978, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole133" parent="Holes" index="132" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.24978, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole134" parent="Holes" index="133" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.74978, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole135" parent="Holes" index="134" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.24978, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole136" parent="Holes" index="135" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.74978, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole137" parent="Holes" index="136" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.24978, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole138" parent="Holes" index="137" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.74978, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole139" parent="Holes" index="138" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.24978, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole140" parent="Holes" index="139" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.74978, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole141" parent="Holes" index="140" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.2498, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole142" parent="Holes" index="141" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.7498, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole143" parent="Holes" index="142" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.2498, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole144" parent="Holes" index="143" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.7498, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole145" parent="Holes" index="144" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.2498, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole146" parent="Holes" index="145" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.7498, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole147" parent="Holes" index="146" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.2498, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole148" parent="Holes" index="147" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.7498, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole149" parent="Holes" index="148" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.2498, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole150" parent="Holes" index="149" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.7498, 0.522807, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole151" parent="Holes" index="150" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.249778, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole152" parent="Holes" index="151" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.749778, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole153" parent="Holes" index="152" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.24978, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole154" parent="Holes" index="153" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.74978, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole155" parent="Holes" index="154" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.24978, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole156" parent="Holes" index="155" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.74978, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole157" parent="Holes" index="156" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.24978, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole158" parent="Holes" index="157" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.74978, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole159" parent="Holes" index="158" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.24978, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole160" parent="Holes" index="159" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.74978, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole161" parent="Holes" index="160" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.24978, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole162" parent="Holes" index="161" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.74978, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole163" parent="Holes" index="162" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.24978, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole164" parent="Holes" index="163" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.74978, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole165" parent="Holes" index="164" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.24978, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole166" parent="Holes" index="165" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.74978, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole167" parent="Holes" index="166" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.24978, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole168" parent="Holes" index="167" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.74978, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole169" parent="Holes" index="168" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.24978, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole170" parent="Holes" index="169" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.74978, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole171" parent="Holes" index="170" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.2498, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole172" parent="Holes" index="171" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.7498, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole173" parent="Holes" index="172" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.2498, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole174" parent="Holes" index="173" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.7498, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole175" parent="Holes" index="174" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.2498, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole176" parent="Holes" index="175" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.7498, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole177" parent="Holes" index="176" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.2498, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole178" parent="Holes" index="177" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.7498, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole179" parent="Holes" index="178" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.2498, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole180" parent="Holes" index="179" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.7498, 0.522807, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole181" parent="Holes" index="180" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.249778, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole182" parent="Holes" index="181" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.749778, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole183" parent="Holes" index="182" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.24978, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole184" parent="Holes" index="183" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.74978, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole185" parent="Holes" index="184" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.24978, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole186" parent="Holes" index="185" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.74978, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole187" parent="Holes" index="186" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.24978, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole188" parent="Holes" index="187" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.74978, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole189" parent="Holes" index="188" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.24978, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole190" parent="Holes" index="189" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.74978, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole191" parent="Holes" index="190" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.24978, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole192" parent="Holes" index="191" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.74978, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole193" parent="Holes" index="192" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.24978, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole194" parent="Holes" index="193" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.74978, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole195" parent="Holes" index="194" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.24978, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole196" parent="Holes" index="195" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.74978, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole197" parent="Holes" index="196" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.24978, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole198" parent="Holes" index="197" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.74978, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole199" parent="Holes" index="198" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.24978, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole200" parent="Holes" index="199" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.74978, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole201" parent="Holes" index="200" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.2498, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole202" parent="Holes" index="201" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.7498, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole203" parent="Holes" index="202" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.2498, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole204" parent="Holes" index="203" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.7498, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole205" parent="Holes" index="204" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.2498, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole206" parent="Holes" index="205" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.7498, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole207" parent="Holes" index="206" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.2498, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole208" parent="Holes" index="207" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.7498, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole209" parent="Holes" index="208" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.2498, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole210" parent="Holes" index="209" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.7498, 0.522807, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole211" parent="Holes" index="210" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.249778, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole212" parent="Holes" index="211" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.749778, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole213" parent="Holes" index="212" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.24978, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole214" parent="Holes" index="213" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.74978, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole215" parent="Holes" index="214" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.24978, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole216" parent="Holes" index="215" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.74978, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole217" parent="Holes" index="216" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.24978, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole218" parent="Holes" index="217" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.74978, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole219" parent="Holes" index="218" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.24978, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole220" parent="Holes" index="219" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.74978, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole221" parent="Holes" index="220" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.24978, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole222" parent="Holes" index="221" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.74978, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole223" parent="Holes" index="222" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.24978, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole224" parent="Holes" index="223" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.74978, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole225" parent="Holes" index="224" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.24978, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole226" parent="Holes" index="225" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.74978, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole227" parent="Holes" index="226" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.24978, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole228" parent="Holes" index="227" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.74978, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole229" parent="Holes" index="228" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.24978, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole230" parent="Holes" index="229" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.74978, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole231" parent="Holes" index="230" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.2498, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole232" parent="Holes" index="231" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.7498, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole233" parent="Holes" index="232" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.2498, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole234" parent="Holes" index="233" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.7498, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole235" parent="Holes" index="234" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.2498, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole236" parent="Holes" index="235" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.7498, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole237" parent="Holes" index="236" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.2498, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole238" parent="Holes" index="237" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.7498, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole239" parent="Holes" index="238" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.2498, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole240" parent="Holes" index="239" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.7498, 0.522807, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole241" parent="Holes" index="240" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.249778, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole242" parent="Holes" index="241" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.749778, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole243" parent="Holes" index="242" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.24978, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole244" parent="Holes" index="243" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.74978, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole245" parent="Holes" index="244" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.24978, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole246" parent="Holes" index="245" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.74978, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole247" parent="Holes" index="246" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.24978, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole248" parent="Holes" index="247" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.74978, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole249" parent="Holes" index="248" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.24978, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole250" parent="Holes" index="249" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.74978, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole251" parent="Holes" index="250" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.24978, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole252" parent="Holes" index="251" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.74978, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole253" parent="Holes" index="252" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.24978, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole254" parent="Holes" index="253" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.74978, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole255" parent="Holes" index="254" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.24978, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole256" parent="Holes" index="255" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.74978, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole257" parent="Holes" index="256" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.24978, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole258" parent="Holes" index="257" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.74978, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole259" parent="Holes" index="258" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.24978, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole260" parent="Holes" index="259" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.74978, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole261" parent="Holes" index="260" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.2498, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole262" parent="Holes" index="261" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.7498, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole263" parent="Holes" index="262" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.2498, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole264" parent="Holes" index="263" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.7498, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole265" parent="Holes" index="264" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.2498, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole266" parent="Holes" index="265" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.7498, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole267" parent="Holes" index="266" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.2498, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole268" parent="Holes" index="267" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.7498, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole269" parent="Holes" index="268" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.2498, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole270" parent="Holes" index="269" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.7498, 0.522807, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole271" parent="Holes" index="270" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.249778, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole272" parent="Holes" index="271" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.749778, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole273" parent="Holes" index="272" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.24978, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole274" parent="Holes" index="273" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.74978, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole275" parent="Holes" index="274" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.24978, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole276" parent="Holes" index="275" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.74978, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole277" parent="Holes" index="276" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.24978, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole278" parent="Holes" index="277" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.74978, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole279" parent="Holes" index="278" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.24978, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole280" parent="Holes" index="279" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.74978, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole281" parent="Holes" index="280" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.24978, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole282" parent="Holes" index="281" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.74978, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole283" parent="Holes" index="282" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.24978, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole284" parent="Holes" index="283" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.74978, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole285" parent="Holes" index="284" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.24978, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole286" parent="Holes" index="285" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.74978, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole287" parent="Holes" index="286" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.24978, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole288" parent="Holes" index="287" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.74978, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole289" parent="Holes" index="288" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.24978, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole290" parent="Holes" index="289" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.74978, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole291" parent="Holes" index="290" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.2498, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole292" parent="Holes" index="291" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.7498, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole293" parent="Holes" index="292" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.2498, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole294" parent="Holes" index="293" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.7498, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole295" parent="Holes" index="294" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.2498, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole296" parent="Holes" index="295" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.7498, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole297" parent="Holes" index="296" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.2498, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole298" parent="Holes" index="297" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.7498, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole299" parent="Holes" index="298" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.2498, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole300" parent="Holes" index="299" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.7498, 0.522807, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole301" parent="Holes" index="300" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.249778, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole302" parent="Holes" index="301" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.749778, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole303" parent="Holes" index="302" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.24978, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole304" parent="Holes" index="303" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.74978, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole305" parent="Holes" index="304" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.24978, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole306" parent="Holes" index="305" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.74978, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole307" parent="Holes" index="306" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.24978, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole308" parent="Holes" index="307" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.74978, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole309" parent="Holes" index="308" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.24978, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole310" parent="Holes" index="309" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.74978, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole311" parent="Holes" index="310" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.24978, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole312" parent="Holes" index="311" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.74978, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole313" parent="Holes" index="312" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.24978, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole314" parent="Holes" index="313" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.74978, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole315" parent="Holes" index="314" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.24978, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole316" parent="Holes" index="315" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.74978, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole317" parent="Holes" index="316" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.24978, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole318" parent="Holes" index="317" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.74978, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole319" parent="Holes" index="318" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.24978, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole320" parent="Holes" index="319" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.74978, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole321" parent="Holes" index="320" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.2498, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole322" parent="Holes" index="321" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.7498, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole323" parent="Holes" index="322" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.2498, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole324" parent="Holes" index="323" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.7498, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole325" parent="Holes" index="324" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.2498, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole326" parent="Holes" index="325" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.7498, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole327" parent="Holes" index="326" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.2498, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole328" parent="Holes" index="327" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.7498, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole329" parent="Holes" index="328" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.2498, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole330" parent="Holes" index="329" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.7498, 0.522807, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole331" parent="Holes" index="330" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.249778, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole332" parent="Holes" index="331" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.749778, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole333" parent="Holes" index="332" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.24978, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole334" parent="Holes" index="333" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.74978, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole335" parent="Holes" index="334" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.24978, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole336" parent="Holes" index="335" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.74978, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole337" parent="Holes" index="336" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.24978, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole338" parent="Holes" index="337" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.74978, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole339" parent="Holes" index="338" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.24978, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole340" parent="Holes" index="339" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.74978, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole341" parent="Holes" index="340" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.24978, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole342" parent="Holes" index="341" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.74978, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole343" parent="Holes" index="342" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.24978, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole344" parent="Holes" index="343" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.74978, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole345" parent="Holes" index="344" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.24978, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole346" parent="Holes" index="345" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.74978, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole347" parent="Holes" index="346" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.24978, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole348" parent="Holes" index="347" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.74978, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole349" parent="Holes" index="348" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.24978, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole350" parent="Holes" index="349" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.74978, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole351" parent="Holes" index="350" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.2498, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole352" parent="Holes" index="351" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.7498, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole353" parent="Holes" index="352" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.2498, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole354" parent="Holes" index="353" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.7498, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole355" parent="Holes" index="354" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.2498, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole356" parent="Holes" index="355" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.7498, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole357" parent="Holes" index="356" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.2498, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole358" parent="Holes" index="357" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.7498, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole359" parent="Holes" index="358" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.2498, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole360" parent="Holes" index="359" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.7498, 0.522807, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole361" parent="Holes" index="360" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.249778, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole362" parent="Holes" index="361" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.749778, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole363" parent="Holes" index="362" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.24978, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole364" parent="Holes" index="363" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.74978, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole365" parent="Holes" index="364" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.24978, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole366" parent="Holes" index="365" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.74978, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole367" parent="Holes" index="366" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.24978, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole368" parent="Holes" index="367" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.74978, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole369" parent="Holes" index="368" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.24978, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole370" parent="Holes" index="369" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.74978, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole371" parent="Holes" index="370" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.24978, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole372" parent="Holes" index="371" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.74978, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole373" parent="Holes" index="372" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.24978, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole374" parent="Holes" index="373" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.74978, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole375" parent="Holes" index="374" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.24978, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole376" parent="Holes" index="375" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.74978, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole377" parent="Holes" index="376" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.24978, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole378" parent="Holes" index="377" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.74978, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole379" parent="Holes" index="378" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.24978, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole380" parent="Holes" index="379" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.74978, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole381" parent="Holes" index="380" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.2498, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole382" parent="Holes" index="381" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.7498, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole383" parent="Holes" index="382" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.2498, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole384" parent="Holes" index="383" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.7498, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole385" parent="Holes" index="384" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.2498, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole386" parent="Holes" index="385" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.7498, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole387" parent="Holes" index="386" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.2498, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole388" parent="Holes" index="387" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.7498, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole389" parent="Holes" index="388" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.2498, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole390" parent="Holes" index="389" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.7498, 0.522807, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole391" parent="Holes" index="390" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.249778, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole451" parent="Holes" index="391" instance=ExtResource("2_vom2h")]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 0.0231504, 0.249985, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole508" parent="Holes" index="392" instance=ExtResource("2_vom2h")]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 0.0231504, 0.249985, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole509" parent="Holes" index="393" instance=ExtResource("2_vom2h")]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 0.0231504, 0.249985, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole510" parent="Holes" index="394" instance=ExtResource("2_vom2h")]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 0.0231504, 0.249985, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole511" parent="Holes" index="395" instance=ExtResource("2_vom2h")]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 0.0231504, 0.249985, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole512" parent="Holes" index="396" instance=ExtResource("2_vom2h")]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 0.0231504, 0.249985, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole513" parent="Holes" index="397" instance=ExtResource("2_vom2h")]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 0.0231504, 0.249985, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole514" parent="Holes" index="398" instance=ExtResource("2_vom2h")]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 0.0231504, 0.249985, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole515" parent="Holes" index="399" instance=ExtResource("2_vom2h")]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 0.0231504, 0.249985, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole516" parent="Holes" index="400" instance=ExtResource("2_vom2h")]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 0.0231504, 0.249985, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole517" parent="Holes" index="401" instance=ExtResource("2_vom2h")]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 0.0231504, 0.249985, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole518" parent="Holes" index="402" instance=ExtResource("2_vom2h")]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 0.0231504, 0.249985, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole519" parent="Holes" index="403" instance=ExtResource("2_vom2h")]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 0.0231504, 0.249985, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole520" parent="Holes" index="404" instance=ExtResource("2_vom2h")]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 14.9775, 0.249985, -0.749359)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole521" parent="Holes" index="405" instance=ExtResource("2_vom2h")]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 14.9775, 0.249985, -1.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole522" parent="Holes" index="406" instance=ExtResource("2_vom2h")]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 14.9775, 0.249985, -1.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole523" parent="Holes" index="407" instance=ExtResource("2_vom2h")]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 14.9775, 0.249985, -2.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole524" parent="Holes" index="408" instance=ExtResource("2_vom2h")]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 14.9775, 0.249985, -2.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole525" parent="Holes" index="409" instance=ExtResource("2_vom2h")]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 14.9775, 0.249985, -3.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole526" parent="Holes" index="410" instance=ExtResource("2_vom2h")]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 14.9775, 0.249985, -3.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole527" parent="Holes" index="411" instance=ExtResource("2_vom2h")]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 14.9775, 0.249985, -4.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole528" parent="Holes" index="412" instance=ExtResource("2_vom2h")]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 14.9775, 0.249985, -4.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole529" parent="Holes" index="413" instance=ExtResource("2_vom2h")]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 14.9775, 0.249985, -5.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole530" parent="Holes" index="414" instance=ExtResource("2_vom2h")]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 14.9775, 0.249985, -5.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole531" parent="Holes" index="415" instance=ExtResource("2_vom2h")]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 14.9775, 0.249985, -6.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole532" parent="Holes" index="416" instance=ExtResource("2_vom2h")]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 14.9775, 0.249985, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole392" parent="Holes" index="417" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.749778, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole393" parent="Holes" index="418" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.24978, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole394" parent="Holes" index="419" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.74978, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole395" parent="Holes" index="420" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.24978, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole396" parent="Holes" index="421" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.74978, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole397" parent="Holes" index="422" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.24978, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole398" parent="Holes" index="423" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.74978, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole399" parent="Holes" index="424" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.24978, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole400" parent="Holes" index="425" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.74978, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole401" parent="Holes" index="426" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.24978, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole402" parent="Holes" index="427" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.74978, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole403" parent="Holes" index="428" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.24978, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole404" parent="Holes" index="429" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.74978, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole405" parent="Holes" index="430" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.24978, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole406" parent="Holes" index="431" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.74978, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole407" parent="Holes" index="432" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.24978, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole408" parent="Holes" index="433" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.74978, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole409" parent="Holes" index="434" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.24978, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole410" parent="Holes" index="435" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.74978, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole411" parent="Holes" index="436" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.2498, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole412" parent="Holes" index="437" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.7498, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole413" parent="Holes" index="438" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.2498, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole414" parent="Holes" index="439" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.7498, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole415" parent="Holes" index="440" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.2498, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole416" parent="Holes" index="441" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.7498, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole417" parent="Holes" index="442" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.2498, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole418" parent="Holes" index="443" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.7498, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole419" parent="Holes" index="444" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.2498, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole420" parent="Holes" index="445" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.7498, 0.522807, -6.74936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole421" parent="Holes" index="446" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.249778, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole422" parent="Holes" index="447" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.749778, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole423" parent="Holes" index="448" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.24978, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole424" parent="Holes" index="449" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.74978, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole425" parent="Holes" index="450" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.24978, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole426" parent="Holes" index="451" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.74978, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole427" parent="Holes" index="452" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.24978, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole428" parent="Holes" index="453" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.74978, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole429" parent="Holes" index="454" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.24978, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole430" parent="Holes" index="455" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.74978, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole431" parent="Holes" index="456" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.24978, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole432" parent="Holes" index="457" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.74978, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole433" parent="Holes" index="458" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.24978, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole434" parent="Holes" index="459" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.74978, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole435" parent="Holes" index="460" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.24978, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole436" parent="Holes" index="461" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 7.74978, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole437" parent="Holes" index="462" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.24978, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole438" parent="Holes" index="463" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.74978, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole439" parent="Holes" index="464" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.24978, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole440" parent="Holes" index="465" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.74978, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole441" parent="Holes" index="466" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.2498, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole442" parent="Holes" index="467" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.7498, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole443" parent="Holes" index="468" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.2498, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole444" parent="Holes" index="469" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.7498, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole445" parent="Holes" index="470" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.2498, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole446" parent="Holes" index="471" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.7498, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole447" parent="Holes" index="472" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.2498, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole448" parent="Holes" index="473" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13.7498, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole449" parent="Holes" index="474" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.2498, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole450" parent="Holes" index="475" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.7498, 0.522807, -7.24936)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole452" parent="Holes" index="476" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.749778, 0.250175, -7.47673)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole453" parent="Holes" index="477" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24978, 0.250175, -7.47673)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole454" parent="Holes" index="478" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.74978, 0.250175, -7.47673)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole455" parent="Holes" index="479" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.24978, 0.250175, -7.47673)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole456" parent="Holes" index="480" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.74978, 0.250175, -7.47673)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole457" parent="Holes" index="481" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.24978, 0.250175, -7.47673)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole458" parent="Holes" index="482" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.74978, 0.250175, -7.47673)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole459" parent="Holes" index="483" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.24978, 0.250175, -7.47673)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole460" parent="Holes" index="484" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.74978, 0.250175, -7.47673)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole461" parent="Holes" index="485" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.24978, 0.250175, -7.47673)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole462" parent="Holes" index="486" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.74978, 0.250175, -7.47673)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole463" parent="Holes" index="487" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.24978, 0.250175, -7.47673)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole464" parent="Holes" index="488" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.74978, 0.250175, -7.47673)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole465" parent="Holes" index="489" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.24978, 0.250175, -7.47673)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole466" parent="Holes" index="490" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.74978, 0.250175, -7.47673)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole467" parent="Holes" index="491" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.24978, 0.250175, -7.47673)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole468" parent="Holes" index="492" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.74978, 0.250175, -7.47673)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole469" parent="Holes" index="493" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.24978, 0.250175, -7.47673)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole470" parent="Holes" index="494" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.74978, 0.250175, -7.47673)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole471" parent="Holes" index="495" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2498, 0.250175, -7.47673)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole472" parent="Holes" index="496" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7498, 0.250175, -7.47673)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole473" parent="Holes" index="497" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2498, 0.250175, -7.47673)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole474" parent="Holes" index="498" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.7498, 0.250175, -7.47673)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole475" parent="Holes" index="499" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2498, 0.250175, -7.47673)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole476" parent="Holes" index="500" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7498, 0.250175, -7.47673)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole477" parent="Holes" index="501" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2498, 0.250175, -7.47673)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole478" parent="Holes" index="502" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7498, 0.250175, -7.47673)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole479" parent="Holes" index="503" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2498, 0.250175, -7.47673)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole480" parent="Holes" index="504" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.749778, 0.250175, -0.0228335)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole481" parent="Holes" index="505" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24978, 0.250175, -0.0228335)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole482" parent="Holes" index="506" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.74978, 0.250175, -0.0228335)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole483" parent="Holes" index="507" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.24978, 0.250175, -0.0228335)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole484" parent="Holes" index="508" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.74978, 0.250175, -0.0228335)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole485" parent="Holes" index="509" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.24978, 0.250175, -0.0228335)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole486" parent="Holes" index="510" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.74978, 0.250175, -0.0228335)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole487" parent="Holes" index="511" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.24978, 0.250175, -0.0228335)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole488" parent="Holes" index="512" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.74978, 0.250175, -0.0228335)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole489" parent="Holes" index="513" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.24978, 0.250175, -0.0228335)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole490" parent="Holes" index="514" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.74978, 0.250175, -0.0228335)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole491" parent="Holes" index="515" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.24978, 0.250175, -0.0228335)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole492" parent="Holes" index="516" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.74978, 0.250175, -0.0228335)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole493" parent="Holes" index="517" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.24978, 0.250175, -0.0228335)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole494" parent="Holes" index="518" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.74978, 0.250175, -0.0228335)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole495" parent="Holes" index="519" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.24978, 0.250175, -0.0228335)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole496" parent="Holes" index="520" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.74978, 0.250175, -0.0228335)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole497" parent="Holes" index="521" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.24978, 0.250175, -0.0228335)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole498" parent="Holes" index="522" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.74978, 0.250175, -0.0228335)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole499" parent="Holes" index="523" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2498, 0.250175, -0.0228335)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole500" parent="Holes" index="524" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7498, 0.250175, -0.0228335)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole501" parent="Holes" index="525" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2498, 0.250175, -0.0228335)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole502" parent="Holes" index="526" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.7498, 0.250175, -0.0228335)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole503" parent="Holes" index="527" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2498, 0.250175, -0.0228335)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole504" parent="Holes" index="528" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7498, 0.250175, -0.0228335)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole505" parent="Holes" index="529" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2498, 0.250175, -0.0228335)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole506" parent="Holes" index="530" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7498, 0.250175, -0.0228335)
+length = 0.036
+width = 1.05
+
+[node name="TwoSidedSquareHole507" parent="Holes" index="531" instance=ExtResource("2_vom2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2498, 0.250175, -0.0228335)
+length = 0.036
+width = 1.05
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("2_74gt5")

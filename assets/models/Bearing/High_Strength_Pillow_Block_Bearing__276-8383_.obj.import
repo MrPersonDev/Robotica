@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://7tbie7w0o3s8"
+path="res://.godot/imported/High_Strength_Pillow_Block_Bearing__276-8383_.obj-5c587700dbd170e2eb037707c26ab8d5.mesh"
+
+[deps]
+
+files=["res://.godot/imported/High_Strength_Pillow_Block_Bearing__276-8383_.obj-5c587700dbd170e2eb037707c26ab8d5.mesh"]
+
+source_file="res://assets/models/Bearing/High_Strength_Pillow_Block_Bearing__276-8383_.obj"
+dest_files=["res://.godot/imported/High_Strength_Pillow_Block_Bearing__276-8383_.obj-5c587700dbd170e2eb037707c26ab8d5.mesh", "res://.godot/imported/High_Strength_Pillow_Block_Bearing__276-8383_.obj-5c587700dbd170e2eb037707c26ab8d5.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

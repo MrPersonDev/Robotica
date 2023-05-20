@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://barcsftrtpr77"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_qcar5"]
+[ext_resource type="PackedScene" uid="uid://cdggdbp51hwv0" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="2_ta2w5"]
+[ext_resource type="ArrayMesh" uid="uid://cnjrfx1gh3rv0" path="res://assets/models/Sprocket/VEX-24-TOOTH-SPROCKET.obj" id="3_to45j"]
+
+[node name="Part" instance=ExtResource("1_qcar5")]
+
+[node name="TwoSidedSquareHole" parent="Holes" index="0" instance=ExtResource("2_ta2w5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.93637, 1.94868, -0.253927)
+length = 0.482
+width = 0.75
+isDefaultHole = true
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_to45j")

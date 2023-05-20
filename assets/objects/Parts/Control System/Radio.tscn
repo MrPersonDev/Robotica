@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bi54jd5fngcf2"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_psw55"]
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/OneSidedCircleHole.tscn" id="2_7sogp"]
+[ext_resource type="ArrayMesh" uid="uid://dxihx5ym25264" path="res://assets/models/Control System/V5_Robot_Radio__276-4831__V5 Robot Radio (276-4831).res" id="3_yq7nm"]
+
+[node name="Part" instance=ExtResource("1_psw55")]
+
+[node name="OneSidedCircleHole" parent="Holes" index="0" instance=ExtResource("2_7sogp")]
+transform = Transform3D(-2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 0.841349, 0.516063, -1.42931)
+isFastener = true
+
+[node name="OneSidedCircleHole2" parent="Holes" index="1" instance=ExtResource("2_7sogp")]
+transform = Transform3D(-2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 0.841349, 0.516063, -0.929311)
+isFastener = true
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_yq7nm")

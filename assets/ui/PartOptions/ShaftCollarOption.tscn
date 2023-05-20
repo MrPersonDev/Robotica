@@ -1,0 +1,25 @@
+[gd_scene load_steps=12 format=3 uid="uid://b5ev7774uotbs"]
+
+[ext_resource type="PackedScene" uid="uid://jra6u2riunsq" path="res://assets/ui/PartOption.tscn" id="1_pt5br"]
+[ext_resource type="Script" path="res://src/part_option/ShaftCollarOption.cs" id="2_eqimv"]
+[ext_resource type="Material" uid="uid://c8u6ykcdce7t0" path="res://assets/materials/Steel.tres" id="3_nx5mk"]
+[ext_resource type="Material" uid="uid://dqjjpnrthauum" path="res://assets/materials/RubberBlack.tres" id="4_dm6lq"]
+[ext_resource type="PackedScene" uid="uid://j1ggjn4xtl7m" path="res://assets/objects/Parts/Shaft Collar/MetalShaftCollar.tscn" id="4_lysyq"]
+[ext_resource type="Material" uid="uid://dn4nw8tsc8deb" path="res://assets/materials/PlasticBlack.tres" id="5_bykx8"]
+[ext_resource type="PackedScene" uid="uid://cbiix7gx6l175" path="res://assets/objects/Parts/Shaft Collar/MetalShaftCollarWithSetScrew.tscn" id="5_set6u"]
+[ext_resource type="PackedScene" uid="uid://daudf50usniwc" path="res://assets/objects/Parts/Shaft Collar/RubberShaftCollar.tscn" id="6_ufwka"]
+[ext_resource type="PackedScene" uid="uid://1dchun33oeao" path="res://assets/objects/Parts/Shaft Collar/ClampingNormalShaftCollar.tscn" id="9_aamdx"]
+[ext_resource type="PackedScene" uid="uid://vy0by6anp4js" path="res://assets/objects/Parts/Shaft Collar/ClampingHSShaftCollar.tscn" id="10_qc7bw"]
+[ext_resource type="PackedScene" uid="uid://b5nrhkunrvjdh" path="res://assets/objects/Parts/Shaft Collar/ClampingLowProfileShaftCollar.tscn" id="11_eenjc"]
+
+[node name="ShaftCollarOption" instance=ExtResource("1_pt5br")]
+script = ExtResource("2_eqimv")
+metalMaterial = ExtResource("3_nx5mk")
+rubberMaterial = ExtResource("4_dm6lq")
+blackPlasticMaterial = ExtResource("5_bykx8")
+metalShaftCollarPartScene = ExtResource("4_lysyq")
+metalShaftCollarWithSetScrewPartScene = ExtResource("5_set6u")
+rubberShaftCollarPartScene = ExtResource("6_ufwka")
+clampingNormalPartScene = ExtResource("9_aamdx")
+clampingHSPartScene = ExtResource("10_qc7bw")
+clampingLowProfilePartScene = ExtResource("11_eenjc")

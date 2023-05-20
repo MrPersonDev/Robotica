@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://diikjs4nyx5gk"
+path="res://.godot/imported/Rubber_Shaft_Collar.obj-cd962f201b8ab49d2ed6df017145e926.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Rubber_Shaft_Collar.obj-cd962f201b8ab49d2ed6df017145e926.mesh"]
+
+source_file="res://assets/models/Shaft Collar/Rubber_Shaft_Collar.obj"
+dest_files=["res://.godot/imported/Rubber_Shaft_Collar.obj-cd962f201b8ab49d2ed6df017145e926.mesh", "res://.godot/imported/Rubber_Shaft_Collar.obj-cd962f201b8ab49d2ed6df017145e926.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

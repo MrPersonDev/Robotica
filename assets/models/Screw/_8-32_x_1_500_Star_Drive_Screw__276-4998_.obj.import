@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d1qokqgfxlxub"
+path="res://.godot/imported/_8-32_x_1_500_Star_Drive_Screw__276-4998_.obj-a4d389acb8893fd48f85ec871ca22392.mesh"
+
+[deps]
+
+files=["res://.godot/imported/_8-32_x_1_500_Star_Drive_Screw__276-4998_.obj-a4d389acb8893fd48f85ec871ca22392.mesh"]
+
+source_file="res://assets/models/Screw/_8-32_x_1_500_Star_Drive_Screw__276-4998_.obj"
+dest_files=["res://.godot/imported/_8-32_x_1_500_Star_Drive_Screw__276-4998_.obj-a4d389acb8893fd48f85ec871ca22392.mesh", "res://.godot/imported/_8-32_x_1_500_Star_Drive_Screw__276-4998_.obj-a4d389acb8893fd48f85ec871ca22392.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,22 @@
+[gd_scene load_steps=16 format=3 uid="uid://vhi4waqhsujp"]
+
+[ext_resource type="PackedScene" uid="uid://jra6u2riunsq" path="res://assets/ui/PartOption.tscn" id="1_lj82a"]
+[ext_resource type="Script" path="res://src/part_option/ScrewOption.cs" id="2_7terj"]
+[ext_resource type="Material" uid="uid://bd05als2prc8f" path="res://assets/materials/ShinySteel.tres" id="3_qam6a"]
+[ext_resource type="PackedScene" uid="uid://du0rhp7nv6t1f" path="res://assets/objects/Parts/Screw/Screw0_25.tscn" id="4_x0mnr"]
+[ext_resource type="PackedScene" uid="uid://ciodbvbgrej1j" path="res://assets/objects/Parts/Screw/Screw0_375.tscn" id="5_nimq5"]
+[ext_resource type="PackedScene" uid="uid://cjotugltlss4o" path="res://assets/objects/Parts/Screw/Screw0_5.tscn" id="6_oqo6o"]
+[ext_resource type="PackedScene" uid="uid://ka6woyrxqu0m" path="res://assets/objects/Parts/Screw/Screw0_625.tscn" id="7_24nw3"]
+[ext_resource type="PackedScene" uid="uid://cwx1u8rr1ecge" path="res://assets/objects/Parts/Screw/Screw0_75.tscn" id="8_x7jsc"]
+[ext_resource type="PackedScene" uid="uid://dws578xb72kqb" path="res://assets/objects/Parts/Screw/Screw0_875.tscn" id="9_8mt6n"]
+[ext_resource type="PackedScene" uid="uid://dprj8mkgefjco" path="res://assets/objects/Parts/Screw/Screw1_0.tscn" id="10_ixe4f"]
+[ext_resource type="PackedScene" uid="uid://dsh3ft6eaok7m" path="res://assets/objects/Parts/Screw/Screw1_25.tscn" id="11_h61d5"]
+[ext_resource type="PackedScene" uid="uid://dikb4fi1qmkiu" path="res://assets/objects/Parts/Screw/Screw1_5.tscn" id="12_2gjml"]
+[ext_resource type="PackedScene" uid="uid://bd1gnaog75hat" path="res://assets/objects/Parts/Screw/Screw1_75.tscn" id="13_2uvqh"]
+[ext_resource type="PackedScene" uid="uid://bnmw0ugq0s6px" path="res://assets/objects/Parts/Screw/Screw2_0.tscn" id="14_fson2"]
+[ext_resource type="PackedScene" uid="uid://clj785i30aqv" path="res://assets/objects/Parts/Screw/Screw2_5.tscn" id="16_ijhkw"]
+
+[node name="ScrewOption" instance=ExtResource("1_lj82a")]
+script = ExtResource("2_7terj")
+defaultMaterial = ExtResource("3_qam6a")
+partScenes = [ExtResource("4_x0mnr"), ExtResource("5_nimq5"), ExtResource("6_oqo6o"), ExtResource("7_24nw3"), ExtResource("8_x7jsc"), ExtResource("9_8mt6n"), ExtResource("10_ixe4f"), ExtResource("11_h61d5"), ExtResource("12_2gjml"), ExtResource("13_2uvqh"), ExtResource("14_fson2"), ExtResource("16_ijhkw"), ExtResource("16_ijhkw")]

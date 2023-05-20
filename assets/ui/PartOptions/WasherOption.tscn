@@ -1,0 +1,15 @@
+[gd_scene load_steps=7 format=3 uid="uid://r7t1fmnt00bb"]
+
+[ext_resource type="PackedScene" uid="uid://jra6u2riunsq" path="res://assets/ui/PartOption.tscn" id="1_0blmm"]
+[ext_resource type="Script" path="res://src/part_option/WasherOption.cs" id="2_el14y"]
+[ext_resource type="Material" uid="uid://6ss8fv3nvim5" path="res://assets/materials/NylonWhite.tres" id="3_xbya6"]
+[ext_resource type="Material" uid="uid://c8u6ykcdce7t0" path="res://assets/materials/Steel.tres" id="4_lixas"]
+[ext_resource type="PackedScene" uid="uid://ca1sn5tw2ruv4" path="res://assets/objects/Parts/Washer/WasherTeflon.tscn" id="5_tculh"]
+[ext_resource type="PackedScene" uid="uid://chd1m7ofk3265" path="res://assets/objects/Parts/Washer/WasherSteel.tscn" id="6_lyn5q"]
+
+[node name="WasherOption" instance=ExtResource("1_0blmm")]
+script = ExtResource("2_el14y")
+teflonMaterial = ExtResource("3_xbya6")
+steelMaterial = ExtResource("4_lixas")
+teflonPartScene = ExtResource("5_tculh")
+steelPartScene = ExtResource("6_lyn5q")

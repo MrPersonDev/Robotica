@@ -1,0 +1,88 @@
+[gd_scene load_steps=6 format=3 uid="uid://ccpujifi3xhev"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_r7iui"]
+[ext_resource type="ArrayMesh" uid="uid://cswgw1ywcepd" path="res://assets/models/Connector Pins/V5_Robot_Brain_Mounting_Flange__Long___276-4810-003_.obj" id="2_mrpoi"]
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="2_ve736"]
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/OneSidedSquareHole.tscn" id="3_fivu4"]
+[ext_resource type="PackedScene" path="res://assets/objects/Insert.tscn" id="4_pupgl"]
+
+[node name="Part" instance=ExtResource("1_r7iui")]
+
+[node name="TwoSidedCircleHole" parent="Holes" index="0" instance=ExtResource("2_ve736")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.09, 0.227, -0.238)
+length = 0.169
+width = 0.962
+
+[node name="TwoSidedCircleHole2" parent="Holes" index="1" instance=ExtResource("2_ve736")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.09, 0.727, -0.238)
+length = 0.169
+width = 0.962
+
+[node name="TwoSidedCircleHole3" parent="Holes" index="2" instance=ExtResource("2_ve736")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.09, 1.227, -0.238)
+length = 0.169
+width = 0.962
+
+[node name="TwoSidedCircleHole4" parent="Holes" index="3" instance=ExtResource("2_ve736")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.09, 1.727, -0.238)
+length = 0.169
+width = 0.962
+isDefaultHole = true
+
+[node name="TwoSidedCircleHole5" parent="Holes" index="4" instance=ExtResource("2_ve736")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.09, 2.227, -0.238)
+length = 0.169
+width = 0.962
+
+[node name="TwoSidedCircleHole6" parent="Holes" index="5" instance=ExtResource("2_ve736")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.09, 2.727, -0.238)
+length = 0.169
+width = 0.962
+
+[node name="TwoSidedCircleHole7" parent="Holes" index="6" instance=ExtResource("2_ve736")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.09, 3.227, -0.238)
+length = 0.169
+width = 0.962
+
+[node name="OneSidedSquareHole" parent="Holes" index="7" instance=ExtResource("3_fivu4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.214753, 0.22837, -0.517681)
+visible = false
+visible = false
+isFastener = true
+
+[node name="OneSidedSquareHole2" parent="Holes" index="8" instance=ExtResource("3_fivu4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.214753, 1.22837, -0.517681)
+visible = false
+visible = false
+isFastener = true
+
+[node name="OneSidedSquareHole3" parent="Holes" index="9" instance=ExtResource("3_fivu4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.214753, 2.22837, -0.517681)
+visible = false
+visible = false
+isFastener = true
+
+[node name="OneSidedSquareHole4" parent="Holes" index="10" instance=ExtResource("3_fivu4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.214753, 3.22837, -0.517681)
+visible = false
+visible = false
+isFastener = true
+
+[node name="Insert" parent="Inserts" index="0" instance=ExtResource("4_pupgl")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.213315, 0.229257, -0.603772)
+length = 0.165
+
+[node name="Insert2" parent="Inserts" index="1" instance=ExtResource("4_pupgl")]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.213315, 1.22926, -0.623066)
+length = 0.213
+
+[node name="Insert3" parent="Inserts" index="2" instance=ExtResource("4_pupgl")]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.213315, 2.22926, -0.623066)
+length = 0.213
+
+[node name="Insert4" parent="Inserts" index="3" instance=ExtResource("4_pupgl")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.213315, 3.22926, -0.603772)
+length = 0.165
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("2_mrpoi")

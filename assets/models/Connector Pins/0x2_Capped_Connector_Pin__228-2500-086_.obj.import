@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c43bt80wjetki"
+path="res://.godot/imported/0x2_Capped_Connector_Pin__228-2500-086_.obj-e45c4e73d839c084a2868aef34985738.mesh"
+
+[deps]
+
+files=["res://.godot/imported/0x2_Capped_Connector_Pin__228-2500-086_.obj-e45c4e73d839c084a2868aef34985738.mesh"]
+
+source_file="res://assets/models/Connector Pins/0x2_Capped_Connector_Pin__228-2500-086_.obj"
+dest_files=["res://.godot/imported/0x2_Capped_Connector_Pin__228-2500-086_.obj-e45c4e73d839c084a2868aef34985738.mesh", "res://.godot/imported/0x2_Capped_Connector_Pin__228-2500-086_.obj-e45c4e73d839c084a2868aef34985738.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

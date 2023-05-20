@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://vpx0n0sj0u3q"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_mxsx0"]
+[ext_resource type="PackedScene" uid="uid://ckikj6lchnhtx" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="2_u4nvo"]
+[ext_resource type="ArrayMesh" uid="uid://oghwpna32pbk" path="res://assets/models/Standoff/2_50_Standoff__275-1019_.obj" id="3_ir63c"]
+
+[node name="Part" instance=ExtResource("1_mxsx0")]
+
+[node name="TwoSidedCircleHole" parent="Holes" index="0" instance=ExtResource("2_u4nvo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.145386, 0.126319, -1.26005)
+length = 2.49
+isDefaultHole = true
+isFastener = true
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_ir63c")

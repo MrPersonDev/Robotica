@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7onhwp3wmkqs"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_df2f3"]
+[ext_resource type="PackedScene" uid="uid://ckikj6lchnhtx" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="2_c2ym1"]
+[ext_resource type="ArrayMesh" uid="uid://dc1nkveyivioo" path="res://assets/models/Sensor/Limit_Switch__276-2174__Limit Switch (276-2174).res" id="3_rrxcv"]
+
+[node name="Part" instance=ExtResource("1_df2f3")]
+
+[node name="TwoSidedCircleHole" parent="Holes" index="0" instance=ExtResource("2_c2ym1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.636813, 1.3235, -0.0848418)
+length = 0.146
+
+[node name="TwoSidedCircleHole2" parent="Holes" index="1" instance=ExtResource("2_c2ym1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.886813, 1.3235, -0.0848418)
+length = 0.146
+
+[node name="TwoSidedCircleHole3" parent="Holes" index="2" instance=ExtResource("2_c2ym1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.386813, 1.3235, -0.0848418)
+length = 0.146
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_rrxcv")

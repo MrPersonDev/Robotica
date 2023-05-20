@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dp770mfy7ghu7"
+path="res://.godot/imported/CubeWithMultipleHoles.obj-5af7f8abcfad86070d523b93e297b46c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/CubeWithMultipleHoles.obj-5af7f8abcfad86070d523b93e297b46c.mesh"]
+
+source_file="res://assets/models/Random/CubeWithMultipleHoles.obj"
+dest_files=["res://.godot/imported/CubeWithMultipleHoles.obj-5af7f8abcfad86070d523b93e297b46c.mesh", "res://.godot/imported/CubeWithMultipleHoles.obj-5af7f8abcfad86070d523b93e297b46c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

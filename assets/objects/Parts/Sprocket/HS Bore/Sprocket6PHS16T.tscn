@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b37tx6r5i33a8"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_bjnxw"]
+[ext_resource type="PackedScene" uid="uid://cdggdbp51hwv0" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="2_2q4qq"]
+[ext_resource type="ArrayMesh" uid="uid://c8yg4qse4i08c" path="res://assets/models/Sprocket/16T_Sprocket__6P__276-8328_.obj" id="3_y05kf"]
+
+[node name="Part" instance=ExtResource("1_bjnxw")]
+
+[node name="TwoSidedSquareHole" parent="Holes" index="0" instance=ExtResource("2_2q4qq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.93519, 1.94868, -0.314927)
+length = 0.493
+width = 1.5
+isDefaultHole = true
+isHighStrength = true
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_y05kf")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cv0v7nuuwb53k"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_qnyqg"]
+[ext_resource type="PackedScene" uid="uid://ckikj6lchnhtx" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="2_3kcya"]
+[ext_resource type="ArrayMesh" uid="uid://becup8nksb8ix" path="res://assets/models/Nut Retainer/4-Post_Hex_Nut_Retainer__276-6483_.obj" id="3_p07ag"]
+
+[node name="Part" instance=ExtResource("1_qnyqg")]
+
+[node name="TwoSidedCircleHole" parent="Holes" index="0" instance=ExtResource("2_3kcya")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.591833, 0.339441, -0.167984)
+length = 0.05
+isDefaultHole = true
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_p07ag")

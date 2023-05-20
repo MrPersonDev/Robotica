@@ -1,0 +1,27 @@
+[gd_scene load_steps=13 format=3 uid="uid://103obyyfaqiu"]
+
+[ext_resource type="PackedScene" uid="uid://jra6u2riunsq" path="res://assets/ui/PartOption.tscn" id="1_iu6pr"]
+[ext_resource type="Script" path="res://src/part_option/BearingOption.cs" id="2_3ltd1"]
+[ext_resource type="Material" uid="uid://dn4nw8tsc8deb" path="res://assets/materials/PlasticBlack.tres" id="3_hyk5g"]
+[ext_resource type="PackedScene" uid="uid://yjssgohgoqyb" path="res://assets/objects/Parts/Bearing/PillowBlockBearing.tscn" id="4_fm261"]
+[ext_resource type="Material" uid="uid://c8u6ykcdce7t0" path="res://assets/materials/Steel.tres" id="4_srjeh"]
+[ext_resource type="PackedScene" uid="uid://bwhqwojprhv86" path="res://assets/objects/Parts/Bearing/FlatBearing.tscn" id="5_cj11t"]
+[ext_resource type="PackedScene" uid="uid://yskq6tnhbssf" path="res://assets/objects/Parts/Bearing/LockBar.tscn" id="6_632ak"]
+[ext_resource type="PackedScene" uid="uid://cy0swonsmm5ih" path="res://assets/objects/Parts/Bearing/LowProfileBearing.tscn" id="7_8enl0"]
+[ext_resource type="PackedScene" uid="uid://ci460r673wrhq" path="res://assets/objects/Parts/Bearing/ShaftCollarRetainerBearing.tscn" id="8_2e4p8"]
+[ext_resource type="PackedScene" uid="uid://bk324t7edpjkm" path="res://assets/objects/Parts/Bearing/MetalLockBar.tscn" id="8_luljr"]
+[ext_resource type="PackedScene" uid="uid://c5c04072hsslh" path="res://assets/objects/Parts/Bearing/HSFlatBearing.tscn" id="9_u8hvy"]
+[ext_resource type="PackedScene" uid="uid://b4gmbw1vla5do" path="res://assets/objects/Parts/Bearing/HSPillowBlockBearing.tscn" id="10_j04s8"]
+
+[node name="BearingOption" instance=ExtResource("1_iu6pr")]
+script = ExtResource("2_3ltd1")
+blackPlasticMaterial = ExtResource("3_hyk5g")
+metalMaterial = ExtResource("4_srjeh")
+pillowBlockBearingPartScene = ExtResource("4_fm261")
+flatBearingPartScene = ExtResource("5_cj11t")
+lockBarPartScene = ExtResource("6_632ak")
+metalLockBarPartScene = ExtResource("8_luljr")
+lowProfileBearingPartScene = ExtResource("7_8enl0")
+shaftCollarRetainerPartScene = ExtResource("8_2e4p8")
+highStrengthFlatBearingPartScene = ExtResource("9_u8hvy")
+highStrengthPillowBlockBearingPartScene = ExtResource("10_j04s8")

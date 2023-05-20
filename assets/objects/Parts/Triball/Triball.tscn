@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cly30ca7ebvau"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_hpe0f"]
+[ext_resource type="ArrayMesh" uid="uid://ccrpvjpl0xyam" path="res://assets/models/Triball/Triball.obj" id="2_fj88a"]
+
+[node name="Part" instance=ExtResource("1_hpe0f")]
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("2_fj88a")

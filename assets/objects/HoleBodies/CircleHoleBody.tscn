@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbpc1jiqxl8o"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/HoleBody.tscn" id="1_unxla"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_leyr5"]
+top_radius = 0.087
+bottom_radius = 0.087
+height = 0.01
+
+[node name="HoleBody" instance=ExtResource("1_unxla")]
+
+[node name="BodyMesh" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_leyr5")

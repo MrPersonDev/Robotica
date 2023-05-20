@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://biu84kuu6cgbe"
+path="res://.godot/imported/1x3x1x35_Aluminum_C-Channel__276-4359_.obj-c094b26157c5ba1910f60dca6aa8f5db.mesh"
+
+[deps]
+
+files=["res://.godot/imported/1x3x1x35_Aluminum_C-Channel__276-4359_.obj-c094b26157c5ba1910f60dca6aa8f5db.mesh"]
+
+source_file="res://assets/models/CChannel/1x3x1x35_Aluminum_C-Channel__276-4359_.obj"
+dest_files=["res://.godot/imported/1x3x1x35_Aluminum_C-Channel__276-4359_.obj-c094b26157c5ba1910f60dca6aa8f5db.mesh", "res://.godot/imported/1x3x1x35_Aluminum_C-Channel__276-4359_.obj-c094b26157c5ba1910f60dca6aa8f5db.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

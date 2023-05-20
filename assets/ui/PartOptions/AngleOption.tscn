@@ -1,0 +1,14 @@
+[gd_scene load_steps=7 format=3 uid="uid://djq6apdtjxop8"]
+
+[ext_resource type="PackedScene" uid="uid://jra6u2riunsq" path="res://assets/ui/PartOption.tscn" id="1_slkbq"]
+[ext_resource type="Script" path="res://src/part_option/AngleOption.cs" id="2_2gkqi"]
+[ext_resource type="Material" uid="uid://c8u6ykcdce7t0" path="res://assets/materials/Steel.tres" id="3_o0wg2"]
+[ext_resource type="Material" uid="uid://c8k02dn76v6vv" path="res://assets/materials/Alluminum.tres" id="4_e5nwm"]
+[ext_resource type="PackedScene" uid="uid://bmbcy6vp5vx42" path="res://assets/objects/Parts/Angle/Angle2.tscn" id="5_6ytdf"]
+[ext_resource type="PackedScene" uid="uid://cg2mogx0xl7c4" path="res://assets/objects/Parts/Angle/Angle3.tscn" id="6_43mgx"]
+
+[node name="AngleOption" instance=ExtResource("1_slkbq")]
+script = ExtResource("2_2gkqi")
+steelMaterial = ExtResource("3_o0wg2")
+alluminumMaterial = ExtResource("4_e5nwm")
+partScenes = [ExtResource("5_6ytdf"), ExtResource("6_43mgx")]

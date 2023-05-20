@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ccrpvjpl0xyam"
+path="res://.godot/imported/Triball.obj-c18478a96873c31141efaf333957718f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Triball.obj-c18478a96873c31141efaf333957718f.mesh"]
+
+source_file="res://assets/models/Triball/Triball.obj"
+dest_files=["res://.godot/imported/Triball.obj-c18478a96873c31141efaf333957718f.mesh", "res://.godot/imported/Triball.obj-c18478a96873c31141efaf333957718f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

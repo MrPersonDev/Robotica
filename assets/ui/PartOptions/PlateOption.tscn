@@ -1,0 +1,13 @@
+[gd_scene load_steps=6 format=3 uid="uid://c331lg0ajc4gn"]
+
+[ext_resource type="PackedScene" uid="uid://jra6u2riunsq" path="res://assets/ui/PartOption.tscn" id="1_k4w1b"]
+[ext_resource type="Script" path="res://src/part_option/PlateOption.cs" id="2_kldft"]
+[ext_resource type="Material" uid="uid://c8u6ykcdce7t0" path="res://assets/materials/Steel.tres" id="3_bhdwt"]
+[ext_resource type="Material" uid="uid://c8k02dn76v6vv" path="res://assets/materials/Alluminum.tres" id="3_mk2sw"]
+[ext_resource type="PackedScene" uid="uid://cmolp4pjeck64" path="res://assets/objects/Parts/Plate/Plate.tscn" id="5_hxmq8"]
+
+[node name="PlateOption" instance=ExtResource("1_k4w1b")]
+script = ExtResource("2_kldft")
+alluminumMaterial = ExtResource("3_mk2sw")
+steelMaterial = ExtResource("3_bhdwt")
+defaultPartScene = ExtResource("5_hxmq8")

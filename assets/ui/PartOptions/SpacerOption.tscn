@@ -1,0 +1,29 @@
+[gd_scene load_steps=19 format=3 uid="uid://diarvwko41wmq"]
+
+[ext_resource type="PackedScene" uid="uid://jra6u2riunsq" path="res://assets/ui/PartOption.tscn" id="1_hwfa7"]
+[ext_resource type="Script" path="res://src/part_option/SpacerOption.cs" id="2_w41jv"]
+[ext_resource type="Material" uid="uid://dn4nw8tsc8deb" path="res://assets/materials/PlasticBlack.tres" id="3_tuu0e"]
+[ext_resource type="Material" uid="uid://6ss8fv3nvim5" path="res://assets/materials/NylonWhite.tres" id="4_5h8yu"]
+[ext_resource type="PackedScene" uid="uid://bgr5ofx62sxjc" path="res://assets/objects/Parts/Spacer/Plastic0_181.tscn" id="5_pnoh4"]
+[ext_resource type="PackedScene" uid="uid://0a2trcyb15e6" path="res://assets/objects/Parts/Spacer/Plastic0_315.tscn" id="6_ne3c0"]
+[ext_resource type="PackedScene" uid="uid://bfrephp66qv5x" path="res://assets/objects/Parts/Spacer/WhiteNylon0_125.tscn" id="7_3mvwm"]
+[ext_resource type="PackedScene" uid="uid://ctrpxn3pgy1g" path="res://assets/objects/Parts/Spacer/BlackNylon0_125.tscn" id="7_n63so"]
+[ext_resource type="PackedScene" uid="uid://qeoq0snhlxk6" path="res://assets/objects/Parts/Spacer/BlackNylon0_25.tscn" id="8_0w7y5"]
+[ext_resource type="PackedScene" uid="uid://pgft85foirg" path="res://assets/objects/Parts/Spacer/WhiteNylon0_25.tscn" id="8_lluhw"]
+[ext_resource type="PackedScene" uid="uid://jkihve6dosdc" path="res://assets/objects/Parts/Spacer/BlackNylon0_375.tscn" id="9_lv6kj"]
+[ext_resource type="PackedScene" uid="uid://budimsn4eallg" path="res://assets/objects/Parts/Spacer/WhiteNylon0_375.tscn" id="9_ruufq"]
+[ext_resource type="PackedScene" uid="uid://bdqkbu7bky4g4" path="res://assets/objects/Parts/Spacer/BlackNylon0_5.tscn" id="10_3xhsn"]
+[ext_resource type="PackedScene" uid="uid://d3o3nclg70dhq" path="res://assets/objects/Parts/Spacer/WhiteNylon0_5.tscn" id="10_xbj2v"]
+[ext_resource type="PackedScene" uid="uid://bnqvp7dqqo85n" path="res://assets/objects/Parts/Spacer/HS0_063.tscn" id="11_ek6py"]
+[ext_resource type="PackedScene" uid="uid://du4g4ihy1fm7u" path="res://assets/objects/Parts/Spacer/HS0_125.tscn" id="12_d7xb5"]
+[ext_resource type="PackedScene" uid="uid://biyvs2fd866m8" path="res://assets/objects/Parts/Spacer/HS0_25.tscn" id="13_kgas8"]
+[ext_resource type="PackedScene" uid="uid://b40g2m0n4l4vy" path="res://assets/objects/Parts/Spacer/HS0_5.tscn" id="14_enf7w"]
+
+[node name="SpacerOption" instance=ExtResource("1_hwfa7")]
+script = ExtResource("2_w41jv")
+blackPlasticMaterial = ExtResource("3_tuu0e")
+whiteNylonMaterial = ExtResource("4_5h8yu")
+plasticPartScenes = [ExtResource("5_pnoh4"), ExtResource("6_ne3c0")]
+blackNylonPartScenes = [ExtResource("7_n63so"), ExtResource("8_0w7y5"), ExtResource("9_lv6kj"), ExtResource("10_3xhsn")]
+whiteNylonPartScenes = [ExtResource("7_3mvwm"), ExtResource("8_lluhw"), ExtResource("9_ruufq"), ExtResource("10_xbj2v")]
+hsPartScenes = [ExtResource("11_ek6py"), ExtResource("12_d7xb5"), ExtResource("13_kgas8"), ExtResource("14_enf7w")]

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7bnmmkauu78o"]
+
+[ext_resource type="Script" path="res://src/part/HoleBody.cs" id="1_m4len"]
+[ext_resource type="Material" uid="uid://dxwv7er6nixdg" path="res://assets/materials/Hole.tres" id="2_21rf1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q8r1p"]
+size = Vector3(0.173, 0.173, 0.01)
+
+[sub_resource type="BoxMesh" id="BoxMesh_khy7e"]
+size = Vector3(0.173, 0.173, 0.01)
+
+[node name="HoleBody" type="Node3D"]
+script = ExtResource("1_m4len")
+mat = ExtResource("2_21rf1")
+selectedColor = Color(0, 0.556863, 1, 0.556863)
+meshPath = NodePath("BodyMesh")
+colliderPath = NodePath("CharacterBody3D/BodyCollider")
+characterBodyPath = NodePath("CharacterBody3D")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." groups=["HOLE_COLLIDER"]]
+slide_on_ceiling = false
+floor_stop_on_slope = false
+floor_block_on_wall = false
+
+[node name="BodyCollider" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("BoxShape3D_q8r1p")
+
+[node name="BodyMesh" type="MeshInstance3D" parent="."]
+layers = 4
+mesh = SubResource("BoxMesh_khy7e")
+skeleton = NodePath("../..")

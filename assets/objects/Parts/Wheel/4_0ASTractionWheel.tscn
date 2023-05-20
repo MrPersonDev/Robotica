@@ -1,0 +1,130 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhobli8htvmok"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_ektqb"]
+[ext_resource type="PackedScene" uid="uid://cdggdbp51hwv0" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="2_sba0b"]
+[ext_resource type="PackedScene" uid="uid://ckikj6lchnhtx" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="3_ol6cb"]
+[ext_resource type="ArrayMesh" uid="uid://oj7wrrub55l7" path="res://assets/models/Wheel/4_Anti-Static_Wheel_4 (320mm Travel) Anti-Static Wheel (2-Pack) (276-8103).res" id="4_6ckd0"]
+
+[node name="Part" instance=ExtResource("1_ektqb")]
+
+[node name="TwoSidedSquareHole" parent="Holes" index="0" instance=ExtResource("2_sba0b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.63156, 2.88304, -0.537159)
+length = 0.485
+width = 1.5
+isDefaultHole = true
+isHighStrength = true
+
+[node name="TwoSidedCircleHole" parent="Holes" index="1" instance=ExtResource("3_ol6cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.13138, 2.88346, -0.536939)
+length = 0.485
+
+[node name="TwoSidedCircleHole2" parent="Holes" index="2" instance=ExtResource("3_ol6cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.13138, 3.38346, -0.536939)
+length = 0.485
+
+[node name="TwoSidedCircleHole9" parent="Holes" index="3" instance=ExtResource("3_ol6cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.63138, 3.38346, -0.536939)
+length = 0.485
+
+[node name="TwoSidedCircleHole10" parent="Holes" index="4" instance=ExtResource("3_ol6cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.13138, 3.88346, -0.536939)
+length = 0.485
+
+[node name="TwoSidedCircleHole11" parent="Holes" index="5" instance=ExtResource("3_ol6cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.63138, 3.88346, -0.536939)
+length = 0.485
+
+[node name="TwoSidedCircleHole12" parent="Holes" index="6" instance=ExtResource("3_ol6cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.13138, 3.88346, -0.536939)
+length = 0.485
+
+[node name="TwoSidedCircleHole13" parent="Holes" index="7" instance=ExtResource("3_ol6cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.63138, 3.38346, -0.536939)
+length = 0.485
+
+[node name="TwoSidedCircleHole14" parent="Holes" index="8" instance=ExtResource("3_ol6cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.63138, 2.88346, -0.536939)
+length = 0.485
+
+[node name="TwoSidedCircleHole21" parent="Holes" index="9" instance=ExtResource("3_ol6cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.13138, 2.88346, -0.536939)
+length = 0.485
+
+[node name="TwoSidedCircleHole22" parent="Holes" index="10" instance=ExtResource("3_ol6cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.63138, 3.88346, -0.536939)
+length = 0.485
+
+[node name="TwoSidedCircleHole23" parent="Holes" index="11" instance=ExtResource("3_ol6cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.63138, 4.38346, -0.536939)
+length = 0.485
+
+[node name="TwoSidedCircleHole24" parent="Holes" index="12" instance=ExtResource("3_ol6cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.63138, 3.88346, -0.536939)
+length = 0.485
+
+[node name="TwoSidedCircleHole25" parent="Holes" index="13" instance=ExtResource("3_ol6cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13138, 2.88346, -0.536939)
+length = 0.485
+
+[node name="TwoSidedCircleHole26" parent="Holes" index="14" instance=ExtResource("3_ol6cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.63138, 1.88346, -0.536939)
+length = 0.485
+
+[node name="TwoSidedCircleHole27" parent="Holes" index="15" instance=ExtResource("3_ol6cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.63138, 1.38346, -0.536939)
+length = 0.485
+
+[node name="TwoSidedCircleHole28" parent="Holes" index="16" instance=ExtResource("3_ol6cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.63138, 1.88346, -0.536939)
+length = 0.485
+
+[node name="TwoSidedCircleHole15" parent="Holes" index="17" instance=ExtResource("3_ol6cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.63138, 2.38346, -0.528)
+length = 0.485
+
+[node name="TwoSidedCircleHole16" parent="Holes" index="18" instance=ExtResource("3_ol6cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.13138, 1.88346, -0.528)
+length = 0.485
+
+[node name="TwoSidedCircleHole17" parent="Holes" index="19" instance=ExtResource("3_ol6cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.63138, 1.88346, -0.528)
+length = 0.485
+
+[node name="TwoSidedCircleHole18" parent="Holes" index="20" instance=ExtResource("3_ol6cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.13138, 1.88346, -0.528)
+length = 0.485
+
+[node name="TwoSidedCircleHole19" parent="Holes" index="21" instance=ExtResource("3_ol6cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.63138, 2.38346, -0.528)
+length = 0.485
+
+[node name="TwoSidedCircleHole20" parent="Holes" index="22" instance=ExtResource("3_ol6cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.63138, 2.88346, -0.528)
+length = 0.485
+
+[node name="TwoSidedCircleHole3" parent="Holes" index="23" instance=ExtResource("3_ol6cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.63138, 3.38346, -0.528)
+length = 0.485
+
+[node name="TwoSidedCircleHole4" parent="Holes" index="24" instance=ExtResource("3_ol6cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.13138, 3.38346, -0.528)
+length = 0.485
+
+[node name="TwoSidedCircleHole5" parent="Holes" index="25" instance=ExtResource("3_ol6cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.13138, 2.88346, -0.528)
+length = 0.485
+
+[node name="TwoSidedCircleHole6" parent="Holes" index="26" instance=ExtResource("3_ol6cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.13138, 2.38346, -0.528)
+length = 0.485
+
+[node name="TwoSidedCircleHole7" parent="Holes" index="27" instance=ExtResource("3_ol6cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.63138, 2.38346, -0.528)
+length = 0.485
+
+[node name="TwoSidedCircleHole8" parent="Holes" index="28" instance=ExtResource("3_ol6cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.13138, 2.38346, -0.528)
+length = 0.485
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("4_6ckd0")

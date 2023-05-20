@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbss66n3wnyex"]
+
+[ext_resource type="Script" path="res://src/ui/PartSettings.cs" id="1_ci0kl"]
+[ext_resource type="PackedScene" path="res://assets/ui/NumericParameterInput.tscn" id="2_t2xep"]
+[ext_resource type="PackedScene" path="res://assets/ui/DropdownParameterInput.tscn" id="3_k7dgc"]
+[ext_resource type="PackedScene" path="res://assets/ui/BooleanParameterInput.tscn" id="4_3i8rx"]
+
+[node name="PartSettings" type="PanelContainer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -232.0
+offset_top = -88.0
+offset_right = -32.0
+offset_bottom = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("1_ci0kl")
+numericParameterObject = ExtResource("2_t2xep")
+dropdownParameterObject = ExtResource("3_k7dgc")
+booleanParameterObject = ExtResource("4_3i8rx")
+vBoxPath = NodePath("MarginContainer/VBoxContainer")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1

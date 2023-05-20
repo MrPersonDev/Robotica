@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgr5ofx62sxjc"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_7dqbp"]
+[ext_resource type="PackedScene" uid="uid://ckikj6lchnhtx" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="2_6pp51"]
+[ext_resource type="ArrayMesh" uid="uid://cp5kd2jpatlwb" path="res://assets/models/Spacer/4_6mm_Plastic_Spacer__276-2018_.obj" id="3_23vbd"]
+
+[node name="Part" instance=ExtResource("1_7dqbp")]
+
+[node name="TwoSidedCircleHole" parent="Holes" index="0" instance=ExtResource("2_6pp51")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.253985, 0.250552, -0.0936264)
+length = 0.178
+isDefaultHole = true
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_23vbd")

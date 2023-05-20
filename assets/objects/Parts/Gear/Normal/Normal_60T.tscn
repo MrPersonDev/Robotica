@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmvsckvgsfhmc"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_alauw"]
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="2_ckjtu"]
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="3_450b6"]
+[ext_resource type="ArrayMesh" uid="uid://clf3p6pb1s7sb" path="res://assets/models/Gear/60T_Gear__276-2169-003_.obj" id="3_lu5dp"]
+
+[node name="Part" instance=ExtResource("1_alauw")]
+
+[node name="TwoSidedHole" parent="Holes" index="0" instance=ExtResource("2_ckjtu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.791, 1.795, -0.252)
+length = 0.365
+width = 0.75
+isDefaultHole = true
+
+[node name="TwoSidedHole2" parent="Holes" index="1" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.28983, 1.79376, -0.252)
+length = 0.07
+
+[node name="TwoSidedHole3" parent="Holes" index="2" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.29087, 1.79376, -0.252)
+length = 0.07
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_lu5dp")

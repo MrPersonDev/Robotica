@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://y4glvkj6s28b"
+path="res://.godot/imported/90-Degree_Gusset_Set_-_Plate__276-2577_.obj-b445b26274b2a9241400aa4dcde406ee.mesh"
+
+[deps]
+
+files=["res://.godot/imported/90-Degree_Gusset_Set_-_Plate__276-2577_.obj-b445b26274b2a9241400aa4dcde406ee.mesh"]
+
+source_file="res://assets/models/Gussets/90-Degree_Gusset_Set_-_Plate__276-2577_.obj"
+dest_files=["res://.godot/imported/90-Degree_Gusset_Set_-_Plate__276-2577_.obj-b445b26274b2a9241400aa4dcde406ee.mesh", "res://.godot/imported/90-Degree_Gusset_Set_-_Plate__276-2577_.obj-b445b26274b2a9241400aa4dcde406ee.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

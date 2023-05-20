@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dyu0rkqir5xfr"
+path="res://.godot/imported/_8-32_Keps_Nut__275-1026_.obj-a54b946dbabf334415b6095d68c2d89f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/_8-32_Keps_Nut__275-1026_.obj-a54b946dbabf334415b6095d68c2d89f.mesh"]
+
+source_file="res://assets/models/Nut/_8-32_Keps_Nut__275-1026_.obj"
+dest_files=["res://.godot/imported/_8-32_Keps_Nut__275-1026_.obj-a54b946dbabf334415b6095d68c2d89f.mesh", "res://.godot/imported/_8-32_Keps_Nut__275-1026_.obj-a54b946dbabf334415b6095d68c2d89f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

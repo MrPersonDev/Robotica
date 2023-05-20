@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cdp1sft4onwlk"
+path="res://.godot/imported/72T_High_Strength_Gear_v2__6-Pack___276-7574_.obj-921c171b776621a7bf7c4ab38bdf084f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/72T_High_Strength_Gear_v2__6-Pack___276-7574_.obj-921c171b776621a7bf7c4ab38bdf084f.mesh"]
+
+source_file="res://assets/models/Gear/72T_High_Strength_Gear_v2__6-Pack___276-7574_.obj"
+dest_files=["res://.godot/imported/72T_High_Strength_Gear_v2__6-Pack___276-7574_.obj-921c171b776621a7bf7c4ab38bdf084f.mesh", "res://.godot/imported/72T_High_Strength_Gear_v2__6-Pack___276-7574_.obj-921c171b776621a7bf7c4ab38bdf084f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

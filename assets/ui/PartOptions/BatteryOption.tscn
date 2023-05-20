@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6rtunem1qioe"]
+
+[ext_resource type="PackedScene" uid="uid://jra6u2riunsq" path="res://assets/ui/PartOption.tscn" id="1_ol8rc"]
+[ext_resource type="Script" path="res://src/part_option/BatteryOption.cs" id="2_ohxrs"]
+[ext_resource type="PackedScene" uid="uid://b7j4m1csdqe0d" path="res://assets/objects/Parts/Control System/Battery.tscn" id="3_th5oy"]
+
+[node name="BatteryOption" instance=ExtResource("1_ol8rc")]
+script = ExtResource("2_ohxrs")
+defaultPartScene = ExtResource("3_th5oy")

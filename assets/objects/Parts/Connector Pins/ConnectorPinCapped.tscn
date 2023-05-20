@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8vfeqvpig8vk"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_p6vni"]
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/OneSidedSquareHole.tscn" id="2_k45l1"]
+[ext_resource type="PackedScene" path="res://assets/objects/Insert.tscn" id="3_prlkh"]
+[ext_resource type="ArrayMesh" uid="uid://c43bt80wjetki" path="res://assets/models/Connector Pins/0x2_Capped_Connector_Pin__228-2500-086_.obj" id="4_jqh3y"]
+
+[node name="Part" instance=ExtResource("1_p6vni")]
+
+[node name="OneSidedSquareHole" parent="Holes" index="0" instance=ExtResource("2_k45l1")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0.124198, 0.128365, -0.0281661)
+visible = false
+visible = false
+isDefaultHole = true
+isFastener = true
+
+[node name="Insert" parent="Inserts" index="0" instance=ExtResource("3_prlkh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.126913, 0.127075, -0.258893)
+length = 0.459
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("4_jqh3y")

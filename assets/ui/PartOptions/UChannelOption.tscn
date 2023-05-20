@@ -1,0 +1,13 @@
+[gd_scene load_steps=6 format=3 uid="uid://dn0yhxi8880rk"]
+
+[ext_resource type="PackedScene" uid="uid://jra6u2riunsq" path="res://assets/ui/PartOption.tscn" id="1_y6m4d"]
+[ext_resource type="Script" path="res://src/part_option/UChannelOption.cs" id="2_ud0ju"]
+[ext_resource type="Material" uid="uid://c8u6ykcdce7t0" path="res://assets/materials/Steel.tres" id="3_1ijwm"]
+[ext_resource type="Material" uid="uid://c8k02dn76v6vv" path="res://assets/materials/Alluminum.tres" id="4_4ba81"]
+[ext_resource type="PackedScene" uid="uid://b3mamt34180m" path="res://assets/objects/Parts/UChannel/UChannel.tscn" id="5_40pfc"]
+
+[node name="UChannelOption" instance=ExtResource("1_y6m4d")]
+script = ExtResource("2_ud0ju")
+steelMaterial = ExtResource("3_1ijwm")
+alluminumMaterial = ExtResource("4_4ba81")
+defaultPartScene = ExtResource("5_40pfc")

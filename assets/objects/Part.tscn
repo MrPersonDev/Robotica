@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cl5en1o2r4bqq"]
+
+[ext_resource type="Script" path="res://src/part/Part.cs" id="1_kk4cw"]
+[ext_resource type="PackedScene" path="res://assets/objects/MeshCutter.tscn" id="2_5elcn"]
+
+[node name="Part" type="Node3D"]
+script = ExtResource("1_kk4cw")
+partMeshPath = NodePath("MeshCutter")
+additionalMeshesPath = NodePath("AdditionalMeshes")
+centerPath = NodePath("Center")
+holesPath = NodePath("Holes")
+insertsPath = NodePath("Inserts")
+
+[node name="Center" type="Node3D" parent="."]
+
+[node name="Holes" type="Node3D" parent="."]
+top_level = true
+
+[node name="Inserts" type="Node3D" parent="."]
+top_level = true
+
+[node name="MeshCutter" parent="." groups=["PART_COLLIDER"] instance=ExtResource("2_5elcn")]
+
+[node name="AdditionalMeshes" type="CSGCombiner3D" parent="." groups=["PART_COLLIDER"]]
+use_collision = true

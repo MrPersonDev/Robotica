@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://ber4h0nehm38h"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_71jjt"]
+[ext_resource type="PackedScene" uid="uid://ckikj6lchnhtx" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="2_5gsqr"]
+[ext_resource type="ArrayMesh" uid="uid://bfxtiysevgic4" path="res://assets/models/Sensor/Line_Tracker__276-2154__Line Tracker (276-2154).res" id="3_x5psl"]
+
+[node name="Part" instance=ExtResource("1_71jjt")]
+
+[node name="TwoSidedCircleHole" parent="Holes" index="0" instance=ExtResource("2_5gsqr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.262747, 1.99484, -0.110368)
+length = 0.185
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_x5psl")

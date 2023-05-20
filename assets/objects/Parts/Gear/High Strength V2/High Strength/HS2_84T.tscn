@@ -1,0 +1,130 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2e3gaionx8kv"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_nm461"]
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="2_ifxnp"]
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="3_450b6"]
+[ext_resource type="ArrayMesh" uid="uid://rnr2b0l37jqb" path="res://assets/models/Gear/84T_High_Strength_Gear_v2__4-pack___276-7749__1_.obj" id="3_gh4af"]
+
+[node name="Part" instance=ExtResource("1_nm461")]
+
+[node name="TwoSidedHole" parent="Holes" index="0" instance=ExtResource("2_ifxnp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.791, 1.795, -0.252)
+length = 0.49
+width = 1.45
+isDefaultHole = true
+isHighStrength = true
+
+[node name="TwoSidedHole2" parent="Holes" index="1" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.28995, 1.795, -0.252)
+length = 0.49
+
+[node name="TwoSidedHole6" parent="Holes" index="2" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.28995, 2.295, -0.252)
+length = 0.49
+
+[node name="TwoSidedHole7" parent="Holes" index="3" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.28995, 2.295, -0.252)
+length = 0.49
+
+[node name="TwoSidedHole8" parent="Holes" index="4" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.28995, 1.295, -0.252)
+length = 0.49
+
+[node name="TwoSidedHole9" parent="Holes" index="5" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.28995, 1.295, -0.252)
+length = 0.49
+
+[node name="TwoSidedHole5" parent="Holes" index="6" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.29027, 1.795, -0.252)
+length = 0.49
+
+[node name="TwoSidedHole3" parent="Holes" index="7" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.78986, 2.29361, -0.252)
+length = 0.49
+
+[node name="TwoSidedHole10" parent="Holes" index="8" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.78986, 2.79361, -0.252)
+length = 0.49
+
+[node name="TwoSidedHole11" parent="Holes" index="9" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78986, 1.79361, -0.252)
+length = 0.49
+
+[node name="TwoSidedHole12" parent="Holes" index="10" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.78986, 0.793605, -0.252)
+length = 0.49
+
+[node name="TwoSidedHole13" parent="Holes" index="11" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.789855, 1.79361, -0.252)
+length = 0.49
+
+[node name="TwoSidedHole22" parent="Holes" index="12" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.289855, 1.79361, -0.252)
+length = 0.49
+
+[node name="TwoSidedHole23" parent="Holes" index="13" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.789855, 2.79361, -0.252)
+length = 0.49
+
+[node name="TwoSidedHole24" parent="Holes" index="14" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.78986, 3.29361, -0.252)
+length = 0.49
+
+[node name="TwoSidedHole25" parent="Holes" index="15" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78986, 2.79361, -0.252)
+length = 0.49
+
+[node name="TwoSidedHole26" parent="Holes" index="16" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.28986, 1.79361, -0.252)
+length = 0.49
+
+[node name="TwoSidedHole27" parent="Holes" index="17" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78986, 0.793605, -0.252)
+length = 0.49
+
+[node name="TwoSidedHole28" parent="Holes" index="18" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.78986, 0.293605, -0.252)
+length = 0.49
+
+[node name="TwoSidedHole29" parent="Holes" index="19" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.789855, 0.793605, -0.252)
+length = 0.49
+
+[node name="TwoSidedHole14" parent="Holes" index="20" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.789855, 2.29361, -0.252)
+length = 0.49
+
+[node name="TwoSidedHole15" parent="Holes" index="21" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.28986, 2.79361, -0.252)
+length = 0.49
+
+[node name="TwoSidedHole16" parent="Holes" index="22" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.28986, 2.79361, -0.252)
+length = 0.49
+
+[node name="TwoSidedHole17" parent="Holes" index="23" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78986, 2.29361, -0.252)
+length = 0.49
+
+[node name="TwoSidedHole18" parent="Holes" index="24" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78986, 1.29361, -0.252)
+length = 0.49
+
+[node name="TwoSidedHole19" parent="Holes" index="25" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.28986, 0.793605, -0.252)
+length = 0.49
+
+[node name="TwoSidedHole20" parent="Holes" index="26" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.28986, 0.793605, -0.252)
+length = 0.49
+
+[node name="TwoSidedHole21" parent="Holes" index="27" instance=ExtResource("3_450b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.789855, 1.29361, -0.252)
+length = 0.49
+
+[node name="TwoSidedHole4" parent="Holes" index="28" instance=ExtResource("2_ifxnp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.78986, 1.29358, -0.252)
+length = 0.49
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_gh4af")

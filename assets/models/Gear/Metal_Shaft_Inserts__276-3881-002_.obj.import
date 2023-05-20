@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dtdfs4rdvxvmn"
+path="res://.godot/imported/Metal_Shaft_Inserts__276-3881-002_.obj-59a752ae94cb3c54cb35e5091eb30449.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Metal_Shaft_Inserts__276-3881-002_.obj-59a752ae94cb3c54cb35e5091eb30449.mesh"]
+
+source_file="res://assets/models/Gear/Metal_Shaft_Inserts__276-3881-002_.obj"
+dest_files=["res://.godot/imported/Metal_Shaft_Inserts__276-3881-002_.obj-59a752ae94cb3c54cb35e5091eb30449.mesh", "res://.godot/imported/Metal_Shaft_Inserts__276-3881-002_.obj-59a752ae94cb3c54cb35e5091eb30449.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

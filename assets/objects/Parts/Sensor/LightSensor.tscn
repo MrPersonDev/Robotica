@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxcco7ebnltkp"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_vvml1"]
+[ext_resource type="PackedScene" uid="uid://ckikj6lchnhtx" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="2_eex1r"]
+[ext_resource type="ArrayMesh" uid="uid://dfev72k13wge5" path="res://assets/models/Sensor/Light_Sensor__276-2158__Light Sensor (276-2158).res" id="3_fk13d"]
+
+[node name="Part" instance=ExtResource("1_vvml1")]
+
+[node name="TwoSidedCircleHole" parent="Holes" index="0" instance=ExtResource("2_eex1r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.516651, 1.56039, -0.0848418)
+length = 0.146
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_fk13d")

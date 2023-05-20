@@ -1,0 +1,24 @@
+[gd_scene load_steps=17 format=3 uid="uid://dtfss217fk1ad"]
+
+[ext_resource type="PackedScene" uid="uid://jra6u2riunsq" path="res://assets/ui/PartOption.tscn" id="1_w7a8r"]
+[ext_resource type="Script" path="res://src/part_option/StandoffOption.cs" id="2_br3up"]
+[ext_resource type="Material" uid="uid://c8k02dn76v6vv" path="res://assets/materials/Alluminum.tres" id="3_a1u74"]
+[ext_resource type="PackedScene" uid="uid://btb2677bvja5o" path="res://assets/objects/Parts/Standoff/Standoff0_25.tscn" id="4_pluon"]
+[ext_resource type="PackedScene" uid="uid://bkk8f6vumiv0r" path="res://assets/objects/Parts/Standoff/Standoff0_5.tscn" id="5_vuq4w"]
+[ext_resource type="PackedScene" uid="uid://cnimoihw78w2r" path="res://assets/objects/Parts/Standoff/Standoff0_75.tscn" id="6_bjcbc"]
+[ext_resource type="PackedScene" uid="uid://c4y6t8ou30y68" path="res://assets/objects/Parts/Standoff/Standoff1_0.tscn" id="7_rl3wx"]
+[ext_resource type="PackedScene" uid="uid://bkh37wtqus8ij" path="res://assets/objects/Parts/Standoff/Standoff1_5.tscn" id="8_m4spv"]
+[ext_resource type="PackedScene" uid="uid://c40krej2hmryn" path="res://assets/objects/Parts/Standoff/Standoff2_0.tscn" id="9_0sbm7"]
+[ext_resource type="PackedScene" uid="uid://vpx0n0sj0u3q" path="res://assets/objects/Parts/Standoff/Standoff2_5.tscn" id="10_rxhh8"]
+[ext_resource type="PackedScene" uid="uid://dfeql6gdoj6l1" path="res://assets/objects/Parts/Standoff/Standoff3_0.tscn" id="11_m0xmq"]
+[ext_resource type="PackedScene" uid="uid://dqcb3t1j03doa" path="res://assets/objects/Parts/Standoff/Standoff4_0.tscn" id="12_yvd26"]
+[ext_resource type="PackedScene" uid="uid://0r2xgubjg8qn" path="res://assets/objects/Parts/Standoff/Standoff5_0.tscn" id="13_avwkh"]
+[ext_resource type="PackedScene" uid="uid://pvlaidg74u71" path="res://assets/objects/Parts/Standoff/Standoff6_0.tscn" id="14_p4ijo"]
+[ext_resource type="PackedScene" uid="uid://c0u8dvjwtg7gx" path="res://assets/objects/Parts/Standoff/Coupler0_5.tscn" id="15_pqxd7"]
+[ext_resource type="PackedScene" uid="uid://dkyud5v7t4nvi" path="res://assets/objects/Parts/Standoff/Coupler1_0.tscn" id="16_xntci"]
+
+[node name="StandoffOption" instance=ExtResource("1_w7a8r")]
+script = ExtResource("2_br3up")
+metalMaterial = ExtResource("3_a1u74")
+standoffPartScenes = [ExtResource("4_pluon"), ExtResource("5_vuq4w"), ExtResource("6_bjcbc"), ExtResource("7_rl3wx"), ExtResource("8_m4spv"), ExtResource("9_0sbm7"), ExtResource("10_rxhh8"), ExtResource("11_m0xmq"), ExtResource("12_yvd26"), ExtResource("13_avwkh"), ExtResource("14_p4ijo")]
+couplerPartScenes = [ExtResource("15_pqxd7"), ExtResource("16_xntci")]

@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://duuppeyfhxshm"]
+
+[ext_resource type="Script" path="res://src/transform/Transform.cs" id="1_rb6nr"]
+[ext_resource type="PackedScene" uid="uid://c27cjiykjrjd8" path="res://assets/objects/ArrowHandle.tscn" id="2_ed3fk"]
+[ext_resource type="PackedScene" uid="uid://mex3bieje7yi" path="res://assets/objects/FlatHandle.tscn" id="3_lu521"]
+[ext_resource type="PackedScene" uid="uid://cqaiq8u36rfay" path="res://assets/objects/RotationHandle.tscn" id="4_vt70p"]
+
+[node name="Transform" type="Node3D"]
+script = ExtResource("1_rb6nr")
+
+[node name="XHandle" parent="." instance=ExtResource("2_ed3fk")]
+color = Color(1, 0, 0, 1)
+meshRotation = Vector3(0, 0, -90)
+normal = Vector3(1, 0, 0)
+
+[node name="YHandle" parent="." instance=ExtResource("2_ed3fk")]
+color = Color(0, 1, 0, 1)
+normal = Vector3(0, 1, 0)
+
+[node name="ZHandle" parent="." instance=ExtResource("2_ed3fk")]
+color = Color(0, 0, 1, 1)
+meshRotation = Vector3(90, 0, 0)
+normal = Vector3(0, 0, 1)
+
+[node name="YFlat" parent="." instance=ExtResource("3_lu521")]
+color = Color(0, 1, 0, 1)
+normal = Vector3(1, 0, 1)
+
+[node name="XFlat" parent="." instance=ExtResource("3_lu521")]
+color = Color(1, 0, 0, 1)
+meshRotation = Vector3(0, 0, 90)
+normal = Vector3(0, 1, 1)
+
+[node name="ZFlat" parent="." instance=ExtResource("3_lu521")]
+color = Color(0, 0, 1, 1)
+meshRotation = Vector3(-90, 0, 0)
+normal = Vector3(1, 1, 0)
+
+[node name="XRotate" parent="." instance=ExtResource("4_vt70p")]
+color = Color(1, 0, 0, 1)
+meshRotation = Vector3(0, 0, -90)
+normal = Vector3(1, 0, 0)
+
+[node name="YRotate" parent="." instance=ExtResource("4_vt70p")]
+color = Color(0, 1, 0, 1)
+normal = Vector3(0, 1, 0)
+
+[node name="ZRotate" parent="." instance=ExtResource("4_vt70p")]
+color = Color(0, 0, 1, 1)
+meshRotation = Vector3(90, 0, 0)
+normal = Vector3(0, 0, 1)

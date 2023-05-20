@@ -1,0 +1,17 @@
+[gd_scene load_steps=8 format=3 uid="uid://bptgy1n1f1ff0"]
+
+[ext_resource type="PackedScene" uid="uid://jra6u2riunsq" path="res://assets/ui/PartOption.tscn" id="1_u66tn"]
+[ext_resource type="Script" path="res://src/part_option/NutOption.cs" id="2_qqpg3"]
+[ext_resource type="Material" uid="uid://bd05als2prc8f" path="res://assets/materials/ShinySteel.tres" id="3_1ogau"]
+[ext_resource type="PackedScene" uid="uid://cduubu26kmeks" path="res://assets/objects/Parts/Nut/HexNut.tscn" id="4_jook2"]
+[ext_resource type="PackedScene" uid="uid://dwcxknjjl03xf" path="res://assets/objects/Parts/Nut/NylockNut.tscn" id="4_lukvk"]
+[ext_resource type="PackedScene" uid="uid://c5v77a08tjmew" path="res://assets/objects/Parts/Nut/KepsNut.tscn" id="5_jbdm7"]
+[ext_resource type="PackedScene" uid="uid://b85f36ehddta" path="res://assets/objects/Parts/Nut/LowProfileNut.tscn" id="7_8o3ny"]
+
+[node name="NutOption" instance=ExtResource("1_u66tn")]
+script = ExtResource("2_qqpg3")
+metalMaterial = ExtResource("3_1ogau")
+hexPartScene = ExtResource("4_jook2")
+nylockPartScene = ExtResource("4_lukvk")
+kepsPartScene = ExtResource("5_jbdm7")
+lowProfilePartScene = ExtResource("7_8o3ny")

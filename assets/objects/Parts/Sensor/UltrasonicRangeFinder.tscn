@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwlib17nhy5ia"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_wqthh"]
+[ext_resource type="PackedScene" uid="uid://ckikj6lchnhtx" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="2_2x3l3"]
+[ext_resource type="ArrayMesh" uid="uid://dkc3v5jbui2pc" path="res://assets/models/Sensor/Ultrasonic_Range_Finder__276-2155__Ultrasonic Range Finder (276-2155).res" id="3_3rwxd"]
+
+[node name="Part" instance=ExtResource("1_wqthh")]
+
+[node name="TwoSidedCircleHole" parent="Holes" index="0" instance=ExtResource("2_2x3l3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.291303, 0.613516, -0.0930785)
+length = 0.147
+width = 1.1
+
+[node name="TwoSidedCircleHole2" parent="Holes" index="1" instance=ExtResource("2_2x3l3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.92861, 0.613516, -0.0930785)
+length = 0.147
+width = 1.1
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_3rwxd")

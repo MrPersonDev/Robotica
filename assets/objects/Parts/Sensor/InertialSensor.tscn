@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://msfwsj7eq1ia"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_plyie"]
+[ext_resource type="PackedScene" uid="uid://ckikj6lchnhtx" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="2_g5r7m"]
+[ext_resource type="ArrayMesh" uid="uid://di4uhfw4o23dn" path="res://assets/models/Sensor/V5_Inertial_Sensor__276-4855__V5 Inertial Sensor (276-4855).res" id="3_xbr1h"]
+
+[node name="Part" instance=ExtResource("1_plyie")]
+
+[node name="TwoSidedCircleHole" parent="Holes" index="0" instance=ExtResource("2_g5r7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.44703, 1.13704, -0.284051)
+length = 0.428
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_xbr1h")

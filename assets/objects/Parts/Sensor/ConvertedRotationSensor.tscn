@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://c6t4fnm0sp06f"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_noiex"]
+[ext_resource type="PackedScene" uid="uid://ckikj6lchnhtx" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="2_ltkkt"]
+[ext_resource type="PackedScene" uid="uid://cdggdbp51hwv0" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="3_op3hm"]
+[ext_resource type="ArrayMesh" uid="uid://cvki04ry1lrcf" path="res://assets/models/Sensor/V5_Rotation_Sensor__276-6050__V5 Rotation Sensor (276-6050).res" id="4_5ygw3"]
+[ext_resource type="ArrayMesh" uid="uid://dtdfs4rdvxvmn" path="res://assets/models/Gear/Metal_Shaft_Inserts__276-3881-002_.obj" id="5_pwado"]
+
+[node name="Part" instance=ExtResource("1_noiex")]
+
+[node name="TwoSidedCircleHole" parent="Holes" index="0" instance=ExtResource("2_ltkkt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4474, 0.449793, -0.419936)
+length = 0.806
+width = 1.1
+
+[node name="TwoSidedSquareHole" parent="Holes" index="1" instance=ExtResource("3_op3hm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.445394, 0.45, -0.415426)
+length = 0.785
+width = 0.75
+isHighStrength = true
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("4_5ygw3")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="AdditionalMeshes" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.346, -1.346, -0.014)
+mesh = ExtResource("5_pwado")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="AdditionalMeshes" index="1"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.24066, -1.34623, -0.817193)
+mesh = ExtResource("5_pwado")

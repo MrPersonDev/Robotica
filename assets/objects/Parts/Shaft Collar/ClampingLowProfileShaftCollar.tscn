@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5nrhkunrvjdh"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_fgkc0"]
+[ext_resource type="PackedScene" uid="uid://cdggdbp51hwv0" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="2_kocm2"]
+[ext_resource type="ArrayMesh" uid="uid://nid22ganop3h" path="res://assets/models/Shaft Collar/Clamping_Low_Profile.obj" id="3_sllt7"]
+
+[node name="Part" instance=ExtResource("1_fgkc0")]
+
+[node name="TwoSidedHole" parent="Holes" index="0" instance=ExtResource("2_kocm2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.400807, 0.407949, -0.126416)
+length = 0.24
+width = 1.449
+isDefaultHole = true
+isFastener = true
+isHighStrength = true
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_sllt7")

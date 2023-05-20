@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d7e01185wlpc"
+path="res://.godot/imported/Drive_Shaft_12__276-1149__1_.obj-547867d64b15e4f1d5a1e7d4da7430da.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Drive_Shaft_12__276-1149__1_.obj-547867d64b15e4f1d5a1e7d4da7430da.mesh"]
+
+source_file="res://assets/models/Shaft/Drive_Shaft_12__276-1149__1_.obj"
+dest_files=["res://.godot/imported/Drive_Shaft_12__276-1149__1_.obj-547867d64b15e4f1d5a1e7d4da7430da.mesh", "res://.godot/imported/Drive_Shaft_12__276-1149__1_.obj-547867d64b15e4f1d5a1e7d4da7430da.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

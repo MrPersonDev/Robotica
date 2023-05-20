@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://b0kk0s2wsi7l7"]
+
+[ext_resource type="Script" path="res://src/Grid.cs" id="1_ofe4k"]
+[ext_resource type="Material" uid="uid://b7ykyocvs3vbo" path="res://assets/materials/Grid.tres" id="2_hb6tg"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_s5m5e"]
+size = Vector2(300, 300)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t0jli"]
+shading_mode = 0
+albedo_color = Color(1, 0, 0.235294, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_n3vw6"]
+top_radius = 0.01
+bottom_radius = 0.01
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_648l1"]
+shading_mode = 0
+albedo_color = Color(0, 0.443137, 1, 1)
+proximity_fade_distance = 10.0
+distance_fade_min_distance = 30.02
+distance_fade_max_distance = 30.0
+
+[node name="Grid" type="Node3D"]
+script = ExtResource("1_ofe4k")
+gridLinesPath = NodePath("GridLines")
+xAxisPath = NodePath("XAxis")
+zAxisPath = NodePath("ZAxis")
+
+[node name="GridLines" type="MeshInstance3D" parent="."]
+material_override = ExtResource("2_hb6tg")
+mesh = SubResource("PlaneMesh_s5m5e")
+
+[node name="XAxis" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_t0jli")
+mesh = SubResource("CylinderMesh_n3vw6")
+
+[node name="ZAxis" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_648l1")
+mesh = SubResource("CylinderMesh_n3vw6")

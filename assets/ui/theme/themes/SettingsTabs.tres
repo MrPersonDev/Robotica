@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://leq8ktbobmjv"]
+
+[ext_resource type="StyleBox" uid="uid://cqydwjajfmklo" path="res://assets/ui/theme/panels/SettingsTabFocus.tres" id="1_y824l"]
+
+[resource]
+Button/styles/pressed = ExtResource("1_y824l")

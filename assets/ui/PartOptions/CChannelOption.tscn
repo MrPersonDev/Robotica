@@ -1,0 +1,15 @@
+[gd_scene load_steps=8 format=3 uid="uid://lsxjn1ytuhc1"]
+
+[ext_resource type="PackedScene" uid="uid://jra6u2riunsq" path="res://assets/ui/PartOption.tscn" id="1_whl70"]
+[ext_resource type="Script" path="res://src/part_option/CChannelOption.cs" id="2_kky8w"]
+[ext_resource type="Material" uid="uid://c8u6ykcdce7t0" path="res://assets/materials/Steel.tres" id="3_uslbu"]
+[ext_resource type="Material" uid="uid://c8k02dn76v6vv" path="res://assets/materials/Alluminum.tres" id="4_f5vvs"]
+[ext_resource type="PackedScene" uid="uid://dstx80q3txa0k" path="res://assets/objects/Parts/CChannel/CChannel2.tscn" id="5_l11nv"]
+[ext_resource type="PackedScene" uid="uid://b56n5o7ufqdhg" path="res://assets/objects/Parts/CChannel/CChannel3.tscn" id="6_dkb8m"]
+[ext_resource type="PackedScene" uid="uid://b8ss1hj13sl3u" path="res://assets/objects/Parts/CChannel/CChannel5.tscn" id="7_cwhjp"]
+
+[node name="CChannelOption" instance=ExtResource("1_whl70")]
+script = ExtResource("2_kky8w")
+steelMaterial = ExtResource("3_uslbu")
+alluminumMaterial = ExtResource("4_f5vvs")
+partScenes = [ExtResource("5_l11nv"), ExtResource("6_dkb8m"), ExtResource("7_cwhjp")]

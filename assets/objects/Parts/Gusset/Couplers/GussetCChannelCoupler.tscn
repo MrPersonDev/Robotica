@@ -1,0 +1,65 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvbnopiy7pels"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_lyjky"]
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="2_mt1sh"]
+[ext_resource type="ArrayMesh" uid="uid://onekgq0vs4ij" path="res://assets/models/Gussets/C-Channel_Coupler_Gusset__276-2575_.obj" id="3_o1m11"]
+
+[node name="Part" instance=ExtResource("1_lyjky")]
+
+[node name="TwoSidedSquareHole35" parent="Holes" index="0" instance=ExtResource("2_mt1sh")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.258767, 0.0337652, -0.252391)
+length = 0.051
+width = 1.059
+
+[node name="TwoSidedSquareHole37" parent="Holes" index="1" instance=ExtResource("2_mt1sh")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.258767, 0.0337652, -0.752391)
+length = 0.051
+width = 1.059
+
+[node name="TwoSidedSquareHole33" parent="Holes" index="2" instance=ExtResource("2_mt1sh")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.0395978, 0.438606, -1.00305)
+length = 0.051
+width = 1.059
+
+[node name="TwoSidedSquareHole34" parent="Holes" index="3" instance=ExtResource("2_mt1sh")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.0395978, 0.438606, -0.503049)
+length = 0.051
+width = 1.059
+
+[node name="TwoSidedSquareHole36" parent="Holes" index="4" instance=ExtResource("2_mt1sh")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.0395978, 0.438606, -1.50305)
+length = 0.051
+width = 1.059
+
+[node name="TwoSidedSquareHole44" parent="Holes" index="5" instance=ExtResource("2_mt1sh")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.258767, 0.0337652, -1.25239)
+length = 0.051
+width = 1.059
+
+[node name="TwoSidedSquareHole46" parent="Holes" index="6" instance=ExtResource("2_mt1sh")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.258767, 0.0337652, -1.75239)
+length = 0.051
+width = 1.059
+
+[node name="TwoSidedSquareHole38" parent="Holes" index="7" instance=ExtResource("2_mt1sh")]
+transform = Transform3D(-1, -3.82137e-15, -8.74228e-08, -8.74228e-08, 4.37114e-08, 1, 0, 1, -4.37114e-08, 0.258767, 0.842133, -0.252391)
+length = 0.051
+width = 1.059
+
+[node name="TwoSidedSquareHole39" parent="Holes" index="8" instance=ExtResource("2_mt1sh")]
+transform = Transform3D(-1, -3.82137e-15, -8.74228e-08, -8.74228e-08, 4.37114e-08, 1, 0, 1, -4.37114e-08, 0.258767, 0.842133, -0.752391)
+length = 0.051
+width = 1.059
+
+[node name="TwoSidedSquareHole45" parent="Holes" index="9" instance=ExtResource("2_mt1sh")]
+transform = Transform3D(-1, -3.82137e-15, -8.74228e-08, -8.74228e-08, 4.37114e-08, 1, 0, 1, -4.37114e-08, 0.258767, 0.842133, -1.25239)
+length = 0.051
+width = 1.059
+
+[node name="TwoSidedSquareHole47" parent="Holes" index="10" instance=ExtResource("2_mt1sh")]
+transform = Transform3D(-1, -3.82137e-15, -8.74228e-08, -8.74228e-08, 4.37114e-08, 1, 0, 1, -4.37114e-08, 0.258767, 0.842133, -1.75239)
+length = 0.051
+width = 1.059
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_o1m11")

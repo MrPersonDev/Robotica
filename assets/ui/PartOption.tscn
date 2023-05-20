@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://jra6u2riunsq"]
+
+[ext_resource type="Script" path="res://src/part_option/PartOption.cs" id="1_a1vh8"]
+
+[node name="PartOption" type="Button" groups=["INPUT"]]
+script = ExtResource("1_a1vh8")

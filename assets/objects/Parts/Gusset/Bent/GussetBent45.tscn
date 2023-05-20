@@ -1,0 +1,90 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds4eejxx7pcro"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_wua4o"]
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="2_tnqul"]
+[ext_resource type="ArrayMesh" uid="uid://dvo3qbv6pjh1p" path="res://assets/models/Gussets/45_Degree_Bent_Gusset__276-7759-002_.obj" id="3_mdyhl"]
+
+[node name="Part" instance=ExtResource("1_wua4o")]
+
+[node name="TwoSidedSquareHole" parent="Holes" index="0" instance=ExtResource("2_tnqul")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.255085, 0.25251, -0.0339586)
+length = 0.052
+width = 1.055
+
+[node name="TwoSidedSquareHole2" parent="Holes" index="1" instance=ExtResource("2_tnqul")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.505085, 0.50251, -0.0339586)
+length = 0.052
+width = 1.055
+
+[node name="TwoSidedSquareHole3" parent="Holes" index="2" instance=ExtResource("2_tnqul")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.255085, 0.75251, -0.0339586)
+length = 0.052
+width = 1.055
+
+[node name="TwoSidedSquareHole4" parent="Holes" index="3" instance=ExtResource("2_tnqul")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.755085, 0.75251, -0.0339586)
+length = 0.052
+width = 1.055
+
+[node name="TwoSidedSquareHole5" parent="Holes" index="4" instance=ExtResource("2_tnqul")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.755085, 0.25251, -0.0339586)
+length = 0.052
+width = 1.055
+
+[node name="TwoSidedSquareHole6" parent="Holes" index="5" instance=ExtResource("2_tnqul")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.00508, 0.50251, -0.0339586)
+length = 0.052
+width = 1.055
+
+[node name="TwoSidedSquareHole7" parent="Holes" index="6" instance=ExtResource("2_tnqul")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25508, 0.75251, -0.0339586)
+length = 0.052
+width = 1.055
+
+[node name="TwoSidedSquareHole8" parent="Holes" index="7" instance=ExtResource("2_tnqul")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25508, 0.25251, -0.0339586)
+length = 0.052
+width = 1.055
+
+[node name="TwoSidedSquareHole9" parent="Holes" index="8" instance=ExtResource("2_tnqul")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 1.88065, 0.25251, -0.292794)
+length = 0.052
+width = 1.055
+
+[node name="TwoSidedSquareHole10" parent="Holes" index="9" instance=ExtResource("2_tnqul")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 2.05742, 0.50251, -0.46957)
+length = 0.052
+width = 1.055
+
+[node name="TwoSidedSquareHole11" parent="Holes" index="10" instance=ExtResource("2_tnqul")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 1.88065, 0.75251, -0.292794)
+length = 0.052
+width = 1.055
+
+[node name="TwoSidedSquareHole12" parent="Holes" index="11" instance=ExtResource("2_tnqul")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 2.2342, 0.75251, -0.646347)
+length = 0.052
+width = 1.055
+
+[node name="TwoSidedSquareHole13" parent="Holes" index="12" instance=ExtResource("2_tnqul")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 2.2342, 0.25251, -0.646347)
+length = 0.052
+width = 1.055
+
+[node name="TwoSidedSquareHole14" parent="Holes" index="13" instance=ExtResource("2_tnqul")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 2.41098, 0.50251, -0.823124)
+length = 0.052
+width = 1.055
+
+[node name="TwoSidedSquareHole15" parent="Holes" index="14" instance=ExtResource("2_tnqul")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 2.58775, 0.75251, -0.999901)
+length = 0.052
+width = 1.055
+
+[node name="TwoSidedSquareHole16" parent="Holes" index="15" instance=ExtResource("2_tnqul")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 2.58775, 0.25251, -0.999901)
+length = 0.052
+width = 1.055
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_mdyhl")

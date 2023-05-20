@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4gmbw1vla5do"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_fhaj7"]
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="2_4hm7b"]
+[ext_resource type="ArrayMesh" uid="uid://7tbie7w0o3s8" path="res://assets/models/Bearing/High_Strength_Pillow_Block_Bearing__276-8383_.obj" id="3_17jpl"]
+
+[node name="Part" instance=ExtResource("1_fhaj7")]
+
+[node name="TwoSidedCircleHole" parent="Holes" index="0" instance=ExtResource("2_4hm7b")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -0.203989, 0.287246, 0.0668815)
+length = 0.064
+isDefaultHole = true
+
+[node name="TwoSidedCircleHole2" parent="Holes" index="1" instance=ExtResource("2_4hm7b")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -1.204, 0.287, 0.0657576)
+length = 0.064
+
+[node name="TwoSidedCircleHole3" parent="Holes" index="2" instance=ExtResource("2_4hm7b")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.70559, 0.283081, 0.279905)
+length = 0.48
+width = 1.77
+isHighStrength = true
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_17jpl")

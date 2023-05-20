@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://vy0by6anp4js"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_afwd6"]
+[ext_resource type="PackedScene" uid="uid://cdggdbp51hwv0" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="2_76cog"]
+[ext_resource type="PackedScene" uid="uid://ckikj6lchnhtx" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="3_450b6"]
+[ext_resource type="ArrayMesh" uid="uid://bn0s2q0drdr3i" path="res://assets/models/Shaft Collar/Clamping_High_Strength.obj" id="3_r2rfg"]
+
+[node name="Part" instance=ExtResource("1_afwd6")]
+
+[node name="TwoSidedHole" parent="Holes" index="0" instance=ExtResource("2_76cog")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.402916, 0.401621, -0.252667)
+length = 0.48
+width = 1.469
+isDefaultHole = true
+isFastener = true
+isHighStrength = true
+
+[node name="ScrewHole" parent="Holes" index="1" instance=ExtResource("3_450b6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.403741, 0.647291, -0.254084)
+length = 0.407
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_r2rfg")

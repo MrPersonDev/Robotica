@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhrfj254hjphf"]
+
+[ext_resource type="Script" path="res://src/ui/SettingsPanelOption.cs" id="1_pblgd"]
+
+[node name="SettingsPanelOption" type="Button"]
+focus_mode = 0
+toggle_mode = true
+text = "Panel Option"
+script = ExtResource("1_pblgd")

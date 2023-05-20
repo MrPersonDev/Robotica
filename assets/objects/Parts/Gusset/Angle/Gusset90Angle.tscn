@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://gwx6nmb873kv"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_g1ja5"]
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="2_ashgk"]
+[ext_resource type="ArrayMesh" uid="uid://b7sftk4o56gbe" path="res://assets/models/Gussets/90-Degree_Gusset_Set_-_Angle__276-2577_.obj" id="3_pceun"]
+
+[node name="Part" instance=ExtResource("1_g1ja5")]
+
+[node name="TwoSidedCircleHole" parent="Holes" index="0" instance=ExtResource("2_ashgk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.177317, 0.718831, -0.0338544)
+length = 0.052
+
+[node name="TwoSidedCircleHole2" parent="Holes" index="1" instance=ExtResource("2_ashgk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.677317, 0.718831, -0.0338544)
+length = 0.052
+
+[node name="TwoSidedCircleHole3" parent="Holes" index="2" instance=ExtResource("2_ashgk")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.177317, 0.0346944, -0.715332)
+length = 0.052
+
+[node name="TwoSidedCircleHole4" parent="Holes" index="3" instance=ExtResource("2_ashgk")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.677317, 0.0346944, -0.715332)
+length = 0.052
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_pceun")

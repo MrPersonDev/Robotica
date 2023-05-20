@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bk7bvbr1mnof2"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_kh7ls"]
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="2_glgj8"]
+[ext_resource type="ArrayMesh" uid="uid://4lx7hrgawffo" path="res://assets/models/Battery Clip/V5_Battery_Clip__276-6020_.obj" id="2_lofvh"]
+
+[node name="Part" instance=ExtResource("1_kh7ls")]
+
+[node name="TwoSidedCircleHole" parent="Holes" index="0" instance=ExtResource("2_glgj8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.07918, 0.244325, -0.0394742)
+length = 0.068
+isDefaultHole = true
+
+[node name="TwoSidedCircleHole2" parent="Holes" index="1" instance=ExtResource("2_glgj8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.704177, 0.244325, -0.0394742)
+length = 0.068
+
+[node name="TwoSidedCircleHole3" parent="Holes" index="2" instance=ExtResource("2_glgj8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.45418, 0.244325, -0.0394742)
+length = 0.068
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("2_lofvh")

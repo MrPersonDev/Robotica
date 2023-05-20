@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cyie4xewappth"
+path="res://.godot/imported/Steel_Washer__275-1024_.obj-3d1b66e10f7f73f4187d2212ffc340db.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Steel_Washer__275-1024_.obj-3d1b66e10f7f73f4187d2212ffc340db.mesh"]
+
+source_file="res://assets/models/Spacer/Steel_Washer__275-1024_.obj"
+dest_files=["res://.godot/imported/Steel_Washer__275-1024_.obj-3d1b66e10f7f73f4187d2212ffc340db.mesh", "res://.godot/imported/Steel_Washer__275-1024_.obj-3d1b66e10f7f73f4187d2212ffc340db.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

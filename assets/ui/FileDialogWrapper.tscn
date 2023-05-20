@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckpkagupqbdfv"]
+
+[ext_resource type="Script" path="res://src/ui/FileDialogWrapper.gd" id="1_qwxuy"]
+
+[node name="FileDialogWrapper" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_qwxuy")
+file_dialog_path = NodePath("NativeFileDialog")
+
+[node name="NativeFileDialog" type="NativeFileDialog" parent="."]
+filters = PackedStringArray("*.rbt ; RBT Files")

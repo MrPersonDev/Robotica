@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bk324t7edpjkm"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_huaal"]
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="2_ydq7m"]
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="3_5s2hg"]
+[ext_resource type="ArrayMesh" uid="uid://b1seah3c6xsy6" path="res://assets/models/Bearing/Drive_Shaft_Bar_Lock__275-1065_.obj" id="4_xg3ih"]
+
+[node name="Part" instance=ExtResource("1_huaal")]
+
+[node name="TwoSidedCircleHole" parent="Holes" index="0" instance=ExtResource("2_ydq7m")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -0.206039, 0.290534, 0.0448311)
+
+[node name="TwoSidedCircleHole3" parent="Holes" index="1" instance=ExtResource("2_ydq7m")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -1.20606, 0.290534, 0.0448311)
+
+[node name="TwoSidedSquareHole" parent="Holes" index="2" instance=ExtResource("3_5s2hg")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -0.705752, 0.289139, 0.0448311)
+width = 0.75
+isDefaultHole = true
+
+[node name="TwoSidedSquareHole2" parent="Holes" index="3" instance=ExtResource("3_5s2hg")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -0.931402, 0.289139, 0.0448311)
+width = 0.75
+
+[node name="TwoSidedSquareHole3" parent="Holes" index="4" instance=ExtResource("3_5s2hg")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -0.481349, 0.289139, 0.0448311)
+width = 0.75
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("4_xg3ih")

@@ -1,0 +1,32 @@
+[gd_scene load_steps=22 format=3 uid="uid://c2yelt3eiej0b"]
+
+[ext_resource type="PackedScene" uid="uid://jra6u2riunsq" path="res://assets/ui/PartOption.tscn" id="1_0q04y"]
+[ext_resource type="Script" path="res://src/part_option/GussetOption.cs" id="2_kb4ev"]
+[ext_resource type="Material" uid="uid://c8k02dn76v6vv" path="res://assets/materials/Alluminum.tres" id="3_ubgck"]
+[ext_resource type="Material" uid="uid://c8u6ykcdce7t0" path="res://assets/materials/Steel.tres" id="4_xp0ti"]
+[ext_resource type="PackedScene" uid="uid://c65pbd4n6dqgm" path="res://assets/objects/Parts/Gusset/Bent/GussetBent30.tscn" id="5_hlu5o"]
+[ext_resource type="PackedScene" uid="uid://ds4eejxx7pcro" path="res://assets/objects/Parts/Gusset/Bent/GussetBent45.tscn" id="6_qdxbd"]
+[ext_resource type="PackedScene" uid="uid://chcpt20deqbfp" path="res://assets/objects/Parts/Gusset/Bent/GussetBent60.tscn" id="7_scola"]
+[ext_resource type="PackedScene" uid="uid://ri4m4suaj5ma" path="res://assets/objects/Parts/Gusset/Bent/GussetBent90.tscn" id="8_syvpc"]
+[ext_resource type="PackedScene" uid="uid://cb707657tcqly" path="res://assets/objects/Parts/Gusset/Flat/GussetFlat30.tscn" id="9_fdn70"]
+[ext_resource type="PackedScene" uid="uid://6m0h3te3mhw2" path="res://assets/objects/Parts/Gusset/Flat/GussetFlat45.tscn" id="10_8d1jq"]
+[ext_resource type="PackedScene" uid="uid://drdce51lwevxa" path="res://assets/objects/Parts/Gusset/Flat/GussetFlat60.tscn" id="11_o3yjw"]
+[ext_resource type="PackedScene" uid="uid://cu5js2sf0kkjm" path="res://assets/objects/Parts/Gusset/Flat/GussetFlat90.tscn" id="12_304nf"]
+[ext_resource type="PackedScene" uid="uid://cdmwt2k4c6sov" path="res://assets/objects/Parts/Gusset/Angle/Gusset45.tscn" id="13_mnh7x"]
+[ext_resource type="PackedScene" uid="uid://gwx6nmb873kv" path="res://assets/objects/Parts/Gusset/Angle/Gusset90Angle.tscn" id="14_0oqrd"]
+[ext_resource type="PackedScene" uid="uid://b6i8oektm0xvr" path="res://assets/objects/Parts/Gusset/Angle/Gusset90Plate.tscn" id="15_uhs7i"]
+[ext_resource type="PackedScene" uid="uid://drvwsx2maffai" path="res://assets/objects/Parts/Gusset/Angle/GussetAngle.tscn" id="16_fja7n"]
+[ext_resource type="PackedScene" uid="uid://cslxay2u6p5sr" path="res://assets/objects/Parts/Gusset/Angle/GussetAngleCorner.tscn" id="17_qosw3"]
+[ext_resource type="PackedScene" uid="uid://q81siimk6u8x" path="res://assets/objects/Parts/Gusset/Angle/GussetPivot.tscn" id="18_jt45l"]
+[ext_resource type="PackedScene" uid="uid://qg212hd41aim" path="res://assets/objects/Parts/Gusset/Angle/GussetPlus.tscn" id="19_6i7cc"]
+[ext_resource type="PackedScene" uid="uid://cvbnopiy7pels" path="res://assets/objects/Parts/Gusset/Couplers/GussetCChannelCoupler.tscn" id="20_uipau"]
+[ext_resource type="PackedScene" uid="uid://dhxo8cephkphh" path="res://assets/objects/Parts/Gusset/Couplers/GussetAngleCoupler.tscn" id="21_na4po"]
+
+[node name="GussetOption" instance=ExtResource("1_0q04y")]
+script = ExtResource("2_kb4ev")
+alluminumMaterial = ExtResource("3_ubgck")
+steelMaterial = ExtResource("4_xp0ti")
+bentPartScenes = Array[PackedScene]([ExtResource("5_hlu5o"), ExtResource("6_qdxbd"), ExtResource("7_scola"), ExtResource("8_syvpc")])
+flatPartScenes = Array[PackedScene]([ExtResource("9_fdn70"), ExtResource("10_8d1jq"), ExtResource("11_o3yjw"), ExtResource("12_304nf")])
+anglePartScenes = Array[PackedScene]([ExtResource("13_mnh7x"), ExtResource("14_0oqrd"), ExtResource("15_uhs7i"), ExtResource("16_fja7n"), ExtResource("17_qosw3"), ExtResource("18_jt45l"), ExtResource("19_6i7cc")])
+couplerPartScenes = Array[PackedScene]([ExtResource("20_uipau"), ExtResource("21_na4po")])

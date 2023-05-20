@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://dcvfydhaftr2r"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_vd20f"]
+[ext_resource type="PackedScene" uid="uid://cdggdbp51hwv0" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="2_nhf4a"]
+[ext_resource type="PackedScene" uid="uid://ckikj6lchnhtx" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="3_6o6uy"]
+[ext_resource type="ArrayMesh" uid="uid://ddbs55k1p1cr3" path="res://assets/models/Sprocket/VEX-40-TOOTH-SPROCKET.obj" id="3_37ljf"]
+
+[node name="Part" instance=ExtResource("1_vd20f")]
+
+[node name="TwoSidedSquareHole" parent="Holes" index="0" instance=ExtResource("2_nhf4a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.93637, 1.94868, -0.253927)
+length = 0.482
+width = 0.75
+isDefaultHole = true
+
+[node name="TwoSidedCircleHole" parent="Holes" index="1" instance=ExtResource("3_6o6uy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.54882, 2.26188, -0.145262)
+length = 0.266
+
+[node name="TwoSidedCircleHole2" parent="Holes" index="2" instance=ExtResource("3_6o6uy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25262, 2.33566, -0.145262)
+length = 0.266
+
+[node name="TwoSidedCircleHole3" parent="Holes" index="3" instance=ExtResource("3_6o6uy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.32747, 1.63388, -0.145262)
+length = 0.266
+
+[node name="TwoSidedCircleHole4" parent="Holes" index="4" instance=ExtResource("3_6o6uy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.62324, 1.55971, -0.145262)
+length = 0.266
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_37ljf")

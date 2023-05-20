@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://bam6rf4tl5po3"]
+
+[ext_resource type="PackedScene" uid="uid://jra6u2riunsq" path="res://assets/ui/PartOption.tscn" id="1_r4uki"]
+[ext_resource type="Script" path="res://src/part_option/RadioOption.cs" id="2_x2to1"]
+[ext_resource type="PackedScene" uid="uid://bi54jd5fngcf2" path="res://assets/objects/Parts/Control System/Radio.tscn" id="3_4q4vl"]
+
+[node name="RadioOption" instance=ExtResource("1_r4uki")]
+script = ExtResource("2_x2to1")
+defaultPartScene = ExtResource("3_4q4vl")

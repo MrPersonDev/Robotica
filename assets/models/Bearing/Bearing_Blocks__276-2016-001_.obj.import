@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bfxbkigdrndiu"
+path="res://.godot/imported/Bearing_Blocks__276-2016-001_.obj-796e8ae7c47d5fcaa214d452dc67ae6c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Bearing_Blocks__276-2016-001_.obj-796e8ae7c47d5fcaa214d452dc67ae6c.mesh"]
+
+source_file="res://assets/models/Bearing/Bearing_Blocks__276-2016-001_.obj"
+dest_files=["res://.godot/imported/Bearing_Blocks__276-2016-001_.obj-796e8ae7c47d5fcaa214d452dc67ae6c.mesh", "res://.godot/imported/Bearing_Blocks__276-2016-001_.obj-796e8ae7c47d5fcaa214d452dc67ae6c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

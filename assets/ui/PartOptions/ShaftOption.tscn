@@ -1,0 +1,13 @@
+[gd_scene load_steps=6 format=3 uid="uid://tjwh4heqahhy"]
+
+[ext_resource type="PackedScene" uid="uid://jra6u2riunsq" path="res://assets/ui/PartOption.tscn" id="1_1iy1w"]
+[ext_resource type="Script" path="res://src/part_option/ShaftOption.cs" id="2_d3ops"]
+[ext_resource type="Material" uid="uid://bd05als2prc8f" path="res://assets/materials/ShinySteel.tres" id="3_7yev4"]
+[ext_resource type="PackedScene" uid="uid://lp3tu5rfhot3" path="res://assets/objects/Parts/Shaft/Shaft.tscn" id="4_l60qs"]
+[ext_resource type="PackedScene" uid="uid://d0ix5l1nr48s4" path="res://assets/objects/Parts/Shaft/HSShaft.tscn" id="5_ydprd"]
+
+[node name="ShaftOption" instance=ExtResource("1_1iy1w")]
+script = ExtResource("2_d3ops")
+defaultMaterial = ExtResource("3_7yev4")
+shaftScene = ExtResource("4_l60qs")
+highStrengthShaftScene = ExtResource("5_ydprd")

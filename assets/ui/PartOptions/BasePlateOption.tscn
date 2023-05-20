@@ -1,0 +1,11 @@
+[gd_scene load_steps=5 format=3 uid="uid://dovcpfm4xamec"]
+
+[ext_resource type="PackedScene" uid="uid://jra6u2riunsq" path="res://assets/ui/PartOption.tscn" id="1_20njg"]
+[ext_resource type="Script" path="res://src/part_option/BasePlateOption.cs" id="2_s4tyj"]
+[ext_resource type="Material" uid="uid://c8u6ykcdce7t0" path="res://assets/materials/Steel.tres" id="3_wte6b"]
+[ext_resource type="PackedScene" uid="uid://btoxg1kp0utrt" path="res://assets/objects/Parts/Base Plate/BasePlate.tscn" id="4_mbvmu"]
+
+[node name="BasePlateOption" instance=ExtResource("1_20njg")]
+script = ExtResource("2_s4tyj")
+steelMaterial = ExtResource("3_wte6b")
+defaultPartScene = ExtResource("4_mbvmu")

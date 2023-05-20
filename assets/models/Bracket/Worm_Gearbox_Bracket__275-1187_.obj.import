@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dcnj8f5475p4y"
+path="res://.godot/imported/Worm_Gearbox_Bracket__275-1187_.obj-9642992e0a938a912f5110437f9f9d9c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Worm_Gearbox_Bracket__275-1187_.obj-9642992e0a938a912f5110437f9f9d9c.mesh"]
+
+source_file="res://assets/models/Bracket/Worm_Gearbox_Bracket__275-1187_.obj"
+dest_files=["res://.godot/imported/Worm_Gearbox_Bracket__275-1187_.obj-9642992e0a938a912f5110437f9f9d9c.mesh", "res://.godot/imported/Worm_Gearbox_Bracket__275-1187_.obj-9642992e0a938a912f5110437f9f9d9c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

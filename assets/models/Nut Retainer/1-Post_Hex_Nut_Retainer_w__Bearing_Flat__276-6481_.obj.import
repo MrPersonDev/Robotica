@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://6s5pr4ruy1gf"
+path="res://.godot/imported/1-Post_Hex_Nut_Retainer_w__Bearing_Flat__276-6481_.obj-4d87ee31062d125be3e3940978c7fce0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/1-Post_Hex_Nut_Retainer_w__Bearing_Flat__276-6481_.obj-4d87ee31062d125be3e3940978c7fce0.mesh"]
+
+source_file="res://assets/models/Nut Retainer/1-Post_Hex_Nut_Retainer_w__Bearing_Flat__276-6481_.obj"
+dest_files=["res://.godot/imported/1-Post_Hex_Nut_Retainer_w__Bearing_Flat__276-6481_.obj-4d87ee31062d125be3e3940978c7fce0.mesh", "res://.godot/imported/1-Post_Hex_Nut_Retainer_w__Bearing_Flat__276-6481_.obj-4d87ee31062d125be3e3940978c7fce0.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

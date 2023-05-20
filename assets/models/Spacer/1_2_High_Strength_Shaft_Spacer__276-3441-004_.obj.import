@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d1xjvmmnkvaoj"
+path="res://.godot/imported/1_2_High_Strength_Shaft_Spacer__276-3441-004_.obj-40157ea17d00ed7ef4584f883d711b90.mesh"
+
+[deps]
+
+files=["res://.godot/imported/1_2_High_Strength_Shaft_Spacer__276-3441-004_.obj-40157ea17d00ed7ef4584f883d711b90.mesh"]
+
+source_file="res://assets/models/Spacer/1_2_High_Strength_Shaft_Spacer__276-3441-004_.obj"
+dest_files=["res://.godot/imported/1_2_High_Strength_Shaft_Spacer__276-3441-004_.obj-40157ea17d00ed7ef4584f883d711b90.mesh", "res://.godot/imported/1_2_High_Strength_Shaft_Spacer__276-3441-004_.obj-40157ea17d00ed7ef4584f883d711b90.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

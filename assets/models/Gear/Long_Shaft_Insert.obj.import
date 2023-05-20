@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://kod8hv72sosy"
+path="res://.godot/imported/Long_Shaft_Insert.obj-c384125bb8d2f41454284602903f4c5f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Long_Shaft_Insert.obj-c384125bb8d2f41454284602903f4c5f.mesh"]
+
+source_file="res://assets/models/Gear/Long_Shaft_Insert.obj"
+dest_files=["res://.godot/imported/Long_Shaft_Insert.obj-c384125bb8d2f41454284602903f4c5f.mesh", "res://.godot/imported/Long_Shaft_Insert.obj-c384125bb8d2f41454284602903f4c5f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://4lx7hrgawffo"
+path="res://.godot/imported/V5_Battery_Clip__276-6020_.obj-36a328da0d2cfc0f1c14ea71baec278a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/V5_Battery_Clip__276-6020_.obj-36a328da0d2cfc0f1c14ea71baec278a.mesh"]
+
+source_file="res://assets/models/Battery Clip/V5_Battery_Clip__276-6020_.obj"
+dest_files=["res://.godot/imported/V5_Battery_Clip__276-6020_.obj-36a328da0d2cfc0f1c14ea71baec278a.mesh", "res://.godot/imported/V5_Battery_Clip__276-6020_.obj-36a328da0d2cfc0f1c14ea71baec278a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

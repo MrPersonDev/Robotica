@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6xyn8l8jle4u"]
+
+[ext_resource type="Script" path="res://src/part/Hole.cs" id="1_juant"]
+[ext_resource type="PackedScene" uid="uid://c7bnmmkauu78o" path="res://assets/objects/HoleBody.tscn" id="3_ktpdu"]
+
+[node name="Hole" type="Node3D"]
+script = ExtResource("1_juant")
+
+[node name="TopBody" parent="." instance=ExtResource("3_ktpdu")]
+
+[node name="BottomBody" parent="." instance=ExtResource("3_ktpdu")]

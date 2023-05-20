@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ciun8w5p53yop"
+path="res://.godot/imported/U-Channel_2x2x2x20__276-7285_.obj-39365c32d9e78d73f840bce024c6a60d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/U-Channel_2x2x2x20__276-7285_.obj-39365c32d9e78d73f840bce024c6a60d.mesh"]
+
+source_file="res://assets/models/UChannel/U-Channel_2x2x2x20__276-7285_.obj"
+dest_files=["res://.godot/imported/U-Channel_2x2x2x20__276-7285_.obj-39365c32d9e78d73f840bce024c6a60d.mesh", "res://.godot/imported/U-Channel_2x2x2x20__276-7285_.obj-39365c32d9e78d73f840bce024c6a60d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

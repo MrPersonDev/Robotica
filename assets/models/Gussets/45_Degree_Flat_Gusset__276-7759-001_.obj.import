@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dgydpxa7gm70y"
+path="res://.godot/imported/45_Degree_Flat_Gusset__276-7759-001_.obj-4e0e8cbbb76af6d1226e70c042e4cd5f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/45_Degree_Flat_Gusset__276-7759-001_.obj-4e0e8cbbb76af6d1226e70c042e4cd5f.mesh"]
+
+source_file="res://assets/models/Gussets/45_Degree_Flat_Gusset__276-7759-001_.obj"
+dest_files=["res://.godot/imported/45_Degree_Flat_Gusset__276-7759-001_.obj-4e0e8cbbb76af6d1226e70c042e4cd5f.mesh", "res://.godot/imported/45_Degree_Flat_Gusset__276-7759-001_.obj-4e0e8cbbb76af6d1226e70c042e4cd5f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

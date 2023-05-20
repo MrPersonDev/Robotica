@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dqgf27xwu6ma"
+path="res://.godot/imported/_8-32_x_1_000_Star_Drive_Coupler__276-4988_.obj-c8d76ffd375ca85e8bb2e458d840265f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/_8-32_x_1_000_Star_Drive_Coupler__276-4988_.obj-c8d76ffd375ca85e8bb2e458d840265f.mesh"]
+
+source_file="res://assets/models/Standoff/_8-32_x_1_000_Star_Drive_Coupler__276-4988_.obj"
+dest_files=["res://.godot/imported/_8-32_x_1_000_Star_Drive_Coupler__276-4988_.obj-c8d76ffd375ca85e8bb2e458d840265f.mesh", "res://.godot/imported/_8-32_x_1_000_Star_Drive_Coupler__276-4988_.obj-c8d76ffd375ca85e8bb2e458d840265f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

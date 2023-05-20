@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://mxg3a0l04mqr"
+path="res://.godot/imported/12T_High_Strength_Metal_Pinion__276-2251_.obj-1c2a5fdbbf38cdc28b422b3760efe3c7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/12T_High_Strength_Metal_Pinion__276-2251_.obj-1c2a5fdbbf38cdc28b422b3760efe3c7.mesh"]
+
+source_file="res://assets/models/Gear/12T_High_Strength_Metal_Pinion__276-2251_.obj"
+dest_files=["res://.godot/imported/12T_High_Strength_Metal_Pinion__276-2251_.obj-1c2a5fdbbf38cdc28b422b3760efe3c7.mesh", "res://.godot/imported/12T_High_Strength_Metal_Pinion__276-2251_.obj-1c2a5fdbbf38cdc28b422b3760efe3c7.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

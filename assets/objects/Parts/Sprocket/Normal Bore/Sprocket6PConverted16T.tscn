@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2rxqw8bv6iex"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_bygsy"]
+[ext_resource type="PackedScene" uid="uid://cdggdbp51hwv0" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="2_knxwt"]
+[ext_resource type="ArrayMesh" uid="uid://c8yg4qse4i08c" path="res://assets/models/Sprocket/16T_Sprocket__6P__276-8328_.obj" id="3_trkcj"]
+[ext_resource type="ArrayMesh" uid="uid://dtdfs4rdvxvmn" path="res://assets/models/Gear/Metal_Shaft_Inserts__276-3881-002_.obj" id="4_ihia7"]
+
+[node name="Part" instance=ExtResource("1_bygsy")]
+
+[node name="TwoSidedSquareHole" parent="Holes" index="0" instance=ExtResource("2_knxwt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.939, 1.949, -0.315)
+length = 0.591
+width = 0.75
+isDefaultHole = true
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_trkcj")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="AdditionalMeshes" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.146392, 0.154643, -0.0104019)
+mesh = ExtResource("4_ihia7")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="AdditionalMeshes" index="1"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.73089, 0.154642, -0.620301)
+mesh = ExtResource("4_ihia7")

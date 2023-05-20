@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://brjx15gnd3du"
+path="res://.godot/imported/V5_Robot_Brain_Mounting_Flange__Short___276-4810-002_.obj-2a33cba49af3208c7e7a877a7245ccd4.mesh"
+
+[deps]
+
+files=["res://.godot/imported/V5_Robot_Brain_Mounting_Flange__Short___276-4810-002_.obj-2a33cba49af3208c7e7a877a7245ccd4.mesh"]
+
+source_file="res://assets/models/Connector Pins/V5_Robot_Brain_Mounting_Flange__Short___276-4810-002_.obj"
+dest_files=["res://.godot/imported/V5_Robot_Brain_Mounting_Flange__Short___276-4810-002_.obj-2a33cba49af3208c7e7a877a7245ccd4.mesh", "res://.godot/imported/V5_Robot_Brain_Mounting_Flange__Short___276-4810-002_.obj-2a33cba49af3208c7e7a877a7245ccd4.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

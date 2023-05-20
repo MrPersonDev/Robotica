@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5eisjtaibrgr"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_dic17"]
+[ext_resource type="PackedScene" uid="uid://cdggdbp51hwv0" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="2_667e6"]
+[ext_resource type="ArrayMesh" uid="uid://djl4yxsq8sxum" path="res://assets/models/Wheel/4_Omni-Directional_Wheel_4 Omni-Directional Wheel (276-2185).res" id="3_0ogfr"]
+
+[node name="Part" instance=ExtResource("1_dic17")]
+
+[node name="TwoSidedSquareHole" parent="Holes" index="0" instance=ExtResource("2_667e6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.62913, 2.88688, -0.541515)
+length = 0.485
+width = 1.45
+isDefaultHole = true
+isHighStrength = true
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_0ogfr")

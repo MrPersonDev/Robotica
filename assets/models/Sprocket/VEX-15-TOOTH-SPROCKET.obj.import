@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bd2ilwffg7p4j"
+path="res://.godot/imported/VEX-15-TOOTH-SPROCKET.obj-85a07e3c918c87cbf53bfc7244dc5f48.mesh"
+
+[deps]
+
+files=["res://.godot/imported/VEX-15-TOOTH-SPROCKET.obj-85a07e3c918c87cbf53bfc7244dc5f48.mesh"]
+
+source_file="res://assets/models/Sprocket/VEX-15-TOOTH-SPROCKET.obj"
+dest_files=["res://.godot/imported/VEX-15-TOOTH-SPROCKET.obj-85a07e3c918c87cbf53bfc7244dc5f48.mesh", "res://.godot/imported/VEX-15-TOOTH-SPROCKET.obj-85a07e3c918c87cbf53bfc7244dc5f48.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

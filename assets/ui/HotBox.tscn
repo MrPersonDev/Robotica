@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2y3ko2wfcrqi"]
+
+[ext_resource type="PackedScene" uid="uid://bw4dk2vh0pm6d" path="res://assets/ui/HotBoxOption.tscn" id="1_i3fdl"]
+[ext_resource type="Script" path="res://src/ui/HotBox.cs" id="1_luykw"]
+
+[node name="HotBox" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_luykw")
+partNames = ["Screw", "Nut", "Spacer", "Shaft Collar", "Shaft", "Gear", "Wheel", "C-Channel"]
+hotBoxOptionScene = ExtResource("1_i3fdl")
+
+[node name="Center" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(10, 0, 0, 10, -10, 0, 0, -10)

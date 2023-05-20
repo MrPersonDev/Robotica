@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/ui/ParameterInput.tscn" id="1_5m3lo"]
+[ext_resource type="Script" path="res://src/parameter/BooleanParameterInput.cs" id="2_c6qew"]
+
+[node name="DropdownParameterInput" instance=ExtResource("1_5m3lo")]
+collapsed = true
+script = ExtResource("2_c6qew")
+checkBoxPath = NodePath("CheckBox")
+
+[node name="CheckBox" type="CheckBox" parent="." index="1"]
+layout_mode = 2
+focus_mode = 0

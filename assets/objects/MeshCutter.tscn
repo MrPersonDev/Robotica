@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bn85eevlym7ww"]
+
+[ext_resource type="Script" path="res://src/mesh_cutter/MeshCutter.cs" id="1_61wjh"]
+
+[node name="MeshCutter" type="MeshInstance3D"]
+script = ExtResource("1_61wjh")

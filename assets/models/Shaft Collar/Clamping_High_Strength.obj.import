@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bn0s2q0drdr3i"
+path="res://.godot/imported/Clamping_High_Strength.obj-940ee01868e7bbb5bcacb267c5ef0467.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Clamping_High_Strength.obj-940ee01868e7bbb5bcacb267c5ef0467.mesh"]
+
+source_file="res://assets/models/Shaft Collar/Clamping_High_Strength.obj"
+dest_files=["res://.godot/imported/Clamping_High_Strength.obj-940ee01868e7bbb5bcacb267c5ef0467.mesh", "res://.godot/imported/Clamping_High_Strength.obj-940ee01868e7bbb5bcacb267c5ef0467.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

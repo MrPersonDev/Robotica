@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://8f5ycg0yhvjc"]
+
+[ext_resource type="Script" path="res://src/transform/Handle.cs" id="1_81m4a"]
+[ext_resource type="Material" uid="uid://di3p3aey44bj7" path="res://assets/materials/Transform.tres" id="2_74t6e"]
+
+[node name="Handle" type="Node3D"]
+script = ExtResource("1_81m4a")
+mat = ExtResource("2_74t6e")
+color = Color(1, 1, 1, 1)
+meshesPath = NodePath("Meshes")
+colliderPath = NodePath("StaticBody3D/CollisionShape3D")
+staticBodyPath = NodePath("StaticBody3D")
+
+[node name="Meshes" type="Node3D" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." groups=["HANDLE_COLLIDER"]]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24244, 0)

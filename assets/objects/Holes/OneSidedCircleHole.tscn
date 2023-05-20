@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4reyv6extm5i"]
+
+[ext_resource type="Script" path="res://src/part/OneSidedHole.cs" id="1_g0drd"]
+[ext_resource type="PackedScene" uid="uid://bbpc1jiqxl8o" path="res://assets/objects/HoleBodies/CircleHoleBody.tscn" id="2_gdtf6"]
+
+[node name="OneSidedCircleHole" type="Node3D"]
+script = ExtResource("1_g0drd")
+bodyPath = NodePath("HoleBody")
+
+[node name="HoleBody" parent="." instance=ExtResource("2_gdtf6")]

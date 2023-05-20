@@ -1,0 +1,11 @@
+[gd_scene load_steps=5 format=3 uid="uid://dh3lsfucm4hrm"]
+
+[ext_resource type="PackedScene" uid="uid://jra6u2riunsq" path="res://assets/ui/PartOption.tscn" id="1_7t5ll"]
+[ext_resource type="Script" path="res://src/part_option/TriballOption.cs" id="2_ldt2m"]
+[ext_resource type="PackedScene" uid="uid://cly30ca7ebvau" path="res://assets/objects/Parts/Triball/Triball.tscn" id="3_gin4p"]
+[ext_resource type="Material" uid="uid://d27mwwdsg1rq0" path="res://assets/materials/PlasticTriball.tres" id="3_yixot"]
+
+[node name="TriballOption" instance=ExtResource("1_7t5ll")]
+script = ExtResource("2_ldt2m")
+greenPlasticMaterial = ExtResource("3_yixot")
+defaultPartScene = ExtResource("3_gin4p")

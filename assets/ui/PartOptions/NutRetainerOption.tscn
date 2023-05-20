@@ -1,0 +1,15 @@
+[gd_scene load_steps=7 format=3 uid="uid://bxnlqoylu6uuv"]
+
+[ext_resource type="PackedScene" uid="uid://jra6u2riunsq" path="res://assets/ui/PartOption.tscn" id="1_cvkcb"]
+[ext_resource type="Script" path="res://src/part_option/NutRetainerOption.cs" id="2_p5bem"]
+[ext_resource type="Material" uid="uid://dn4nw8tsc8deb" path="res://assets/materials/PlasticBlack.tres" id="3_7votr"]
+[ext_resource type="PackedScene" uid="uid://bynmcbwwajccr" path="res://assets/objects/Parts/Nut Retainer/OnePostNutRetainer.tscn" id="4_jtll8"]
+[ext_resource type="PackedScene" uid="uid://8p5gyotchmur" path="res://assets/objects/Parts/Nut Retainer/OnePostBearingNutRetainer.tscn" id="5_xx3ur"]
+[ext_resource type="PackedScene" uid="uid://cv0v7nuuwb53k" path="res://assets/objects/Parts/Nut Retainer/FourPostNutRetainer.tscn" id="6_388f3"]
+
+[node name="NutRetainerOption" instance=ExtResource("1_cvkcb")]
+script = ExtResource("2_p5bem")
+blackPlasticMaterial = ExtResource("3_7votr")
+onePostNutRetainerPartScene = ExtResource("4_jtll8")
+onePostBearingNutRetainerPartScene = ExtResource("5_xx3ur")
+fourPostNutRetainerPartScene = ExtResource("6_388f3")

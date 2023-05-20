@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cf2qgmpjgawgv"
+path="res://.godot/imported/15x30_Base_Plate__276-1341_.obj-0650a0146ef4891b3075579f43208022.mesh"
+
+[deps]
+
+files=["res://.godot/imported/15x30_Base_Plate__276-1341_.obj-0650a0146ef4891b3075579f43208022.mesh"]
+
+source_file="res://assets/models/Base Plate/15x30_Base_Plate__276-1341_.obj"
+dest_files=["res://.godot/imported/15x30_Base_Plate__276-1341_.obj-0650a0146ef4891b3075579f43208022.mesh", "res://.godot/imported/15x30_Base_Plate__276-1341_.obj-0650a0146ef4891b3075579f43208022.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

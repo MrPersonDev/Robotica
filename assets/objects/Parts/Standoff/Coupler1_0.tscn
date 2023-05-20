@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://dkyud5v7t4nvi"]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_6vsb6"]
+[ext_resource type="PackedScene" uid="uid://bslvrhvh02lo3" path="res://assets/objects/Holes/OneSidedSquareHole.tscn" id="2_1y6kb"]
+[ext_resource type="PackedScene" path="res://assets/objects/Insert.tscn" id="3_yuvrr"]
+[ext_resource type="ArrayMesh" uid="uid://dqgf27xwu6ma" path="res://assets/models/Standoff/_8-32_x_1_000_Star_Drive_Coupler__276-4988_.obj" id="4_b87l7"]
+
+[node name="Part" instance=ExtResource("1_6vsb6")]
+
+[node name="OneSidedSquareHole" parent="Holes" index="0" instance=ExtResource("2_1y6kb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0822902, 0.0793858, -0.49801)
+isDefaultHole = true
+isFastener = true
+isNonInteractive = true
+
+[node name="Insert" parent="Inserts" index="0" instance=ExtResource("3_yuvrr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0822857, 0.0819304, -0.499696)
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("4_b87l7")
