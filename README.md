@@ -1,3 +1,5 @@
+⚠️ DISCLAIMER: Robotica is current in beta. Feel free to try the software but understand that there will be glitches. If you experience any problems, please report the bug and the steps to reproduce it in [issues](https://github.com/MrPersonDev/Robotica/issues) ⚠️
+
 # Robotica
 Robotica is an open-source tool crafted to streamline the prototyping process of VEX V5 robots. It provides an intuitive interface that streamlines every step of the prototyping journey.
 
