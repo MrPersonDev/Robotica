@@ -7,6 +7,7 @@ public partial class Insert : Area3D
 {
     private const float MAX_SNAPPING_DIST = 0.4f;
     private const float MAX_INCLUDED_DIST = 0.01f;
+    private const float CHECKING_WIDTH = 0.25f;
 
     private HashSet<HoleBody> potentiallyCollidingHoleBodies = new HashSet<HoleBody>();
     private HashSet<HoleBody> actuallyCollidingHoleBodies = new HashSet<HoleBody>(); 
@@ -21,6 +22,7 @@ public partial class Insert : Area3D
     [Export]
     private NodePath colliderPath;
 
+    private CylinderShape3D colliderShape;
     private CollisionShape3D collider;
 
     public override void _Ready()
@@ -33,10 +35,10 @@ public partial class Insert : Area3D
 
     private void SetColliderShape()
     {
-        CylinderShape3D shape = new CylinderShape3D();
-        shape.Radius = width;
-        shape.Height = length;
-        collider.Shape = shape;
+        colliderShape = new CylinderShape3D();
+        colliderShape.Radius = width;
+        colliderShape.Height = length;
+        collider.Shape = colliderShape;
     }
 
     private void SetEvents()
@@ -84,6 +86,31 @@ public partial class Insert : Area3D
             return;
 
         collider.Disabled = true;
+    }
+
+    public void IncreaseWidth()
+    {
+        colliderShape.Radius = CHECKING_WIDTH;
+    }
+
+    public void ResetWidth()
+    {
+        colliderShape.Radius = width;
+    }
+
+    public List<Part> GetCurCollidingParts()
+    {
+        List<Part> collidingParts = new List<Part>();
+        foreach (Node3D node in GetOverlappingBodies())
+        {
+            if (!node.IsInGroup("PART_COLLIDER"))
+                continue;
+
+            Part part = (Part)node.GetParent();
+            collidingParts.Add(part);
+        }
+
+        return collidingParts;
     }
 
     public List<HoleBody> GetCollidingHoleBodies()

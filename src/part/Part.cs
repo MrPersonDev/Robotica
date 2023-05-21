@@ -660,6 +660,36 @@ public partial class Part : Moveable
         return requiresUpdate;
     }
 
+    public void IncreaseInsertWidth()
+    {
+        if (!IsInstanceValid(inserts))
+            return;
+
+        foreach (Insert insert in inserts.GetChildren())
+            insert.IncreaseWidth();    
+    }
+
+    public void ResetInsertWidth()
+    {
+        if (!IsInstanceValid(inserts))
+            return;
+
+        foreach (Insert insert in inserts.GetChildren())
+            insert.ResetWidth();    
+    }
+
+    public List<Part> GetCurCollidingParts()
+    {
+        List<Part> collidingParts = new List<Part>();
+
+        if (!IsInstanceValid(inserts))
+            return collidingParts;
+
+        foreach (Insert insert in inserts.GetChildren())
+            collidingParts.AddRange(insert.GetCurCollidingParts());
+        return collidingParts;
+    }
+
     public List<Part> GetPotentiallyCollidingParts()
     {
         List<Part> potentiallyCollidingParts = new List<Part>();

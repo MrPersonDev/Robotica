@@ -1117,7 +1117,17 @@ public partial class Control : Node3D
             if (part.RequiresUpdate())
                 partsList.AddRange(part.GetPotentiallyCollidingParts());
 
-        List<Part> previouslyDisabled = parts.EnableColliders(partsList);
+        List<Part> partsCollidingWithInsert = new List<Part>();
+        foreach (Part part in partsList)
+            part.IncreaseInsertWidth();
+        await ToSignal(GetTree(), SceneTree.SignalName.PhysicsFrame);
+        await ToSignal(GetTree(), SceneTree.SignalName.PhysicsFrame);
+        foreach (Part part in partsList)
+            partsCollidingWithInsert.AddRange(part.GetCurCollidingParts());
+        foreach (Part part in partsList)
+            part.ResetInsertWidth();
+
+        List<Part> previouslyDisabled = parts.EnableColliders(partsCollidingWithInsert);
         parts.OverlappingFix();
 
         // Awaiting a couple physics frames seems to be required for proper collision
