@@ -19,16 +19,18 @@ public partial class Pivot : Node3D
 
     [ExportGroup("Node Paths")]
     [Export]
-    private NodePath camPosPath, mainCamPath, outlineCamPath;
+    private NodePath camPosPath, mainCamPath, outlineCamPath, orthographicGridPath;
 
     private Node3D camPos;
     private Camera3D backgroundCam, mainCam, outlineCam;
+    private MeshInstance3D orthographicGrid;
 
     public override void _Ready()
     {
         camPos = (Node3D)GetNode(camPosPath);
         mainCam = (Camera3D)GetNode(mainCamPath);
         outlineCam = (Camera3D)GetNode(outlineCamPath);
+        orthographicGrid = (MeshInstance3D)GetNode(orthographicGridPath);
     }
 
     public override void _UnhandledInput(InputEvent inputEvent)
@@ -124,6 +126,8 @@ public partial class Pivot : Node3D
         }
         
         orthogonal = value;
+
+        orthographicGrid.Visible = value;
 
         if (value)
             SetCameraProjection(Camera3D.ProjectionType.Orthogonal);

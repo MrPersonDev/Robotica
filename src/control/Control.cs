@@ -38,8 +38,9 @@ public partial class Control : Node3D
 
     [ExportGroup("Node Paths")]
     [Export]
-    private NodePath pivotPath, transformPath, partsPath, uiPath;
+    private NodePath gridPath, pivotPath, transformPath, partsPath, uiPath;
 
+    private Grid grid;
     private Pivot pivot;
     private Transform transform;
     private Parts parts;
@@ -47,6 +48,7 @@ public partial class Control : Node3D
 
     public override void _Ready()
     {
+        grid = (Grid)GetNode(gridPath);
         pivot = (Pivot)GetNode(pivotPath);
         transform = (Transform)GetNode(transformPath);
         parts = (Parts)GetNode(partsPath);
@@ -352,6 +354,7 @@ public partial class Control : Node3D
         if (ui.IsSettingsOpen())
             return;
 
+        grid.Hide();
         pivot.SetOrthogonal(true);
     }
 
@@ -360,6 +363,7 @@ public partial class Control : Node3D
         if (ui.IsSettingsOpen())
             return;
         
+        grid.Show();
         pivot.SetOrthogonal(false);
     }
 

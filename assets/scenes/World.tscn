@@ -47,6 +47,7 @@ sky_mode = 1
 environment = SubResource("Environment_u1f4n")
 
 [node name="Control" parent="." instance=ExtResource("2_d3jbn")]
+gridPath = NodePath("../Grid")
 pivotPath = NodePath("../Pivot")
 transformPath = NodePath("../Transform")
 partsPath = NodePath("../Parts")

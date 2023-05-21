@@ -1,7 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://b12cbfdjsyn0s"]
+[gd_scene load_steps=7 format=3 uid="uid://b12cbfdjsyn0s"]
 
 [ext_resource type="Script" path="res://src/Pivot.cs" id="1_ct8oe"]
 [ext_resource type="Shader" path="res://assets/shaders/Outline.gdshader" id="2_6xw5f"]
+[ext_resource type="Material" uid="uid://c7ict262dx3xt" path="res://assets/materials/GridOrthographic.tres" id="2_kticr"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tqv5x"]
+size = Vector2(100, 100)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j4qbg"]
 shader = ExtResource("2_6xw5f")
@@ -14,6 +18,7 @@ script = ExtResource("1_ct8oe")
 camPosPath = NodePath("CameraPos")
 mainCamPath = NodePath("MainViewportContainer/MainViewport/MainCamera")
 outlineCamPath = NodePath("OutlineViewportContainer/OutlineViewport/OutlineCamera")
+orthographicGridPath = NodePath("MainViewportContainer/MainViewport/MainCamera/OrthographicGrid")
 
 [node name="CameraPos" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.999962, 0.00872654, 0, -0.00872654, 0.999962, 0, 0, 5)
@@ -36,6 +41,12 @@ render_target_update_mode = 4
 current = true
 fov = 60.0
 near = 0.001
+
+[node name="OrthographicGrid" type="MeshInstance3D" parent="MainViewportContainer/MainViewport/MainCamera"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -100)
+visible = false
+material_override = ExtResource("2_kticr")
+mesh = SubResource("PlaneMesh_tqv5x")
 
 [node name="OutlineViewportContainer" type="SubViewportContainer" parent="."]
 material = SubResource("ShaderMaterial_j4qbg")
