@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cebm74okhh7rw"]
+
+[ext_resource type="Script" path="res://src/ui/SettingEdit/SettingEdit.cs" id="1_hphni"]
+
+[node name="SettingEdit" type="HSplitContainer"]
+split_offset = 300
+dragger_visibility = 1
+script = ExtResource("1_hphni")
+labelPath = NodePath("EditLabel")
+
+[node name="EditLabel" type="Label" parent="."]
+layout_mode = 2
+text = "Label"

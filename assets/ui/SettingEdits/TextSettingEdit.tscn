@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://47bqe884jgsw"]
+
+[ext_resource type="PackedScene" uid="uid://cebm74okhh7rw" path="res://assets/ui/SettingEdit.tscn" id="1_kyr83"]
+[ext_resource type="Script" path="res://src/ui/SettingEdit/TextSettingEdit.cs" id="2_ldrp2"]
+
+[node name="SettingEdit" instance=ExtResource("1_kyr83")]
+script = ExtResource("2_ldrp2")
+textEditPath = NodePath("TextEdit")
+
+[node name="TextEdit" type="TextEdit" parent="." index="1"]
+layout_mode = 2
+scroll_fit_content_height = true

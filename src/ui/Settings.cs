@@ -20,6 +20,7 @@ public partial class Settings : PanelContainer
 
 		SetCloseButtonPressed();
 		ConnectSettingsPanelOptions();
+		LoadSettings();
 	}
 
 	private async void SetCloseButtonPressed()
@@ -33,10 +34,19 @@ public partial class Settings : PanelContainer
 
 	private void ConnectSettingsPanelOptions()
 	{
-		Action<PackedScene> pressedAction = (PackedScene panelScene) => { SetPanel(panelScene); };
+		Action<PackedScene, String> pressedAction = (PackedScene panelScene, String panelName) => { SetPanel(panelScene, panelName); };
 
 		foreach (SettingsPanelOption panelOption in panelOptions.GetChildren())
 			panelOption.ConnectPressed(pressedAction);
+	}
+
+	private async void LoadSettings()
+	{
+		World world = (World)GetTree().CurrentScene;
+		await ToSignal(world, Node.SignalName.Ready);
+
+		Interface ui = world.GetInterfaceNode();
+		SettingsManager.LoadSettings(ui);
 	}
 
 	public override void _Input(InputEvent inputEvent)
@@ -55,6 +65,8 @@ public partial class Settings : PanelContainer
 
 	public void Close()
 	{
+		SettingsManager.ApplySettings(this, ((World)GetTree().CurrentScene).GetInterfaceNode());
+
 		Visible = false;
 		SetInputFocus(FocusModeEnum.All);
 	}
@@ -75,8 +87,11 @@ public partial class Settings : PanelContainer
 		SetPanelsPressed(index);
 	}
 
-	public void SetPanel(PackedScene panelScene)
+	public async void SetPanel(PackedScene panelScene, String panelName)
 	{
+		if (GetCurrentPanel() != null)
+			SettingsManager.ApplySettings(this, ((World)GetTree().CurrentScene).GetInterfaceNode());
+
 		Godot.Collections.Array<Node> children = settingsPanelContainer.GetChildren();
 		foreach (Node child in children)
 		{
@@ -84,7 +99,8 @@ public partial class Settings : PanelContainer
 			child.QueueFree();
 		}
 
-		Node panel = panelScene.Instantiate();
+		SettingsPanel panel = (SettingsPanel)panelScene.Instantiate();
+		panel.SetName(panelName);
 		settingsPanelContainer.AddChild(panel);
 
 		for (int i = 0; i < panelOptions.GetChildCount(); i++)
@@ -95,6 +111,8 @@ public partial class Settings : PanelContainer
 				break;
 			}
 		}
+
+		panel.UpdateSettingEdits(SettingsManager.GetPanelSettings(panelName));
 	}
 
 	private void SetInputFocus(FocusModeEnum focusMode)
@@ -109,5 +127,23 @@ public partial class Settings : PanelContainer
 	public bool IsOpen()
 	{
 		return Visible;
+	}
+
+	private SettingsPanel GetCurrentPanel()
+	{
+		if (settingsPanelContainer.GetChildCount() == 0)
+			return null;
+
+		return (SettingsPanel)settingsPanelContainer.GetChild(0);
+	}
+
+	public String GetCurrentPanelName()
+	{
+		return GetCurrentPanel().GetName();
+	}	
+
+	public Dictionary<String, Variant> GetCurrentPanelSettings()
+	{
+		return GetCurrentPanel().GetCurrentSettings();
 	}
 }

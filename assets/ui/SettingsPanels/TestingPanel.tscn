@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyaukmbnjixil"]
+
+[ext_resource type="PackedScene" uid="uid://bc720e4p081s4" path="res://assets/ui/SettingsPanel.tscn" id="1_32m0e"]
+[ext_resource type="PackedScene" uid="uid://47bqe884jgsw" path="res://assets/ui/SettingEdits/TextSettingEdit.tscn" id="2_slubw"]
+
+[node name="SettingsPanel" instance=ExtResource("1_32m0e")]
+
+[node name="SettingEdit" parent="SettingEdits" index="0" instance=ExtResource("2_slubw")]
+layout_mode = 2
+name = "Test Edit"
