@@ -87,7 +87,7 @@ public partial class Settings : PanelContainer
 		SetPanelsPressed(index);
 	}
 
-	public async void SetPanel(PackedScene panelScene, String panelName)
+	public void SetPanel(PackedScene panelScene, String panelName)
 	{
 		if (GetCurrentPanel() != null)
 			SettingsManager.ApplySettings(this, ((World)GetTree().CurrentScene).GetInterfaceNode());
