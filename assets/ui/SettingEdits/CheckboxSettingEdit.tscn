@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4mx7mguksmi6"]
+
+[ext_resource type="PackedScene" uid="uid://cebm74okhh7rw" path="res://assets/ui/SettingEdit.tscn" id="1_yp71w"]
+[ext_resource type="Script" path="res://src/ui/SettingEdit/CheckboxSettingEdit.cs" id="2_biw51"]
+
+[node name="SettingEdit" instance=ExtResource("1_yp71w")]
+script = ExtResource("2_biw51")
+checkboxPath = NodePath("EditCheckBox")
+
+[node name="EditCheckBox" type="CheckBox" parent="." index="1"]
+layout_mode = 2

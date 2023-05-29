@@ -41,7 +41,9 @@ public static class SettingsManager
 
     private static void ApplyTestingSettings(Dictionary<String, Variant> panelSettings)
     {
-        GD.Print(panelSettings["Test Edit"]);
+        GD.Print(panelSettings["Text"]);
+        GD.Print(panelSettings["Dropdown"]);
+        GD.Print(panelSettings["Checkbox"]);
     }
 
     private static void SaveSettings(Interface ui)
