@@ -4,8 +4,8 @@ using System.Collections.Generic;
 
 public static class SettingsManager
 {
-    const String USER_SETTINGS_FILE_NAME = "UserSettings.json";
-    const String DEFAULT_SETTINGS_FILE_NAME = "DefaultSettings.json";
+    const String USER_SETTINGS_FILE_NAME = "UserSettings.cfg";
+    const String DEFAULT_SETTINGS_FILE_NAME = "DefaultSettings.cfg";
 
     private static Dictionary<String, Dictionary<String, Variant>> currentSettings = new Dictionary<String, Dictionary<String, Variant>>();
 
@@ -48,23 +48,19 @@ public static class SettingsManager
 
     private static void SaveSettings(Interface ui)
     {
-        using FileAccess file = FileAccess.Open(GetSavePath(), FileAccess.ModeFlags.Write);
+        ConfigFile configFile = new ConfigFile();
 
-        if (file == null)
+        foreach (KeyValuePair<String, Dictionary<String, Variant>> sectionPair in currentSettings)
         {
-            Error error = FileAccess.GetOpenError();
-            ui.Error(error.ToString());
-            return;
+            String section = sectionPair.Key;
+            foreach (KeyValuePair<String, Variant> settingPair in sectionPair.Value)
+                configFile.SetValue(section, settingPair.Key, settingPair.Value);
         }
 
-        Godot.Collections.Dictionary<String, Godot.Collections.Dictionary<String, Variant>> godotSettingsDict = new Godot.Collections.Dictionary<String, Godot.Collections.Dictionary<String, Variant>>();
-        foreach (KeyValuePair<String, Dictionary<String, Variant>> pair in currentSettings)
-            godotSettingsDict[pair.Key] = new Godot.Collections.Dictionary<String, Variant>(pair.Value);
-        
-        String settingsString = Json.Stringify(godotSettingsDict);
-        file.StoreLine(settingsString);
+        Error saveError = configFile.Save(GetSavePath());
 
-        file.Close();
+        if (saveError != Error.Ok)
+            ui.Error(saveError.ToString());
     }
 
     public static void LoadSettings(Interface ui)
@@ -85,32 +81,27 @@ public static class SettingsManager
 
     private static void LoadSettings(Interface ui, String filePath)
     {
-        using FileAccess file = FileAccess.Open(filePath, FileAccess.ModeFlags.Read);
+        ConfigFile configFile = new ConfigFile();
 
-        if (file == null)
+        Error loadError = configFile.Load(filePath);
+        if (loadError != Error.Ok)
         {
-            Error error = FileAccess.GetOpenError();
-            ui.Error(error.ToString());
+            ui.Error(loadError.ToString());
             return;
         }
 
-        String jsonString = file.GetLine();
-        Json json = new Json();
-
-        Error parseResult = json.Parse(jsonString);
-        if (parseResult != Error.Ok)
+        foreach (String section in configFile.GetSections())
         {
-            ui.Error(parseResult.ToString());
-            return;
+            String[] settingKeys = configFile.GetSectionKeys(section);
+            Dictionary<String, Variant> sectionSettings = new Dictionary<String, Variant>();
+            foreach (String key in settingKeys)
+            {
+                Variant value = configFile.GetValue(section, key);
+                sectionSettings[key] = value;
+            }
+
+            currentSettings[section] = sectionSettings;
         }
-
-        Godot.Collections.Dictionary jsonDict = (Godot.Collections.Dictionary)json.Data;
-        Godot.Collections.Dictionary<String, Godot.Collections.Dictionary<String, Variant>> godotDict = new Godot.Collections.Dictionary<String, Godot.Collections.Dictionary<String, Variant>>(jsonDict);
-        Dictionary<String, Dictionary<String, Variant>> loadedSettings = new Dictionary<String, Dictionary<String, Variant>>();
-        foreach (KeyValuePair<String, Godot.Collections.Dictionary<String, Variant>> pair in godotDict)
-            loadedSettings[pair.Key] = new Dictionary<String, Variant>(pair.Value);
-
-        currentSettings = loadedSettings;
     }
 
     public static Dictionary<String, Variant> GetPanelSettings(String panelName)
