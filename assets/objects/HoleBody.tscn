@@ -27,5 +27,6 @@ shape = SubResource("BoxShape3D_q8r1p")
 
 [node name="BodyMesh" type="MeshInstance3D" parent="."]
 layers = 4
+cast_shadow = 0
 mesh = SubResource("BoxMesh_khy7e")
 skeleton = NodePath("../..")

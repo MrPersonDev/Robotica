@@ -29,14 +29,17 @@ zAxisPath = NodePath("ZAxis")
 
 [node name="GridLines" type="MeshInstance3D" parent="."]
 material_override = ExtResource("2_hb6tg")
+cast_shadow = 0
 mesh = SubResource("PlaneMesh_s5m5e")
 
 [node name="XAxis" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_t0jli")
+cast_shadow = 0
 mesh = SubResource("CylinderMesh_n3vw6")
 
 [node name="ZAxis" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_648l1")
+cast_shadow = 0
 mesh = SubResource("CylinderMesh_n3vw6")

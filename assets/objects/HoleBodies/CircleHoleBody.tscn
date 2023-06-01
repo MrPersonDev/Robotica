@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bbpc1jiqxl8o"]
 
-[ext_resource type="PackedScene" path="res://assets/objects/HoleBody.tscn" id="1_unxla"]
+[ext_resource type="PackedScene" uid="uid://c7bnmmkauu78o" path="res://assets/objects/HoleBody.tscn" id="1_unxla"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_leyr5"]
 top_radius = 0.087
