@@ -1,11 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://dh3lsfucm4hrm"]
+[gd_scene load_steps=7 format=3 uid="uid://cdoxtksc8pk5y"]
 
 [ext_resource type="PackedScene" uid="uid://jra6u2riunsq" path="res://assets/ui/PartOption.tscn" id="1_7t5ll"]
 [ext_resource type="Script" path="res://src/part_option/TriballOption.cs" id="2_ldt2m"]
 [ext_resource type="PackedScene" uid="uid://cly30ca7ebvau" path="res://assets/objects/Parts/Triball/Triball.tscn" id="3_gin4p"]
-[ext_resource type="Material" uid="uid://d27mwwdsg1rq0" path="res://assets/materials/PlasticTriball.tres" id="3_yixot"]
+[ext_resource type="Material" uid="uid://ynykkpdp3whb" path="res://assets/materials/TriballGreen.tres" id="3_lhbr2"]
+[ext_resource type="Material" uid="uid://co0htogoh3uqt" path="res://assets/materials/TriballRed.tres" id="4_nxpmu"]
+[ext_resource type="Material" uid="uid://d27mwwdsg1rq0" path="res://assets/materials/TriballBlue.tres" id="5_ow5p6"]
 
 [node name="TriballOption" instance=ExtResource("1_7t5ll")]
 script = ExtResource("2_ldt2m")
-greenPlasticMaterial = ExtResource("3_yixot")
+greenPlasticMaterial = ExtResource("3_lhbr2")
+redPlasticMaterial = ExtResource("4_nxpmu")
+bluePlasticMaterial = ExtResource("5_ow5p6")
 defaultPartScene = ExtResource("3_gin4p")

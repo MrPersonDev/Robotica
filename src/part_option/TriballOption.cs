@@ -5,11 +5,12 @@ using System.Linq;
 
 public partial class TriballOption : PartOption
 {
+	private readonly String[] COLORS = {"Neutral", "Red", "Blue"};
 	private PartObject defaultPartObject;
 
 	[ExportGroup("Properties")]
 	[Export]
-	private StandardMaterial3D greenPlasticMaterial;
+	private StandardMaterial3D greenPlasticMaterial, redPlasticMaterial, bluePlasticMaterial;
 
 	[ExportGroup("Part Objects")]
 	[Export]
@@ -36,12 +37,21 @@ public partial class TriballOption : PartOption
 	{
 		base.Setup(part, parameters);
 
-		part.SetMaterial(greenPlasticMaterial);
+		String color = (String)parameters["Alliance"];
+		if (color == "Neutral")
+			part.SetMaterial(greenPlasticMaterial);
+		else if (color == "Red")
+			part.SetMaterial(redPlasticMaterial);
+		else // if (color == "Blue")
+			part.SetMaterial(bluePlasticMaterial);
 	}
 
 	public override List<Tuple<String, ParameterType>> GetSpecificDefaultParameterTypes()
 	{
 		List<Tuple<String, ParameterType>> parameterTypes = new List<Tuple<String, ParameterType>>();
+
+		List<Object> colorList = new List<String>(COLORS).Cast<Object>().ToList();
+		parameterTypes.Add(Tuple.Create("Alliance", (ParameterType)new DropdownParameter(colorList)));
 
 		return parameterTypes;
 	}
