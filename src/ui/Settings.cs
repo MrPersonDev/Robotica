@@ -65,10 +65,16 @@ public partial class Settings : PanelContainer
 
 	public void Close()
 	{
-		SettingsManager.ApplySettings(this, ((World)GetTree().CurrentScene).GetInterfaceNode());
+		ApplyPanelSettings();
 
 		Visible = false;
 		SetInputFocus(FocusModeEnum.All);
+	}
+
+	private void ApplyPanelSettings()
+	{
+		World world = (World)GetTree().CurrentScene;
+		SettingsManager.ApplySettings(this, world.GetInterfaceNode(), world);
 	}
 
 	private void SetPanelsPressed(int curIndex)
@@ -90,7 +96,7 @@ public partial class Settings : PanelContainer
 	public void SetPanel(PackedScene panelScene, String panelName)
 	{
 		if (GetCurrentPanel() != null)
-			SettingsManager.ApplySettings(this, ((World)GetTree().CurrentScene).GetInterfaceNode());
+			ApplyPanelSettings();
 
 		Godot.Collections.Array<Node> children = settingsPanelContainer.GetChildren();
 		foreach (Node child in children)

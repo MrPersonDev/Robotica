@@ -5,7 +5,7 @@
 [ext_resource type="Theme" uid="uid://leq8ktbobmjv" path="res://assets/ui/theme/themes/SettingsTabs.tres" id="2_8txek"]
 [ext_resource type="Theme" uid="uid://dks02nais2ncl" path="res://assets/ui/theme/themes/SettingsPanel.tres" id="3_5lnmb"]
 [ext_resource type="PackedScene" uid="uid://bhrfj254hjphf" path="res://assets/ui/SettingsPanelOption.tscn" id="4_e7d12"]
-[ext_resource type="PackedScene" uid="uid://dyaukmbnjixil" path="res://assets/ui/SettingsPanels/TestingPanel.tscn" id="5_akuiq"]
+[ext_resource type="PackedScene" uid="uid://bt7fnrbbf3si3" path="res://assets/ui/SettingsPanels/GraphicsPanel.tscn" id="5_ebv16"]
 
 [node name="Settings" type="PanelContainer"]
 anchors_preset = 15
@@ -79,8 +79,8 @@ theme_override_constants/separation = 8
 
 [node name="SettingsPanelOption" parent="VSplitContainer/HSplitContainer2/MarginContainer/PanelOptions" instance=ExtResource("4_e7d12")]
 layout_mode = 2
-text = "Testing"
-settingsPanel = ExtResource("5_akuiq")
+text = "Graphics"
+settingsPanel = ExtResource("5_ebv16")
 
 [node name="MarginContainer2" type="MarginContainer" parent="VSplitContainer/HSplitContainer2"]
 layout_mode = 2

@@ -354,7 +354,7 @@ public partial class Control : Node3D
         if (ui.IsSettingsOpen())
             return;
 
-        grid.Hide();
+        grid.HideGrid();
         pivot.SetOrthogonal(true);
     }
 
@@ -363,7 +363,7 @@ public partial class Control : Node3D
         if (ui.IsSettingsOpen())
             return;
         
-        grid.Show();
+        grid.ShowGrid();
         pivot.SetOrthogonal(false);
     }
 

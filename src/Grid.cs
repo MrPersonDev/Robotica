@@ -7,6 +7,8 @@ public partial class Grid : Node3D
     private const float AXIS_LENGTH_SCALE = 1000.0f;
     private const float MIN_AXIS_SCALE = 0.75f;
 
+    private bool canEnableGrid = true;
+
     [ExportGroup("Node Paths")]
     [Export]
     private NodePath gridLinesPath, xAxisPath, zAxisPath;
@@ -46,5 +48,21 @@ public partial class Grid : Node3D
         float lineLength = camPos.Length() * AXIS_LENGTH_SCALE;
         xAxis.Scale = new Vector3(xAxisWidth, lineLength, xAxisWidth);
         zAxis.Scale = new Vector3(zAxisWidth, lineLength, zAxisWidth);
+    }
+
+    public void ShowGrid()
+    {
+        if (canEnableGrid)
+            Show();
+    }
+
+    public void HideGrid()
+    {
+        Hide();
+    }
+
+    public void SetGridEnabled(bool value)
+    {
+        canEnableGrid = value;
     }
 }

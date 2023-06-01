@@ -13,16 +13,18 @@ public partial class Pivot : Node3D
 
     private bool orbiting = false;
     private bool panning = false;
+    private bool canEnableGrid = true;
     
     [Export]
     private bool orthogonal = false;
 
     [ExportGroup("Node Paths")]
     [Export]
-    private NodePath camPosPath, mainCamPath, outlineCamPath, orthographicGridPath;
+    private NodePath camPosPath, mainCamPath, outlineCamPath, outlineContainerPath, orthographicGridPath;
 
     private Node3D camPos;
     private Camera3D backgroundCam, mainCam, outlineCam;
+    private SubViewportContainer outlineContainer;
     private MeshInstance3D orthographicGrid;
 
     public override void _Ready()
@@ -30,6 +32,7 @@ public partial class Pivot : Node3D
         camPos = (Node3D)GetNode(camPosPath);
         mainCam = (Camera3D)GetNode(mainCamPath);
         outlineCam = (Camera3D)GetNode(outlineCamPath);
+        outlineContainer = (SubViewportContainer)GetNode(outlineContainerPath);
         orthographicGrid = (MeshInstance3D)GetNode(orthographicGridPath);
     }
 
@@ -126,8 +129,10 @@ public partial class Pivot : Node3D
         }
         
         orthogonal = value;
-
-        orthographicGrid.Visible = value;
+        if (value)
+            ShowGrid();
+        else
+            HideGrid();
 
         if (value)
             SetCameraProjection(Camera3D.ProjectionType.Orthogonal);
@@ -135,10 +140,36 @@ public partial class Pivot : Node3D
             SetCameraProjection(Camera3D.ProjectionType.Perspective);
     }
 
+    public void ShowGrid()
+    {
+        if (canEnableGrid)
+            orthographicGrid.Show();
+    }
+
+    public void HideGrid()
+    {
+        orthographicGrid.Hide();
+    }
+
+    public void SetGridEnabled(bool value)
+    {
+        canEnableGrid = value;
+    }
+
     private void SetCameraProjection(Camera3D.ProjectionType projectionType)
     {
         mainCam.Projection = projectionType;
         outlineCam.Projection = projectionType;
+    }
+
+    public void SetOutlinesEnabled(bool value)
+    {
+        outlineContainer.Visible = value;
+    }
+
+    public bool GetOrthogonal()
+    {
+        return orthogonal;
     }
 
     public Vector3 GetWorldPos(Vector2 screenPos, float dist)

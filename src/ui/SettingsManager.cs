@@ -9,7 +9,7 @@ public static class SettingsManager
 
     private static Dictionary<String, Dictionary<String, Variant>> currentSettings = new Dictionary<String, Dictionary<String, Variant>>();
 
-    public static void ApplySettings(Settings settings, Interface ui)
+    public static void ApplySettings(Settings settings, Interface ui, World world)
     {
         String currentPanelName = settings.GetCurrentPanelName();
         Dictionary<String, Variant> currentPanelSettings = settings.GetCurrentPanelSettings();
@@ -18,32 +18,61 @@ public static class SettingsManager
     
         SaveSettings(ui);
 
-        ApplySettings(currentPanelName, currentPanelSettings);
+        ApplySettings(currentPanelName, currentPanelSettings, world);
     }
 
-    public static void ApplyAllSettings(Settings settings, Interface ui)
+    public static void ApplyAllSettings(Settings settings, Interface ui, World world)
     {
         foreach (String panelName in currentSettings.Keys)
-            ApplySettings(panelName, currentSettings[panelName]);
+            ApplySettings(panelName, currentSettings[panelName], world);
     }
 
-    private static void ApplySettings(String panelName, Dictionary<String, Variant> panelSettings)
+    private static void ApplySettings(String panelName, Dictionary<String, Variant> panelSettings, World world)
     {
         switch (panelName)
         {
-            case "Testing":
-                ApplyTestingSettings(panelSettings);
+            case "Graphics":
+                ApplyGraphicsSettings(panelSettings, world);
                 break;
             default:
                 throw new Exception("Unkown panel name");
         }
     }
 
-    private static void ApplyTestingSettings(Dictionary<String, Variant> panelSettings)
+    private static void ApplyGraphicsSettings(Dictionary<String, Variant> panelSettings, World world)
     {
-        GD.Print(panelSettings["Text"]);
-        GD.Print(panelSettings["Dropdown"]);
-        GD.Print(panelSettings["Checkbox"]);
+        Godot.Environment environment = world.GetEnvironment();
+        DirectionalLight3D light = world.GetLight();
+        Viewport viewport = (Viewport)world.GetNode("Pivot").GetNode("MainViewportContainer").GetNode("MainViewport");
+        Pivot pivot = world.GetPivotNode();
+
+        DisplayServer.WindowSetVsyncMode((bool)panelSettings["VSync"] ? DisplayServer.VSyncMode.Enabled : DisplayServer.VSyncMode.Disabled);
+
+        environment.GlowEnabled = (bool)panelSettings["Glow"];
+        environment.SsrEnabled = (bool)panelSettings["Screen-Space Reflections"];
+        environment.SsaoEnabled = (bool)panelSettings["Screen-Space Ambient Occlusion"];
+        environment.SsilEnabled = (bool)panelSettings["Screen-Space Indirect Lighting"];
+
+        light.ShadowEnabled = (bool)panelSettings["Shadows"];
+
+        world.SetGridEnabled((bool)panelSettings["Grid"]);
+        pivot.SetOutlinesEnabled((bool)panelSettings["Outlines"]);
+
+        switch ((String)panelSettings["Anti-Aliasing"])
+        {
+            case "Disabled":
+                viewport.Msaa3D = Viewport.Msaa.Disabled;
+                break;
+            case "2x":
+                viewport.Msaa3D = Viewport.Msaa.Msaa2X;
+                break;
+            case "4x":
+                viewport.Msaa3D = Viewport.Msaa.Msaa4X;
+                break;
+            case "8x":
+                viewport.Msaa3D = Viewport.Msaa.Msaa8X;
+                break;
+        }
     }
 
     private static void SaveSettings(Interface ui)

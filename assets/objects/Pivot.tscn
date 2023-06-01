@@ -18,6 +18,7 @@ script = ExtResource("1_ct8oe")
 camPosPath = NodePath("CameraPos")
 mainCamPath = NodePath("MainViewportContainer/MainViewport/MainCamera")
 outlineCamPath = NodePath("OutlineViewportContainer/OutlineViewport/OutlineCamera")
+outlineContainerPath = NodePath("OutlineViewportContainer")
 orthographicGridPath = NodePath("MainViewportContainer/MainViewport/MainCamera/OrthographicGrid")
 
 [node name="CameraPos" type="Node3D" parent="."]

@@ -29,7 +29,6 @@ ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_energy = 0.4
 reflected_light_source = 2
 tonemap_mode = 2
-ssao_radius = 0.25
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_c6srm")
@@ -38,9 +37,12 @@ gridPath = NodePath("Grid")
 controlPath = NodePath("Control")
 partsPath = NodePath("Parts")
 uiPath = NodePath("Interface")
+worldEnvironmentPath = NodePath("Environment")
+lightPath = NodePath("Sun")
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.515906, 0.856645, 0, -0.856645, 0.515906, 0, 7.77277, 6.0578)
+shadow_enabled = true
 sky_mode = 1
 
 [node name="Environment" type="WorldEnvironment" parent="."]

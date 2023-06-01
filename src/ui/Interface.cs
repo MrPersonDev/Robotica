@@ -138,6 +138,12 @@ public partial class Interface : Godot.Control
         loadDialog.Call("set_saving", false);
     }
 
+    public void InitializeSettings()
+    {
+        SettingsManager.LoadSettings(this);
+        SettingsManager.ApplyAllSettings(settings, this, (World)GetTree().CurrentScene);
+    }
+
     public override void _Process(double delta)
     {
         UpdateFPSCounter();

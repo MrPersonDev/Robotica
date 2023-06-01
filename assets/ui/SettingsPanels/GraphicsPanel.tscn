@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://bt7fnrbbf3si3"]
+
+[ext_resource type="PackedScene" uid="uid://bc720e4p081s4" path="res://assets/ui/SettingsPanel.tscn" id="1_3hym4"]
+[ext_resource type="PackedScene" uid="uid://d4mx7mguksmi6" path="res://assets/ui/SettingEdits/CheckboxSettingEdit.tscn" id="2_a1c16"]
+[ext_resource type="PackedScene" uid="uid://b1hpe320pv3y5" path="res://assets/ui/SettingEdits/DropdownSettingEdit.tscn" id="3_afn7y"]
+
+[node name="SettingsPanel" instance=ExtResource("1_3hym4")]
+
+[node name="VSync" parent="SettingEdits" index="0" instance=ExtResource("2_a1c16")]
+layout_mode = 2
+name = "VSync"
+
+[node name="Antialiasing" parent="SettingEdits" index="1" instance=ExtResource("3_afn7y")]
+layout_mode = 2
+values = ["Disabled", "2x", "4x", "8x"]
+name = "Anti-Aliasing"
+
+[node name="Shadows" parent="SettingEdits" index="2" instance=ExtResource("2_a1c16")]
+layout_mode = 2
+name = "Shadows"
+
+[node name="Glow" parent="SettingEdits" index="3" instance=ExtResource("2_a1c16")]
+layout_mode = 2
+name = "Glow"
+
+[node name="Screen-Space Reflections" parent="SettingEdits" index="4" instance=ExtResource("2_a1c16")]
+layout_mode = 2
+name = "Screen-Space Reflections"
+
+[node name="Screen-Space Ambient Occlusion" parent="SettingEdits" index="5" instance=ExtResource("2_a1c16")]
+layout_mode = 2
+name = "Screen-Space Ambient Occlusion"
+
+[node name="Screen-Space Indirect Lighting" parent="SettingEdits" index="6" instance=ExtResource("2_a1c16")]
+layout_mode = 2
+name = "Screen-Space Indirect Lighting"
+
+[node name="Outlines" parent="SettingEdits" index="7" instance=ExtResource("2_a1c16")]
+layout_mode = 2
+name = "Outlines"
+
+[node name="Grid" parent="SettingEdits" index="8" instance=ExtResource("2_a1c16")]
+layout_mode = 2
+name = "Grid"
