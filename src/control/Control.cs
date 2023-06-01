@@ -375,7 +375,7 @@ public partial class Control : Node3D
         Deselect(false);
         ResetNewPart();
         parts.Clear();
-        SaveManager.CurrentPath = null;
+        SaveManager.SetCurrentPath(null, ui);
     }
 
     public void HandleSaveInput()
@@ -385,10 +385,10 @@ public partial class Control : Node3D
 
         ClearHistory();
 
-        if (SaveManager.CurrentPath == null)
+        if (SaveManager.GetCurrentPath() == null)
             ui.ShowSaveDialog();
         else
-            SaveManager.Save(SaveManager.CurrentPath, ui, parts);
+            SaveManager.Save(SaveManager.GetCurrentPath(), ui, parts);
     }
 
     public void HandleSaveAsInput()

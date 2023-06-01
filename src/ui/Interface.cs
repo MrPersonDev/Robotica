@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public partial class Interface : Godot.Control
 {
+    private static readonly String DEFAULT_FILE_LABEL_TEXT = "New Robot (Unsaved)";
+
     private bool creatingPart = false;
     private bool inQueue = false;
     private PartOption queuedPartOption;
@@ -16,7 +18,7 @@ public partial class Interface : Godot.Control
     [Export]
     private NodePath fieldPath, fieldButtonPath, selectionBoxPath, fpsCounterPath, controlPath, partsPath, partsListPath, saveDialogPath, loadDialogPath, errorPath;
     [Export]
-    private NodePath settingsPath, overlayPath, hotBoxPath, fileButtonPath, editButtonPath, selectButtonPath;
+    private NodePath settingsPath, overlayPath, hotBoxPath, fileButtonPath, editButtonPath, selectButtonPath, currentFileLabelPath;
 
     private Node3D field;
     private Button fieldButton;
@@ -30,6 +32,7 @@ public partial class Interface : Godot.Control
     private Panel overlay;
     private HotBox hotBox;
     private MenuButton fileButton, editButton, selectButton;
+    private Label currentFileLabel;
 
     public override void _Ready()
     {
@@ -49,6 +52,7 @@ public partial class Interface : Godot.Control
         fileButton = (MenuButton)GetNode(fileButtonPath);
         editButton = (MenuButton)GetNode(editButtonPath);
         selectButton = (MenuButton)GetNode(selectButtonPath);
+        currentFileLabel = (Label)GetNode(currentFileLabelPath);
 
         SetMenuButtons();
         SetFieldButtonPressed();
@@ -293,6 +297,13 @@ public partial class Interface : Godot.Control
     {
         error.Call("set_text", text);
         error.Call("show_error");
+    }
+
+    public void SetCurrentPath(String path)
+    {
+        if (path == null)
+            currentFileLabel.Text = DEFAULT_FILE_LABEL_TEXT;
+        currentFileLabel.Text = path.Substring(path.LastIndexOf("/") + 1);
     }
 
     public PartsList GetPartsListNode()

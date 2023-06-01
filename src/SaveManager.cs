@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public static class SaveManager
 {
-    public static String CurrentPath = null;
+    private static String currentPath = null;
 
 	public static void Save(String path, Interface ui, Parts parts)
     {
@@ -45,7 +45,7 @@ public static class SaveManager
         file.StoreLine(partGroupingJsonString);
 
         file.Close();
-        CurrentPath = path;
+        SetCurrentPath(path, ui);
     } 
 
 	public static void Load(String path, Interface ui, Parts parts)
@@ -105,7 +105,7 @@ public static class SaveManager
         parts.LoadPartGroups(partGroups);
 
         file.Close();
-        CurrentPath = path;
+        SetCurrentPath(path, ui);
     }
 
 	public static void LoadPart(Dictionary<String, Variant> saveInfo, Parts parts, Dictionary<String, PartGroup> loadedPartGroups)
@@ -184,4 +184,15 @@ public static class SaveManager
         Vector3 result = new Vector3(float.Parse(values[0]), float.Parse(values[1]), float.Parse(values[2]));
         return result;
 	}
+
+    public static void SetCurrentPath(String path, Interface ui)
+    {
+        currentPath = path;
+        ui.SetCurrentPath(path);
+    }
+
+    public static String GetCurrentPath()
+    {
+        return currentPath;
+    }
 }

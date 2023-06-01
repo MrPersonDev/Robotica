@@ -36,6 +36,7 @@ hotBoxPath = NodePath("HotBox")
 fileButtonPath = NodePath("PanelContainer/MarginContainer/HBoxContainer/FileButton")
 editButtonPath = NodePath("PanelContainer/MarginContainer/HBoxContainer/EditButton")
 selectButtonPath = NodePath("PanelContainer/MarginContainer/HBoxContainer/SelectButton")
+currentFileLabelPath = NodePath("PanelContainer/MarginContainer/CurrentFileLabel")
 
 [node name="SelectionBox" type="Panel" parent="."]
 visible = false
@@ -80,9 +81,10 @@ layout_mode = 2
 text = "Select"
 flat = false
 
-[node name="CenterLabel" type="Label" parent="PanelContainer/MarginContainer"]
+[node name="CurrentFileLabel" type="Label" parent="PanelContainer/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+text = "New Robot (Unsaved)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
