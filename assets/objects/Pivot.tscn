@@ -41,7 +41,6 @@ render_target_update_mode = 4
 [node name="MainCamera" type="Camera3D" parent="MainViewportContainer/MainViewport"]
 current = true
 fov = 60.0
-near = 0.001
 
 [node name="OrthographicGrid" type="MeshInstance3D" parent="MainViewportContainer/MainViewport/MainCamera"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -100)
@@ -70,4 +69,3 @@ render_target_update_mode = 4
 cull_mask = 2
 environment = SubResource("Environment_v61ko")
 fov = 60.0
-near = 0.001
