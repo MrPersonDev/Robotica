@@ -744,12 +744,15 @@ public partial class Control : Node3D
         if (moving && !rotating)
             return axis;
         else
-            return pivot.GetCamNormal() * axis + (Vector3.One-axis);
+            return pivot.GetCamNormal() * (Vector3.One-axis);
     }
 
     private Vector3 GetIntersectionPlanePos(Moveable other)
     {
-        return pivot.GlobalPosition;
+        if (moving)
+            return pivot.GlobalPosition;
+        else
+            return transform.GlobalPosition - offset;
     }
 
     private double RotationToIntersection(Vector3 intersection, bool snapping)
