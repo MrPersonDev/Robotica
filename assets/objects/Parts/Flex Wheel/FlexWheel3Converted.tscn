@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://d2vm8kk3pdnw2"]
+
+[ext_resource type="PackedScene" uid="uid://cl5en1o2r4bqq" path="res://assets/objects/Part.tscn" id="1_emay3"]
+[ext_resource type="PackedScene" uid="uid://cdggdbp51hwv0" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="2_ix03h"]
+[ext_resource type="ArrayMesh" uid="uid://c8uo8d7ewvvpc" path="res://assets/models/Flex Wheel/3_inch_flex_wheel.obj" id="3_lcci5"]
+[ext_resource type="ArrayMesh" uid="uid://dhlfb70ww8u54" path="res://assets/models/Flex Wheel/VersaHub_v2.obj" id="4_o6tv4"]
+[ext_resource type="ArrayMesh" uid="uid://bavyech46y1lp" path="res://assets/models/Flex Wheel/VersaHex.obj" id="5_x6q04"]
+[ext_resource type="ArrayMesh" uid="uid://dtdfs4rdvxvmn" path="res://assets/models/Gear/Metal_Shaft_Inserts__276-3881-002_.obj" id="6_04qu6"]
+
+[node name="Part" instance=ExtResource("1_emay3")]
+
+[node name="TwoSidedSquareHole" parent="Holes" index="0" instance=ExtResource("2_ix03h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.008, 2.005, -0.63)
+length = 1.529
+width = 0.7
+isDefaultHole = true
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_lcci5")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="AdditionalMeshes" index="0"]
+mesh = ExtResource("4_o6tv4")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="AdditionalMeshes" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.369023)
+mesh = ExtResource("5_x6q04")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="AdditionalMeshes" index="2"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.00486, 0, -1.62948)
+mesh = ExtResource("5_x6q04")
+
+[node name="CSGMesh3D4" type="CSGMesh3D" parent="AdditionalMeshes" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.213414, 0.20859, 0.142539)
+mesh = ExtResource("6_04qu6")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="AdditionalMeshes" index="4"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.80164, 0.2137, -1.40285)
+mesh = ExtResource("6_04qu6")

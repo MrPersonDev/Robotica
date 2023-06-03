@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqup75o2r83bw"]
+
+[ext_resource type="PackedScene" uid="uid://cl5en1o2r4bqq" path="res://assets/objects/Part.tscn" id="1_32i1y"]
+[ext_resource type="PackedScene" uid="uid://cdggdbp51hwv0" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="2_suv8v"]
+[ext_resource type="ArrayMesh" uid="uid://b68sddhaw8cpp" path="res://assets/models/Flex Wheel/2_inch_flex_wheel.obj" id="3_f4xny"]
+[ext_resource type="ArrayMesh" uid="uid://bavyech46y1lp" path="res://assets/models/Flex Wheel/VersaHex.obj" id="4_aievj"]
+
+[node name="Part" instance=ExtResource("1_32i1y")]
+
+[node name="TwoSidedSquareHole" parent="Holes" index="0" instance=ExtResource("2_suv8v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.00253, 2.00008, -0.624098)
+length = 0.686
+width = 1.514
+isDefaultHole = true
+isHighStrength = true
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_f4xny")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="AdditionalMeshes" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.00504035)
+mesh = ExtResource("4_aievj")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="AdditionalMeshes" index="1"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.00486, 0, -1.25336)
+mesh = ExtResource("4_aievj")

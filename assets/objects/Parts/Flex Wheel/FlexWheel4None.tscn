@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://byg38ejweap0e"]
+
+[ext_resource type="PackedScene" uid="uid://cl5en1o2r4bqq" path="res://assets/objects/Part.tscn" id="1_e2not"]
+[ext_resource type="ArrayMesh" uid="uid://d4n34fbtg2whf" path="res://assets/models/Flex Wheel/4_inch_flex_wheel.obj" id="2_ot6mr"]
+
+[node name="Part" instance=ExtResource("1_e2not")]
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("2_ot6mr")

@@ -1,0 +1,30 @@
+[gd_scene load_steps=19 format=3 uid="uid://d23koedu1bfo1"]
+
+[ext_resource type="PackedScene" uid="uid://djq6apdtjxop8" path="res://assets/ui/PartOptions/AngleOption.tscn" id="1_5ah48"]
+[ext_resource type="Script" path="res://src/part_option/FlexWheelOption.cs" id="2_dsmix"]
+[ext_resource type="Material" uid="uid://1p2c6xyeiuwy" path="res://assets/materials/Rubber30A.tres" id="3_ji1jg"]
+[ext_resource type="PackedScene" uid="uid://bqmlubotjhd0q" path="res://assets/objects/Parts/Flex Wheel/FlexWheel1_625None.tscn" id="4_1ujon"]
+[ext_resource type="Material" uid="uid://c4f61fel6lhek" path="res://assets/materials/Rubber45A.tres" id="4_gcej2"]
+[ext_resource type="Material" uid="uid://djco5xdj7cfp3" path="res://assets/materials/Rubber60A.tres" id="5_abhei"]
+[ext_resource type="PackedScene" uid="uid://bfh4u6fisvyeu" path="res://assets/objects/Parts/Flex Wheel/FlexWheel2None.tscn" id="5_wuo2b"]
+[ext_resource type="Material" uid="uid://b3m88l8t0ougl" path="res://assets/materials/MetalInsertMaterial.tres" id="6_0esi0"]
+[ext_resource type="PackedScene" uid="uid://d1mpcxsehy3o2" path="res://assets/objects/Parts/Flex Wheel/FlexWheel3None.tscn" id="6_xaryo"]
+[ext_resource type="PackedScene" uid="uid://byg38ejweap0e" path="res://assets/objects/Parts/Flex Wheel/FlexWheel4None.tscn" id="7_46lam"]
+[ext_resource type="PackedScene" uid="uid://dx1kxdxe3b8gh" path="res://assets/objects/Parts/Flex Wheel/FlexWheel1_625HS.tscn" id="8_xm48e"]
+[ext_resource type="PackedScene" uid="uid://dqup75o2r83bw" path="res://assets/objects/Parts/Flex Wheel/FlexWheel2HS.tscn" id="9_0hmcm"]
+[ext_resource type="PackedScene" uid="uid://bt7cgql482n05" path="res://assets/objects/Parts/Flex Wheel/FlexWheel3HS.tscn" id="10_hus5n"]
+[ext_resource type="PackedScene" uid="uid://dx71l20805agl" path="res://assets/objects/Parts/Flex Wheel/FlexWheel4HS.tscn" id="11_dkofa"]
+[ext_resource type="PackedScene" uid="uid://dl5245kajjkts" path="res://assets/objects/Parts/Flex Wheel/FlexWheel1_625Converted.tscn" id="12_aigsb"]
+[ext_resource type="PackedScene" uid="uid://dic6a3fw2yuyk" path="res://assets/objects/Parts/Flex Wheel/FlexWheel2Converted.tscn" id="13_denwb"]
+[ext_resource type="PackedScene" uid="uid://d2vm8kk3pdnw2" path="res://assets/objects/Parts/Flex Wheel/FlexWheel3Converted.tscn" id="14_gm2tt"]
+[ext_resource type="PackedScene" uid="uid://won2dxdv6vtu" path="res://assets/objects/Parts/Flex Wheel/FlexWheel4Converted.tscn" id="15_0jcph"]
+
+[node name="FlexWheelOption" instance=ExtResource("1_5ah48")]
+script = ExtResource("2_dsmix")
+rubber30A = ExtResource("3_ji1jg")
+rubber45A = ExtResource("4_gcej2")
+rubber60A = ExtResource("5_abhei")
+insertsMaterial = ExtResource("6_0esi0")
+nonePartScenes = [ExtResource("4_1ujon"), ExtResource("5_wuo2b"), ExtResource("6_xaryo"), ExtResource("7_46lam")]
+hsPartScenes = [ExtResource("8_xm48e"), ExtResource("9_0hmcm"), ExtResource("10_hus5n"), ExtResource("11_dkofa")]
+convertedPartScenes = [ExtResource("12_aigsb"), ExtResource("13_denwb"), ExtResource("14_gm2tt"), ExtResource("15_0jcph")]
