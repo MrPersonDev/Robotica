@@ -1294,7 +1294,7 @@ public partial class Control : Node3D
         if (partOption == null || parameters == null)
             return;
 
-        Deselect();
+        Deselect(false);
 
         PartObject partObject = partOption.GetPartObject(parameters);
 
