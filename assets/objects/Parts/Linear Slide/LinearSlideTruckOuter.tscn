@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://cs2gqlr6jtvdu"]
+
+[ext_resource type="PackedScene" uid="uid://cl5en1o2r4bqq" path="res://assets/objects/Part.tscn" id="1_r8jqn"]
+[ext_resource type="PackedScene" uid="uid://ckikj6lchnhtx" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="2_0fx8p"]
+[ext_resource type="ArrayMesh" uid="uid://b1hl56em5v2ig" path="res://assets/models/Linear Slide/Outer_Slide_Truck.obj" id="3_tx8ln"]
+
+[node name="Part" instance=ExtResource("1_r8jqn")]
+
+[node name="TwoSidedCircleHole" parent="Holes" index="0" instance=ExtResource("2_0fx8p")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.505367, 0.10643, -0.254258)
+length = 0.201
+width = 0.938
+isFastener = true
+
+[node name="TwoSidedCircleHole2" parent="Holes" index="1" instance=ExtResource("2_0fx8p")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.505367, 0.10643, -0.754258)
+length = 0.201
+width = 0.938
+isFastener = true
+
+[node name="TwoSidedCircleHole3" parent="Holes" index="2" instance=ExtResource("2_0fx8p")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.505367, 0.10643, -1.25426)
+length = 0.201
+width = 0.938
+isFastener = true
+
+[node name="TwoSidedCircleHole4" parent="Holes" index="3" instance=ExtResource("2_0fx8p")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.505367, 0.10643, -1.75426)
+length = 0.201
+width = 0.938
+isFastener = true
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_tx8ln")

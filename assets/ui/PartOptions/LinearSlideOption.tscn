@@ -1,0 +1,19 @@
+[gd_scene load_steps=9 format=3 uid="uid://3yh51s2prsyj"]
+
+[ext_resource type="PackedScene" uid="uid://djq6apdtjxop8" path="res://assets/ui/PartOptions/AngleOption.tscn" id="1_sr002"]
+[ext_resource type="Script" path="res://src/part_option/LinearSlideOption.cs" id="2_6tjyx"]
+[ext_resource type="Material" uid="uid://c8u6ykcdce7t0" path="res://assets/materials/Steel.tres" id="3_xxe62"]
+[ext_resource type="Material" uid="uid://lpooaj56gdse" path="res://assets/materials/PlasticGreen.tres" id="4_1smfk"]
+[ext_resource type="Material" uid="uid://bdq1ijg0qqknc" path="res://assets/materials/PlasticRed.tres" id="5_hxu3q"]
+[ext_resource type="PackedScene" uid="uid://dtm3mercwvn7t" path="res://assets/objects/Parts/Linear Slide/LinearSlideTrack.tscn" id="6_xn3nb"]
+[ext_resource type="PackedScene" uid="uid://bsbjx15lboah" path="res://assets/objects/Parts/Linear Slide/LinearSlideTruckInner.tscn" id="7_trm67"]
+[ext_resource type="PackedScene" uid="uid://cs2gqlr6jtvdu" path="res://assets/objects/Parts/Linear Slide/LinearSlideTruckOuter.tscn" id="8_2u0qf"]
+
+[node name="LinearSlideOption" instance=ExtResource("1_sr002")]
+script = ExtResource("2_6tjyx")
+metalMaterial = ExtResource("3_xxe62")
+greenPlasticMaterial = ExtResource("4_1smfk")
+redPlasticMaterial = ExtResource("5_hxu3q")
+trackPartScene = ExtResource("6_xn3nb")
+innerTruckPartScene = ExtResource("7_trm67")
+outerTruckPartScene = ExtResource("8_2u0qf")

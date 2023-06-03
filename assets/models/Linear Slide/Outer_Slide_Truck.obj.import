@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b1hl56em5v2ig"
+path="res://.godot/imported/Outer_Slide_Truck.obj-70e5619a3539cdf29c873393f87bf452.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Outer_Slide_Truck.obj-70e5619a3539cdf29c873393f87bf452.mesh"]
+
+source_file="res://assets/models/Linear Slide/Outer_Slide_Truck.obj"
+dest_files=["res://.godot/imported/Outer_Slide_Truck.obj-70e5619a3539cdf29c873393f87bf452.mesh", "res://.godot/imported/Outer_Slide_Truck.obj-70e5619a3539cdf29c873393f87bf452.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
