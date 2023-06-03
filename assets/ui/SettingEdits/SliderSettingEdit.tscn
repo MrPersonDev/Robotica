@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://o6t64qn3snd0"]
+
+[ext_resource type="PackedScene" uid="uid://cebm74okhh7rw" path="res://assets/ui/SettingEdit.tscn" id="1_4f65h"]
+[ext_resource type="Script" path="res://src/ui/SettingEdit/SliderSettingEdit.cs" id="2_msbcm"]
+
+[node name="SettingEdit" instance=ExtResource("1_4f65h")]
+script = ExtResource("2_msbcm")
+min = 0.0
+max = 100.0
+step = 1.0
+sliderPath = NodePath("HSplitContainer/HSlider")
+spinboxPath = NodePath("HSplitContainer/SpinBox")
+
+[node name="HSplitContainer" type="HSplitContainer" parent="." index="1"]
+layout_mode = 2
+dragger_visibility = 1
+
+[node name="HSlider" type="HSlider" parent="HSplitContainer" index="0"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="SpinBox" type="SpinBox" parent="HSplitContainer" index="1"]
+layout_mode = 2
+size_flags_horizontal = 8
