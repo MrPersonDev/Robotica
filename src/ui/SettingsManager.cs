@@ -31,12 +31,30 @@ public static class SettingsManager
     {
         switch (panelName)
         {
+            case "General":
+                ApplyGeneralSettings(panelSettings, world);
+                break;
             case "Graphics":
                 ApplyGraphicsSettings(panelSettings, world);
                 break;
             default:
                 throw new Exception("Unkown panel name");
         }
+    }
+
+    private static void ApplyGeneralSettings(Dictionary<String, Variant> panelSettings, World world)
+    {
+        Pivot pivot = world.GetPivotNode();
+
+        pivot.SetFieldOfView((float)panelSettings["Field of View"]);
+        pivot.SetZoomSpeed((float)panelSettings["Zoom Speed"]);
+        pivot.SetXOrbitSpeed((float)panelSettings["X Orbit Speed"]);
+        pivot.SetYOrbitSpeed((float)panelSettings["Y Orbit Speed"]);
+        pivot.SetPanSpeed((float)panelSettings["Pan Speed"]);
+        pivot.SetXOrbitInverted((bool)panelSettings["Invert X Orbit"]);
+        pivot.SetYOrbitInverted((bool)panelSettings["Invert Y Orbit"]);
+        pivot.SetXPanInverted((bool)panelSettings["Invert X Pan"]);
+        pivot.SetYPanInverted((bool)panelSettings["Invert Y Pan"]);
     }
 
     private static void ApplyGraphicsSettings(Dictionary<String, Variant> panelSettings, World world)

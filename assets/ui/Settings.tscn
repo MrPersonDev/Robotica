@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cuoo2o88wqta1"]
+[gd_scene load_steps=8 format=3 uid="uid://cuoo2o88wqta1"]
 
 [ext_resource type="StyleBox" uid="uid://cw8o2n74feuab" path="res://assets/ui/theme/panels/SettingsPanel.tres" id="1_cbql0"]
 [ext_resource type="Script" path="res://src/ui/Settings.cs" id="2_6p6kl"]
@@ -6,6 +6,7 @@
 [ext_resource type="Theme" uid="uid://dks02nais2ncl" path="res://assets/ui/theme/themes/SettingsPanel.tres" id="3_5lnmb"]
 [ext_resource type="PackedScene" uid="uid://bhrfj254hjphf" path="res://assets/ui/SettingsPanelOption.tscn" id="4_e7d12"]
 [ext_resource type="PackedScene" uid="uid://bt7fnrbbf3si3" path="res://assets/ui/SettingsPanels/GraphicsPanel.tscn" id="5_ebv16"]
+[ext_resource type="PackedScene" uid="uid://bmnqnka0jve6j" path="res://assets/ui/SettingsPanels/GeneralPanel.tscn" id="5_loe3v"]
 
 [node name="Settings" type="PanelContainer"]
 anchors_preset = 15
@@ -77,7 +78,12 @@ layout_mode = 2
 theme = ExtResource("2_8txek")
 theme_override_constants/separation = 8
 
-[node name="SettingsPanelOption" parent="VSplitContainer/HSplitContainer2/MarginContainer/PanelOptions" instance=ExtResource("4_e7d12")]
+[node name="GeneralPanelOption" parent="VSplitContainer/HSplitContainer2/MarginContainer/PanelOptions" instance=ExtResource("4_e7d12")]
+layout_mode = 2
+text = "General"
+settingsPanel = ExtResource("5_loe3v")
+
+[node name="GraphicsPanelOption" parent="VSplitContainer/HSplitContainer2/MarginContainer/PanelOptions" instance=ExtResource("4_e7d12")]
 layout_mode = 2
 text = "Graphics"
 settingsPanel = ExtResource("5_ebv16")

@@ -3,13 +3,18 @@ using System;
 
 public partial class Pivot : Node3D
 {
-    private const float ZOOM_SPEED = 0.2f;
-    private const float X_ORBIT_SPEED = 200.0f;
-    private const float Y_ORBIT_SPEED = 100.0f;
-    private const float PAN_SPEED = 100.0f;
     private const float CAM_MAX_ANGLE = 90.0f;
     private const float CAM_MIN_ANGLE = 90.0f;
     private const float ORTHOGONAL_DIST_MULTIPLIER = 2.0f;
+
+    private float zoomSpeed = 0.2f;
+    private float xOrbitSpeed = 0.01f;
+    private float yOrbitSpeed = 0.005f;
+    private float panSpeed = 0.01f;
+    private bool invertXOrbit = false;
+    private bool invertYOrbit = false;
+    private bool invertXPan = false;
+    private bool invertYPan = false;
 
     private bool orbiting = false;
     private bool panning = false;
@@ -55,9 +60,9 @@ public partial class Pivot : Node3D
             orbiting = false;
 
         if (Input.IsActionJustPressed("zoom_in"))
-            Scale *= 1.0f / (1.0f + ZOOM_SPEED);
+            Scale *= 1.0f / (1.0f + zoomSpeed);
         else if (Input.IsActionJustPressed("zoom_out"))
-            Scale *= 1.0f + ZOOM_SPEED;
+            Scale *= 1.0f + zoomSpeed;
 
         if (inputEvent is InputEventMouseMotion)
         {
@@ -80,8 +85,8 @@ public partial class Pivot : Node3D
 
     private void OrbitingUpdate(InputEventMouseMotion mouseEvent)
     {
-        Rotate(Vector3.Up, -mouseEvent.Relative.X / Y_ORBIT_SPEED);
-        Rotate(Transform.Basis.X.Normalized(), -mouseEvent.Relative.Y / X_ORBIT_SPEED);
+        Rotate(Vector3.Up, -mouseEvent.Relative.X * xOrbitSpeed * (invertXOrbit ? -1 : 1));
+        Rotate(Transform.Basis.X.Normalized(), -mouseEvent.Relative.Y * yOrbitSpeed * (invertYOrbit ? -1 : 1));
 
         if (RotationDegrees.X < -CAM_MIN_ANGLE || RotationDegrees.X > CAM_MAX_ANGLE)
             ClampCameraAngle();
@@ -96,9 +101,9 @@ public partial class Pivot : Node3D
 
     private void PanningUpdate(InputEventMouseMotion mouseEvent)
     {
-        float curPanSpeed = orthogonal ? PAN_SPEED * ORTHOGONAL_DIST_MULTIPLIER : PAN_SPEED;
-        Translate(Vector3.Up * mouseEvent.Relative.Y / curPanSpeed);
-        Translate(Vector3.Left * mouseEvent.Relative.X / curPanSpeed);
+        float curPanSpeed = orthogonal ? panSpeed / ORTHOGONAL_DIST_MULTIPLIER : panSpeed;
+        Translate(Vector3.Up * mouseEvent.Relative.Y * curPanSpeed * (invertYPan ? -1 : 1));
+        Translate(Vector3.Left * mouseEvent.Relative.X * curPanSpeed * (invertXPan ? -1 : 1));
     }
 
     private void UpdateCameraPositions()
@@ -211,6 +216,52 @@ public partial class Pivot : Node3D
     public void SetOutlinesEnabled(bool value)
     {
         outlineContainer.Visible = value;
+    }
+
+    public void SetFieldOfView(float value)
+    {
+        mainCam.Fov = value;
+        outlineCam.Fov = value;
+    }
+
+    public void SetZoomSpeed(float value)
+    {
+        zoomSpeed = value;
+    }
+
+    public void SetXOrbitSpeed(float value)
+    {
+        xOrbitSpeed = value;
+    }
+
+    public void SetYOrbitSpeed(float value)
+    {
+        yOrbitSpeed = value;
+    }
+
+    public void SetPanSpeed(float value)
+    {
+        panSpeed = value;
+    }
+
+    public void SetXOrbitInverted(bool value)
+    {
+        invertXOrbit = value;
+    }
+
+    public void SetYOrbitInverted(bool value)
+    {
+        invertYOrbit = value;
+    }
+
+    public void SetXPanInverted(bool value)
+    {
+        invertXPan = value;
+    }
+
+    public void SetYPanInverted(bool value)
+    {
+        invertYPan = value;
     }
 
     public bool GetOrthogonal()
