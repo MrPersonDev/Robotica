@@ -22,10 +22,10 @@ isHighStrength = true
 [node name="MeshCutter" parent="." index="3"]
 mesh = ExtResource("4_5ygw3")
 
-[node name="CSGMesh3D" type="CSGMesh3D" parent="AdditionalMeshes" index="0"]
+[node name="CSGMesh3D" type="MeshInstance3D" parent="AdditionalMeshes" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.346, -1.346, -0.014)
 mesh = ExtResource("5_pwado")
 
-[node name="CSGMesh3D2" type="CSGMesh3D" parent="AdditionalMeshes" index="1"]
+[node name="CSGMesh3D2" type="MeshInstance3D" parent="AdditionalMeshes" index="1"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.24066, -1.34623, -0.817193)
 mesh = ExtResource("5_pwado")

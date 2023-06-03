@@ -15,5 +15,5 @@ isDefaultHole = true
 [node name="MeshCutter" parent="." index="3"]
 mesh = ExtResource("3_xhe23")
 
-[node name="Converter" type="CSGMesh3D" parent="AdditionalMeshes" index="0"]
+[node name="Converter" type="MeshInstance3D" parent="AdditionalMeshes" index="0"]
 mesh = ExtResource("4_j7njf")

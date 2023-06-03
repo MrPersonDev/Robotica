@@ -28,6 +28,7 @@ public partial class Part : Moveable
     private Dictionary<String, Variant> parameters;
     private StaticBody3D partMeshStaticBody;
     private CollisionShape3D partMeshCollider;
+    private List<CollisionShape3D> additionalMeshColliders = new List<CollisionShape3D>();
     private bool cutting = false;
     private bool queuedForCutting = false;
     private float queuedLength, queuedHeight, queuedWidth;
@@ -47,13 +48,12 @@ public partial class Part : Moveable
     private NodePath partMeshPath, additionalMeshesPath, centerPath, holesPath, insertsPath;
 
     private MeshCutter partMesh;
-    private CsgCombiner3D additionalMeshes;
-    private Node3D center, holes, inserts, otherMeshes;
+    private Node3D additionalMeshes, center, holes, inserts, otherMeshes;
 
     public void Setup(bool loaded = false)
     {
         partMesh = (MeshCutter)GetNode(partMeshPath);
-        additionalMeshes = (CsgCombiner3D)GetNode(additionalMeshesPath);
+        additionalMeshes = (Node3D)GetNode(additionalMeshesPath);
         center = (Node3D)GetNode(centerPath);
         holes = (Node3D)GetNode(holesPath);
         inserts = (Node3D)GetNode(insertsPath);
@@ -163,6 +163,29 @@ public partial class Part : Moveable
         partMeshCollider = (CollisionShape3D)partMeshStaticBody.GetChild(0);
     }
 
+    public void SetAdditionalMeshColliders()
+    {
+        if (!IsInsideTree())
+            return;
+
+        foreach (MeshInstance3D additionalMesh in additionalMeshes.GetChildren())
+            SetAdditionalMeshCollider(additionalMesh);
+    }
+
+    private void SetAdditionalMeshCollider(MeshInstance3D additionalMesh)
+    {
+        additionalMesh.CreateTrimeshCollision();
+
+        StaticBody3D additionalMeshStaticBody = (StaticBody3D)additionalMesh.GetChildren()[additionalMesh.GetChildCount() - 1];
+        additionalMeshStaticBody.AddToGroup(additionalMeshes.GetGroups()[0], true);
+        Transform3D prevTransform = additionalMeshStaticBody.GlobalTransform;
+        additionalMesh.RemoveChild(additionalMeshStaticBody);
+        AddChild(additionalMeshStaticBody);
+        additionalMeshStaticBody.GlobalTransform = prevTransform;
+
+        additionalMeshColliders.Add((CollisionShape3D)additionalMeshStaticBody.GetChild(0));
+    }
+
     public void RemoveCollider()
     {
         if (!IsInstanceValid(partMeshStaticBody))
@@ -194,8 +217,8 @@ public partial class Part : Moveable
 
     public void SetAdditionalMeshMaterial(StandardMaterial3D material)
     {
-        foreach (CsgMesh3D additionalMesh in additionalMeshes.GetChildren())
-            additionalMesh.Material = material;
+        foreach (MeshInstance3D additionalMesh in additionalMeshes.GetChildren())
+            additionalMesh.MaterialOverride = material;
     }
 
     private void SetOverlayMaterial()
@@ -321,7 +344,8 @@ public partial class Part : Moveable
             return;
 
         partMeshCollider.Disabled = false;
-        additionalMeshes.UseCollision = true;
+        foreach (CollisionShape3D additionalMeshCollider in additionalMeshColliders)
+            additionalMeshCollider.Disabled = false;
     }
 
     public override void DisableMeshCollider()
@@ -330,7 +354,8 @@ public partial class Part : Moveable
             return;
 
         partMeshCollider.Disabled = true;
-        additionalMeshes.UseCollision = false;
+        foreach (CollisionShape3D additionalMeshCollider in additionalMeshColliders)
+            additionalMeshCollider.Disabled = true;
     }
 
     public override void EnableColliders()
@@ -400,7 +425,7 @@ public partial class Part : Moveable
 
         partMesh.Layers = layer;
 
-        foreach (CsgMesh3D additionalMesh in additionalMeshes.GetChildren())
+        foreach (MeshInstance3D additionalMesh in additionalMeshes.GetChildren())
             additionalMesh.Layers = layer;
     }
 

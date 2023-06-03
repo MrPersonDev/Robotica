@@ -18,21 +18,21 @@ isDefaultHole = true
 [node name="MeshCutter" parent="." index="3"]
 mesh = ExtResource("3_lcci5")
 
-[node name="CSGMesh3D" type="CSGMesh3D" parent="AdditionalMeshes" index="0"]
+[node name="CSGMesh3D" type="MeshInstance3D" parent="AdditionalMeshes" index="0"]
 mesh = ExtResource("4_o6tv4")
 
-[node name="CSGMesh3D2" type="CSGMesh3D" parent="AdditionalMeshes" index="1"]
+[node name="CSGMesh3D2" type="MeshInstance3D" parent="AdditionalMeshes" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.369023)
 mesh = ExtResource("5_x6q04")
 
-[node name="CSGMesh3D3" type="CSGMesh3D" parent="AdditionalMeshes" index="2"]
+[node name="CSGMesh3D3" type="MeshInstance3D" parent="AdditionalMeshes" index="2"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.00486, 0, -1.62948)
 mesh = ExtResource("5_x6q04")
 
-[node name="CSGMesh3D4" type="CSGMesh3D" parent="AdditionalMeshes" index="3"]
+[node name="CSGMesh3D4" type="MeshInstance3D" parent="AdditionalMeshes" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.213414, 0.20859, 0.142539)
 mesh = ExtResource("6_04qu6")
 
-[node name="CSGMesh3D5" type="CSGMesh3D" parent="AdditionalMeshes" index="4"]
+[node name="CSGMesh3D5" type="MeshInstance3D" parent="AdditionalMeshes" index="4"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.80164, 0.2137, -1.40285)
 mesh = ExtResource("6_04qu6")

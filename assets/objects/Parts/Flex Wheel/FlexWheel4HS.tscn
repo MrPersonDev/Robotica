@@ -18,13 +18,13 @@ isHighStrength = true
 [node name="MeshCutter" parent="." index="3"]
 mesh = ExtResource("2_phmcx")
 
-[node name="CSGMesh3D" type="CSGMesh3D" parent="AdditionalMeshes" index="0"]
+[node name="CSGMesh3D" type="MeshInstance3D" parent="AdditionalMeshes" index="0"]
 mesh = ExtResource("3_6rnb0")
 
-[node name="CSGMesh3D2" type="CSGMesh3D" parent="AdditionalMeshes" index="1"]
+[node name="CSGMesh3D2" type="MeshInstance3D" parent="AdditionalMeshes" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.369023)
 mesh = ExtResource("4_6x01y")
 
-[node name="CSGMesh3D3" type="CSGMesh3D" parent="AdditionalMeshes" index="2"]
+[node name="CSGMesh3D3" type="MeshInstance3D" parent="AdditionalMeshes" index="2"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.00486, 0, -1.62948)
 mesh = ExtResource("4_6x01y")

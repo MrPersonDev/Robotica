@@ -49,10 +49,10 @@ length = 0.485
 [node name="MeshCutter" parent="." index="3"]
 mesh = ExtResource("4_ew30n")
 
-[node name="CSGMesh3D" type="CSGMesh3D" parent="AdditionalMeshes" index="0"]
+[node name="CSGMesh3D" type="MeshInstance3D" parent="AdditionalMeshes" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.842, 1.086, -0.208768)
 mesh = ExtResource("5_hsrkb")
 
-[node name="CSGMesh3D2" type="CSGMesh3D" parent="AdditionalMeshes" index="1"]
+[node name="CSGMesh3D2" type="MeshInstance3D" parent="AdditionalMeshes" index="1"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.425, 1.086, -0.822647)
 mesh = ExtResource("5_hsrkb")

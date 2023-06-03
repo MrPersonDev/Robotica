@@ -263,6 +263,7 @@ public partial class Parts : Node3D
         CallDeferred("add_child", part);
         // CreateHoles(part, new Godot.Collections.Array<Hole>(holeList));
         CallDeferred("CreateHoles", part, new Godot.Collections.Array<Hole>(holeList));
+        part.CallDeferred("call_deferred", "SetAdditionalMeshColliders");
 
         return part;
     }

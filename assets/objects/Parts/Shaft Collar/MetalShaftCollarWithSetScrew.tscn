@@ -17,5 +17,5 @@ isFastener = true
 [node name="MeshCutter" parent="." index="3"]
 mesh = ExtResource("4_qbmq2")
 
-[node name="Set Screw" type="CSGMesh3D" parent="AdditionalMeshes" index="0"]
+[node name="Set Screw" type="MeshInstance3D" parent="AdditionalMeshes" index="0"]
 mesh = ExtResource("4_ch1ki")

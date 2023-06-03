@@ -31,5 +31,5 @@ isHighStrength = true
 [node name="MeshCutter" parent="." index="3"]
 mesh = ExtResource("4_wtraf")
 
-[node name="Cartridge Indicator" type="CSGMesh3D" parent="AdditionalMeshes" index="0"]
+[node name="Cartridge Indicator" type="MeshInstance3D" parent="AdditionalMeshes" index="0"]
 mesh = ExtResource("4_c72dr")
