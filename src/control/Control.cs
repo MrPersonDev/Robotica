@@ -934,6 +934,10 @@ public partial class Control : Node3D
         if (isPartSelected)
             return;
 
+        foreach (Part selectionPart in selection.GetParts())
+            if (selectionPart.HasInsert())
+                parts.RequireUpdate(selectionPart);
+
         snapping = true;
 
         selection.UpdateCollisionTransform();
@@ -953,6 +957,8 @@ public partial class Control : Node3D
         bool movingAnInsert = moving && selection.GetParts().Count == 1 && selection.GetParts()[0].HasInsert();
         if (!movingAnInsert)
             return;
+
+        parts.RequireUpdate(selection.GetParts()[0]);
 
         selection.UpdateCollisionTransform();
 
