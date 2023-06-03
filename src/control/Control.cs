@@ -887,6 +887,9 @@ public partial class Control : Node3D
 
     private void MoveRotateInteraction()
     {
+        if (!IsInstanceValid(selectedHoleBody))
+            return;    
+
         double angle = ChangeInAngle(MoveRotation(), Input.IsActionPressed("snapping") ? QUARTER_ROTATE_SNAP : DEFAULT_ROTATE_SNAP);
 
         Vector3 rotationAxis = axis.Normalized();
