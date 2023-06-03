@@ -22,7 +22,7 @@ outlineContainerPath = NodePath("OutlineViewportContainer")
 orthographicGridPath = NodePath("MainViewportContainer/MainViewport/MainCamera/OrthographicGrid")
 
 [node name="CameraPos" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.999962, 0.00872654, 0, -0.00872654, 0.999962, 0, 0, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 
 [node name="MainViewportContainer" type="SubViewportContainer" parent="."]
 anchors_preset = 15

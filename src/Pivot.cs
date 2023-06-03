@@ -67,6 +67,9 @@ public partial class Pivot : Node3D
             else if (panning)
                 PanningUpdate(mouseEvent);
         }
+
+        if (Input.IsActionJustPressed("snap_camera"))// && orthogonal)
+            SnapCamera();
     }
 
     public override void _Process(double delta)
@@ -138,6 +141,49 @@ public partial class Pivot : Node3D
             SetCameraProjection(Camera3D.ProjectionType.Orthogonal);
         else
             SetCameraProjection(Camera3D.ProjectionType.Perspective);
+    }
+
+    private void SnapCamera()
+    {
+        double minDistance = double.MaxValue;
+        Vector3 closestSnapDirection = GlobalTransform.Basis.Z;
+        for (int position = 0; position < 3; position++)
+        {
+            for (int value = -1; value <= 1; value += 2)
+            {
+                Vector3 snapDirection = new Vector3(0.0f, 0.0f, 0.0f);
+                snapDirection[position] = value;
+
+                double distance = snapDirection.AngleTo(GlobalTransform.Basis.Z);
+                if (distance < minDistance)
+                {
+                    minDistance = distance;
+                    closestSnapDirection = snapDirection;
+                }
+            }
+        }
+
+        Vector3 prevPosition = GlobalPosition;
+        if (GlobalTransform.Basis.Z.Normalized().Dot(closestSnapDirection) < 0.9999)
+        {
+            if (Vector3.Up.Cross(closestSnapDirection).IsZeroApprox())
+                LookAtFromPosition(Vector3.Zero, -closestSnapDirection, -GlobalTransform.Basis.Z);
+            else
+                LookAtFromPosition(Vector3.Zero, -closestSnapDirection);
+        }
+        GlobalPosition = prevPosition;
+
+        RotationDegrees = SnapRotationVector(RotationDegrees);
+    }
+
+    private float RoundToNearest(float value, float other)
+    {
+        return (float)Math.Round(value / other) * other;
+    }
+
+    private Vector3 SnapRotationVector(Vector3 vector)
+    {
+        return new Vector3(vector.X, RoundToNearest(vector.Y, 90.0f), vector.Z);
     }
 
     public void ShowGrid()
