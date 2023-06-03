@@ -5,7 +5,7 @@ public partial class SliderSettingEdit : SettingEdit
 {
 	[ExportGroup("Properties")]
 	[Export]
-	private float min = 0.0f, max = 100.0f, step = 1.0f, defaultValue = 0.0f;
+	private float min = 0.0f, max = 100.0f, step = 1.0f;
 
 	[ExportGroup("Node paths")]
 	[Export]
@@ -23,7 +23,6 @@ public partial class SliderSettingEdit : SettingEdit
 
 		SetupInputs();
 		ConnectInputs();
-		SetValue(defaultValue);
 	}
 
 	private void SetupInputs()
