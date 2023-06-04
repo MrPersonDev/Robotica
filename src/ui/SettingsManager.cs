@@ -37,6 +37,9 @@ public static class SettingsManager
             case "Graphics":
                 ApplyGraphicsSettings(panelSettings, world);
                 break;
+            case "Keybinds":
+                ApplyKeybindsSettings(panelSettings, world);
+                break;
             default:
                 throw new Exception("Unkown panel name");
         }
@@ -92,6 +95,17 @@ public static class SettingsManager
                 break;
         }
     }
+    
+    private static void ApplyKeybindsSettings(Dictionary<String, Variant> panelSettings, World world)
+    {
+        foreach (KeyValuePair<String, Variant> mapping in panelSettings)
+        {
+            InputMap.ActionEraseEvents(mapping.Key);
+            InputMap.ActionAddEvent(mapping.Key, (InputEvent)mapping.Value);
+        }
+
+        world.GetInterfaceNode().UpdateMenuButtons();
+    }    
 
     private static void SaveSettings(Interface ui)
     {

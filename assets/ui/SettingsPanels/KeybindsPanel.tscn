@@ -1,0 +1,122 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpe3bkgr07x7f"]
+
+[ext_resource type="PackedScene" uid="uid://bc720e4p081s4" path="res://assets/ui/SettingsPanel.tscn" id="1_4wsjj"]
+[ext_resource type="PackedScene" uid="uid://j2ghh4jdy6jb" path="res://assets/ui/SettingEdits/InputSettingEdit.tscn" id="2_ukts1"]
+
+[node name="SettingsPanel" instance=ExtResource("1_4wsjj")]
+
+[node name="pan" parent="ScrollContainer/SettingEdits" index="0" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "pan"
+
+[node name="orbit" parent="ScrollContainer/SettingEdits" index="1" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "orbit"
+
+[node name="zoom_in" parent="ScrollContainer/SettingEdits" index="2" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "zoom_in"
+
+[node name="zoom_out" parent="ScrollContainer/SettingEdits" index="3" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "zoom_out"
+
+[node name="focus" parent="ScrollContainer/SettingEdits" index="4" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "focus"
+
+[node name="select" parent="ScrollContainer/SettingEdits" index="5" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "select"
+
+[node name="select_all" parent="ScrollContainer/SettingEdits" index="6" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "select_all"
+
+[node name="deselect_all" parent="ScrollContainer/SettingEdits" index="7" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "deselect_all"
+
+[node name="multiselect" parent="ScrollContainer/SettingEdits" index="8" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "multiselect"
+
+[node name="opposing_collider" parent="ScrollContainer/SettingEdits" index="9" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "opposing_collider"
+
+[node name="transform_rotate" parent="ScrollContainer/SettingEdits" index="10" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "transform_rotate"
+
+[node name="transform_move" parent="ScrollContainer/SettingEdits" index="11" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "transform_move"
+
+[node name="transform_both" parent="ScrollContainer/SettingEdits" index="12" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "transform_both"
+
+[node name="move" parent="ScrollContainer/SettingEdits" index="13" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "move"
+
+[node name="move_rotate" parent="ScrollContainer/SettingEdits" index="14" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "move_rotate"
+
+[node name="snapping" parent="ScrollContainer/SettingEdits" index="15" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "snapping"
+
+[node name="group" parent="ScrollContainer/SettingEdits" index="16" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "group"
+
+[node name="delete" parent="ScrollContainer/SettingEdits" index="17" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "delete"
+
+[node name="new" parent="ScrollContainer/SettingEdits" index="18" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "new"
+
+[node name="save_as" parent="ScrollContainer/SettingEdits" index="19" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "save_as"
+
+[node name="load" parent="ScrollContainer/SettingEdits" index="20" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "load"
+
+[node name="fullscreen" parent="ScrollContainer/SettingEdits" index="21" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "fullscreen"
+
+[node name="undo" parent="ScrollContainer/SettingEdits" index="22" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "undo"
+
+[node name="redo" parent="ScrollContainer/SettingEdits" index="23" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "redo"
+
+[node name="duplicate" parent="ScrollContainer/SettingEdits" index="24" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "duplicate"
+
+[node name="hot_box" parent="ScrollContainer/SettingEdits" index="25" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "hot_box"
+
+[node name="snap_camera" parent="ScrollContainer/SettingEdits" index="26" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "snap_camera"
+
+[node name="orthographic" parent="ScrollContainer/SettingEdits" index="27" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "orthographic"
+
+[node name="perspective" parent="ScrollContainer/SettingEdits" index="28" instance=ExtResource("2_ukts1")]
+layout_mode = 2
+name = "perspective"
