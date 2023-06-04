@@ -81,5 +81,11 @@ public partial class PartsList : PanelContainer
 	{
 		Action partOptionClickedAction = () => { PartOptionClicked(partOption); };
 		return partOptionClickedAction;
+	
+	}
+	
+	public List<String> GetPartsNames()
+	{
+		return new List<String>(partOptionNames.Keys);
 	}
 }
