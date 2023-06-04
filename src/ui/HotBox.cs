@@ -30,6 +30,8 @@ public partial class HotBox : Godot.Control
 
 	private void SetHotBoxOptions()
 	{
+		ClearOptions();
+
 		float angleBetween = (float)((360.0f / partNames.Count) * (Math.PI / 180.0f));
 		float angle = 0.0f;
 		for (int i = 0; i < partNames.Count; i++)
@@ -46,6 +48,17 @@ public partial class HotBox : Godot.Control
 
 			angle += angleBetween;
 		}
+	}
+	
+	private void ClearOptions()
+	{
+		foreach (Node child in children)
+		{
+			RemoveChild(child);
+			child.QueueFree();
+		}
+
+		children.Clear();
 	}
 
     public override void _Input(InputEvent inputEvent)
@@ -115,5 +128,17 @@ public partial class HotBox : Godot.Control
 
 		currentHovering = null;
 		Hide();
+	}
+
+	public void SetItems(Godot.Collections.Array<String> items)
+	{
+		partNames = items;
+		SetHotBoxOptions();
+	}
+	
+	public void SetDist(float dist)
+	{
+		this.dist = dist;
+		SetHotBoxOptions();
 	}
 }

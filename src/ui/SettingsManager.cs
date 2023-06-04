@@ -40,6 +40,9 @@ public static class SettingsManager
             case "Keybinds":
                 ApplyKeybindsSettings(panelSettings, world);
                 break;
+            case "Hotbox":
+                ApplyHotboxSettings(panelSettings, world);
+                break;
             default:
                 throw new Exception("Unkown panel name");
         }
@@ -106,6 +109,15 @@ public static class SettingsManager
 
         world.GetInterfaceNode().UpdateMenuButtons();
     }    
+
+    private static void ApplyHotboxSettings(Dictionary<String, Variant> panelSettings, World world)
+    {
+        HotBox hotBox = world.GetInterfaceNode().GetHotBoxNode();
+        Godot.Collections.Array<String> hotBoxItems = (Godot.Collections.Array<String>)panelSettings["Items"];
+
+        hotBox.SetItems(hotBoxItems);        
+        hotBox.SetDist((float)panelSettings["Distance"]);
+    }
 
     private static void SaveSettings(Interface ui)
     {

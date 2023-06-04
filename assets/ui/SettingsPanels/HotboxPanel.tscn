@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2dasaf85ruds"]
+
+[ext_resource type="PackedScene" uid="uid://bc720e4p081s4" path="res://assets/ui/SettingsPanel.tscn" id="1_6hsmo"]
+[ext_resource type="PackedScene" uid="uid://67lx6emq7ikj" path="res://assets/ui/SettingEdits/PartsArraySettingEdit.tscn" id="2_ntamy"]
+[ext_resource type="PackedScene" uid="uid://o6t64qn3snd0" path="res://assets/ui/SettingEdits/SliderSettingEdit.tscn" id="3_dc7jf"]
+
+[node name="SettingsPanel" instance=ExtResource("1_6hsmo")]
+
+[node name="Items" parent="ScrollContainer/SettingEdits" index="0" instance=ExtResource("2_ntamy")]
+layout_mode = 2
+name = "Items"
+
+[node name="Distance" parent="ScrollContainer/SettingEdits" index="1" instance=ExtResource("3_dc7jf")]
+layout_mode = 2
+min = 10.0
+max = 1000.0
+name = "Distance"

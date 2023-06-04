@@ -54,8 +54,9 @@ public partial class HotBoxOption : Godot.Control
 	private async Task<Action> GetPartOptionAction()
 	{
 		World world = (World)GetTree().CurrentScene;
-		await ToSignal(world, Node.SignalName.Ready);
-
+		if (world.GetInterfaceNode() == null)
+			await ToSignal(world, Node.SignalName.Ready);
+		
 		PartsList partsList = world.GetInterfaceNode().GetPartsListNode();
 		PartOption partOption = partsList.GetPartOption(partName);
 

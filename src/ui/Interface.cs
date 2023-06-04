@@ -351,4 +351,9 @@ public partial class Interface : Godot.Control
     {
         return partsList;
     }
+
+    public HotBox GetHotBoxNode()
+    {
+        return hotBox;
+    }
 }

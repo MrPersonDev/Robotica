@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cuoo2o88wqta1"]
+[gd_scene load_steps=10 format=3 uid="uid://cuoo2o88wqta1"]
 
 [ext_resource type="StyleBox" uid="uid://cw8o2n74feuab" path="res://assets/ui/theme/panels/SettingsPanel.tres" id="1_cbql0"]
 [ext_resource type="Script" path="res://src/ui/Settings.cs" id="2_6p6kl"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bt7fnrbbf3si3" path="res://assets/ui/SettingsPanels/GraphicsPanel.tscn" id="5_ebv16"]
 [ext_resource type="PackedScene" uid="uid://bmnqnka0jve6j" path="res://assets/ui/SettingsPanels/GeneralPanel.tscn" id="5_loe3v"]
 [ext_resource type="PackedScene" uid="uid://dpe3bkgr07x7f" path="res://assets/ui/SettingsPanels/KeybindsPanel.tscn" id="7_h5rv7"]
+[ext_resource type="PackedScene" uid="uid://c2dasaf85ruds" path="res://assets/ui/SettingsPanels/HotboxPanel.tscn" id="8_dypi8"]
 
 [node name="Settings" type="PanelContainer"]
 anchors_preset = 15
@@ -93,6 +94,11 @@ settingsPanel = ExtResource("5_ebv16")
 layout_mode = 2
 text = "Keybinds"
 settingsPanel = ExtResource("7_h5rv7")
+
+[node name="HotboxPanelOption" parent="VSplitContainer/HSplitContainer2/MarginContainer/PanelOptions" instance=ExtResource("4_e7d12")]
+layout_mode = 2
+text = "Hotbox"
+settingsPanel = ExtResource("8_dypi8")
 
 [node name="MarginContainer2" type="MarginContainer" parent="VSplitContainer/HSplitContainer2"]
 layout_mode = 2
