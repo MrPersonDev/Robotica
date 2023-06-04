@@ -413,6 +413,18 @@ public partial class Control : Node3D
         ui.ShowLoadDialog();
     }
 
+    public void HandleImportInput()
+    {
+        if (ui.IsSettingsOpen())
+            return;
+        
+        ClearHistory();
+
+        Deselect(false);
+        ResetNewPart();
+        ui.ShowImportDialog();
+    }
+
     public void HandleExitInput()
     {
         GetTree().Quit();

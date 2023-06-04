@@ -29,6 +29,7 @@ fpsCounterPath = NodePath("PanelContainer/MarginContainer/Rightmost/FPSCounter")
 partsListPath = NodePath("PartsList")
 saveDialogPath = NodePath("SaveDialog")
 loadDialogPath = NodePath("LoadDialog")
+importDialogPath = NodePath("ImportDialog")
 errorPath = NodePath("Error")
 settingsPath = NodePath("Settings")
 overlayPath = NodePath("Overlay")
@@ -155,6 +156,9 @@ offset_bottom = 0.0
 mouse_filter = 2
 
 [node name="LoadDialog" parent="." instance=ExtResource("4_4ro5i")]
+mouse_filter = 2
+
+[node name="ImportDialog" parent="." instance=ExtResource("4_4ro5i")]
 mouse_filter = 2
 
 [node name="Error" parent="." instance=ExtResource("5_tch3p")]

@@ -47,13 +47,13 @@ public static class SaveManager
         file.Close();
         SetCurrentPath(path, ui);
     } 
-
-	public static void Load(String path, Interface ui, Parts parts)
+    
+    private static bool TryLoad(String path, Interface ui)
     {
         if (!FileAccess.FileExists(path))
         {
             ui.Error("File does not exist");
-            return;
+            return false;
         }
 
         using FileAccess file = FileAccess.Open(path, FileAccess.ModeFlags.Read);
@@ -62,10 +62,31 @@ public static class SaveManager
         {
             Error error = FileAccess.GetOpenError();
             ui.Error(error.ToString());
-            return;
+            return false;
         }
+        
+        file.Close();
+        
+        return true;
+    }
 
-        parts.Clear();
+    public static void Load(String path, Interface ui, Parts parts)
+    {
+        if (TryLoad(path, ui))
+        {
+            parts.Clear();
+            Import(path, ui, parts);
+            SetCurrentPath(path, ui);
+        }
+    }
+
+	public static void Import(String path, Interface ui, Parts parts)
+    {
+        if (!TryLoad(path, ui))
+            return;
+        
+        using FileAccess file = FileAccess.Open(path, FileAccess.ModeFlags.Read);
+
 		Dictionary<String, PartGroup> loadedPartGroups = new Dictionary<String, PartGroup>();
         while (file.GetPosition() < file.GetLength())
         {
@@ -105,7 +126,6 @@ public static class SaveManager
         parts.LoadPartGroups(partGroups);
 
         file.Close();
-        SetCurrentPath(path, ui);
     }
 
 	public static void LoadPart(Dictionary<String, Variant> saveInfo, Parts parts, Dictionary<String, PartGroup> loadedPartGroups)

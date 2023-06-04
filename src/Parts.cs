@@ -365,7 +365,7 @@ public partial class Parts : Node3D
 
     public void LoadPartGroups(List<PartGroup> partGroups)
     {
-        this.partGroups = partGroups;
+        this.partGroups.AddRange(partGroups);
     }
 
     public List<List<Part>> GetManualPartGroupings()
@@ -375,6 +375,6 @@ public partial class Parts : Node3D
 
     public void LoadManualPartGroupings(List<List<Part>> manualPartGroupings)
     {
-        this.manualPartGroupings = manualPartGroupings;
+        this.manualPartGroupings.AddRange(manualPartGroupings);
     }
 }

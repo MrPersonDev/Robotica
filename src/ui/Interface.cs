@@ -16,7 +16,7 @@ public partial class Interface : Godot.Control
 
     [ExportGroup("Node Paths")]
     [Export]
-    private NodePath fieldPath, fieldButtonPath, selectionBoxPath, fpsCounterPath, controlPath, partsPath, partsListPath, saveDialogPath, loadDialogPath, errorPath;
+    private NodePath fieldPath, fieldButtonPath, selectionBoxPath, fpsCounterPath, controlPath, partsPath, partsListPath, saveDialogPath, loadDialogPath, importDialogPath, errorPath;
     [Export]
     private NodePath settingsPath, overlayPath, hotBoxPath, fileButtonPath, editButtonPath, selectButtonPath, currentFileLabelPath;
 
@@ -27,7 +27,7 @@ public partial class Interface : Godot.Control
     private Control control;
     private Parts parts;
     private PartsList partsList;
-    private Node saveDialog, loadDialog, error;
+    private Node saveDialog, loadDialog, importDialog, error;
     private Settings settings;
     private Panel overlay;
     private HotBox hotBox;
@@ -45,6 +45,7 @@ public partial class Interface : Godot.Control
         partsList = (PartsList)GetNode(partsListPath);
         saveDialog = GetNode(saveDialogPath);
         loadDialog = GetNode(loadDialogPath);
+        importDialog = GetNode(importDialogPath);
         error = GetNode(errorPath);
         settings = (Settings)GetNode(settingsPath);
         overlay = (Panel)GetNode(overlayPath);
@@ -63,6 +64,7 @@ public partial class Interface : Godot.Control
     {
         AddMenuOption(fileButton, "New", "new", fileCallables, () => { control.HandleNewInput(); });
         AddMenuOption(fileButton, "Open", "load", fileCallables, () => { control.HandleLoadInput(); });
+        AddMenuOption(fileButton, "Import", null, fileCallables, () => { control.HandleImportInput(); });
         AddMenuSeparator(fileButton, "");
         AddMenuOption(fileButton, "Save", "save", fileCallables, () => { control.HandleSaveInput(); });
         AddMenuOption(fileButton, "Save As", "save_as", fileCallables, () => { control.HandleSaveAsInput(); });
@@ -151,14 +153,18 @@ public partial class Interface : Godot.Control
     {
         Action<String> saveAction = (String path) => { SaveToFile(path); };
         Action<String> loadAction = (String path) => { LoadFromFile(path); };
+        Action<String> importAction = (String path) => { ImportFromFile(path); };
 
         Callable save = Callable.From(saveAction);
         Callable load = Callable.From(loadAction);
+        Callable import = Callable.From(importAction);
 
         saveDialog.Call("connect_selected", save);
         loadDialog.Call("connect_selected", load);
+        importDialog.Call("connect_selected", import);
 
         loadDialog.Call("set_saving", false);
+        importDialog.Call("set_saving", false);
     }
 
     public void InitializeSettings()
@@ -293,6 +299,11 @@ public partial class Interface : Godot.Control
         loadDialog.Call("show_dialog");
     }
 
+    public void ShowImportDialog()
+    {
+        importDialog.Call("show_dialog");
+    }
+
     public void SaveToFile(String path)
     {
         if (!path.EndsWith(".rbt"))
@@ -310,6 +321,17 @@ public partial class Interface : Godot.Control
         }
 
         SaveManager.Load(path, this, parts);
+    }
+
+    public void ImportFromFile(String path)
+    {
+        if (!path.EndsWith(".rbt"))
+        {
+            Error("Unknown file extension");
+            return;
+        }
+        
+        SaveManager.Import(path, this, parts);
     }
 
     public void Error(String text)
