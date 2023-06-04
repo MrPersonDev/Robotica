@@ -5,11 +5,11 @@ using System.Linq;
 
 public partial class LinearSlideOption : PartOption
 {
-    private readonly String[] TYPES = { "Track", "Truck" };
+    private readonly String[] TYPES = { "Track", "Truck", "Rack Gear" };
     private readonly String[] TRUCK_TYPES = { "Outer", "Inner" };
 	private readonly String[] COLORS = { "Red", "Green" };
 
-    private PartObject trackPartObject, innerTruckPartObject, outerTruckPartObject;
+    private PartObject trackPartObject, innerTruckPartObject, outerTruckPartObject, rackGearPartObject;
 
     [ExportGroup("Properties")]
     [Export]
@@ -17,7 +17,7 @@ public partial class LinearSlideOption : PartOption
 
     [ExportGroup("Part Objects")]
     [Export]
-    private PackedScene trackPartScene, innerTruckPartScene, outerTruckPartScene;
+    private PackedScene trackPartScene, innerTruckPartScene, outerTruckPartScene, rackGearPartScene;
 
     public override void _Ready()
     {
@@ -31,6 +31,7 @@ public partial class LinearSlideOption : PartOption
         trackPartObject = new PartObject(trackPartScene);
         innerTruckPartObject = new PartObject(innerTruckPartScene);
         outerTruckPartObject = new PartObject(outerTruckPartScene);
+        rackGearPartObject = new PartObject(rackGearPartScene);
     }
 
     public override PartObject GetPartObject(Dictionary<String, Variant> parameters)
@@ -38,8 +39,10 @@ public partial class LinearSlideOption : PartOption
         String type = (String)parameters["Type"];
         if (type == "Track")
             return trackPartObject;
-        else
+        else if (type == "Truck")
             return (String)parameters["Truck Type"] == "Outer" ? outerTruckPartObject : innerTruckPartObject;
+        else // if (type == "Rack Gear")
+            return rackGearPartObject;
     }
 
     public override async void Setup(Part part, Dictionary<String, Variant> parameters)
@@ -53,7 +56,7 @@ public partial class LinearSlideOption : PartOption
             float length = (float)parameters["Length"] / 2.0f;
             await part.SetMeshCutterSize(length, MeshCutter.NO_CUT, MeshCutter.NO_CUT);
         }
-		else // if (type == "Truck")
+		else // if (type == "Truck" || type == "Rack Gear")
 		{
 			String color = (String)parameters["Color"];
 			if (color == "Red")
@@ -81,11 +84,14 @@ public partial class LinearSlideOption : PartOption
 		String type = (String)curParameters["Type"];
 		if (type == "Track")
 			parameterTypes.Add(Tuple.Create("Length", (ParameterType)new FloatRangeParameter(1.0f, 24.0f, 1.0f, 24.0f)));
-		else // if (type == "Truck")
+		else // if (type == "Truck" || type == "Rack Gear")
 		{
-			List<Object> truckTypesList = new List<String>(TRUCK_TYPES).Cast<Object>().ToList();
+            if (type == "Truck")
+            {
+                List<Object> truckTypesList = new List<String>(TRUCK_TYPES).Cast<Object>().ToList();
+                parameterTypes.Add(Tuple.Create("Truck Type", (ParameterType)new DropdownParameter(truckTypesList)));
+            }
 			List<Object> colorsList = new List<String>(COLORS).Cast<Object>().ToList();
-			parameterTypes.Add(Tuple.Create("Truck Type", (ParameterType)new DropdownParameter(truckTypesList)));
 			parameterTypes.Add(Tuple.Create("Color", (ParameterType)new DropdownParameter(colorsList)));
 		}
 
@@ -99,6 +105,7 @@ public partial class LinearSlideOption : PartOption
 		partObjectsList.Add(trackPartObject);
 		partObjectsList.Add(innerTruckPartObject);
 		partObjectsList.Add(outerTruckPartObject);
+        partObjectsList.Add(rackGearPartObject);
 
         return partObjectsList;
     }

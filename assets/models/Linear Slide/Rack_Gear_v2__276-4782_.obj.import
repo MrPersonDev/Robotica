@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bca5g6cubn362"
+path="res://.godot/imported/Rack_Gear_v2__276-4782_.obj-b2d99525d4f1d0a84d70db0dc9781af7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Rack_Gear_v2__276-4782_.obj-b2d99525d4f1d0a84d70db0dc9781af7.mesh"]
+
+source_file="res://assets/models/Linear Slide/Rack_Gear_v2__276-4782_.obj"
+dest_files=["res://.godot/imported/Rack_Gear_v2__276-4782_.obj-b2d99525d4f1d0a84d70db0dc9781af7.mesh", "res://.godot/imported/Rack_Gear_v2__276-4782_.obj-b2d99525d4f1d0a84d70db0dc9781af7.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

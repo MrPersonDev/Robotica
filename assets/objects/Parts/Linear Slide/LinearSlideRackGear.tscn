@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://drx6e5nrcle6f"]
+
+[ext_resource type="PackedScene" uid="uid://cl5en1o2r4bqq" path="res://assets/objects/Part.tscn" id="1_sgjwa"]
+[ext_resource type="PackedScene" uid="uid://ckikj6lchnhtx" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="2_ramge"]
+[ext_resource type="ArrayMesh" uid="uid://bca5g6cubn362" path="res://assets/models/Linear Slide/Rack_Gear_v2__276-4782_.obj" id="3_d1usd"]
+[ext_resource type="PackedScene" uid="uid://c4reyv6extm5i" path="res://assets/objects/Holes/OneSidedCircleHole.tscn" id="3_rpuqd"]
+
+[node name="Part" instance=ExtResource("1_sgjwa")]
+
+[node name="TwoSidedCircleHole" parent="Holes" index="0" instance=ExtResource("2_ramge")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.250605, 0.078604, -0.241011)
+length = 0.067
+width = 1.1
+isFastener = true
+
+[node name="TwoSidedCircleHole2" parent="Holes" index="1" instance=ExtResource("2_ramge")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.250605, 0.078604, -2.24101)
+length = 0.067
+width = 1.1
+isFastener = true
+
+[node name="OneSidedCircleHole" parent="Holes" index="2" instance=ExtResource("3_rpuqd")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.250188, 0.00545305, -0.740185)
+width = 0.564
+isFastener = true
+
+[node name="OneSidedCircleHole2" parent="Holes" index="3" instance=ExtResource("3_rpuqd")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.250188, 0.00545305, -1.74019)
+width = 0.564
+isFastener = true
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("3_d1usd")
