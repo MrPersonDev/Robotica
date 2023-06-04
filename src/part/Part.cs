@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 public partial class Part : Moveable
 {
     private const int HOLES_PER_FRAME = 20;
-    private const float HOLE_OFFSET = 0.25f;
+    private const float HOLE_OFFSET = 0.1f;
     private const int MAIN_MESH_LAYER = 1;
     private const int OUTLINE_MESH_LAYER = 2;
     private const float OVERLAY_OPACITY = 0.1f;
