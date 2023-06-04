@@ -10,44 +10,45 @@ public partial class HotBoxOption : Godot.Control
 
 	[ExportGroup("Node Paths")]
 	[Export]
-	private NodePath buttonPath;
+	private NodePath labelPath, indicatorPanelPath;
 
-	private Button button;
+	private Label label;
+	private Panel indicatorPanel;
 
 	public void Setup(String partName)
 	{
-		button = (Button)GetNode(buttonPath);
+		label = (Label)GetNode(labelPath);
+		indicatorPanel = (Panel)GetNode(indicatorPanelPath);
 
 		this.partName = partName;
 
-		SetButtonText();
+		SetLabelText();
 		SetCallable();
 	}
 
-	private void SetButtonText()
+	private void SetLabelText()
 	{
-		button.Text = partName;
+		label.Text = partName;
 	}
 
 	private async void SetCallable()
 	{
 		callable = Callable.From(await GetPartOptionAction());
 	}
+	
+	public void ShowIndicator()
+	{
+		indicatorPanel.SelfModulate = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+	}
+
+	public void HideIndicator()
+	{
+		indicatorPanel.SelfModulate = new Color(1.0f, 1.0f, 1.0f, 0.0f);
+	}
 
 	public void Select()
 	{
 		callable.Call();
-	}
-
-	public void ConnectHovered(Action<HotBoxOption> action)
-	{
-		hoveredAction = action;
-		button.MouseEntered += () => { HoveredHandler(); };
-	}
-
-	private void HoveredHandler()
-	{
-		Callable.From(hoveredAction).Call(this);
 	}
 
 	private async Task<Action> GetPartOptionAction()

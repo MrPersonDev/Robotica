@@ -11,6 +11,16 @@ offset_bottom = 40.0
 script = ExtResource("1_luykw")
 partNames = ["Screw", "Nut", "Spacer", "Shaft Collar", "Shaft", "Gear", "Wheel", "C-Channel"]
 hotBoxOptionScene = ExtResource("1_i3fdl")
+linePath = NodePath("Line2D")
 
 [node name="Center" type="Polygon2D" parent="."]
-polygon = PackedVector2Array(10, 0, 0, 10, -10, 0, 0, -10)
+color = Color(1, 1, 1, 0.392157)
+polygon = PackedVector2Array(-3, 0, -2, -2, 0, -3, 2, -2, 3, 0, 2, 2, 0, 3, -2, 2)
+
+[node name="Center of center" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-2, 0, -1, -1, 0, -2, 1, -1, 2, 0, 1, 1, 0, 2, -1, 1)
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(0, 0, 0, 0)
+width = 2.0
+default_color = Color(1, 1, 1, 0.392157)

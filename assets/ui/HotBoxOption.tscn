@@ -1,6 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://bw4dk2vh0pm6d"]
+[gd_scene load_steps=4 format=3 uid="uid://bw4dk2vh0pm6d"]
 
 [ext_resource type="Script" path="res://src/ui/HotBoxOption.cs" id="1_08oae"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b5s5j"]
+bg_color = Color(1, 1, 1, 0.568627)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lvg3g"]
+bg_color = Color(0.109804, 0.109804, 0.109804, 0.635294)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
 [node name="HotBoxOption" type="Control"]
 layout_mode = 3
@@ -10,17 +29,44 @@ offset_top = -37.0
 offset_right = 38.0
 offset_bottom = 38.0
 script = ExtResource("1_08oae")
-buttonPath = NodePath("Button")
+labelPath = NodePath("IndicatorPanel/MarginContainer/Panel/Label")
+indicatorPanelPath = NodePath("IndicatorPanel")
 
-[node name="Button" type="Button" parent="."]
+[node name="IndicatorPanel" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_b5s5j")
+
+[node name="MarginContainer" type="MarginContainer" parent="IndicatorPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="Panel" type="Panel" parent="IndicatorPanel/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lvg3g")
+
+[node name="Label" type="Label" parent="IndicatorPanel/MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "text"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
 text_overrun_behavior = 1
