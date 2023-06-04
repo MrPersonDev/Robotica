@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://j2ghh4jdy6jb"]
+
+[ext_resource type="PackedScene" uid="uid://cebm74okhh7rw" path="res://assets/ui/SettingEdit.tscn" id="1_r1q40"]
+[ext_resource type="Script" path="res://src/ui/SettingEdit/InputSettingEdit.cs" id="2_gcmjl"]
+
+[node name="SettingEdit" instance=ExtResource("1_r1q40")]
+script = ExtResource("2_gcmjl")
+buttonPath = NodePath("Button")
+
+[node name="Button" type="Button" parent="." index="1"]
+layout_mode = 2

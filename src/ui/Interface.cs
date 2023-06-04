@@ -112,8 +112,27 @@ public partial class Interface : Godot.Control
     private void AddMenuSeparator(MenuButton menuButton, String name)
     {
         PopupMenu popupMenu = menuButton.GetPopup();
-
+        
         popupMenu.AddSeparator(name);
+    }
+    
+    public void UpdateMenuButtons()
+    {
+        ClearMenuButton(fileButton);
+        ClearMenuButton(editButton);
+        ClearMenuButton(selectButton);
+        fileCallables.Clear();
+        editCallables.Clear();
+        selectCallables.Clear();
+        SetMenuButtons();
+    }
+
+    private void ClearMenuButton(MenuButton menuButton)
+    {
+        PopupMenu popupMenu = menuButton.GetPopup();
+        Callable callable = (Callable)popupMenu.GetSignalConnectionList("id_pressed")[0]["callable"];
+        popupMenu.Disconnect("id_pressed", callable);
+        popupMenu.Clear();
     }
 
     private void PopupMenuItemSelected(Dictionary<int, Callable> callables, int id)
