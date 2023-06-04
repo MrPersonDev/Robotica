@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="16"
+   viewBox="0 -960 319.99999 319.99999"
+   width="16"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="ExitIcon.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="43.543455"
+     inkscape:cx="9.955572"
+     inkscape:cy="7.6130845"
+     inkscape:window-width="1680"
+     inkscape:window-height="977"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4"
+     width="16px"
+     units="px"
+     scale-x="16" />
+  <path
+     d="M 24.615383,-640.00001 0,-664.61538 135.3846,-799.99998 0,-935.38456 24.615383,-960 160.00002,-824.61535 295.3846,-960 l 24.61539,24.61544 -135.38462,135.38458 135.38462,135.3846 -24.61539,24.61537 -135.38458,-135.38459 z"
+     id="path2"
+     style="fill:#ffffff;stroke-width:0.586081" />
+</svg>

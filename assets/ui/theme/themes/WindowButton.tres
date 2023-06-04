@@ -1,0 +1,11 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://b2lbvr2j7vowb"]
+
+[ext_resource type="StyleBox" uid="uid://di6iqjfvfks1q" path="res://assets/ui/theme/panels/WindowButtonHoverPanel.tres" id="2_b3v8t"]
+[ext_resource type="StyleBox" uid="uid://r005xul1rnqa" path="res://assets/ui/theme/panels/WindowButtonPanel.tres" id="2_lngf2"]
+
+[resource]
+Button/styles/disabled = ExtResource("2_lngf2")
+Button/styles/focus = ExtResource("2_lngf2")
+Button/styles/hover = ExtResource("2_b3v8t")
+Button/styles/normal = ExtResource("2_lngf2")
+Button/styles/pressed = ExtResource("2_lngf2")
