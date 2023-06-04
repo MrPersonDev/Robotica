@@ -45,7 +45,8 @@ offset_bottom = -270.0
 grow_horizontal = 0
 grow_vertical = 0
 script = ExtResource("1_gq88v")
-partOptionsPath = NodePath("MarginContainer/ScrollContainer/VBoxContainer")
+partOptionsPath = NodePath("MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer")
+searchPath = NodePath("MarginContainer/VSplitContainer/Search")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
@@ -54,99 +55,107 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer"]
+[node name="VSplitContainer" type="VSplitContainer" parent="MarginContainer"]
+layout_mode = 2
+dragger_visibility = 1
+
+[node name="Search" type="LineEdit" parent="MarginContainer/VSplitContainer"]
+layout_mode = 2
+placeholder_text = "Search"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VSplitContainer"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VSplitContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="CChannelOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_4pe4e")]
+[node name="CChannelOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_4pe4e")]
 layout_mode = 2
 
-[node name="UChannelOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("6_58ha3")]
+[node name="UChannelOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("6_58ha3")]
 layout_mode = 2
 
-[node name="AngleOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_yufbw")]
+[node name="AngleOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_yufbw")]
 layout_mode = 2
 
-[node name="RailOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_2jrlv")]
+[node name="RailOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_2jrlv")]
 layout_mode = 2
 
-[node name="ScrewOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("3_i5gop")]
+[node name="ScrewOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("3_i5gop")]
 layout_mode = 2
 
-[node name="NutOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("8_liwag")]
+[node name="NutOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("8_liwag")]
 layout_mode = 2
 
-[node name="SpacerOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("6_s0rri")]
+[node name="SpacerOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("6_s0rri")]
 layout_mode = 2
 
-[node name="WasherOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("15_8ltqi")]
+[node name="WasherOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("15_8ltqi")]
 layout_mode = 2
 
-[node name="ShaftCollarOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("7_jdadb")]
+[node name="ShaftCollarOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("7_jdadb")]
 layout_mode = 2
 
-[node name="ShaftOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_roewl")]
+[node name="ShaftOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_roewl")]
 layout_mode = 2
 
-[node name="MotorOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("6_ff0hg")]
+[node name="MotorOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("6_ff0hg")]
 layout_mode = 2
 
-[node name="WheelOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_0iyy3")]
+[node name="WheelOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_0iyy3")]
 layout_mode = 2
 
-[node name="GearOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("4_7k8f6")]
+[node name="GearOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("4_7k8f6")]
 layout_mode = 2
 
-[node name="SprocketOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_u0f2x")]
+[node name="SprocketOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_u0f2x")]
 layout_mode = 2
 
-[node name="StandoffOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_0ij1x")]
+[node name="StandoffOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_0ij1x")]
 layout_mode = 2
 
-[node name="LinearSlideOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("16_8jw33")]
+[node name="LinearSlideOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("16_8jw33")]
 layout_mode = 2
 
-[node name="FlexWheelOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("16_fg8ay")]
+[node name="FlexWheelOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("16_fg8ay")]
 layout_mode = 2
 
-[node name="PlateOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("8_8dcsw")]
+[node name="PlateOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("8_8dcsw")]
 layout_mode = 2
 
-[node name="GussetOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_32580")]
+[node name="GussetOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_32580")]
 layout_mode = 2
 
-[node name="BracketOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("18_spssp")]
+[node name="BracketOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("18_spssp")]
 layout_mode = 2
 
-[node name="ConnectorPinOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_dcgqj")]
+[node name="ConnectorPinOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_dcgqj")]
 layout_mode = 2
 
-[node name="BasePlateOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("8_dv5sj")]
+[node name="BasePlateOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("8_dv5sj")]
 layout_mode = 2
 
-[node name="BearingOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("8_1jxik")]
+[node name="BearingOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("8_1jxik")]
 layout_mode = 2
 
-[node name="NutRetainerOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("8_ysxwl")]
+[node name="NutRetainerOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("8_ysxwl")]
 layout_mode = 2
 
-[node name="SensorOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("23_mn3ig")]
+[node name="SensorOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("23_mn3ig")]
 layout_mode = 2
 
-[node name="BrainOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("20_fcokv")]
+[node name="BrainOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("20_fcokv")]
 layout_mode = 2
 
-[node name="BatteryOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("21_3r2ng")]
+[node name="BatteryOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("21_3r2ng")]
 layout_mode = 2
 
-[node name="BatteryClipOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("25_dmo6e")]
+[node name="BatteryClipOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("25_dmo6e")]
 layout_mode = 2
 
-[node name="RadioOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("22_2uij3")]
+[node name="RadioOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("22_2uij3")]
 layout_mode = 2
 
-[node name="TriballOption" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("25_7sktg")]
+[node name="TriballOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("25_7sktg")]
 layout_mode = 2

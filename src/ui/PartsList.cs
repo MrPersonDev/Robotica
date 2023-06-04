@@ -8,20 +8,21 @@ public partial class PartsList : PanelContainer
 
     [ExportGroup("Node Paths")]
 	[Export]
-	private NodePath partOptionsPath;
-	[Export]
-	private NodePath partSettingsPath;
+	private NodePath partOptionsPath, partSettingsPath, searchPath;
 
 	private VBoxContainer partOptions;
 	private PartSettings partSettings;
+	private LineEdit search;
 	
 	public override void _Ready()
 	{
 		partOptions = (VBoxContainer)GetNode(partOptionsPath);
 		partSettings = (PartSettings)GetNode(partSettingsPath);
+		search = (LineEdit)GetNode(searchPath);
 		
 		GetHoleArraysFromList();
 		StorePartOptionNames();
+		ConnectSearch();
 	}
 	
 	private void GetHoleArraysFromList()
@@ -70,6 +71,18 @@ public partial class PartsList : PanelContainer
 	{
 		foreach (PartOption partOption in partOptions.GetChildren())
 			partOptionNames[partOption.GetName()] = partOption;
+	}
+	
+	private void ConnectSearch()
+	{
+		search.Connect(LineEdit.SignalName.TextChanged, Callable.From((String value) => { SearchUpdated(value); }));
+	}
+	
+	private void SearchUpdated(String value)
+	{
+		String valueLower = value.ToLower();
+		foreach (PartOption partOption in partOptions.GetChildren())
+			partOption.Visible = partOption.GetName().ToLower().Contains(valueLower);
 	}
 
 	public PartOption GetPartOption(String name)
