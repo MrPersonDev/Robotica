@@ -1,0 +1,11 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0ivx1yekk6qf"]
+
+[ext_resource type="PackedScene" uid="uid://djq6apdtjxop8" path="res://assets/ui/PartOptions/AngleOption.tscn" id="1_awpb6"]
+[ext_resource type="Script" path="res://src/part_option/RailOption.cs" id="2_pv86g"]
+[ext_resource type="PackedScene" uid="uid://cq3kfy82eqhp5" path="res://assets/objects/Parts/Rail/Rail25.tscn" id="3_3ayxv"]
+[ext_resource type="PackedScene" uid="uid://c7lyeo4smj0fx" path="res://assets/objects/Parts/Rail/Rail35.tscn" id="4_45cfb"]
+
+[node name="RailOption" instance=ExtResource("1_awpb6")]
+script = ExtResource("2_pv86g")
+rail25PartScene = ExtResource("3_3ayxv")
+rail35PartScene = ExtResource("4_45cfb")
