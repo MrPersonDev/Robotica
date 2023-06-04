@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://b04pg1wsygywi"]
+
+[ext_resource type="PackedScene" uid="uid://djq6apdtjxop8" path="res://assets/ui/PartOptions/AngleOption.tscn" id="1_sudpr"]
+[ext_resource type="Script" path="res://src/part_option/ClawOption.cs" id="2_4wxty"]
+[ext_resource type="PackedScene" uid="uid://dg2q2rvw5vg8j" path="res://assets/objects/Parts/Claw/Claw.tscn" id="3_uqmgp"]
+
+[node name="ClawOption" instance=ExtResource("1_sudpr")]
+script = ExtResource("2_4wxty")
+defaultPartScene = ExtResource("3_uqmgp")

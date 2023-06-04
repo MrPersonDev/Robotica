@@ -1,0 +1,183 @@
+[gd_scene load_steps=5 format=3 uid="uid://dg2q2rvw5vg8j"]
+
+[ext_resource type="PackedScene" uid="uid://cl5en1o2r4bqq" path="res://assets/objects/Part.tscn" id="1_doeht"]
+[ext_resource type="PackedScene" uid="uid://ckikj6lchnhtx" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="2_7xvkv"]
+[ext_resource type="PackedScene" uid="uid://cdggdbp51hwv0" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="3_n7b44"]
+[ext_resource type="ArrayMesh" uid="uid://dijjatggryuk0" path="res://assets/models/Claw/V5_Claw_Kit__276-6010__V5 Claw Kit (276-6010).res" id="4_oqhky"]
+
+[node name="Part" instance=ExtResource("1_doeht")]
+
+[node name="TwoSidedCircleHole" parent="Holes" index="0" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.82966, 0.347867, -0.339733)
+length = 0.069
+width = 0.955
+
+[node name="TwoSidedCircleHole2" parent="Holes" index="1" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.93231, 0.347867, -0.339733)
+length = 0.069
+width = 0.955
+
+[node name="TwoSidedCircleHole3" parent="Holes" index="2" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.93231, 0.598386, -1.09092)
+length = 0.069
+width = 0.955
+
+[node name="TwoSidedCircleHole4" parent="Holes" index="3" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.83018, 0.598386, -1.09092)
+length = 0.069
+width = 0.955
+
+[node name="TwoSidedCircleHole5" parent="Holes" index="4" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(4.37114e-08, 8.74228e-08, 1, -8.74228e-08, -1, 8.74228e-08, 1, -8.74228e-08, -4.37114e-08, 2.93257, 2.34948, -0.339733)
+length = 0.069
+width = 0.955
+
+[node name="TwoSidedCircleHole6" parent="Holes" index="5" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(4.37114e-08, 8.74228e-08, 1, -8.74228e-08, -1, 8.74228e-08, 1, -8.74228e-08, -4.37114e-08, 1.82992, 2.34948, -0.339733)
+length = 0.069
+width = 0.955
+
+[node name="TwoSidedCircleHole7" parent="Holes" index="6" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(4.37114e-08, 8.74228e-08, 1, -8.74228e-08, -1, 8.74228e-08, 1, -8.74228e-08, -4.37114e-08, 1.82992, 2.09896, -1.09092)
+length = 0.069
+width = 0.955
+
+[node name="TwoSidedCircleHole13" parent="Holes" index="7" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(7.54979e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, -7.54979e-08, -3.30012e-15, 1.13135, 1.74941, -2.09092)
+length = 0.051
+width = 0.955
+
+[node name="TwoSidedCircleHole14" parent="Holes" index="8" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(7.54979e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, -7.54979e-08, -3.30012e-15, 1.13135, 0.946588, -2.09092)
+length = 0.051
+width = 0.955
+
+[node name="TwoSidedCircleHole15" parent="Holes" index="9" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(7.54979e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, -7.54979e-08, -3.30012e-15, 3.63135, 1.74941, -2.09092)
+length = 0.051
+width = 0.955
+
+[node name="TwoSidedCircleHole16" parent="Holes" index="10" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(7.54979e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, -7.54979e-08, -3.30012e-15, 3.63135, 0.946588, -2.09092)
+length = 0.051
+width = 0.955
+
+[node name="TwoSidedCircleHole17" parent="Holes" index="11" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(7.54979e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, -7.54979e-08, -3.30012e-15, 4.24256, 1.74941, -3.47019)
+length = 0.051
+width = 0.955
+
+[node name="TwoSidedCircleHole18" parent="Holes" index="12" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(7.54979e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, -7.54979e-08, -3.30012e-15, 4.24256, 0.946588, -3.47019)
+length = 0.051
+width = 0.955
+
+[node name="TwoSidedCircleHole19" parent="Holes" index="13" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(7.54979e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, -7.54979e-08, -3.30012e-15, 4.01078, 1.74941, -3.9138)
+length = 0.051
+width = 0.955
+
+[node name="TwoSidedCircleHole20" parent="Holes" index="14" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(7.54979e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, -7.54979e-08, -3.30012e-15, 4.01078, 0.946588, -3.9138)
+length = 0.051
+width = 0.955
+
+[node name="TwoSidedCircleHole21" parent="Holes" index="15" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(7.54979e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, -7.54979e-08, -3.30012e-15, 3.53694, 1.74941, -5.5514)
+length = 0.051
+width = 0.955
+
+[node name="TwoSidedCircleHole22" parent="Holes" index="16" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(7.54979e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, -7.54979e-08, -3.30012e-15, 3.53694, 0.946588, -5.5514)
+length = 0.051
+width = 0.955
+
+[node name="TwoSidedCircleHole23" parent="Holes" index="17" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 0.518226, 0.946588, -3.46988)
+length = 0.051
+width = 0.955
+
+[node name="TwoSidedCircleHole24" parent="Holes" index="18" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 0.518226, 1.74941, -3.46988)
+length = 0.051
+width = 0.955
+
+[node name="TwoSidedCircleHole25" parent="Holes" index="19" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 0.750005, 0.946588, -3.91348)
+length = 0.051
+width = 0.955
+
+[node name="TwoSidedCircleHole26" parent="Holes" index="20" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 0.750005, 1.74941, -3.91348)
+length = 0.051
+width = 0.955
+
+[node name="TwoSidedCircleHole29" parent="Holes" index="21" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 2.13021, 0.946588, -3.09015)
+length = 0.051
+width = 0.955
+
+[node name="TwoSidedCircleHole30" parent="Holes" index="22" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 2.13021, 1.74941, -3.09015)
+length = 0.051
+width = 0.955
+
+[node name="TwoSidedCircleHole31" parent="Holes" index="23" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 2.63021, 0.946588, -3.09015)
+length = 0.051
+width = 0.955
+
+[node name="TwoSidedCircleHole32" parent="Holes" index="24" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 2.63021, 1.74941, -3.09015)
+length = 0.051
+width = 0.955
+
+[node name="TwoSidedCircleHole27" parent="Holes" index="25" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 1.22384, 0.946588, -5.55109)
+length = 0.051
+width = 0.955
+
+[node name="TwoSidedCircleHole28" parent="Holes" index="26" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 1.22384, 1.74941, -5.55109)
+length = 0.051
+width = 0.955
+
+[node name="TwoSidedCircleHole8" parent="Holes" index="27" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(4.37114e-08, 8.74228e-08, 1, -8.74228e-08, -1, 8.74228e-08, 1, -8.74228e-08, -4.37114e-08, 2.93205, 2.09896, -1.09092)
+length = 0.069
+width = 0.955
+
+[node name="TwoSidedCircleHole9" parent="Holes" index="28" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(7.54979e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, 7.54979e-08, -3.30012e-15, 3.13115, 1.75209, -2.09091)
+length = 0.382
+width = 0.955
+
+[node name="TwoSidedCircleHole10" parent="Holes" index="29" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(7.54979e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, 7.54979e-08, -3.30012e-15, 3.13115, 0.943808, -2.09091)
+length = 0.382
+width = 0.955
+
+[node name="TwoSidedCircleHole11" parent="Holes" index="30" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(7.54979e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, 7.54979e-08, -3.30012e-15, 1.63115, 1.75209, -2.09091)
+length = 0.382
+width = 0.955
+
+[node name="TwoSidedCircleHole12" parent="Holes" index="31" instance=ExtResource("2_7xvkv")]
+transform = Transform3D(7.54979e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, 7.54979e-08, -3.30012e-15, 1.63115, 0.943808, -2.09091)
+length = 0.382
+width = 0.955
+
+[node name="TwoSidedSquareHole" parent="Holes" index="32" instance=ExtResource("3_n7b44")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.63137, 1.34779, -2.09054)
+length = 1.19
+
+[node name="TwoSidedSquareHole2" parent="Holes" index="33" instance=ExtResource("3_n7b44")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.63339, 1.34779, -2.09566)
+length = 1.19
+
+[node name="TwoSidedSquareHole3" parent="Holes" index="34" instance=ExtResource("3_n7b44")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.13339, 1.34779, -2.09566)
+length = 1.19
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("4_oqhky")

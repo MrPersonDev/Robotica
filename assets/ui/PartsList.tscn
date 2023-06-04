@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://bk3hpxa6tawec"]
+[gd_scene load_steps=33 format=3 uid="uid://bk3hpxa6tawec"]
 
 [ext_resource type="Script" path="res://src/ui/PartsList.cs" id="1_gq88v"]
 [ext_resource type="PackedScene" uid="uid://dtfss217fk1ad" path="res://assets/ui/PartOptions/StandoffOption.tscn" id="2_0ij1x"]
@@ -31,6 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://bvcnxtu83rh6r" path="res://assets/ui/PartOptions/SensorOption.tscn" id="23_mn3ig"]
 [ext_resource type="PackedScene" uid="uid://cdoxtksc8pk5y" path="res://assets/ui/PartOptions/TriballOption.tscn" id="25_7sktg"]
 [ext_resource type="PackedScene" uid="uid://d3y7ds4ijicce" path="res://assets/ui/PartOptions/BatteryClipOption.tscn" id="25_dmo6e"]
+[ext_resource type="PackedScene" uid="uid://b04pg1wsygywi" path="res://assets/ui/PartOptions/ClawOption.tscn" id="26_rx0sq"]
 
 [node name="PartsList" type="PanelContainer"]
 anchors_preset = 3
@@ -140,6 +141,9 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="NutRetainerOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("8_ysxwl")]
+layout_mode = 2
+
+[node name="ClawOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("26_rx0sq")]
 layout_mode = 2
 
 [node name="SensorOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("23_mn3ig")]
