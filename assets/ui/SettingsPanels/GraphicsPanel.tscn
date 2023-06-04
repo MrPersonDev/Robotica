@@ -6,39 +6,39 @@
 
 [node name="SettingsPanel" instance=ExtResource("1_3hym4")]
 
-[node name="VSync" parent="SettingEdits" index="0" instance=ExtResource("2_a1c16")]
+[node name="VSync" parent="ScrollContainer/SettingEdits" index="0" instance=ExtResource("2_a1c16")]
 layout_mode = 2
 name = "VSync"
 
-[node name="Antialiasing" parent="SettingEdits" index="1" instance=ExtResource("3_afn7y")]
+[node name="Antialiasing" parent="ScrollContainer/SettingEdits" index="1" instance=ExtResource("3_afn7y")]
 layout_mode = 2
 values = ["Disabled", "2x", "4x", "8x"]
 name = "Anti-Aliasing"
 
-[node name="Shadows" parent="SettingEdits" index="2" instance=ExtResource("2_a1c16")]
+[node name="Shadows" parent="ScrollContainer/SettingEdits" index="2" instance=ExtResource("2_a1c16")]
 layout_mode = 2
 name = "Shadows"
 
-[node name="Glow" parent="SettingEdits" index="3" instance=ExtResource("2_a1c16")]
+[node name="Glow" parent="ScrollContainer/SettingEdits" index="3" instance=ExtResource("2_a1c16")]
 layout_mode = 2
 name = "Glow"
 
-[node name="Screen-Space Reflections" parent="SettingEdits" index="4" instance=ExtResource("2_a1c16")]
+[node name="Screen-Space Reflections" parent="ScrollContainer/SettingEdits" index="4" instance=ExtResource("2_a1c16")]
 layout_mode = 2
 name = "Screen-Space Reflections"
 
-[node name="Screen-Space Ambient Occlusion" parent="SettingEdits" index="5" instance=ExtResource("2_a1c16")]
+[node name="Screen-Space Ambient Occlusion" parent="ScrollContainer/SettingEdits" index="5" instance=ExtResource("2_a1c16")]
 layout_mode = 2
 name = "Screen-Space Ambient Occlusion"
 
-[node name="Screen-Space Indirect Lighting" parent="SettingEdits" index="6" instance=ExtResource("2_a1c16")]
+[node name="Screen-Space Indirect Lighting" parent="ScrollContainer/SettingEdits" index="6" instance=ExtResource("2_a1c16")]
 layout_mode = 2
 name = "Screen-Space Indirect Lighting"
 
-[node name="Outlines" parent="SettingEdits" index="7" instance=ExtResource("2_a1c16")]
+[node name="Outlines" parent="ScrollContainer/SettingEdits" index="7" instance=ExtResource("2_a1c16")]
 layout_mode = 2
 name = "Outlines"
 
-[node name="Grid" parent="SettingEdits" index="8" instance=ExtResource("2_a1c16")]
+[node name="Grid" parent="ScrollContainer/SettingEdits" index="8" instance=ExtResource("2_a1c16")]
 layout_mode = 2
 name = "Grid"
