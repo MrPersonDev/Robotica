@@ -2,34 +2,24 @@ using Godot;
 using System;
 using System.Collections.Generic;
 
-public partial class Settings : PanelContainer
+public partial class Settings : Window
 {
     [ExportGroup("Node Paths")]
     [Export]
-    private NodePath closeButtonPath, panelOptionsPath, settingsPanelContainerPath;
+    private NodePath panelOptionsPath, settingsPanelContainerPath;
 
-    private Button closeButton;
     private VBoxContainer panelOptions;
     private Godot.Control settingsPanelContainer;
 
     public override void _Ready()
     {
-        closeButton = (Button)GetNode(closeButtonPath);
+        base._Ready();
+        
         panelOptions = (VBoxContainer)GetNode(panelOptionsPath);
         settingsPanelContainer = (Godot.Control)GetNode(settingsPanelContainerPath);
 
-        SetCloseButtonPressed();
         ConnectSettingsPanelOptions();
         LoadSettings();
-    }
-
-    private async void SetCloseButtonPressed()
-    {
-        World world = (World)GetTree().CurrentScene;
-        await ToSignal(world, Node.SignalName.Ready);
-
-        Interface ui = world.GetInterfaceNode();
-        closeButton.Pressed += () => { ui.CloseSettings(); };
     }
 
     private void ConnectSettingsPanelOptions()

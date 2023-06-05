@@ -1,117 +1,64 @@
-[gd_scene load_steps=12 format=3 uid="uid://cuoo2o88wqta1"]
+[gd_scene load_steps=10 format=3 uid="uid://tf7vsp27gqps"]
 
-[ext_resource type="StyleBox" uid="uid://cw8o2n74feuab" path="res://assets/ui/theme/panels/SettingsPanel.tres" id="1_cbql0"]
+[ext_resource type="PackedScene" uid="uid://c6fpokgtiinai" path="res://assets/ui/Window.tscn" id="1_2k3xu"]
 [ext_resource type="Script" path="res://src/ui/Settings.cs" id="2_6p6kl"]
 [ext_resource type="Theme" uid="uid://leq8ktbobmjv" path="res://assets/ui/theme/themes/SettingsTabs.tres" id="2_8txek"]
-[ext_resource type="Theme" uid="uid://b2lbvr2j7vowb" path="res://assets/ui/theme/themes/WindowButton.tres" id="3_00uly"]
 [ext_resource type="Theme" uid="uid://dks02nais2ncl" path="res://assets/ui/theme/themes/SettingsPanel.tres" id="3_5lnmb"]
-[ext_resource type="Texture2D" uid="uid://cpkg05qu3k7sq" path="res://assets/images/ExitIcon.svg" id="3_laqqp"]
 [ext_resource type="PackedScene" uid="uid://bhrfj254hjphf" path="res://assets/ui/SettingsPanelOption.tscn" id="4_e7d12"]
 [ext_resource type="PackedScene" uid="uid://bt7fnrbbf3si3" path="res://assets/ui/SettingsPanels/GraphicsPanel.tscn" id="5_ebv16"]
 [ext_resource type="PackedScene" uid="uid://bmnqnka0jve6j" path="res://assets/ui/SettingsPanels/GeneralPanel.tscn" id="5_loe3v"]
 [ext_resource type="PackedScene" uid="uid://dpe3bkgr07x7f" path="res://assets/ui/SettingsPanels/KeybindsPanel.tscn" id="7_h5rv7"]
 [ext_resource type="PackedScene" uid="uid://c2dasaf85ruds" path="res://assets/ui/SettingsPanels/HotboxPanel.tscn" id="8_dypi8"]
 
-[node name="Settings" type="PanelContainer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 300.0
-offset_top = 100.0
-offset_right = -300.0
-offset_bottom = -100.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = ExtResource("1_cbql0")
+[node name="Settings" instance=ExtResource("1_2k3xu")]
 script = ExtResource("2_6p6kl")
-closeButtonPath = NodePath("VSplitContainer/PanelContainer/MarginContainer/HSplitContainer/Label/CloseButton")
 panelOptionsPath = NodePath("VSplitContainer/HSplitContainer2/MarginContainer/PanelOptions")
 settingsPanelContainerPath = NodePath("VSplitContainer/HSplitContainer2/MarginContainer2/PanelContainer/SettingsPanelContainer")
 
-[node name="VSplitContainer" type="VSplitContainer" parent="."]
-layout_mode = 2
-theme_override_constants/separation = 0
-dragger_visibility = 1
-
-[node name="PanelContainer" type="PanelContainer" parent="VSplitContainer"]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="VSplitContainer/PanelContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="HSplitContainer" type="HSplitContainer" parent="VSplitContainer/PanelContainer/MarginContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="VSplitContainer/PanelContainer/MarginContainer/HSplitContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Settings"
-horizontal_alignment = 1
-
-[node name="CloseButton" type="Button" parent="VSplitContainer/PanelContainer/MarginContainer/HSplitContainer/Label"]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -24.0
-offset_top = -15.5
-offset_bottom = 15.5
-grow_horizontal = 0
-grow_vertical = 2
-focus_mode = 0
-theme = ExtResource("3_00uly")
-icon = ExtResource("3_laqqp")
-
-[node name="HSplitContainer2" type="HSplitContainer" parent="VSplitContainer"]
+[node name="HSplitContainer2" type="HSplitContainer" parent="VSplitContainer" index="1"]
 layout_mode = 2
 theme_override_constants/separation = 0
 split_offset = 140
 dragger_visibility = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="VSplitContainer/HSplitContainer2"]
+[node name="MarginContainer" type="MarginContainer" parent="VSplitContainer/HSplitContainer2" index="0"]
 layout_mode = 2
 theme_override_constants/margin_left = 8
 
-[node name="PanelOptions" type="VBoxContainer" parent="VSplitContainer/HSplitContainer2/MarginContainer"]
+[node name="PanelOptions" type="VBoxContainer" parent="VSplitContainer/HSplitContainer2/MarginContainer" index="0"]
 layout_mode = 2
 theme = ExtResource("2_8txek")
 theme_override_constants/separation = 8
 
-[node name="GeneralPanelOption" parent="VSplitContainer/HSplitContainer2/MarginContainer/PanelOptions" instance=ExtResource("4_e7d12")]
+[node name="GeneralPanelOption" parent="VSplitContainer/HSplitContainer2/MarginContainer/PanelOptions" index="0" instance=ExtResource("4_e7d12")]
 layout_mode = 2
 text = "General"
 settingsPanel = ExtResource("5_loe3v")
 
-[node name="GraphicsPanelOption" parent="VSplitContainer/HSplitContainer2/MarginContainer/PanelOptions" instance=ExtResource("4_e7d12")]
+[node name="GraphicsPanelOption" parent="VSplitContainer/HSplitContainer2/MarginContainer/PanelOptions" index="1" instance=ExtResource("4_e7d12")]
 layout_mode = 2
 text = "Graphics"
 settingsPanel = ExtResource("5_ebv16")
 
-[node name="KeybindsPanelOption" parent="VSplitContainer/HSplitContainer2/MarginContainer/PanelOptions" instance=ExtResource("4_e7d12")]
+[node name="KeybindsPanelOption" parent="VSplitContainer/HSplitContainer2/MarginContainer/PanelOptions" index="2" instance=ExtResource("4_e7d12")]
 layout_mode = 2
 text = "Keybinds"
 settingsPanel = ExtResource("7_h5rv7")
 
-[node name="HotboxPanelOption" parent="VSplitContainer/HSplitContainer2/MarginContainer/PanelOptions" instance=ExtResource("4_e7d12")]
+[node name="HotboxPanelOption" parent="VSplitContainer/HSplitContainer2/MarginContainer/PanelOptions" index="3" instance=ExtResource("4_e7d12")]
 layout_mode = 2
 text = "Hotbox"
 settingsPanel = ExtResource("8_dypi8")
 
-[node name="MarginContainer2" type="MarginContainer" parent="VSplitContainer/HSplitContainer2"]
+[node name="MarginContainer2" type="MarginContainer" parent="VSplitContainer/HSplitContainer2" index="1"]
 layout_mode = 2
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="PanelContainer" type="PanelContainer" parent="VSplitContainer/HSplitContainer2/MarginContainer2"]
+[node name="PanelContainer" type="PanelContainer" parent="VSplitContainer/HSplitContainer2/MarginContainer2" index="0"]
 layout_mode = 2
 
-[node name="SettingsPanelContainer" type="MarginContainer" parent="VSplitContainer/HSplitContainer2/MarginContainer2/PanelContainer"]
+[node name="SettingsPanelContainer" type="MarginContainer" parent="VSplitContainer/HSplitContainer2/MarginContainer2/PanelContainer" index="0"]
 layout_mode = 2
 theme = ExtResource("3_5lnmb")
 theme_override_constants/margin_left = 10

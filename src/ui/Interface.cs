@@ -277,8 +277,8 @@ public partial class Interface : Godot.Control
         settings.Open();
         overlay.Show();
     }
-
-    public void CloseSettings()
+    
+    public void ClosePanels()
     {
         settings.Close();
         overlay.Hide();

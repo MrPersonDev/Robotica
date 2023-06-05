@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bku66pba6qcjn"]
+[gd_scene load_steps=12 format=3 uid="uid://cn5qd20us2rnx"]
 
 [ext_resource type="Script" path="res://src/ui/Interface.cs" id="1_0qpga"]
 [ext_resource type="Theme" uid="uid://cwkikht3340e5" path="res://assets/ui/theme/GlobalTheme.tres" id="1_6hyhk"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ckpkagupqbdfv" path="res://assets/ui/FileDialogWrapper.tscn" id="4_4ro5i"]
 [ext_resource type="PackedScene" uid="uid://d2y3ko2wfcrqi" path="res://assets/ui/HotBox.tscn" id="5_88y0h"]
 [ext_resource type="PackedScene" uid="uid://w14vqfjtsojv" path="res://assets/ui/ErrorWrapper.tscn" id="5_tch3p"]
-[ext_resource type="PackedScene" uid="uid://cuoo2o88wqta1" path="res://assets/ui/Settings.tscn" id="7_3acxu"]
+[ext_resource type="PackedScene" uid="uid://tf7vsp27gqps" path="res://assets/ui/Settings.tscn" id="7_3acxu"]
 [ext_resource type="StyleBox" uid="uid://blaaxkcagu3jf" path="res://assets/ui/theme/panels/OverlayPanel.tres" id="8_gxidw"]
 
 [node name="Interface" type="Control"]
@@ -142,15 +142,6 @@ theme_override_styles/panel = ExtResource("8_gxidw")
 [node name="Settings" parent="." instance=ExtResource("7_3acxu")]
 visible = false
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.169
-anchor_top = 0.162
-anchor_right = 0.831
-anchor_bottom = 0.838
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 0.0
-offset_bottom = 0.0
 
 [node name="SaveDialog" parent="." instance=ExtResource("4_4ro5i")]
 mouse_filter = 2
