@@ -1101,6 +1101,9 @@ public partial class Control : Node3D
 
     private async void EndMoving(bool setRotating = true)
     {
+        if (!moving)
+            return;
+        
         selection.EnableMeshCollider();
 
         transform.GlobalPosition = selection.GetCenter();
