@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dbss66n3wnyex"]
 
 [ext_resource type="Script" path="res://src/ui/PartSettings.cs" id="1_ci0kl"]
-[ext_resource type="PackedScene" path="res://assets/ui/NumericParameterInput.tscn" id="2_t2xep"]
+[ext_resource type="PackedScene" uid="uid://dmty1hqu8rif0" path="res://assets/ui/NumericParameterInput.tscn" id="2_t2xep"]
 [ext_resource type="PackedScene" path="res://assets/ui/DropdownParameterInput.tscn" id="3_k7dgc"]
 [ext_resource type="PackedScene" path="res://assets/ui/BooleanParameterInput.tscn" id="4_3i8rx"]
 
