@@ -1146,8 +1146,13 @@ public partial class Control : Node3D
     public async Task CreatePartGroups(List<Part> partsList)
     {
         foreach (Part part in parts.GetAllParts())
+        {
             if (part.RequiresUpdate())
+            {
+                partsList.Add(part);
                 partsList.AddRange(part.GetPotentiallyCollidingParts());
+            }
+        }
 
         List<Part> partsCollidingWithInsert = new List<Part>();
         foreach (Part part in partsList)
