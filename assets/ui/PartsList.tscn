@@ -60,7 +60,7 @@ theme_override_constants/margin_bottom = 10
 layout_mode = 2
 dragger_visibility = 1
 
-[node name="Search" type="LineEdit" parent="MarginContainer/VSplitContainer"]
+[node name="Search" type="LineEdit" parent="MarginContainer/VSplitContainer" groups=["INPUT"]]
 layout_mode = 2
 placeholder_text = "Search"
 
