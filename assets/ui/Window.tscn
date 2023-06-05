@@ -41,7 +41,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="VSplitContainer/PanelContainer/MarginContainer/HSplitContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Settings"
+text = "Window Title"
 horizontal_alignment = 1
 
 [node name="CloseButton" type="Button" parent="VSplitContainer/PanelContainer/MarginContainer/HSplitContainer/Label"]
