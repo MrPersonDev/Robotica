@@ -64,6 +64,11 @@ public partial class PartOption : Button
         return GetDefaultParameterTypes();
     }
 
+    public virtual String GetSpecificName(Dictionary<String, Variant> parameters)
+    {
+        return GetName();
+    }
+
     public virtual PartObject GetPartObject(Dictionary<String, Variant> parameters) { throw new NotImplementedException(); }
     public virtual List<Tuple<String, ParameterType>> GetSpecificDefaultParameterTypes() { throw new NotImplementedException(); }
     public virtual List<PartObject> GetPartObjects() { throw new NotImplementedException(); }

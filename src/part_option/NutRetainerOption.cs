@@ -75,4 +75,9 @@ public partial class NutRetainerOption : PartOption
     {
         return "Nut Retainer";
     }
+    
+    public override string GetSpecificName(Dictionary<String, Variant> parameters)
+    {
+        return $"{parameters["Type"]} Nut Retainer";
+    }
 }

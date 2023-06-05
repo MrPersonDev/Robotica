@@ -75,4 +75,9 @@ public partial class UChannelOption : PartOption
     {
         return "U-Channel";
     }
+    
+    public override string GetSpecificName(Dictionary<String, Variant> parameters)
+    {
+        return $"{parameters["Material"]} {(float)parameters["Length"]:0.#}-length U-Channel";
+    }
 }

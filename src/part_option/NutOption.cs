@@ -81,4 +81,9 @@ public partial class NutOption : PartOption
     {
         return "Nut";
     }
+    
+    public override string GetSpecificName(Dictionary<String, Variant> parameters)
+    {
+        return $"{parameters["Type"]} Nut";
+    }
 }

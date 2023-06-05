@@ -70,4 +70,13 @@ public partial class ShaftOption : PartOption
     {
         return "Shaft";
     }
+    
+    public override string GetSpecificName(Dictionary<String, Variant> parameters)
+    {
+        String text = "";
+        if ((bool)parameters["High Strength"])   
+            text += "High Strength ";
+        text += $"{(float)parameters["Length"]:0.#}-length Shaft";
+        return text;
+    }
 }

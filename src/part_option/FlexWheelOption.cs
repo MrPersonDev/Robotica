@@ -122,4 +122,18 @@ public partial class FlexWheelOption : PartOption
     {
         return "Flex Wheel";
     }
+
+    public override string GetSpecificName(Dictionary<String, Variant> parameters)
+    {
+        String text = $"{parameters["Diameter"]}\" {parameters["Durometer"]} ";
+        text += "Flex Wheel";
+        if ((bool)parameters["Adapter"])
+        {
+            text += " with adaper";
+            if ((bool)parameters["High Strength Converter"])
+                text += " and insert";
+        }
+
+        return text;
+    }
 }

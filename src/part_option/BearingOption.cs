@@ -109,4 +109,14 @@ public partial class BearingOption : PartOption
     {
         return "Bearing";
     }
+
+    public override string GetSpecificName(Dictionary<String, Variant> parameters)
+    {
+        String text = "";
+        if (parameters.ContainsKey("Metal") && (bool)parameters["Metal"])
+            text += "Metal ";
+        if ((String)parameters["Type"] != "Lock Bar" && (String)parameters["Type"] != "Shaft Collar Retainer")
+        text += $"{parameters["Type"]} Bearing";
+        return text;
+    }
 }

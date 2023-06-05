@@ -158,4 +158,12 @@ public partial class GearOption : PartOption
     {
         return "Gear";
     }
+    
+    public override string GetSpecificName(Dictionary<String, Variant> parameters)
+    {
+        String text = $"{parameters["Teeth"]}-tooth {parameters["Type"]} Gear";   
+        if ((bool)parameters["High Strength Converter"])
+            text += " with insert";
+        return text;
+    }
 }

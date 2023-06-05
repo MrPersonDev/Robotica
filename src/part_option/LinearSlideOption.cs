@@ -114,4 +114,14 @@ public partial class LinearSlideOption : PartOption
     {
         return "Linear Slide";
     }
+
+    public override string GetSpecificName(Dictionary<String, Variant> parameters)
+    {
+        if ((String)parameters["Type"] == "Track")       
+            return $"{(float)parameters["Length"]:0.#}-length Linear Slide Track";
+        else if ((String)parameters["Type"] == "Truck")
+            return $"{parameters["Truck Type"]} Linear Slide Truck";
+        else // if ((String)parameters["Type"] == "Rack Gear")
+            return "Rack Gear";
+    }
 }

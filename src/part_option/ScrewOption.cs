@@ -73,4 +73,9 @@ public partial class ScrewOption : PartOption
     {
         return "Screw";
     }
+    
+    public override string GetSpecificName(Dictionary<String, Variant> parameters)
+    {
+        return $"{(float)parameters["Length"]:0.#}\" Screw";
+    }
 }

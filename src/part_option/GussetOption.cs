@@ -134,4 +134,23 @@ public partial class GussetOption : PartOption
     {
         return "Gusset";
     }
+    
+    public override string GetSpecificName(Dictionary<String, Variant> parameters)
+    {
+        String text = (String)parameters["Material"];
+        
+        if ((String)parameters["Type"] == "Bent")
+            text += $"{parameters["Angle"]} Bent ";
+        else if ((String)parameters["Type"] == "Flat")
+            text += $"{parameters["Angle"]} Flat ";
+        else if ((String)parameters["Type"] == "Angle" || (String)parameters["Type"] == "Coupler")
+            text += $"{parameters["Subtype"]} ";
+        
+        if ((String)parameters["Type"] == "Coupler")
+            text += "coupler";
+        else
+            text += "gusset";
+        
+        return text;
+    }
 }

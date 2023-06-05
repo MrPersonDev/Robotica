@@ -154,4 +154,12 @@ public partial class SprocketOption : PartOption
     {
         return "Sprocket";
     }
+    
+    public override string GetSpecificName(Dictionary<String, Variant> parameters)
+    {
+        String text = $"{parameters["Type"]} {parameters["Teeth"]}-tooth Sprocket";   
+        if (parameters.ContainsKey("High Strength Converter") && (bool)parameters["High Strength Converter"])
+            text += " with insert";
+        return text;
+    }
 }

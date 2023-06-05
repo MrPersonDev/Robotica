@@ -90,4 +90,9 @@ public partial class CChannelOption : PartOption
     {
         return "C-Channel";
     }
+    
+    public override string GetSpecificName(Dictionary<String, Variant> parameters)
+    {
+        return $"{parameters["Material"]} {(float)parameters["Width"]:0.#}x{(float)parameters["Width"]:0.#}x{(float)parameters["Length"]:0.#} C-Channel";
+    }
 }

@@ -74,4 +74,9 @@ public partial class BracketOption : PartOption
     {
         return "Bracket";
     }
+
+    public override string GetSpecificName(Dictionary<String, Variant> parameters)
+    {
+        return $"{parameters["Type"]} Bracket";
+    }
 }

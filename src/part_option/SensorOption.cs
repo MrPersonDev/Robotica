@@ -159,4 +159,12 @@ public partial class SensorOption : PartOption
     {
         return "Sensor";
     }
+
+    public override string GetSpecificName(Dictionary<String, Variant> parameters)
+    {
+        String text = (String)parameters["Type"];
+        if (parameters.ContainsKey("High Strength Converter") && (bool)parameters["High Strength Converter"])
+            text += " with insert";
+        return text;
+    }
 }

@@ -79,4 +79,9 @@ public partial class WasherOption : PartOption
     {
         return "Washer";
     }
+    
+    public override string GetSpecificName(Dictionary<String, Variant> parameters)
+    {
+        return $"{parameters["Type"]} Washer";
+    }
 }

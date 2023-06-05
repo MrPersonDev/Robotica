@@ -77,4 +77,9 @@ public partial class PlateOption : PartOption
     {
         return "Plate";
     }
+    
+    public override string GetSpecificName(Dictionary<String, Variant> parameters)
+    {
+        return $"{parameters["Material"]} {(float)parameters["Width"]:0.#}x{(float)parameters["Length"]:0.#} Plate";
+    }
 }

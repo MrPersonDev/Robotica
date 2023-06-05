@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwmsp3tkwp41p"]
+
+[ext_resource type="PackedScene" uid="uid://c6fpokgtiinai" path="res://assets/ui/Window.tscn" id="1_oiugy"]
+[ext_resource type="Script" path="res://src/ui/RequiredParts.cs" id="2_1ieva"]
+[ext_resource type="PackedScene" uid="uid://dgm66gbym0hi0" path="res://assets/ui/RequiredPart.tscn" id="3_gc30l"]
+
+[node name="RequiredParts" instance=ExtResource("1_oiugy")]
+script = ExtResource("2_1ieva")
+requiredPart = ExtResource("3_gc30l")
+listPath = NodePath("VSplitContainer/HSplitContainer2/MarginContainer/ScrollContainer/VBoxContainer")
+
+[node name="Label" parent="VSplitContainer/PanelContainer/MarginContainer/HSplitContainer" index="0"]
+text = "Required Parts"
+
+[node name="HSplitContainer2" type="HSplitContainer" parent="VSplitContainer" index="1"]
+layout_mode = 2
+theme_override_constants/separation = 0
+split_offset = 140
+dragger_visibility = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VSplitContainer/HSplitContainer2" index="0"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_right = 8
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VSplitContainer/HSplitContainer2/MarginContainer" index="0"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VSplitContainer/HSplitContainer2/MarginContainer/ScrollContainer" index="0"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3

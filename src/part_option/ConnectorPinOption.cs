@@ -99,4 +99,14 @@ public partial class ConnectorPinOption : PartOption
     {
         return "Connector Pin";
     }
+    
+    public override string GetSpecificName(Dictionary<String, Variant> parameters)
+    {
+        String text = "";
+        if ((String)parameters["Type"] == "Pin")   
+            text += $"{parameters["Pin Type"]} Connector Pin";
+        else if ((String)parameters["Type"] == "Mounting Flange")   
+            text += $"{parameters["Flange Type"]} Mounting Flange";
+        return text;
+    }
 }

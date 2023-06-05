@@ -475,6 +475,14 @@ public partial class Control : Node3D
 
         ui.ShowSettings();
     }
+    
+    public void HandleRequiredPartsInput()
+    {
+        if (ui.IsSettingsOpen())
+            return;
+
+        ui.ShowRequiredParts();
+    }
 
     public void HandleFocusInput()
     {

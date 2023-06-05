@@ -83,4 +83,9 @@ public partial class MotorOption : PartOption
     {
         return "Motor";
     }
+    
+    public override string GetSpecificName(Dictionary<String, Variant> parameters)
+    {
+        return $"{parameters["Cartridge"]} Motor";
+    }
 }

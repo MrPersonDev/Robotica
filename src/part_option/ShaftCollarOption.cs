@@ -122,4 +122,15 @@ public partial class ShaftCollarOption : PartOption
     {
         return "Shaft Collar";
     }
+    
+    public override string GetSpecificName(Dictionary<String, Variant> parameters)
+    {
+        String text = "";
+        if ((String)parameters["Type"] == "Clamping")
+            text += (String)parameters["Clamping Type"] + " ";
+        text += (String)parameters["Type"] + " " + "Shaft Collar";
+        if ((String)parameters["Type"] == "Metal" && (bool)parameters["Set Screw"])
+            text += " with set screw";
+        return text;
+    }
 }

@@ -18,7 +18,7 @@ public partial class Interface : Godot.Control
     [Export]
     private NodePath fieldPath, fieldButtonPath, selectionBoxPath, fpsCounterPath, controlPath, partsPath, partsListPath, saveDialogPath, loadDialogPath, importDialogPath, errorPath;
     [Export]
-    private NodePath settingsPath, overlayPath, hotBoxPath, fileButtonPath, editButtonPath, selectButtonPath, currentFileLabelPath;
+    private NodePath settingsPath, requiredPartsPath, overlayPath, hotBoxPath, fileButtonPath, editButtonPath, selectButtonPath, currentFileLabelPath;
 
     private Node3D field;
     private Button fieldButton;
@@ -29,6 +29,7 @@ public partial class Interface : Godot.Control
     private PartsList partsList;
     private Node saveDialog, loadDialog, importDialog, error;
     private Settings settings;
+    private RequiredParts requiredParts;
     private Panel overlay;
     private HotBox hotBox;
     private MenuButton fileButton, editButton, selectButton;
@@ -48,6 +49,7 @@ public partial class Interface : Godot.Control
         importDialog = GetNode(importDialogPath);
         error = GetNode(errorPath);
         settings = (Settings)GetNode(settingsPath);
+        requiredParts = (RequiredParts)GetNode(requiredPartsPath);
         overlay = (Panel)GetNode(overlayPath);
         hotBox = (HotBox)GetNode(hotBoxPath);
         fileButton = (MenuButton)GetNode(fileButtonPath);
@@ -75,6 +77,8 @@ public partial class Interface : Godot.Control
         AddMenuOption(editButton, "Redo", "redo", editCallables, () => { control.HandleRedoInput(); });
         AddMenuSeparator(editButton, "");
         AddMenuOption(editButton, "Delete", "delete", editCallables, () => { control.HandleDeleteInput(); });
+        AddMenuSeparator(editButton, "");
+        AddMenuOption(editButton, "Required Parts", null, editCallables, () => { control.HandleRequiredPartsInput(); });
         AddMenuSeparator(editButton, "");
         AddMenuOption(editButton, "Settings", null, editCallables, () => { control.HandleSettingsInput(); });
 
@@ -278,9 +282,18 @@ public partial class Interface : Godot.Control
         overlay.Show();
     }
     
+    public void ShowRequiredParts()
+    {
+        requiredParts.Open();
+        overlay.Show();
+    }
+    
     public void ClosePanels()
     {
-        settings.Close();
+        if (settings.IsOpen())
+            settings.Close();
+        if (requiredParts.IsOpen())
+            requiredParts.Close();
         overlay.Hide();
     }
 

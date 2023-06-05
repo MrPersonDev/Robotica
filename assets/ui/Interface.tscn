@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cn5qd20us2rnx"]
+[gd_scene load_steps=13 format=3 uid="uid://cn5qd20us2rnx"]
 
 [ext_resource type="Script" path="res://src/ui/Interface.cs" id="1_0qpga"]
 [ext_resource type="Theme" uid="uid://cwkikht3340e5" path="res://assets/ui/theme/GlobalTheme.tres" id="1_6hyhk"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://w14vqfjtsojv" path="res://assets/ui/ErrorWrapper.tscn" id="5_tch3p"]
 [ext_resource type="PackedScene" uid="uid://tf7vsp27gqps" path="res://assets/ui/Settings.tscn" id="7_3acxu"]
 [ext_resource type="StyleBox" uid="uid://blaaxkcagu3jf" path="res://assets/ui/theme/panels/OverlayPanel.tres" id="8_gxidw"]
+[ext_resource type="PackedScene" uid="uid://cwmsp3tkwp41p" path="res://assets/ui/RequiredParts.tscn" id="9_phwoy"]
 
 [node name="Interface" type="Control"]
 layout_mode = 3
@@ -32,6 +33,7 @@ loadDialogPath = NodePath("LoadDialog")
 importDialogPath = NodePath("ImportDialog")
 errorPath = NodePath("Error")
 settingsPath = NodePath("Settings")
+requiredPartsPath = NodePath("RequiredParts")
 overlayPath = NodePath("Overlay")
 hotBoxPath = NodePath("HotBox")
 fileButtonPath = NodePath("PanelContainer/MarginContainer/HBoxContainer/FileButton")
@@ -138,6 +140,10 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = ExtResource("8_gxidw")
+
+[node name="RequiredParts" parent="." instance=ExtResource("9_phwoy")]
+visible = false
+layout_mode = 1
 
 [node name="Settings" parent="." instance=ExtResource("7_3acxu")]
 visible = false
