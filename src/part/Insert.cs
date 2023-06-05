@@ -10,7 +10,7 @@ public partial class Insert : Area3D
     private const float CHECKING_WIDTH = 0.25f;
 
     private HashSet<HoleBody> potentiallyCollidingHoleBodies = new HashSet<HoleBody>();
-    private HashSet<HoleBody> actuallyCollidingHoleBodies = new HashSet<HoleBody>(); 
+    private HashSet<HoleBody> actuallyCollidingHoleBodies = new HashSet<HoleBody>();
 
     [ExportGroup("Properties")]
     [Export]
@@ -139,7 +139,7 @@ public partial class Insert : Area3D
         {
             if (!IsInstanceValid(holeBody) || holeBody.GetHole().GetPart().IsDeleted())
                 continue;
-            
+
             if (ShouldIncludeHoleBody(holeBody))
                 curHoleBodies.Add(holeBody);
         }
@@ -310,7 +310,7 @@ public partial class Insert : Area3D
         if (!IsInsideTree())
             return null;
 
-        return GetPos() + length/2 * GlobalTransform.Basis.Z * direction;
+        return GetPos() + length / 2 * GlobalTransform.Basis.Z * direction;
     }
 
     public Part GetPart()

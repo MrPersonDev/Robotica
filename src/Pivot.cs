@@ -19,7 +19,7 @@ public partial class Pivot : Node3D
     private bool orbiting = false;
     private bool panning = false;
     private bool canEnableGrid = true;
-    
+
     [Export]
     private bool orthogonal = false;
 
@@ -135,7 +135,7 @@ public partial class Pivot : Node3D
             else
                 Scale /= ORTHOGONAL_DIST_MULTIPLIER;
         }
-        
+
         orthogonal = value;
         if (value)
             ShowGrid();
@@ -288,7 +288,7 @@ public partial class Pivot : Node3D
     {
         if (orthogonal)
             return mainCam.Size;
-        
+
         return GetCamPos().DistanceTo(pos);
     }
 

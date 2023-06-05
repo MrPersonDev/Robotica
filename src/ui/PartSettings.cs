@@ -4,160 +4,160 @@ using System.Collections.Generic;
 
 public partial class PartSettings : PanelContainer
 {
-	private List<Tuple<String, ParameterType>> curParameterTypes;
-	private PartOption currentPartOption;
-	private Dictionary<PartOption, Dictionary<String, Variant>> prevParameters = new Dictionary<PartOption, Dictionary<String, Variant>>();
+    private List<Tuple<String, ParameterType>> curParameterTypes;
+    private PartOption currentPartOption;
+    private Dictionary<PartOption, Dictionary<String, Variant>> prevParameters = new Dictionary<PartOption, Dictionary<String, Variant>>();
 
     [ExportGroup("Parameter Objects")]
-	[Export]
-	private PackedScene numericParameterObject, dropdownParameterObject, booleanParameterObject;
-	
+    [Export]
+    private PackedScene numericParameterObject, dropdownParameterObject, booleanParameterObject;
+
     [ExportGroup("Node Paths")]
-	[Export]
-	private NodePath vBoxPath;
+    [Export]
+    private NodePath vBoxPath;
 
-	private VBoxContainer vBox;
+    private VBoxContainer vBox;
 
-	public override void _Ready()
-	{
-		vBox = (VBoxContainer)GetNode(vBoxPath);
-	}
+    public override void _Ready()
+    {
+        vBox = (VBoxContainer)GetNode(vBoxPath);
+    }
 
-	public void ShowSettings(PartOption partOption)
-	{
-		Show();
-		ClearChildren();
+    public void ShowSettings(PartOption partOption)
+    {
+        Show();
+        ClearChildren();
 
-		currentPartOption = partOption;
-		List<Tuple<String, ParameterType>> parameterTypes = partOption.GetDefaultParameterTypes();
-		this.curParameterTypes = parameterTypes;
+        currentPartOption = partOption;
+        List<Tuple<String, ParameterType>> parameterTypes = partOption.GetDefaultParameterTypes();
+        this.curParameterTypes = parameterTypes;
 
-		foreach (Tuple<String, ParameterType> parameterType in parameterTypes)
-			AddParameter(parameterType.Item1, parameterType.Item2);
+        foreach (Tuple<String, ParameterType> parameterType in parameterTypes)
+            AddParameter(parameterType.Item1, parameterType.Item2);
 
-		if (prevParameters.ContainsKey(partOption))
-			RestoreParameters(prevParameters[partOption], parameterTypes);
+        if (prevParameters.ContainsKey(partOption))
+            RestoreParameters(prevParameters[partOption], parameterTypes);
 
-		ParameterInputEdited();
-	}
+        ParameterInputEdited();
+    }
 
-	private void RestoreParameters(Dictionary<String, Variant> parameters, List<Tuple<String, ParameterType>> parameterTypes)
-	{
-		for (int i = 0; i < parameterTypes.Count; i++)
-		{
-			ParameterInput parameterInput = GetParameter(i);
-			String name = parameterInput.GetName();
-			Variant value = parameters[name];
+    private void RestoreParameters(Dictionary<String, Variant> parameters, List<Tuple<String, ParameterType>> parameterTypes)
+    {
+        for (int i = 0; i < parameterTypes.Count; i++)
+        {
+            ParameterInput parameterInput = GetParameter(i);
+            String name = parameterInput.GetName();
+            Variant value = parameters[name];
 
-			parameterInput.SetValue(value);
-		}
-	}
+            parameterInput.SetValue(value);
+        }
+    }
 
-	private void UpdateSettings()
-	{
-		bool updatedParameter = true;
-		while (updatedParameter)
-		{
-			updatedParameter = false;
+    private void UpdateSettings()
+    {
+        bool updatedParameter = true;
+        while (updatedParameter)
+        {
+            updatedParameter = false;
 
-			Dictionary<String, Variant> curParameters = GetParameters();
-			List<Tuple<String, ParameterType>> newParameterTypes = currentPartOption.GetSpecificParameterTypes(curParameters);
-			
-			for (int i = 0; i < curParameterTypes.Count && i < newParameterTypes.Count; i++)
-			{
-				if (curParameterTypes[i].Equals(newParameterTypes[i]))
-					continue;
+            Dictionary<String, Variant> curParameters = GetParameters();
+            List<Tuple<String, ParameterType>> newParameterTypes = currentPartOption.GetSpecificParameterTypes(curParameters);
 
-				RemoveParameter(i);
-				ParameterInput parameterInput = AddParameter(newParameterTypes[i].Item1, newParameterTypes[i].Item2);
-				vBox.MoveChild(parameterInput, i);
-				updatedParameter = true;
-			}
+            for (int i = 0; i < curParameterTypes.Count && i < newParameterTypes.Count; i++)
+            {
+                if (curParameterTypes[i].Equals(newParameterTypes[i]))
+                    continue;
 
-			for (int i = newParameterTypes.Count; i < curParameterTypes.Count; i++)
-			{
-				RemoveParameter(i);
-				updatedParameter = true;
-			}
+                RemoveParameter(i);
+                ParameterInput parameterInput = AddParameter(newParameterTypes[i].Item1, newParameterTypes[i].Item2);
+                vBox.MoveChild(parameterInput, i);
+                updatedParameter = true;
+            }
 
-			for (int i = curParameterTypes.Count; i < newParameterTypes.Count; i++)
-			{
-				AddParameter(newParameterTypes[i].Item1, newParameterTypes[i].Item2);
-				updatedParameter = true;
-			}
+            for (int i = newParameterTypes.Count; i < curParameterTypes.Count; i++)
+            {
+                RemoveParameter(i);
+                updatedParameter = true;
+            }
 
-			curParameterTypes = newParameterTypes;
-		}
-	}
+            for (int i = curParameterTypes.Count; i < newParameterTypes.Count; i++)
+            {
+                AddParameter(newParameterTypes[i].Item1, newParameterTypes[i].Item2);
+                updatedParameter = true;
+            }
 
-	private ParameterInput GetParameter(int index)
-	{
-		return (ParameterInput)vBox.GetChild(index);
-	}
+            curParameterTypes = newParameterTypes;
+        }
+    }
 
-	private void ClearChildren()
-	{
-		foreach (Node child in vBox.GetChildren())
-		{
-			vBox.RemoveChild(child);
-			child.QueueFree();
-		}
-	}
+    private ParameterInput GetParameter(int index)
+    {
+        return (ParameterInput)vBox.GetChild(index);
+    }
 
-	private ParameterInput AddParameter(String label, ParameterType parameterType)
-	{
-		PackedScene parameterInputObject = null;
-		if (parameterType is FloatRangeParameter)
-			parameterInputObject = numericParameterObject;
-		else if (parameterType is DropdownParameter)
-			parameterInputObject = dropdownParameterObject;
-		else if (parameterType is BooleanParameter)
-			parameterInputObject = booleanParameterObject;
+    private void ClearChildren()
+    {
+        foreach (Node child in vBox.GetChildren())
+        {
+            vBox.RemoveChild(child);
+            child.QueueFree();
+        }
+    }
 
-		ParameterInput newParameterInput = (ParameterInput)parameterInputObject.Instantiate();
+    private ParameterInput AddParameter(String label, ParameterType parameterType)
+    {
+        PackedScene parameterInputObject = null;
+        if (parameterType is FloatRangeParameter)
+            parameterInputObject = numericParameterObject;
+        else if (parameterType is DropdownParameter)
+            parameterInputObject = dropdownParameterObject;
+        else if (parameterType is BooleanParameter)
+            parameterInputObject = booleanParameterObject;
 
-		newParameterInput.Setup(parameterType);
+        ParameterInput newParameterInput = (ParameterInput)parameterInputObject.Instantiate();
 
-		Action<Variant> editAction = (Variant value) => { ParameterInputEdited(); };
-		newParameterInput.ConnectEdited(editAction);
-		newParameterInput.SetLabel(label);
+        newParameterInput.Setup(parameterType);
 
-		vBox.AddChild(newParameterInput);
+        Action<Variant> editAction = (Variant value) => { ParameterInputEdited(); };
+        newParameterInput.ConnectEdited(editAction);
+        newParameterInput.SetLabel(label);
 
-		return newParameterInput;
-	}
+        vBox.AddChild(newParameterInput);
 
-	private void RemoveParameter(int index)
-	{
-		Node child = vBox.GetChildren()[index];
-		vBox.RemoveChild(child);
-		child.QueueFree();
-	}
+        return newParameterInput;
+    }
 
-	private void ParameterInputEdited()
-	{
-		UpdateSettings();
-		Dictionary<String, Variant> parameters = GetParameters();
+    private void RemoveParameter(int index)
+    {
+        Node child = vBox.GetChildren()[index];
+        vBox.RemoveChild(child);
+        child.QueueFree();
+    }
 
-		prevParameters[currentPartOption] = parameters;
+    private void ParameterInputEdited()
+    {
+        UpdateSettings();
+        Dictionary<String, Variant> parameters = GetParameters();
 
-		Interface ui = (Interface)GetParent();
-		ui.CreatePart(currentPartOption, parameters);
-	}
+        prevParameters[currentPartOption] = parameters;
 
-	public Dictionary<String, Variant> GetParameters()
-	{
-		Dictionary<String, Variant> parameters = new Dictionary<String, Variant>();
+        Interface ui = (Interface)GetParent();
+        ui.CreatePart(currentPartOption, parameters);
+    }
 
-		foreach (Node child in vBox.GetChildren())
-		{
-			if (!(child is ParameterInput))
-				continue;
-			ParameterInput parameterInput = (ParameterInput)child;
-			
-			parameters.Add(parameterInput.GetName(), parameterInput.GetValue());
-		}
+    public Dictionary<String, Variant> GetParameters()
+    {
+        Dictionary<String, Variant> parameters = new Dictionary<String, Variant>();
 
-		return parameters;
-	}
+        foreach (Node child in vBox.GetChildren())
+        {
+            if (!(child is ParameterInput))
+                continue;
+            ParameterInput parameterInput = (ParameterInput)child;
+
+            parameters.Add(parameterInput.GetName(), parameterInput.GetValue());
+        }
+
+        return parameters;
+    }
 }

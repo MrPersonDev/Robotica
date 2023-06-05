@@ -4,62 +4,62 @@ using System.Threading.Tasks;
 
 public partial class HotBoxOption : Godot.Control
 {
-	private String partName;
-	private Action<HotBoxOption> hoveredAction;
-	private Callable callable;
+    private String partName;
+    private Action<HotBoxOption> hoveredAction;
+    private Callable callable;
 
-	[ExportGroup("Node Paths")]
-	[Export]
-	private NodePath labelPath, indicatorPanelPath;
+    [ExportGroup("Node Paths")]
+    [Export]
+    private NodePath labelPath, indicatorPanelPath;
 
-	private Label label;
-	private Panel indicatorPanel;
+    private Label label;
+    private Panel indicatorPanel;
 
-	public void Setup(String partName)
-	{
-		label = (Label)GetNode(labelPath);
-		indicatorPanel = (Panel)GetNode(indicatorPanelPath);
+    public void Setup(String partName)
+    {
+        label = (Label)GetNode(labelPath);
+        indicatorPanel = (Panel)GetNode(indicatorPanelPath);
 
-		this.partName = partName;
+        this.partName = partName;
 
-		SetLabelText();
-		SetCallable();
-	}
+        SetLabelText();
+        SetCallable();
+    }
 
-	private void SetLabelText()
-	{
-		label.Text = partName;
-	}
+    private void SetLabelText()
+    {
+        label.Text = partName;
+    }
 
-	private async void SetCallable()
-	{
-		callable = Callable.From(await GetPartOptionAction());
-	}
-	
-	public void ShowIndicator()
-	{
-		indicatorPanel.SelfModulate = new Color(1.0f, 1.0f, 1.0f, 1.0f);
-	}
+    private async void SetCallable()
+    {
+        callable = Callable.From(await GetPartOptionAction());
+    }
 
-	public void HideIndicator()
-	{
-		indicatorPanel.SelfModulate = new Color(1.0f, 1.0f, 1.0f, 0.0f);
-	}
+    public void ShowIndicator()
+    {
+        indicatorPanel.SelfModulate = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+    }
 
-	public void Select()
-	{
-		callable.Call();
-	}
+    public void HideIndicator()
+    {
+        indicatorPanel.SelfModulate = new Color(1.0f, 1.0f, 1.0f, 0.0f);
+    }
 
-	private async Task<Action> GetPartOptionAction()
-	{
-		World world = (World)GetTree().CurrentScene;
-		if (world.GetInterfaceNode() == null)
-			await ToSignal(world, Node.SignalName.Ready);
-		
-		PartsList partsList = world.GetInterfaceNode().GetPartsListNode();
-		PartOption partOption = partsList.GetPartOption(partName);
+    public void Select()
+    {
+        callable.Call();
+    }
 
-		return partsList.GetPartOptionClickedAction(partOption);
-	}
+    private async Task<Action> GetPartOptionAction()
+    {
+        World world = (World)GetTree().CurrentScene;
+        if (world.GetInterfaceNode() == null)
+            await ToSignal(world, Node.SignalName.Ready);
+
+        PartsList partsList = world.GetInterfaceNode().GetPartsListNode();
+        PartOption partOption = partsList.GetPartOption(partName);
+
+        return partsList.GetPartOptionClickedAction(partOption);
+    }
 }

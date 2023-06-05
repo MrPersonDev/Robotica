@@ -9,7 +9,7 @@ public partial class Parts : Node3D
 {
     private const int MAX_CONCURRENT_HOLE_THREADS = 1;
     private const int MAX_CONCURRENT_DELETE_THREADS = 1;
-    
+
     private List<List<Part>> manualPartGroupings = new List<List<Part>>();
     private List<PartGroup> partGroups = new List<PartGroup>();
     private HashSet<Part> partsToUpdate = new HashSet<Part>();
@@ -109,7 +109,7 @@ public partial class Parts : Node3D
 
         for (int i = 1; i < overlappingPartGroups.Count; i++)
             parts.AddRange(AbductChildren(overlappingPartGroups[i], true));
-        
+
         List<Part> partsWithoutDeleted = new List<Part>();
         foreach (Part part in parts)
         {
@@ -202,7 +202,7 @@ public partial class Parts : Node3D
 
             newGroupingsSet.Add(grouping);
         }
-        
+
         manualPartGroupings = new List<List<Part>>(newGroupingsSet);
     }
 
@@ -308,7 +308,7 @@ public partial class Parts : Node3D
         foreach (Part part in parts)
             part.DisableColliders(disableInserts);
     }
-    
+
     public void SetOwner(Node parent)
     {
         foreach (Part part in GetAllParts())

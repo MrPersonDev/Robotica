@@ -362,7 +362,7 @@ public partial class Control : Node3D
     {
         if (ui.IsSettingsOpen())
             return;
-        
+
         grid.ShowGrid();
         pivot.SetOrthogonal(false);
     }
@@ -417,7 +417,7 @@ public partial class Control : Node3D
     {
         if (ui.IsSettingsOpen())
             return;
-        
+
         ClearHistory();
 
         Deselect(false);
@@ -467,7 +467,7 @@ public partial class Control : Node3D
 
         await CreatePartGroups(selection.GetParts());
     }
-    
+
     public void HandleSettingsInput()
     {
         if (ui.IsSettingsOpen())
@@ -756,7 +756,7 @@ public partial class Control : Node3D
         if (moving && !rotating)
             return axis;
         else
-            return pivot.GetCamNormal() * (Vector3.One-axis);
+            return pivot.GetCamNormal() * (Vector3.One - axis);
     }
 
     private Vector3 GetIntersectionPlanePos(Moveable other)
@@ -900,7 +900,7 @@ public partial class Control : Node3D
     private void MoveRotateInteraction()
     {
         if (!IsInstanceValid(selectedHoleBody))
-            return;    
+            return;
 
         double angle = ChangeInAngle(MoveRotation(), Input.IsActionPressed("snapping") ? QUARTER_ROTATE_SNAP : DEFAULT_ROTATE_SNAP);
 

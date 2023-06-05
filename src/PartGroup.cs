@@ -38,7 +38,7 @@ public partial class PartGroup : Moveable
     {
         Vector3 displacement = pos - GetCenter();
 
-        List<Part> parts = new List<Part>(GetParts());        
+        List<Part> parts = new List<Part>(GetParts());
         foreach (Part part in parts)
             part.MoveTo(part.GetCenter() + displacement, meshOnly);
     }

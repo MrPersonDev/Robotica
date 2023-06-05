@@ -6,7 +6,7 @@ public static class SaveManager
 {
     private static String currentPath = null;
 
-	public static void Save(String path, Interface ui, Parts parts)
+    public static void Save(String path, Interface ui, Parts parts)
     {
         parts.SetOwner(parts);
 
@@ -46,8 +46,8 @@ public static class SaveManager
 
         file.Close();
         SetCurrentPath(path, ui);
-    } 
-    
+    }
+
     private static bool TryLoad(String path, Interface ui)
     {
         if (!FileAccess.FileExists(path))
@@ -64,9 +64,9 @@ public static class SaveManager
             ui.Error(error.ToString());
             return false;
         }
-        
+
         file.Close();
-        
+
         return true;
     }
 
@@ -80,14 +80,14 @@ public static class SaveManager
         }
     }
 
-	public static void Import(String path, Interface ui, Parts parts)
+    public static void Import(String path, Interface ui, Parts parts)
     {
         if (!TryLoad(path, ui))
             return;
-        
+
         using FileAccess file = FileAccess.Open(path, FileAccess.ModeFlags.Read);
 
-		Dictionary<String, PartGroup> loadedPartGroups = new Dictionary<String, PartGroup>();
+        Dictionary<String, PartGroup> loadedPartGroups = new Dictionary<String, PartGroup>();
         while (file.GetPosition() < file.GetLength())
         {
             String jsonString = file.GetLine();
@@ -128,9 +128,9 @@ public static class SaveManager
         file.Close();
     }
 
-	public static void LoadPart(Dictionary<String, Variant> saveInfo, Parts parts, Dictionary<String, PartGroup> loadedPartGroups)
-	{
-		String name = (String)saveInfo["Name"];
+    public static void LoadPart(Dictionary<String, Variant> saveInfo, Parts parts, Dictionary<String, PartGroup> loadedPartGroups)
+    {
+        String name = (String)saveInfo["Name"];
         Vector3 basisX = StrToVector3((String)saveInfo["X"]);
         Vector3 basisY = StrToVector3((String)saveInfo["Y"]);
         Vector3 basisZ = StrToVector3((String)saveInfo["Z"]);
@@ -162,12 +162,12 @@ public static class SaveManager
                 PartGroup partGroup = new PartGroup();
                 loadedPartGroups[partGroupName] = partGroup;
             }
-            
+
             Parts.AdoptChild(loadedPartGroups[partGroupName], part, true);
         }
 
         partOption.Setup(part, parameters);
-	}
+    }
 
     private static void LoadManualPartGroupings(Godot.Collections.Array<Godot.Collections.Array<String>> partGroupingArrays, Parts parts)
     {
@@ -176,7 +176,7 @@ public static class SaveManager
 
         foreach (Part part in partsList)
             partNames[part.Name] = part;
-        
+
 
         List<List<Part>> manualPartGroupings = new List<List<Part>>();
         foreach (Godot.Collections.Array<String> partGroupingArray in partGroupingArrays)
@@ -189,21 +189,21 @@ public static class SaveManager
                 Part part = partNames[parsedName];
                 groupedParts.Add(part);
             }
-        
+
             manualPartGroupings.Add(groupedParts);
         }
 
         parts.LoadManualPartGroupings(manualPartGroupings);
     }
 
-	public static Vector3 StrToVector3(String str)
-	{
-        str = str.Substring(1, str.Length-2);
+    public static Vector3 StrToVector3(String str)
+    {
+        str = str.Substring(1, str.Length - 2);
         String[] values = str.Split(", ");
 
         Vector3 result = new Vector3(float.Parse(values[0]), float.Parse(values[1]), float.Parse(values[2]));
         return result;
-	}
+    }
 
     public static void SetCurrentPath(String path, Interface ui)
     {

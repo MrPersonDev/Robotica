@@ -68,19 +68,19 @@ public partial class PartsArraySettingEdit : SettingEdit
     public override void SetValue(Variant value)
     {
         Godot.Collections.Array<String> array = (Godot.Collections.Array<String>)value;
-		spinbox.Value = array.Count;
-		
-		for (int i = 0; i < array.Count; i++)
-		{
-			for (int j = 0; j < partNames.Count; j++)
-			{
-				if (partNames[j] == array[i])
-				{
-					((OptionButton)itemsContainer.GetChild(i)).Select(j);
-					break;
-				}
-			}
-		}
+        spinbox.Value = array.Count;
+
+        for (int i = 0; i < array.Count; i++)
+        {
+            for (int j = 0; j < partNames.Count; j++)
+            {
+                if (partNames[j] == array[i])
+                {
+                    ((OptionButton)itemsContainer.GetChild(i)).Select(j);
+                    break;
+                }
+            }
+        }
     }
 
     public override Variant GetValue()

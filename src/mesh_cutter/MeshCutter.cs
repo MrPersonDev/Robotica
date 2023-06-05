@@ -73,7 +73,7 @@ public partial class MeshCutter : MeshInstance3D
     public void SetMaterial(StandardMaterial3D material)
     {
         if (!IsInstanceValid(this))
-            return;    
+            return;
 
         MaterialOverride = material;
     }
@@ -195,7 +195,7 @@ public partial class MeshCutter : MeshInstance3D
             {
                 if (edge == originEdge || edge.Overlaps(originEdge))
                     continue;
-                
+
                 float distToEdge = originEdge.DistanceTo(edge);
                 if (distToEdge < minDist)
                 {
@@ -215,7 +215,7 @@ public partial class MeshCutter : MeshInstance3D
                 fartherVertex = idx1;
             else
                 return;
-            
+
             group.AddEdge(closestEdge);
             visited.Add(idx1);
             visited.Add(idx2);
@@ -245,7 +245,7 @@ public partial class MeshCutter : MeshInstance3D
 
     private void FillEdgeGroup(MeshDataTool mdt, SurfaceTool st, EdgeGroup edgeGroup)
     {
-        
+
 
         Vector2[] polygon = GetPolygonFromEdgeGroup(mdt, edgeGroup);
         int[] triangles = Geometry2D.TriangulatePolygon(polygon);

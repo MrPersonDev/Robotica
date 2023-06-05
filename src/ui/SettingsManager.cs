@@ -15,7 +15,7 @@ public static class SettingsManager
         Dictionary<String, Variant> currentPanelSettings = settings.GetCurrentPanelSettings();
 
         currentSettings[currentPanelName] = currentPanelSettings;
-    
+
         SaveSettings(ui);
 
         ApplySettings(currentPanelName, currentPanelSettings, world);
@@ -98,7 +98,7 @@ public static class SettingsManager
                 break;
         }
     }
-    
+
     private static void ApplyKeybindsSettings(Dictionary<String, Variant> panelSettings, World world)
     {
         foreach (KeyValuePair<String, Variant> mapping in panelSettings)
@@ -108,14 +108,14 @@ public static class SettingsManager
         }
 
         world.GetInterfaceNode().UpdateMenuButtons();
-    }    
+    }
 
     private static void ApplyHotboxSettings(Dictionary<String, Variant> panelSettings, World world)
     {
         HotBox hotBox = world.GetInterfaceNode().GetHotBoxNode();
         Godot.Collections.Array<String> hotBoxItems = (Godot.Collections.Array<String>)panelSettings["Items"];
 
-        hotBox.SetItems(hotBoxItems);        
+        hotBox.SetItems(hotBoxItems);
         hotBox.SetDist((float)panelSettings["Distance"]);
     }
 
@@ -180,7 +180,7 @@ public static class SettingsManager
     public static Dictionary<String, Variant> GetPanelSettings(String panelName)
     {
         return currentSettings[panelName];
-    }    
+    }
 
     private static String GetExecutablePath()
     {

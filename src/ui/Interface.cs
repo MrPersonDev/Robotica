@@ -73,19 +73,19 @@ public partial class Interface : Godot.Control
 
         AddMenuOption(editButton, "Undo", "undo", editCallables, () => { control.HandleUndoInput(); });
         AddMenuOption(editButton, "Redo", "redo", editCallables, () => { control.HandleRedoInput(); });
-		AddMenuSeparator(editButton, "");
+        AddMenuSeparator(editButton, "");
         AddMenuOption(editButton, "Delete", "delete", editCallables, () => { control.HandleDeleteInput(); });
-		AddMenuSeparator(editButton, "");
+        AddMenuSeparator(editButton, "");
         AddMenuOption(editButton, "Settings", null, editCallables, () => { control.HandleSettingsInput(); });
 
-		AddMenuOption(selectButton, "Select All", "select_all", selectCallables, () => { control.HandleSelectAllInput(); });
-		AddMenuOption(selectButton, "Deselect All", "deselect_all", selectCallables, () => { control.HandleDeselectAllInput(); });
-		AddMenuSeparator(selectButton, "");
-		AddMenuOption(selectButton, "Focus", "focus", selectCallables, () => { control.HandleFocusInput(); });
-		AddMenuSeparator(selectButton, "");
-		AddMenuOption(selectButton, "Group", "group", selectCallables, () => { control.HandleGroupInput(); });
-		AddMenuSeparator(selectButton, "");
-		AddMenuOption(selectButton, "Duplicate", "duplicate", selectCallables, () => { control.HandleDuplicateInput(); });
+        AddMenuOption(selectButton, "Select All", "select_all", selectCallables, () => { control.HandleSelectAllInput(); });
+        AddMenuOption(selectButton, "Deselect All", "deselect_all", selectCallables, () => { control.HandleDeselectAllInput(); });
+        AddMenuSeparator(selectButton, "");
+        AddMenuOption(selectButton, "Focus", "focus", selectCallables, () => { control.HandleFocusInput(); });
+        AddMenuSeparator(selectButton, "");
+        AddMenuOption(selectButton, "Group", "group", selectCallables, () => { control.HandleGroupInput(); });
+        AddMenuSeparator(selectButton, "");
+        AddMenuOption(selectButton, "Duplicate", "duplicate", selectCallables, () => { control.HandleDuplicateInput(); });
 
         fileButton.GetPopup().Connect("id_pressed", Callable.From((int id) => { PopupMenuItemSelected(fileCallables, id); }));
         editButton.GetPopup().Connect("id_pressed", Callable.From((int id) => { PopupMenuItemSelected(editCallables, id); }));
@@ -103,7 +103,7 @@ public partial class Interface : Godot.Control
             shortcut.Events.AddRange(events);
         }
 
-		popupMenu.AddShortcut(shortcut, -1, false);
+        popupMenu.AddShortcut(shortcut, -1, false);
 
         int idx = popupMenu.ItemCount - 1;
         popupMenu.SetItemText(idx, name);
@@ -114,10 +114,10 @@ public partial class Interface : Godot.Control
     private void AddMenuSeparator(MenuButton menuButton, String name)
     {
         PopupMenu popupMenu = menuButton.GetPopup();
-        
+
         popupMenu.AddSeparator(name);
     }
-    
+
     public void UpdateMenuButtons()
     {
         ClearMenuButton(fileButton);
@@ -330,7 +330,7 @@ public partial class Interface : Godot.Control
             Error("Unknown file extension");
             return;
         }
-        
+
         SaveManager.Import(path, this, parts);
     }
 

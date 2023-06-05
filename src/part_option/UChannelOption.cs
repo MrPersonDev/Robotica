@@ -5,74 +5,74 @@ using System.Linq;
 
 public partial class UChannelOption : PartOption
 {
-	private readonly String[] MATERIALS = {"Steel", "Alluminum"};
+    private readonly String[] MATERIALS = { "Steel", "Alluminum" };
 
-	private PartObject defaultPartObject;
+    private PartObject defaultPartObject;
 
-	[ExportGroup("Properties")]
-	[Export]
-	private StandardMaterial3D steelMaterial, alluminumMaterial;
+    [ExportGroup("Properties")]
+    [Export]
+    private StandardMaterial3D steelMaterial, alluminumMaterial;
 
-	[ExportGroup("Part Objects")]
-	[Export]
-	private PackedScene defaultPartScene;
+    [ExportGroup("Part Objects")]
+    [Export]
+    private PackedScene defaultPartScene;
 
     public override void _Ready()
     {
         base._Ready();
 
-		SetPartObjects();
+        SetPartObjects();
     }
 
-	private void SetPartObjects()
-	{
-		defaultPartObject = new PartObject(defaultPartScene);
-	}
+    private void SetPartObjects()
+    {
+        defaultPartObject = new PartObject(defaultPartScene);
+    }
 
     public override PartObject GetPartObject(Dictionary<String, Variant> parameters)
     {
-		return defaultPartObject;
+        return defaultPartObject;
     }
 
-	public override async void Setup(Part part, Dictionary<String, Variant> parameters)
-	{
-		base.Setup(part, parameters);
+    public override async void Setup(Part part, Dictionary<String, Variant> parameters)
+    {
+        base.Setup(part, parameters);
 
-		float length = (float)parameters["Length"]/2.0f;
+        float length = (float)parameters["Length"] / 2.0f;
 
-		StandardMaterial3D mainMaterial;
-		if ((String)parameters["Material"] == "Steel")
-			mainMaterial = steelMaterial;
-		else // if (String)parameters["Material"] == "Alluminum"
-			mainMaterial = alluminumMaterial;
+        StandardMaterial3D mainMaterial;
+        if ((String)parameters["Material"] == "Steel")
+            mainMaterial = steelMaterial;
+        else // if (String)parameters["Material"] == "Alluminum"
+            mainMaterial = alluminumMaterial;
 
-		await part.SetMeshCutterSize(length, MeshCutter.NO_CUT, MeshCutter.NO_CUT);
-		part.SetMaterial(mainMaterial);
-	}
+        await part.SetMeshCutterSize(length, MeshCutter.NO_CUT, MeshCutter.NO_CUT);
+        part.SetMaterial(mainMaterial);
+    }
 
-	public override List<Tuple<String, ParameterType>> GetSpecificDefaultParameterTypes()
-	{
-		List<Tuple<String, ParameterType>> parameterTypes = new List<Tuple<String, ParameterType>>();
+    public override List<Tuple<String, ParameterType>> GetSpecificDefaultParameterTypes()
+    {
+        List<Tuple<String, ParameterType>> parameterTypes = new List<Tuple<String, ParameterType>>();
 
-		List<Object> materialsList = new List<String>(MATERIALS).Cast<Object>().ToList();
+        List<Object> materialsList = new List<String>(MATERIALS).Cast<Object>().ToList();
 
-		parameterTypes.Add(Tuple.Create("Length", (ParameterType)new FloatRangeParameter(1.0f, 20.0f, 1.0f, 15.0f)));
-		parameterTypes.Add(Tuple.Create("Material", (ParameterType)new DropdownParameter(materialsList)));
+        parameterTypes.Add(Tuple.Create("Length", (ParameterType)new FloatRangeParameter(1.0f, 20.0f, 1.0f, 15.0f)));
+        parameterTypes.Add(Tuple.Create("Material", (ParameterType)new DropdownParameter(materialsList)));
 
-		return parameterTypes;
-	}
+        return parameterTypes;
+    }
 
-	public override List<PartObject> GetPartObjects()
-	{
-		List<PartObject> partObjects = new List<PartObject>();
+    public override List<PartObject> GetPartObjects()
+    {
+        List<PartObject> partObjects = new List<PartObject>();
 
-		partObjects.Add(defaultPartObject);
+        partObjects.Add(defaultPartObject);
 
-		return partObjects;
-	}
+        return partObjects;
+    }
 
-	public override String GetName()
-	{
-		return "U-Channel";
-	}
+    public override String GetName()
+    {
+        return "U-Channel";
+    }
 }

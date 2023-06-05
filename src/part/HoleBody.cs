@@ -81,7 +81,7 @@ public partial class HoleBody : Selectable
     public override void Hover()
     {
         if (isNonInteractive || isMotorHole)
-            return;    
+            return;
 
         if (!selected)
             mat.AlbedoColor = new Color(mat.AlbedoColor.R, mat.AlbedoColor.G, mat.AlbedoColor.B, HOVER_ALPHA);

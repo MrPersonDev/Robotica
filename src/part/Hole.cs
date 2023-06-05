@@ -14,7 +14,7 @@ public abstract partial class Hole : Node3D
     private const float SHAFT_SCALE = 0.8f;
     private const float HOVER_ALPHA = 0.4f;
     private bool shouldEnable = true;
-    
+
     [ExportGroup("Properties")]
     [Export]
     private float width = 1.0f;
@@ -46,7 +46,7 @@ public abstract partial class Hole : Node3D
     {
         return (Part)GetParent().GetParent();
     }
-    
+
     public void SetShouldEnable(bool value)
     {
         shouldEnable = value;

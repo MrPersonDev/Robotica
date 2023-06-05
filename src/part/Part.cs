@@ -266,7 +266,7 @@ public partial class Part : Moveable
 
     //             Hole curHole = (Hole)queuedHoles[i].Duplicate();
     //             AddHole(curHole);
-                
+
     //             queuedHoles.RemoveAt(i);
     //         }
 
@@ -496,7 +496,7 @@ public partial class Part : Moveable
             await ToSignal(GetTree(), SceneTree.SignalName.ProcessFrame);
         }
 
-        HideExcludedHoles(width, height, length); 
+        HideExcludedHoles(width, height, length);
         DisableColliders(false);
     }
 
@@ -691,7 +691,7 @@ public partial class Part : Moveable
             return;
 
         foreach (Insert insert in inserts.GetChildren())
-            insert.IncreaseWidth();    
+            insert.IncreaseWidth();
     }
 
     public void ResetInsertWidth()
@@ -700,7 +700,7 @@ public partial class Part : Moveable
             return;
 
         foreach (Insert insert in inserts.GetChildren())
-            insert.ResetWidth();    
+            insert.ResetWidth();
     }
 
     public List<Part> GetCurCollidingParts()
