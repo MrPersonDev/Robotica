@@ -25,4 +25,25 @@ public partial class Window : PanelContainer
         Interface ui = world.GetInterfaceNode();
         closeButton.Pressed += () => { ui.ClosePanels(); };
     }
+
+    public override void _Input(InputEvent inputEvent)
+    {
+        if (IsOpen() && inputEvent is InputEventMouse && !GetRect().HasPoint(((InputEventMouse)inputEvent).GlobalPosition))
+            GetViewport().SetInputAsHandled();
+    }
+    
+    public virtual void Open()
+    {
+        Visible = true;
+    }
+
+    public virtual void Close()
+    {
+        Visible = false;
+    }
+
+    public virtual bool IsOpen()
+    {
+        return Visible;
+    }
 }

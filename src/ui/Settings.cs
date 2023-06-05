@@ -39,25 +39,19 @@ public partial class Settings : Window
         SettingsManager.LoadSettings(ui);
     }
 
-    public override void _Input(InputEvent inputEvent)
+    public override void Open()
     {
-        if (IsOpen() && inputEvent is InputEventMouse && !GetRect().HasPoint(((InputEventMouse)inputEvent).GlobalPosition))
-            GetViewport().SetInputAsHandled();
-    }
+        base.Open();
 
-    public void Open()
-    {
-        Visible = true;
         SetInputFocus(FocusModeEnum.None);
-
         SetPanel(0);
     }
 
-    public void Close()
+    public override void Close()
     {
-        ApplyPanelSettings();
+        base.Close();
 
-        Visible = false;
+        ApplyPanelSettings();
         SetInputFocus(FocusModeEnum.All);
     }
 
@@ -118,11 +112,6 @@ public partial class Settings : Window
         {
             input.FocusMode = focusMode;
         }
-    }
-
-    public bool IsOpen()
-    {
-        return Visible;
     }
 
     private SettingsPanel GetCurrentPanel()
