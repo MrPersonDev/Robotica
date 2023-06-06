@@ -72,7 +72,6 @@ public partial class HotBox : Godot.Control
 
     private void UpdateLine()
     {
-        line.Points[1] = GetViewport().GetMousePosition() - GlobalPosition;
         line.SetPointPosition(1, GetViewport().GetMousePosition() - GlobalPosition);
     }
 
