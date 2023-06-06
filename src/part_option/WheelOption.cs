@@ -201,7 +201,7 @@ public partial class WheelOption : PartOption
         if ((String)parameters["Type"] == "Mecanum")
             return $"{((bool)parameters["Flipped"] ? "Left" : "Right")}-side Mecanum Wheel";
             
-        String text = $"{(float)parameters["Diameter"]:0.#}\" {parameters["Type"]}";
+        String text = $"{(float)parameters["Diameter"]:0.####}\" {parameters["Type"]}";
         if (parameters.ContainsKey("High Strength Converter") && (bool)parameters["High Strength Converter"])
             text += " with insert";
         return text;

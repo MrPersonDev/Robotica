@@ -93,6 +93,6 @@ public partial class AngleOption : PartOption
 
     public override string GetSpecificName(Dictionary<String, Variant> parameters)
     {
-        return $"{parameters["Material"]} {(float)parameters["Width"]:0.#}x{(float)parameters["Width"]:0.#}x{(float)parameters["Length"]:0.#} Angle";
+        return $"{parameters["Material"]} {(float)parameters["Width"]:0.####}x{(float)parameters["Width"]:0.####}x{(float)parameters["Length"]:0.####} Angle";
     }
 }

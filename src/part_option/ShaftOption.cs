@@ -76,7 +76,7 @@ public partial class ShaftOption : PartOption
         String text = "";
         if ((bool)parameters["High Strength"])   
             text += "High Strength ";
-        text += $"{(float)parameters["Length"]:0.#}-length Shaft";
+        text += $"{(float)parameters["Length"]:0.####}-length Shaft";
         return text;
     }
 }

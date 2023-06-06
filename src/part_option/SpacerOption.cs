@@ -141,6 +141,6 @@ public partial class SpacerOption : PartOption
     
     public override string GetSpecificName(Dictionary<String, Variant> parameters)
     {
-        return $"{(float)parameters["Length"]:0.#}-length {parameters["Type"]} Spacer";
+        return $"{(float)parameters["Length"]:0.####}-length {parameters["Type"]} Spacer";
     }
 }

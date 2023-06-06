@@ -102,6 +102,6 @@ public partial class RailOption : PartOption
     
     public override string GetSpecificName(Dictionary<String, Variant> parameters)
     {
-        return $"{parameters["Material"]} {(float)parameters["Length"]:0.#}-length ({parameters["Base Length"]:0.#}-base-length) Rail";
+        return $"{parameters["Material"]} {(float)parameters["Length"]:0.####}-length ({parameters["Base Length"]:0.####}-base-length) Rail";
     }
 }
