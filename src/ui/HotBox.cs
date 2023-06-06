@@ -115,6 +115,8 @@ public partial class HotBox : Godot.Control
     public void Start()
     {
         Show();
+
+        line.SetPointPosition(1, line.Points[0]);
     }
 
     public void End()
