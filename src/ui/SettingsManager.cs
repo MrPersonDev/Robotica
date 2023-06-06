@@ -117,6 +117,7 @@ public static class SettingsManager
 
         hotBox.SetItems(hotBoxItems);
         hotBox.SetDist((float)panelSettings["Distance"]);
+        hotBox.SetCancelRadius((float)panelSettings["Cancel Radius"]);
     }
 
     private static void SaveSettings(Interface ui)

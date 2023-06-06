@@ -6,6 +6,7 @@ public partial class HotBox : Godot.Control
 {
     private List<HotBoxOption> children = new List<HotBoxOption>();
     private HotBoxOption currentHovering = null;
+    private float cancelRadius = 20.0f;
 
     [ExportGroup("Properties")]
     [Export]
@@ -77,8 +78,17 @@ public partial class HotBox : Godot.Control
 
     private void UpdateHovering()
     {
+        Vector2 mousePos = GetViewport().GetMousePosition();
+        float distFromCenter = mousePos.DistanceTo(GlobalPosition);
+        if (distFromCenter <= cancelRadius)
+        {
+            Unhover();
+            return;
+        }
+
         float d = 360.0f / partNames.Count;
-        Vector2 relativeMousePos = (GetViewport().GetMousePosition() - GlobalPosition).Normalized();
+        Vector2 relativeMousePos = (mousePos - GlobalPosition).Normalized();
+        
         float angle = Mathf.Atan2(-relativeMousePos.Y, relativeMousePos.X) / (float)(Math.PI / 180.0f);
         angle += 90.0f;
 
@@ -112,6 +122,13 @@ public partial class HotBox : Godot.Control
         currentHovering.ShowIndicator();
     }
 
+    private void Unhover()
+    {
+        if (currentHovering != null)
+            currentHovering.HideIndicator();
+        currentHovering = null;       
+    }
+
     public void Start()
     {
         Show();
@@ -141,5 +158,10 @@ public partial class HotBox : Godot.Control
     {
         this.dist = dist;
         SetHotBoxOptions();
+    }
+
+    public void SetCancelRadius(float radius)
+    {
+        cancelRadius = radius;
     }
 }

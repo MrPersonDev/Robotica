@@ -15,3 +15,8 @@ layout_mode = 2
 min = 10.0
 max = 1000.0
 name = "Distance"
+
+[node name="Cancel Radius" parent="ScrollContainer/SettingEdits" index="2" instance=ExtResource("3_dc7jf")]
+layout_mode = 2
+max = 500.0
+name = "Cancel Radius"
