@@ -110,7 +110,7 @@ public partial class StandoffOption : PartOption
     
     public override string GetSpecificName(Dictionary<String, Variant> parameters)
     {
-        if ((String)parameters["Type"] == "Coupler")
+        if ((bool)parameters["Coupler"])
             return $"{(float)parameters["Length"]:0.#}\" Standoff Coupler";
         return $"{(float)parameters["Length"]:0.#}\" Standoff";
     }
