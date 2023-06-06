@@ -55,13 +55,16 @@ public partial class Control : Node3D
         ui = (Interface)GetNode(uiPath);
     }
 
+    public override void _Input(InputEvent inputEvent)
+    {
+        if (!ui.IsSettingsOpen() && inputEvent is InputEventMouseMotion)
+            UpdateMousePosition();
+    }
+
     public override void _UnhandledInput(InputEvent inputEvent)
     {
         if (!ui.IsSettingsOpen() && inputEvent is InputEventMouseMotion)
-        {
-            UpdateMousePosition();
             UpdateDragging();
-        }
 
         bool opposingColliderInput = inputEvent.IsActionPressed("opposing_collider") || inputEvent.IsActionReleased("opposing_collider");
         bool shouldUpdateHovering = !(moving && rotating) && !ui.IsSettingsOpen() && (inputEvent is InputEventMouseMotion || opposingColliderInput);
