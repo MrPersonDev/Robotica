@@ -728,7 +728,7 @@ public partial class Part : Moveable
         String name = Name;
         Transform3D transform = GlobalTransform;
         String partGroup = (GetPartGroup() != null) ? GetPartGroup().ToString() : "";
-        NodePath partOptionPath = partOption.GetPath();
+        NodePath partOptionName = partOption.GetName();
         Godot.Collections.Dictionary<String, Variant> godotDict = new Godot.Collections.Dictionary<String, Variant>(parameters);
 
         return new Dictionary<String, Variant>() {
@@ -738,7 +738,7 @@ public partial class Part : Moveable
             { "Z", transform.Basis.Z },
             { "O", transform.Origin },
             { "PartGroup", partGroup },
-            { "PartOption", partOptionPath },
+            { "PartOption", partOptionName },
             { "Parameters", godotDict }
         };
     }

@@ -87,6 +87,9 @@ public static class SaveManager
 
         using FileAccess file = FileAccess.Open(path, FileAccess.ModeFlags.Read);
 
+        World world = (World)parts.GetTree().CurrentScene;
+        PartsList partsList = world.GetInterfaceNode().GetPartsListNode();
+        
         Dictionary<String, PartGroup> loadedPartGroups = new Dictionary<String, PartGroup>();
         while (file.GetPosition() < file.GetLength())
         {
@@ -113,7 +116,7 @@ public static class SaveManager
 
             try
             {
-                LoadPart(saveInfo, parts, loadedPartGroups);
+                LoadPart(saveInfo, parts, partsList, loadedPartGroups);
             }
             catch (KeyNotFoundException)
             {
@@ -128,7 +131,7 @@ public static class SaveManager
         file.Close();
     }
 
-    public static void LoadPart(Dictionary<String, Variant> saveInfo, Parts parts, Dictionary<String, PartGroup> loadedPartGroups)
+    public static void LoadPart(Dictionary<String, Variant> saveInfo, Parts parts, PartsList partsList, Dictionary<String, PartGroup> loadedPartGroups)
     {
         String name = (String)saveInfo["Name"];
         Vector3 basisX = StrToVector3((String)saveInfo["X"]);
@@ -136,11 +139,11 @@ public static class SaveManager
         Vector3 basisZ = StrToVector3((String)saveInfo["Z"]);
         Vector3 origin = StrToVector3((String)saveInfo["O"]);
         String partGroupName = (String)saveInfo["PartGroup"];
-        NodePath partOptionPath = (NodePath)saveInfo["PartOption"];
+        String partOptionName = (String)saveInfo["PartOption"];
         Godot.Collections.Dictionary<String, Variant> godotDict = (Godot.Collections.Dictionary<String, Variant>)saveInfo["Parameters"];
         Dictionary<String, Variant> parameters = new Dictionary<String, Variant>(godotDict);
 
-        PartOption partOption = (PartOption)parts.GetNode(partOptionPath);
+        PartOption partOption = partsList.GetPartOption(partOptionName);
         PartObject partObject = partOption.GetPartObject(parameters);
         List<Hole> holeList = partOption.GetHoles(partObject);
 
