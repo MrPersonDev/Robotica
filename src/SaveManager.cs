@@ -75,15 +75,15 @@ public static class SaveManager
         if (TryLoad(path, ui))
         {
             parts.Clear();
-            Import(path, ui, parts);
-            SetCurrentPath(path, ui);
+            if (Import(path, ui, parts))
+                SetCurrentPath(path, ui);
         }
     }
 
-    public static void Import(String path, Interface ui, Parts parts)
+    public static bool Import(String path, Interface ui, Parts parts)
     {
         if (!TryLoad(path, ui))
-            return;
+            return false;
 
         using FileAccess file = FileAccess.Open(path, FileAccess.ModeFlags.Read);
 
@@ -100,7 +100,7 @@ public static class SaveManager
             if (parseResult != Error.Ok)
             {
                 ui.Error(parseResult.ToString());
-                return;
+                return false;
             }
 
             if (jsonString[0] == '[')
@@ -121,7 +121,7 @@ public static class SaveManager
             catch (KeyNotFoundException)
             {
                 ui.Error("Invalid save file. (Is it from a different version?)");
-                return;
+                return false;
             }
         }
 
@@ -129,6 +129,8 @@ public static class SaveManager
         parts.LoadPartGroups(partGroups);
 
         file.Close();
+
+        return true;
     }
 
     public static void LoadPart(Dictionary<String, Variant> saveInfo, Parts parts, PartsList partsList, Dictionary<String, PartGroup> loadedPartGroups)
