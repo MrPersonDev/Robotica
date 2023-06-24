@@ -1,0 +1,21 @@
+[gd_scene load_steps=10 format=3 uid="uid://d1scykrcti2x8"]
+
+[ext_resource type="PackedScene" uid="uid://jra6u2riunsq" path="res://assets/ui/PartOption.tscn" id="1_pljqh"]
+[ext_resource type="Script" path="res://src/part_option/ChainOption.cs" id="2_fo38k"]
+[ext_resource type="PackedScene" uid="uid://bg81v7is7oml" path="res://assets/objects/Parts/Chain/ChainLink.tscn" id="3_uvui2"]
+[ext_resource type="PackedScene" uid="uid://b42402l7421n5" path="res://assets/objects/Parts/Chain/ChainTraction.tscn" id="4_c4jpy"]
+[ext_resource type="PackedScene" uid="uid://b6dr61viwtx6i" path="res://assets/objects/Parts/Chain/ChainAttachment.tscn" id="5_i36q5"]
+[ext_resource type="PackedScene" uid="uid://dscuhrx3lvhkn" path="res://assets/objects/Parts/Chain/ChainConveyor.tscn" id="6_vj8sk"]
+[ext_resource type="PackedScene" uid="uid://c1dk7tijhbm6a" path="res://assets/objects/Parts/Chain/ChainFlapSmall.tscn" id="7_k838x"]
+[ext_resource type="PackedScene" uid="uid://dh6bsnyppbqka" path="res://assets/objects/Parts/Chain/ChainFlapMedium.tscn" id="8_h43tk"]
+[ext_resource type="PackedScene" uid="uid://rslov0oce2od" path="res://assets/objects/Parts/Chain/ChainFlapTall.tscn" id="9_cpv76"]
+
+[node name="ChainOption" instance=ExtResource("1_pljqh")]
+script = ExtResource("2_fo38k")
+linkPartScene = ExtResource("3_uvui2")
+tractionPartScene = ExtResource("4_c4jpy")
+attachmentPartScene = ExtResource("5_i36q5")
+conveyorPartScene = ExtResource("6_vj8sk")
+flapShortPartScene = ExtResource("7_k838x")
+flapMediumPartScene = ExtResource("8_h43tk")
+flapTallPartScene = ExtResource("9_cpv76")

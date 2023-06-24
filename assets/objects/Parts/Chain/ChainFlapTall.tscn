@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://rslov0oce2od"]
+
+[ext_resource type="PackedScene" uid="uid://cl5en1o2r4bqq" path="res://assets/objects/Part.tscn" id="1_bj2nw"]
+[ext_resource type="ArrayMesh" uid="uid://bw6a5p3xx3abk" path="res://assets/models/Chain/Tall_Conveyor-belt_Inserts__276-2214-004__Tall Conveyor-belt Inserts (276-2214-004).res" id="2_vscy6"]
+
+[node name="Part" instance=ExtResource("1_bj2nw")]
+isChain = true
+chainRotationPath = NodePath("RotationPosition")
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("2_vscy6")
+
+[node name="RotationPosition" type="Node3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.386159, 0.747037, 0.0081725)

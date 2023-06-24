@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://bk3hpxa6tawec"]
+[gd_scene load_steps=34 format=3 uid="uid://bk3hpxa6tawec"]
 
 [ext_resource type="Script" path="res://src/ui/PartsList.cs" id="1_gq88v"]
 [ext_resource type="PackedScene" uid="uid://dtfss217fk1ad" path="res://assets/ui/PartOptions/StandoffOption.tscn" id="2_0ij1x"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://bptgy1n1f1ff0" path="res://assets/ui/PartOptions/NutOption.tscn" id="8_liwag"]
 [ext_resource type="PackedScene" uid="uid://bxnlqoylu6uuv" path="res://assets/ui/PartOptions/NutRetainerOption.tscn" id="8_ysxwl"]
 [ext_resource type="PackedScene" uid="uid://r7t1fmnt00bb" path="res://assets/ui/PartOptions/WasherOption.tscn" id="15_8ltqi"]
+[ext_resource type="PackedScene" uid="uid://d1scykrcti2x8" path="res://assets/ui/PartOptions/ChainOption.tscn" id="16_5j2bw"]
 [ext_resource type="PackedScene" uid="uid://3yh51s2prsyj" path="res://assets/ui/PartOptions/LinearSlideOption.tscn" id="16_8jw33"]
 [ext_resource type="PackedScene" uid="uid://d23koedu1bfo1" path="res://assets/ui/PartOptions/FlexWheelOption.tscn" id="16_fg8ay"]
 [ext_resource type="PackedScene" uid="uid://cmoanjmjob2ex" path="res://assets/ui/PartOptions/BracketOption.tscn" id="18_spssp"]
@@ -111,6 +112,9 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="SprocketOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_u0f2x")]
+layout_mode = 2
+
+[node name="ChainOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("16_5j2bw")]
 layout_mode = 2
 
 [node name="StandoffOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_0ij1x")]

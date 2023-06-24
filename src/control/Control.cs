@@ -23,10 +23,13 @@ public partial class Control : Node3D
     private PartObject currentPartObject;
     private Dictionary<String, Variant> currentPartParameters;
     private Part currentNewPart;
+    private Vector3 chainRotationPosition = Vector3.Zero;
+    private Vector3 chainRotationAxis = Vector3.Up;
+    private List<Part> chainParts = new List<Part>();
     private Node3D hovering;
     private bool creatingPartGroups = false;
     private List<Part> queuedToDisable = new List<Part>();
-    private bool transforming = false, moving = false, rotating = false;
+    private bool transforming = false, moving = false, rotating = false, placingChain = false;
     private bool snapping = true;
     private Vector3 offset, axis;
     private Vector2 mousePos, prevMousePos, clickMousePos;
@@ -275,6 +278,15 @@ public partial class Control : Node3D
         {
             transform.Enable();
 
+            Part newPart = selection.GetParts()[0];
+            if (newPart.IsChain())
+            {
+                placingChain = true;
+                chainRotationPosition = newPart.GetChainRotationPosition();
+                chainRotationAxis = newPart.GlobalTransform.Basis.Y;
+                chainParts.Add(newPart);
+            }
+
             List<Part> curParts = new List<Part>(selection.GetParts());
             undoSteps.Add(new UndoStep(Callable.From(() => { RestorePartsDeleted(true, curParts, true); }), false, curParts));
         }
@@ -321,7 +333,15 @@ public partial class Control : Node3D
             return;
 
         if (selectingNewPart)
+        {
+            if (placingChain)
+            {
+                List<Part> curChainParts = new List<Part>(chainParts);
+                parts.CreateManualPartGroup(curChainParts, true);
+                chainParts.Clear();
+            }
             await Delete(false);
+        }
         selectingNewPart = false;
     }
 
@@ -478,7 +498,7 @@ public partial class Control : Node3D
 
         ui.ShowSettings();
     }
-    
+
     public void HandleRequiredPartsInput()
     {
         if (ui.IsSettingsOpen())
@@ -819,9 +839,20 @@ public partial class Control : Node3D
         return RotationToMouse(transform.GlobalPosition, true);
     }
 
+    private Vector3 MoveRotationPosition()
+    {
+        if (!placingChain && !IsInstanceValid(selectedHoleBody))
+            return Vector3.Zero;
+
+        if (placingChain)
+            return chainRotationPosition;
+        else
+            return selectedHoleBody.GetPos();
+    }
+
     private double MoveRotation()
     {
-        return RotationToMouse(selectedHoleBody.GetPos(), true);
+        return RotationToMouse(MoveRotationPosition(), true);
     }
 
     private double ChangeInAngle(double angle, double snapping)
@@ -910,13 +941,15 @@ public partial class Control : Node3D
 
     private void MoveRotateInteraction()
     {
-        if (!IsInstanceValid(selectedHoleBody))
+        if (!placingChain && !IsInstanceValid(selectedHoleBody))
             return;
 
         double angle = ChangeInAngle(MoveRotation(), Input.IsActionPressed("snapping") ? QUARTER_ROTATE_SNAP : DEFAULT_ROTATE_SNAP);
 
         Vector3 rotationAxis = axis.Normalized();
-        selection.RotatePos(rotationAxis, (float)angle, selectedHoleBody.GetPos(), false);
+        Vector3 rotationPos = MoveRotationPosition();
+
+        selection.RotatePos(rotationAxis, (float)angle, rotationPos, false);
     }
 
     private HoleBody GetBodyOrOpposingBody(HoleBody holeBody)
@@ -1106,7 +1139,7 @@ public partial class Control : Node3D
     {
         if (!moving)
             return;
-        
+
         selection.EnableMeshCollider();
 
         transform.GlobalPosition = selection.GetCenter();
@@ -1127,17 +1160,27 @@ public partial class Control : Node3D
     {
         selection.UpdateCollisionTransform();
 
-        axis = selectedHoleBody.GlobalTransform.Basis.Z;
-
         moving = true;
         rotating = true;
 
-        prevAngle = MoveRotation();
-        originalAngle = prevAngle;
+        if (placingChain)
+        {
+            axis = chainRotationAxis;
+            prevAngle = 0.0f;
+            originalAngle = 0.0f;
+        }
+        else
+        {
+            axis = selectedHoleBody.GlobalTransform.Basis.Z;
+            prevAngle = MoveRotation();
+            originalAngle = prevAngle;
+        }
     }
 
     private void EndMoveRotating()
     {
+        placingChain = false;
+
         if (!IsInstanceValid(prevSelectedHoleBody))
             return;
 
@@ -1147,6 +1190,26 @@ public partial class Control : Node3D
         List<Part> selectionParts = new List<Part>(selection.GetParts());
         undoSteps.Add(new UndoStep(Callable.From(() => { RestoreMoveRotate(curAxis, -totalAngleChange, pos, selectionParts, true); })));
         CleanHistory();
+    }
+    
+    private void SetupChainPosition()
+    {
+        Part chain = selection.GetParts()[0];
+        
+        Vector3 offset = new Vector3(chain.GetCenter().X - chain.GlobalPosition.X, 0.0f, chain.GetCenter().Z - chain.GlobalPosition.Z);
+        Vector3 chainDirection = chain.GlobalTransform.Basis.Y;
+
+        Vector3 rotationAxis = chainDirection.Cross(chainRotationAxis).Normalized();
+        float angleToDirection = chainDirection.AngleTo(chainRotationAxis);
+
+        if (rotationAxis == Vector3.Zero)
+            rotationAxis = Vector3.Up;
+
+        selection.RotateCenter(rotationAxis, angleToDirection, false);
+        offset.Rotated(rotationAxis, angleToDirection);
+
+        Vector3 newCenterPosition = offset + chainRotationPosition;
+        chain.MoveTo(newCenterPosition);
     }
 
     public async Task CreatePartGroups(List<Part> partsList)
@@ -1331,6 +1394,17 @@ public partial class Control : Node3D
         if (partOption == null || parameters == null)
             return;
 
+        bool actualSelectionHasChain = false;
+        if (!selectingNewPart && actualSelection.GetParts().Count == 1 && actualSelection.GetParts()[0].IsChain())
+        {
+            Part part = actualSelection.GetParts()[0];
+            actualSelectionHasChain = true;
+            chainRotationPosition = part.GetChainRotationPosition();
+            chainRotationAxis = part.GlobalTransform.Basis.Y;
+            chainParts.Add(part);
+        }
+
+        bool prevPlacingChain = placingChain || actualSelectionHasChain;
         Deselect(false);
 
         PartObject partObject = partOption.GetPartObject(parameters);
@@ -1364,7 +1438,15 @@ public partial class Control : Node3D
         EndMoving();
         Deselect();
         PartInteraction(newPart);
-        StartMoving();
+        placingChain = prevPlacingChain;
+        
+        if (placingChain)
+        {
+            StartMoveRotating();
+            SetupChainPosition();
+        }
+        else
+            StartMoving();
     }
 
     private void TempSelectParts(List<Part> parts)

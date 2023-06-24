@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1dk7tijhbm6a"]
+
+[ext_resource type="PackedScene" uid="uid://cl5en1o2r4bqq" path="res://assets/objects/Part.tscn" id="1_jg8mr"]
+[ext_resource type="ArrayMesh" uid="uid://cd68qti75qvfj" path="res://assets/models/Chain/Conveyor-belt_Base_Links__276-2214-001__Conveyor-belt Base Links (276-2214-001).res" id="2_skm20"]
+
+[node name="Part" instance=ExtResource("1_jg8mr")]
+isChain = true
+chainRotationPath = NodePath("RotationPosition")
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("2_skm20")
+
+[node name="RotationPosition" type="Node3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.386159, 0.747037, 0.0081725)

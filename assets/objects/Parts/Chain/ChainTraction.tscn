@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b42402l7421n5"]
+
+[ext_resource type="PackedScene" uid="uid://cl5en1o2r4bqq" path="res://assets/objects/Part.tscn" id="1_c6rnb"]
+[ext_resource type="ArrayMesh" uid="uid://cjrmr0m1d6epp" path="res://assets/models/Chain/Tank_Tread_Traction_Links__276-2214-005__Tank Tread Traction Links (276-2214-005).res" id="2_d413w"]
+
+[node name="Part" instance=ExtResource("1_c6rnb")]
+isHighStrengthShaft = true
+chainRotationPath = NodePath("RotationPosition")
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("2_d413w")
+
+[node name="RotationPosition" type="Node3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.386159, 0.747037, 0.0081725)

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg81v7is7oml"]
+
+[ext_resource type="PackedScene" uid="uid://cl5en1o2r4bqq" path="res://assets/objects/Part.tscn" id="1_lwdyc"]
+[ext_resource type="ArrayMesh" uid="uid://xqop2iygso0b" path="res://assets/models/Chain/High_Strength_Chain_Links__276-2252-001__High Strength Chain Links (276-2252-001).res" id="2_f5rj0"]
+
+[node name="Part" instance=ExtResource("1_lwdyc")]
+isChain = true
+chainRotationPath = NodePath("RotationPosition")
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("2_f5rj0")
+
+[node name="RotationPosition" type="Node3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.386, 0.748, 0.008)
