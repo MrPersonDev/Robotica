@@ -15,4 +15,4 @@ mesh = ExtResource("2_skm20")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.386159, 0.747037, 0.0081725)
 
 [node name="HolePosition" type="Node3D" parent="." index="6"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.386159, 1.49504, 0.0081725)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.747, 0)
