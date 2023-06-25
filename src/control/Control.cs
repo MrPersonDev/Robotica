@@ -226,7 +226,7 @@ public partial class Control : Node3D
         shape.Points = points;
 
         param.Shape = shape;
-        Godot.Collections.Array<Godot.Collections.Dictionary> results = spaceState.IntersectShape(param);
+        Godot.Collections.Array<Godot.Collections.Dictionary> results = spaceState.IntersectShape(param, 1000);
 
         foreach (Godot.Collections.Dictionary result in results)
         {
