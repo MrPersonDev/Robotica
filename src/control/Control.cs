@@ -1196,7 +1196,6 @@ public partial class Control : Node3D
     {
         Part chain = selection.GetParts()[0];
         
-        Vector3 offset = new Vector3(0.0f, chain.GetChainRotationPosition().Y - chain.GlobalPosition.Y, 0.0f);
         Vector3 chainDirection = chain.GlobalTransform.Basis.Y;
 
         Vector3 rotationAxis = chainDirection.Cross(chainRotationAxis).Normalized();
@@ -1206,10 +1205,11 @@ public partial class Control : Node3D
             rotationAxis = Vector3.Up;
 
         selection.RotateCenter(rotationAxis, angleToDirection, false);
-        offset.Rotated(rotationAxis, angleToDirection);
+
+        Vector3 offset = chain.GetChainHolePosition() - chain.GetCenter();
 
         Vector3 newPosition = -offset + chainRotationPosition;
-        chain.GlobalPosition = newPosition;
+        chain.MoveTo(newPosition);
     }
 
     public async Task CreatePartGroups(List<Part> partsList)

@@ -47,10 +47,10 @@ public partial class Part : Moveable
 
     [ExportGroup("Node Paths")]
     [Export]
-    private NodePath partMeshPath, additionalMeshesPath, centerPath, holesPath, insertsPath, chainRotationPath;
+    private NodePath partMeshPath, additionalMeshesPath, centerPath, holesPath, insertsPath, chainRotationPath, chainHolePath;
 
     private MeshCutter partMesh;
-    private Node3D additionalMeshes, center, holes, inserts, otherMeshes, chainRotation;
+    private Node3D additionalMeshes, center, holes, inserts, otherMeshes, chainRotation, chainHole;
 
     public void Setup(bool loaded = false)
     {
@@ -61,6 +61,8 @@ public partial class Part : Moveable
         inserts = (Node3D)GetNode(insertsPath);
         if (!(chainRotationPath == null))
             chainRotation = (Node3D)GetNode(chainRotationPath);
+        if (!(chainHolePath == null))
+            chainHole = (Node3D)GetNode(chainHolePath);
 
         this.loaded = loaded;
 
@@ -652,6 +654,14 @@ public partial class Part : Moveable
             return Vector3.Zero;
 
         return chainRotation.GlobalPosition;
+    }
+    
+    public Vector3 GetChainHolePosition()
+    {
+        if (!IsInstanceValid(chainHole))
+            return Vector3.Zero;
+        
+        return chainHole.GlobalPosition;
     }
 
     public List<Part> GetCollidingFastenedParts()

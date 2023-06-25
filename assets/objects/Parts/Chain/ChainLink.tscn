@@ -6,9 +6,13 @@
 [node name="Part" instance=ExtResource("1_lwdyc")]
 isChain = true
 chainRotationPath = NodePath("RotationPosition")
+chainHolePath = NodePath("HolePosition")
 
 [node name="MeshCutter" parent="." index="3"]
 mesh = ExtResource("2_f5rj0")
 
 [node name="RotationPosition" type="Node3D" parent="." index="5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.386, 0.748, 0.008)
+
+[node name="HolePosition" type="Node3D" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.748, 0)

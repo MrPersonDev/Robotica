@@ -7,6 +7,7 @@
 [node name="Part" instance=ExtResource("1_w42t3")]
 isChain = true
 chainRotationPath = NodePath("RotationPosition")
+chainHolePath = NodePath("HolePosition")
 
 [node name="TwoSidedCircleHole" parent="Holes" index="0" instance=ExtResource("2_p43t0")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.164, 1.158, -0.494)
@@ -23,3 +24,6 @@ mesh = ExtResource("2_s8lsm")
 
 [node name="RotationPosition" type="Node3D" parent="." index="5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.386159, 0.747037, 0.0081725)
+
+[node name="HolePosition" type="Node3D" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.748, 0)
