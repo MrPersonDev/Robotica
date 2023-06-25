@@ -784,7 +784,9 @@ public partial class Control : Node3D
 
     private Vector3 GetIntersectionPlaneNormal()
     {
-        if (moving && !rotating)
+        if (placingChain)
+            return axis;
+        else if (moving && !rotating)
             return axis;
         else
             return pivot.GetCamNormal() * (Vector3.One - axis);
@@ -792,7 +794,9 @@ public partial class Control : Node3D
 
     private Vector3 GetIntersectionPlanePos(Moveable other)
     {
-        if (moving)
+        if (placingChain)
+            return other.GlobalPosition;
+        else if (moving)
             return pivot.GlobalPosition;
         else
             return transform.GlobalPosition - offset;
@@ -948,8 +952,24 @@ public partial class Control : Node3D
 
         Vector3 rotationAxis = axis.Normalized();
         Vector3 rotationPos = MoveRotationPosition();
+        
+        if (placingChain)
+        {
+            Part chain = selection.GetParts()[0];
+            Vector3 chainDirection = chain.GlobalTransform.Basis.X;
 
-        selection.RotatePos(rotationAxis, (float)angle, rotationPos, false);
+            Vector3? mouseIntersection = IntersectMouse(chain);
+            if (mouseIntersection == null)
+                return;
+
+            Vector3 mousePos = (Vector3)mouseIntersection;
+            Vector3 mouseDirection = (mousePos - chain.GlobalPosition).Normalized();
+
+            angle = chainDirection.SignedAngleTo(mouseDirection, rotationAxis);
+            selection.RotatePos(rotationAxis, (float)angle, rotationPos, false);
+        }
+        else
+            selection.RotatePos(rotationAxis, (float)angle, rotationPos, false);
     }
 
     private HoleBody GetBodyOrOpposingBody(HoleBody holeBody)
