@@ -33,6 +33,7 @@ public partial class Part : Moveable
     private bool queuedForCutting = false;
     private float queuedLength, queuedHeight, queuedWidth;
     private bool requiresUpdate = false;
+    private bool chainFlipped = false;
     // private List<Hole> queuedHoles = null;
 
     [ExportGroup("Properties")]
@@ -646,6 +647,16 @@ public partial class Part : Moveable
     public bool IsChain()
     {
         return isChain;
+    }
+    
+    public bool IsChainFlipped()
+    {
+        return chainFlipped;
+    }
+    
+    public void SetChainFlipped(bool value)
+    {
+        chainFlipped = value;
     }
     
     public Vector3 GetChainRotationPosition()

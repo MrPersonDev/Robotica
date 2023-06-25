@@ -60,6 +60,19 @@ public partial class ChainOption : PartOption
 	public override void Setup(Part part, Dictionary<String, Variant> parameters)
 	{
 		base.Setup(part, parameters);
+		
+		float zRotation = 0.0f;
+		if ((bool)parameters["Flipped"])
+			zRotation = (float)Math.PI;
+		part.SetChainFlipped((bool)parameters["Flipped"]);
+		CallDeferred("FlipChain", part, zRotation);
+	}
+
+	private void FlipChain(Part part, float zRotation)
+	{
+		Vector3 originalPosition = part.GetCenter();
+		part.GlobalRotation = new Vector3(0.0f, 0.0f, zRotation);
+		part.MoveTo(originalPosition);
 	}
 
 	public override List<Tuple<String, ParameterType>> GetSpecificDefaultParameterTypes()
@@ -68,13 +81,17 @@ public partial class ChainOption : PartOption
 
 		List<Object> typesList = new List<String>(TYPES).Cast<Object>().ToList();
 		parameterTypes.Add(Tuple.Create("Type", (ParameterType)new DropdownParameter(typesList)));
+		parameterTypes.Add(Tuple.Create("Flipped", (ParameterType)new BooleanParameter(false)));
 
 		return parameterTypes;
 	}
 	
 	public override List<Tuple<String, ParameterType>> GetSpecificParameterTypes(Dictionary<String, Variant> curParameters)
 	{
-		List<Tuple<String, ParameterType>> parameterTypes = GetSpecificDefaultParameterTypes();
+		List<Tuple<String, ParameterType>> parameterTypes = new List<Tuple<String, ParameterType>>();
+
+		List<Object> typesList = new List<String>(TYPES).Cast<Object>().ToList();
+		parameterTypes.Add(Tuple.Create("Type", (ParameterType)new DropdownParameter(typesList)));
 
 		String type = (String)curParameters["Type"];
 		if (type == "Flap")
@@ -82,6 +99,8 @@ public partial class ChainOption : PartOption
 			List<Object> flapTypesList = new List<String>(FLAP_TYPES).Cast<Object>().ToList();
 			parameterTypes.Add(Tuple.Create("Flap Type", (ParameterType)new DropdownParameter(flapTypesList)));
 		}
+
+		parameterTypes.Add(Tuple.Create("Flipped", (ParameterType)new BooleanParameter(false)));
 
 		return parameterTypes;
 	}

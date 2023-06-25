@@ -26,6 +26,7 @@ public partial class Control : Node3D
     private Vector3 chainRotationPosition = Vector3.Zero;
     private Vector3 chainRotationAxis = Vector3.Up;
     private List<Part> chainParts = new List<Part>();
+    private bool prevChainFlipped = false;
     private Node3D hovering;
     private bool creatingPartGroups = false;
     private List<Part> queuedToDisable = new List<Part>();
@@ -285,6 +286,7 @@ public partial class Control : Node3D
                 chainRotationPosition = newPart.GetChainRotationPosition();
                 chainRotationAxis = newPart.GlobalTransform.Basis.Y;
                 chainParts.Add(newPart);
+                prevChainFlipped = newPart.IsChainFlipped();
             }
 
             List<Part> curParts = new List<Part>(selection.GetParts());
@@ -1217,6 +1219,8 @@ public partial class Control : Node3D
         Part chain = selection.GetParts()[0];
         
         Vector3 chainDirection = chain.GlobalTransform.Basis.Y;
+        if (prevChainFlipped != chain.IsChainFlipped())
+            chainDirection *= -1;
 
         Vector3 rotationAxis = chainDirection.Cross(chainRotationAxis).Normalized();
         float angleToDirection = chainDirection.AngleTo(chainRotationAxis);
@@ -1422,6 +1426,7 @@ public partial class Control : Node3D
             chainRotationPosition = part.GetChainRotationPosition();
             chainRotationAxis = part.GlobalTransform.Basis.Y;
             chainParts.Add(part);
+            prevChainFlipped = part.IsChainFlipped();
         }
 
         bool prevPlacingChain = placingChain || actualSelectionHasChain;
