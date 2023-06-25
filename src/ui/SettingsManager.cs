@@ -8,6 +8,7 @@ public static class SettingsManager
     private static List<String> SSAO_QUALITY_VALUES = new List<String> { "Very Low", "Low", "Medium", "High" };
     private static List<String> SSR_QUALITY_VALUES = new List<String> { "Low", "Medium", "High" };
     private static List<String> SCALING_MODE_VALUES = new List<String> { "Bilinear", "FSR" };
+    private static List<String> TONEMAP_VALUES = new List<String> { "Linear", "Reinhard", "Filmic", "ACES" };
 
     const String USER_SETTINGS_FILE_NAME = "UserSettings.cfg";
     const String DEFAULT_SETTINGS_FILE_NAME = "DefaultSettings.cfg";
@@ -41,6 +42,9 @@ public static class SettingsManager
                 break;
             case "Graphics":
                 ApplyGraphicsSettings(panelSettings, world);
+                break;
+            case "Environment":
+                ApplyEnvironmentSettings(panelSettings, world);
                 break;
             case "Keybinds":
                 ApplyKeybindsSettings(panelSettings, world);
@@ -125,6 +129,18 @@ public static class SettingsManager
         ProjectSettings.SetSetting("anti_aliasing/quality/use_debanding", (bool)panelSettings["Use Debanding"]);
 
         ProjectSettings.SaveCustom("override.cfg");
+    }
+    
+    private static void ApplyEnvironmentSettings(Dictionary<String, Variant> panelSettings, World world)
+    {
+        Godot.Environment environment = world.GetEnvironment();
+        DirectionalLight3D light = world.GetLight();
+        ProceduralSkyMaterial skyMaterial = (ProceduralSkyMaterial)environment.Sky.SkyMaterial;
+        
+        skyMaterial.SkyEnergyMultiplier = (float)panelSettings["Sky Energy"];
+        skyMaterial.GroundEnergyMultiplier = (float)panelSettings["Ground Energy"];
+        light.LightEnergy = (float)panelSettings["Sun Energy"];
+        environment.TonemapMode = (Godot.Environment.ToneMapper)TONEMAP_VALUES.IndexOf((String)panelSettings["Tonemap"]);
     }
 
     private static void ApplyKeybindsSettings(Dictionary<String, Variant> panelSettings, World world)

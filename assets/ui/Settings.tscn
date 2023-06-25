@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://tf7vsp27gqps"]
+[gd_scene load_steps=11 format=3 uid="uid://tf7vsp27gqps"]
 
 [ext_resource type="PackedScene" uid="uid://c6fpokgtiinai" path="res://assets/ui/Window.tscn" id="1_2k3xu"]
 [ext_resource type="Script" path="res://src/ui/Settings.cs" id="2_6p6kl"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bhrfj254hjphf" path="res://assets/ui/SettingsPanelOption.tscn" id="4_e7d12"]
 [ext_resource type="PackedScene" uid="uid://bt7fnrbbf3si3" path="res://assets/ui/SettingsPanels/GraphicsPanel.tscn" id="5_ebv16"]
 [ext_resource type="PackedScene" uid="uid://bmnqnka0jve6j" path="res://assets/ui/SettingsPanels/GeneralPanel.tscn" id="5_loe3v"]
+[ext_resource type="PackedScene" uid="uid://tx17m8bix6eo" path="res://assets/ui/SettingsPanels/EnvironmentPanel.tscn" id="7_gd5p7"]
 [ext_resource type="PackedScene" uid="uid://dpe3bkgr07x7f" path="res://assets/ui/SettingsPanels/KeybindsPanel.tscn" id="7_h5rv7"]
 [ext_resource type="PackedScene" uid="uid://c2dasaf85ruds" path="res://assets/ui/SettingsPanels/HotboxPanel.tscn" id="8_dypi8"]
 
@@ -40,12 +41,17 @@ layout_mode = 2
 text = "Graphics"
 settingsPanel = ExtResource("5_ebv16")
 
-[node name="KeybindsPanelOption" parent="VSplitContainer/HSplitContainer2/MarginContainer/PanelOptions" index="2" instance=ExtResource("4_e7d12")]
+[node name="EnvironmentPanelOption" parent="VSplitContainer/HSplitContainer2/MarginContainer/PanelOptions" index="2" instance=ExtResource("4_e7d12")]
+layout_mode = 2
+text = "Environment"
+settingsPanel = ExtResource("7_gd5p7")
+
+[node name="KeybindsPanelOption" parent="VSplitContainer/HSplitContainer2/MarginContainer/PanelOptions" index="3" instance=ExtResource("4_e7d12")]
 layout_mode = 2
 text = "Keybinds"
 settingsPanel = ExtResource("7_h5rv7")
 
-[node name="HotboxPanelOption" parent="VSplitContainer/HSplitContainer2/MarginContainer/PanelOptions" index="3" instance=ExtResource("4_e7d12")]
+[node name="HotboxPanelOption" parent="VSplitContainer/HSplitContainer2/MarginContainer/PanelOptions" index="4" instance=ExtResource("4_e7d12")]
 layout_mode = 2
 text = "Hotbox"
 settingsPanel = ExtResource("8_dypi8")

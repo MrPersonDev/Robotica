@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://tx17m8bix6eo"]
+
+[ext_resource type="PackedScene" uid="uid://bc720e4p081s4" path="res://assets/ui/SettingsPanel.tscn" id="1_uwcyi"]
+[ext_resource type="PackedScene" uid="uid://o6t64qn3snd0" path="res://assets/ui/SettingEdits/SliderSettingEdit.tscn" id="2_x5so2"]
+[ext_resource type="PackedScene" uid="uid://b1hpe320pv3y5" path="res://assets/ui/SettingEdits/DropdownSettingEdit.tscn" id="3_5f1hg"]
+
+[node name="SettingsPanel" instance=ExtResource("1_uwcyi")]
+
+[node name="Sky Energy" parent="ScrollContainer/SettingEdits" index="0" instance=ExtResource("2_x5so2")]
+layout_mode = 2
+max = 10.0
+step = 0.1
+name = "Sky Energy"
+
+[node name="Ground Energy" parent="ScrollContainer/SettingEdits" index="1" instance=ExtResource("2_x5so2")]
+layout_mode = 2
+max = 10.0
+step = 0.1
+name = "Ground Energy"
+
+[node name="Sun Energy" parent="ScrollContainer/SettingEdits" index="2" instance=ExtResource("2_x5so2")]
+layout_mode = 2
+max = 16.0
+step = 0.1
+name = "Sun Energy"
+
+[node name="Tonemap" parent="ScrollContainer/SettingEdits" index="3" instance=ExtResource("3_5f1hg")]
+layout_mode = 2
+values = ["Linear", "Reinhard", "Filmic", "ACES"]
+name = "Tonemap"
