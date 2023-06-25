@@ -4,6 +4,11 @@ using System.Collections.Generic;
 
 public static class SettingsManager
 {
+    private static List<String> SHADOW_QUALITY_VALUES = new List<String> { "Hard", "Soft Very Low", "Soft Low", "Soft Medium", "Soft High", "Soft Ultra" };
+    private static List<String> SSAO_QUALITY_VALUES = new List<String> { "Very Low", "Low", "Medium", "High" };
+    private static List<String> SSR_QUALITY_VALUES = new List<String> { "Low", "Medium", "High" };
+    private static List<String> SCALING_MODE_VALUES = new List<String> { "Bilinear", "FSR" };
+
     const String USER_SETTINGS_FILE_NAME = "UserSettings.cfg";
     const String DEFAULT_SETTINGS_FILE_NAME = "DefaultSettings.cfg";
 
@@ -97,6 +102,29 @@ public static class SettingsManager
                 viewport.Msaa3D = Viewport.Msaa.Msaa8X;
                 break;
         }
+
+        String shadowQuality = (String)panelSettings["Shadow Quality"];
+        String ssaoQuality = (String)panelSettings["Screen-Space Ambient Occlusion Quality"];
+        String ssilQuality = (String)panelSettings["Screen-Space Indirect Lighting Quality"];
+        String ssrQuality = (String)panelSettings["Screen-Space Reflections Quality"];
+        String scalingMode = (String)panelSettings["Scaling Mode"];
+
+        int shadowQualityIdx = SHADOW_QUALITY_VALUES.IndexOf(shadowQuality);
+        int ssaoQualityIdx = SSAO_QUALITY_VALUES.IndexOf(ssaoQuality);
+        int ssilQualityIdx = SSAO_QUALITY_VALUES.IndexOf(ssilQuality);
+        int ssrQualityIdx = SSR_QUALITY_VALUES.IndexOf(ssrQuality);
+        int scalingModeIdx = SCALING_MODE_VALUES.IndexOf(scalingMode);
+
+        ProjectSettings.SetSetting("rendering/lights_and_shadows/directional_shadow/soft_shadow_filter_quality", shadowQualityIdx);
+        ProjectSettings.SetSetting("rendering/lights_and_shadows/positional_shadow/soft_shadow_filter_quality", shadowQualityIdx);
+        ProjectSettings.SetSetting("rendering/environment/screen_space_reflection/roughness_quality", ssrQualityIdx + 1);
+        ProjectSettings.SetSetting("rendering/environment/ssil/quality", ssilQualityIdx);
+        ProjectSettings.SetSetting("rendering/environment/ssao/quality", ssaoQualityIdx);
+        ProjectSettings.SetSetting("rendering/scaling_3d/mode", scalingModeIdx);
+        ProjectSettings.SetSetting("rendering/scaling_3d/scale", (float)panelSettings["Scale"]);
+        ProjectSettings.SetSetting("anti_aliasing/quality/use_debanding", (bool)panelSettings["Use Debanding"]);
+
+        ProjectSettings.SaveCustom("override.cfg");
     }
 
     private static void ApplyKeybindsSettings(Dictionary<String, Variant> panelSettings, World world)

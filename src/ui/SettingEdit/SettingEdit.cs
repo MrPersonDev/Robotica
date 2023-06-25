@@ -6,6 +6,8 @@ public partial class SettingEdit : HSplitContainer
     [ExportGroup("Properties")]
     [Export]
     private String name;
+    [Export]
+    private bool requiresRestart = false;
 
     [ExportGroup("Node paths")]
     [Export]
@@ -23,11 +25,13 @@ public partial class SettingEdit : HSplitContainer
     private void SetName()
     {
         label.Text = name;
+        if (requiresRestart)
+            label.Text += "*";
     }
 
     public String GetName()
     {
-        return label.Text;
+        return name;
     }
 
     public virtual void SetValue(Variant value)
