@@ -153,6 +153,8 @@ public partial class PartGroup : Moveable
     {
         foreach (Part part in GetParts())
         {
+            if (!IsInstanceValid(part))
+                continue;
             if (part.HasInsert())
                 return true;
         }
@@ -164,6 +166,8 @@ public partial class PartGroup : Moveable
     {
         foreach (Part part in GetParts())
         {
+            if (!IsInstanceValid(part))
+                continue;
             if (part.HasFastenerHoles())
                 return true;
         }
