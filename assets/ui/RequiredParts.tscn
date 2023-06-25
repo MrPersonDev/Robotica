@@ -9,9 +9,6 @@ script = ExtResource("2_1ieva")
 requiredPart = ExtResource("3_gc30l")
 listPath = NodePath("VSplitContainer/HSplitContainer2/MarginContainer/ScrollContainer/VBoxContainer")
 
-[node name="Label" parent="VSplitContainer/PanelContainer/MarginContainer/HSplitContainer" index="0"]
-text = "Required Parts"
-
 [node name="HSplitContainer2" type="HSplitContainer" parent="VSplitContainer" index="1"]
 layout_mode = 2
 theme_override_constants/separation = 0

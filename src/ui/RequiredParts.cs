@@ -19,6 +19,7 @@ public partial class RequiredParts : Window
         base._Ready();
 
         list = (VBoxContainer)GetNode(listPath);
+        SetText("Required Parts");
     }
 
     private void LoadList()

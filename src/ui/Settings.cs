@@ -20,6 +20,7 @@ public partial class Settings : Window
 
         ConnectSettingsPanelOptions();
         LoadSettings();
+        SetText("Settings");
     }
 
     private void ConnectSettingsPanelOptions()

@@ -18,6 +18,7 @@ grow_vertical = 2
 theme_override_styles/panel = ExtResource("1_3vi7e")
 script = ExtResource("2_kb2d5")
 closeButtonPath = NodePath("VSplitContainer/PanelContainer/MarginContainer/HSplitContainer/Label/CloseButton")
+titlePath = NodePath("VSplitContainer/PanelContainer/MarginContainer/HSplitContainer/Label")
 
 [node name="VSplitContainer" type="VSplitContainer" parent="."]
 layout_mode = 2

@@ -5,13 +5,15 @@ public partial class Window : PanelContainer
 {
     [ExportGroup("Node Paths")]
     [Export]
-    private NodePath closeButtonPath;
+    private NodePath closeButtonPath, titlePath;
 
     private Button closeButton;
+    private Label title;
 
     public override void _Ready()
     {
         closeButton = (Button)GetNode(closeButtonPath);
+        title = (Label)GetNode(titlePath);
 
         SetCloseButtonPressed();
     }
@@ -45,5 +47,10 @@ public partial class Window : PanelContainer
     public virtual bool IsOpen()
     {
         return Visible;
+    }
+
+    public void SetText(String text)
+    {
+        title.Text = text;
     }
 }
