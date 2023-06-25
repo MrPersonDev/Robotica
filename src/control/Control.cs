@@ -948,11 +948,10 @@ public partial class Control : Node3D
         if (!placingChain && !IsInstanceValid(selectedHoleBody))
             return;
 
-        double angle = ChangeInAngle(MoveRotation(), Input.IsActionPressed("snapping") ? QUARTER_ROTATE_SNAP : DEFAULT_ROTATE_SNAP);
-
         Vector3 rotationAxis = axis.Normalized();
         Vector3 rotationPos = MoveRotationPosition();
         
+        double angle = 0.0;
         if (placingChain)
         {
             Part chain = selection.GetParts()[0];
@@ -966,10 +965,11 @@ public partial class Control : Node3D
             Vector3 mouseDirection = (mousePos - chain.GlobalPosition).Normalized();
 
             angle = chainDirection.SignedAngleTo(mouseDirection, rotationAxis);
-            selection.RotatePos(rotationAxis, (float)angle, rotationPos, false);
         }
         else
-            selection.RotatePos(rotationAxis, (float)angle, rotationPos, false);
+            angle = ChangeInAngle(MoveRotation(), Input.IsActionPressed("snapping") ? QUARTER_ROTATE_SNAP : DEFAULT_ROTATE_SNAP);
+
+        selection.RotatePos(rotationAxis, (float)angle, rotationPos, false);
     }
 
     private HoleBody GetBodyOrOpposingBody(HoleBody holeBody)
