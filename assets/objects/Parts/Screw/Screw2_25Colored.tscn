@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkp4yl11tjukc"]
+
+[ext_resource type="PackedScene" uid="uid://cl5en1o2r4bqq" path="res://assets/objects/Part.tscn" id="1_f831u"]
+[ext_resource type="PackedScene" uid="uid://bslvrhvh02lo3" path="res://assets/objects/Holes/OneSidedSquareHole.tscn" id="2_rbjmo"]
+[ext_resource type="PackedScene" uid="uid://dj5paivfvdvt1" path="res://assets/objects/Insert.tscn" id="3_atydq"]
+[ext_resource type="ArrayMesh" uid="uid://1pg3dlutpquv" path="res://assets/models/Screw/Colored__8-32_x_2_250_Star_Drive_Screw__276-8015__001_#8-32 x 2250 Star Drive Screw (276-8015)001.res" id="4_a0rg4"]
+
+[node name="Screw2_25" instance=ExtResource("1_f831u")]
+
+[node name="Center" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.156219, 0.156533, 0.543462)
+
+[node name="OneSidedHole" parent="Holes" index="0" instance=ExtResource("2_rbjmo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.158049, 0.157358, -0.0803186)
+visible = false
+visible = false
+isDefaultHole = true
+isFastener = true
+
+[node name="Insert" parent="Inserts" index="0" instance=ExtResource("3_atydq")]
+transform = Transform3D(-1, -9.31761e-22, -8.74228e-08, 0, 1, -1.06581e-14, 8.74228e-08, -1.06581e-14, -1, 0.15832, 0.158793, -1.18008)
+length = 2.25
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("4_a0rg4")

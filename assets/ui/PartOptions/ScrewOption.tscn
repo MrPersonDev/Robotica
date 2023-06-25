@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://vhi4waqhsujp"]
+[gd_scene load_steps=28 format=3 uid="uid://vhi4waqhsujp"]
 
 [ext_resource type="PackedScene" uid="uid://jra6u2riunsq" path="res://assets/ui/PartOption.tscn" id="1_lj82a"]
 [ext_resource type="Script" path="res://src/part_option/ScrewOption.cs" id="2_7terj"]
@@ -13,8 +13,22 @@
 [ext_resource type="PackedScene" uid="uid://dikb4fi1qmkiu" path="res://assets/objects/Parts/Screw/Screw1_5.tscn" id="12_2gjml"]
 [ext_resource type="PackedScene" uid="uid://bd1gnaog75hat" path="res://assets/objects/Parts/Screw/Screw1_75.tscn" id="13_2uvqh"]
 [ext_resource type="PackedScene" uid="uid://bnmw0ugq0s6px" path="res://assets/objects/Parts/Screw/Screw2_0.tscn" id="14_fson2"]
+[ext_resource type="PackedScene" uid="uid://bo0ioao6qmi7k" path="res://assets/objects/Parts/Screw/Screw0_25Colored.tscn" id="15_1cv1d"]
 [ext_resource type="PackedScene" uid="uid://clj785i30aqv" path="res://assets/objects/Parts/Screw/Screw2_5.tscn" id="16_ijhkw"]
+[ext_resource type="PackedScene" uid="uid://bd48whgsdfvas" path="res://assets/objects/Parts/Screw/Screw0_375Colored.tscn" id="16_xeq2k"]
+[ext_resource type="PackedScene" uid="uid://bchqsw7xhaaiv" path="res://assets/objects/Parts/Screw/Screw0_5Colored.tscn" id="17_jpkdq"]
+[ext_resource type="PackedScene" uid="uid://c7oobrnftu503" path="res://assets/objects/Parts/Screw/Screw0_625Colored.tscn" id="18_fo2p1"]
+[ext_resource type="PackedScene" uid="uid://cfu1f2u6gwhd7" path="res://assets/objects/Parts/Screw/Screw0_75Colored.tscn" id="19_7ao30"]
+[ext_resource type="PackedScene" uid="uid://b8hym5syll85u" path="res://assets/objects/Parts/Screw/Screw0_875Colored.tscn" id="20_nd6pk"]
+[ext_resource type="PackedScene" uid="uid://ib3woeji5idv" path="res://assets/objects/Parts/Screw/Screw1_0Colored.tscn" id="21_plkxl"]
+[ext_resource type="PackedScene" uid="uid://dsugdaxjdljm7" path="res://assets/objects/Parts/Screw/Screw1_25Colored.tscn" id="22_b7ic6"]
+[ext_resource type="PackedScene" uid="uid://bmt71ykwahdmi" path="res://assets/objects/Parts/Screw/Screw1_5Colored.tscn" id="23_rgu52"]
+[ext_resource type="PackedScene" uid="uid://cwytur7t6s8uu" path="res://assets/objects/Parts/Screw/Screw1_75Colored.tscn" id="24_3tm4a"]
+[ext_resource type="PackedScene" uid="uid://bbshj8pocau8y" path="res://assets/objects/Parts/Screw/Screw2_0Colored.tscn" id="25_kb6j2"]
+[ext_resource type="PackedScene" uid="uid://bkp4yl11tjukc" path="res://assets/objects/Parts/Screw/Screw2_25Colored.tscn" id="26_cenxe"]
+[ext_resource type="PackedScene" uid="uid://vxx3ggdvc0hm" path="res://assets/objects/Parts/Screw/Screw2_5Colored.tscn" id="27_68pti"]
 
 [node name="ScrewOption" instance=ExtResource("1_lj82a")]
 script = ExtResource("2_7terj")
 partScenes = [ExtResource("4_x0mnr"), ExtResource("5_nimq5"), ExtResource("6_oqo6o"), ExtResource("7_24nw3"), ExtResource("8_x7jsc"), ExtResource("9_8mt6n"), ExtResource("10_ixe4f"), ExtResource("11_h61d5"), ExtResource("12_2gjml"), ExtResource("13_2uvqh"), ExtResource("14_fson2"), ExtResource("16_ijhkw"), ExtResource("16_ijhkw")]
+coloredPartScenes = [ExtResource("15_1cv1d"), ExtResource("16_xeq2k"), ExtResource("17_jpkdq"), ExtResource("18_fo2p1"), ExtResource("19_7ao30"), ExtResource("20_nd6pk"), ExtResource("21_plkxl"), ExtResource("22_b7ic6"), ExtResource("23_rgu52"), ExtResource("24_3tm4a"), ExtResource("25_kb6j2"), ExtResource("26_cenxe"), ExtResource("27_68pti")]
