@@ -37,6 +37,9 @@ public partial class PartSettings : PanelContainer
 
         if (prevParameters.ContainsKey(partOption))
             RestoreParameters(prevParameters[partOption], parameterTypes);
+    
+        if (parameterTypes.Count == 0)
+            Hide();
 
         ParameterInputEdited();
     }
