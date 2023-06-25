@@ -9,10 +9,6 @@ public partial class ScrewOption : PartOption
 
     private Dictionary<float, PartObject> partObjects = new Dictionary<float, PartObject>();
 
-    [ExportGroup("Properties")]
-    [Export]
-    private StandardMaterial3D defaultMaterial;
-
     [ExportGroup("Part Objects")]
     [Export]
     private Godot.Collections.Array<PackedScene> partScenes = new Godot.Collections.Array<PackedScene>();
@@ -43,8 +39,6 @@ public partial class ScrewOption : PartOption
     public override void Setup(Part part, Dictionary<String, Variant> parameters)
     {
         base.Setup(part, parameters);
-
-        part.SetMaterial(defaultMaterial);
     }
 
     public override List<Tuple<String, ParameterType>> GetSpecificDefaultParameterTypes()

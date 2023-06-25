@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dikb4fi1qmkiu"]
 
-[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_hx40d"]
+[ext_resource type="PackedScene" uid="uid://cl5en1o2r4bqq" path="res://assets/objects/Part.tscn" id="1_hx40d"]
 [ext_resource type="PackedScene" uid="uid://bslvrhvh02lo3" path="res://assets/objects/Holes/OneSidedSquareHole.tscn" id="2_oqf3o"]
-[ext_resource type="PackedScene" path="res://assets/objects/Insert.tscn" id="3_6npya"]
-[ext_resource type="ArrayMesh" uid="uid://d1qokqgfxlxub" path="res://assets/models/Screw/_8-32_x_1_500_Star_Drive_Screw__276-4998_.obj" id="4_o1jd7"]
+[ext_resource type="PackedScene" uid="uid://dj5paivfvdvt1" path="res://assets/objects/Insert.tscn" id="3_6npya"]
+[ext_resource type="ArrayMesh" uid="uid://dhpc1nnge2ga" path="res://assets/models/Screw/_8-32_x_1_500_Star_Drive_Screw__276-4998__#8-32 x 1500 Star Drive Screw (276-4998).res" id="4_0vbiv"]
 
 [node name="Screw1_5" instance=ExtResource("1_hx40d")]
 
@@ -22,4 +22,4 @@ transform = Transform3D(-1, -9.31761e-22, -8.74228e-08, 0, 1, -1.06581e-14, 8.74
 length = 1.5
 
 [node name="MeshCutter" parent="." index="3"]
-mesh = ExtResource("4_o1jd7")
+mesh = ExtResource("4_0vbiv")

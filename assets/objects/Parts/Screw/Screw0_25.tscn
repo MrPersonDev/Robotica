@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://du0rhp7nv6t1f"]
+[gd_scene load_steps=5 format=3 uid="uid://cqu1ts1mgaxj0"]
 
-[ext_resource type="PackedScene" path="res://assets/objects/Part.tscn" id="1_f1ixj"]
+[ext_resource type="PackedScene" uid="uid://cl5en1o2r4bqq" path="res://assets/objects/Part.tscn" id="1_f1ixj"]
 [ext_resource type="PackedScene" uid="uid://bslvrhvh02lo3" path="res://assets/objects/Holes/OneSidedSquareHole.tscn" id="2_iey1g"]
-[ext_resource type="PackedScene" path="res://assets/objects/Insert.tscn" id="3_irgyd"]
-[ext_resource type="ArrayMesh" uid="uid://bi4bu1eto5k1b" path="res://assets/models/Screw/_8-32_x_1_4_Star_Drive_Screw__276-4990_.obj" id="4_dtull"]
+[ext_resource type="PackedScene" uid="uid://dj5paivfvdvt1" path="res://assets/objects/Insert.tscn" id="3_irgyd"]
+[ext_resource type="ArrayMesh" uid="uid://bwdkarwg007ht" path="res://assets/models/Screw/_8-32_x_1_4_Star_Drive_Screw__276-4990__#8-32 x 1_4 Star Drive Screw (276-4990).res" id="4_dtull"]
 
 [node name="Screw0_25" instance=ExtResource("1_f1ixj")]
 
