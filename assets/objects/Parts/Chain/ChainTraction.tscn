@@ -4,7 +4,7 @@
 [ext_resource type="ArrayMesh" uid="uid://cjrmr0m1d6epp" path="res://assets/models/Chain/Tank_Tread_Traction_Links__276-2214-005__Tank Tread Traction Links (276-2214-005).res" id="2_d413w"]
 
 [node name="Part" instance=ExtResource("1_c6rnb")]
-isHighStrengthShaft = true
+isChain = true
 chainRotationPath = NodePath("RotationPosition")
 chainHolePath = NodePath("HolePosition")
 
