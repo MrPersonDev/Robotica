@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 public partial class HotBoxOption : Godot.Control
 {
     private String partName;
-    private Action<HotBoxOption> hoveredAction;
     private Callable callable;
 
     [ExportGroup("Node Paths")]
