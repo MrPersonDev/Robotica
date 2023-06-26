@@ -60,6 +60,9 @@ public static class SettingsManager
     private static void ApplyGeneralSettings(Dictionary<String, Variant> panelSettings, World world)
     {
         Pivot pivot = world.GetPivotNode();
+        Interface ui = world.GetInterfaceNode();
+
+        ui.SetTheme((String)panelSettings["Theme"]);
 
         pivot.SetFieldOfView((float)panelSettings["Field of View"]);
         pivot.SetZoomSpeed((float)panelSettings["Zoom Speed"]);

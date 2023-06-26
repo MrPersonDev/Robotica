@@ -1,17 +1,32 @@
-[gd_scene load_steps=13 format=3 uid="uid://cn5qd20us2rnx"]
+[gd_scene load_steps=28 format=3 uid="uid://dpmd61hdlk2n0"]
 
 [ext_resource type="Script" path="res://src/ui/Interface.cs" id="1_0qpga"]
-[ext_resource type="Theme" uid="uid://cwkikht3340e5" path="res://assets/ui/theme/GlobalTheme.tres" id="1_6hyhk"]
+[ext_resource type="StyleBox" uid="uid://daog53om7jfxn" path="res://assets/ui/theme/panels/MenuButtonPanel.tres" id="1_5gbku"]
+[ext_resource type="Theme" uid="uid://b1t80nws1ecs3" path="res://assets/ui/theme/GlobalTheme.tres" id="1_6hyhk"]
 [ext_resource type="PackedScene" uid="uid://bk3hpxa6tawec" path="res://assets/ui/PartsList.tscn" id="1_apj7p"]
 [ext_resource type="PackedScene" uid="uid://dbss66n3wnyex" path="res://assets/ui/PartSettings.tscn" id="1_t16sb"]
+[ext_resource type="StyleBox" uid="uid://ckbyk1ukq87g6" path="res://assets/ui/theme/panels/PopupMenuPanel.tres" id="2_1c06w"]
 [ext_resource type="StyleBox" uid="uid://7d2bypeodxc0" path="res://assets/ui/theme/panels/MenuPanel.tres" id="3_k0te5"]
 [ext_resource type="StyleBox" uid="uid://d1s3y7a48i0fv" path="res://assets/ui/theme/panels/SelectionBoxPanel.tres" id="3_xatuu"]
 [ext_resource type="PackedScene" uid="uid://ckpkagupqbdfv" path="res://assets/ui/FileDialogWrapper.tscn" id="4_4ro5i"]
+[ext_resource type="Theme" uid="uid://bumvrpe0t5ry2" path="res://assets/ui/theme/color_themes/DarkColors.tres" id="5_7o8co"]
 [ext_resource type="PackedScene" uid="uid://d2y3ko2wfcrqi" path="res://assets/ui/HotBox.tscn" id="5_88y0h"]
 [ext_resource type="PackedScene" uid="uid://w14vqfjtsojv" path="res://assets/ui/ErrorWrapper.tscn" id="5_tch3p"]
+[ext_resource type="Theme" uid="uid://b4tieat8xqh7f" path="res://assets/ui/theme/color_themes/LightColors.tres" id="6_8xvpm"]
 [ext_resource type="PackedScene" uid="uid://tf7vsp27gqps" path="res://assets/ui/Settings.tscn" id="7_3acxu"]
+[ext_resource type="StyleBox" uid="uid://c8vlqi5fkth6d" path="res://assets/ui/theme/panels/SettingsTitlePanel.tres" id="7_byk0s"]
 [ext_resource type="StyleBox" uid="uid://blaaxkcagu3jf" path="res://assets/ui/theme/panels/OverlayPanel.tres" id="8_gxidw"]
+[ext_resource type="StyleBox" uid="uid://dwjnhtrvw2c3l" path="res://assets/ui/theme/panels/PartsListPanel.tres" id="8_la25p"]
 [ext_resource type="PackedScene" uid="uid://cwmsp3tkwp41p" path="res://assets/ui/RequiredParts.tscn" id="9_phwoy"]
+[ext_resource type="StyleBox" uid="uid://cw8o2n74feuab" path="res://assets/ui/theme/panels/SettingsPanel.tres" id="9_vjtuh"]
+[ext_resource type="StyleBox" uid="uid://cqydwjajfmklo" path="res://assets/ui/theme/panels/SettingsTabFocus.tres" id="10_qaj7e"]
+[ext_resource type="StyleBox" uid="uid://di6iqjfvfks1q" path="res://assets/ui/theme/panels/WindowButtonHoverPanel.tres" id="11_l70i0"]
+[ext_resource type="StyleBox" uid="uid://r005xul1rnqa" path="res://assets/ui/theme/panels/WindowButtonPanel.tres" id="12_r5yy6"]
+[ext_resource type="StyleBox" uid="uid://dp77jv8snfwt4" path="res://assets/ui/theme/panels/SettingsEditsPanel.tres" id="13_5egg1"]
+[ext_resource type="StyleBox" uid="uid://bqqwj3f63mgxf" path="res://assets/ui/theme/panels/PopupMenuHoveredPanel.tres" id="15_y3y5n"]
+[ext_resource type="StyleBox" uid="uid://boklvsym3jq81" path="res://assets/ui/theme/panels/ButtonNormalPanel.tres" id="17_6uq0n"]
+[ext_resource type="StyleBox" uid="uid://i2hq00lhuawe" path="res://assets/ui/theme/panels/ButtonHoveredPanel.tres" id="18_iimg7"]
+[ext_resource type="StyleBox" uid="uid://bpdr4ymeuy2rn" path="res://assets/ui/theme/panels/ButtonPressedPanel.tres" id="19_wwvrt"]
 
 [node name="Interface" type="Control"]
 layout_mode = 3
@@ -23,6 +38,18 @@ grow_vertical = 2
 mouse_filter = 1
 theme = ExtResource("1_6hyhk")
 script = ExtResource("1_0qpga")
+globalTheme = ExtResource("1_6hyhk")
+darkTheme = ExtResource("5_7o8co")
+lightTheme = ExtResource("6_8xvpm")
+mainColorBoxes = Array[StyleBox]([ExtResource("12_r5yy6"), ExtResource("9_vjtuh")])
+hoveredColorBoxes = Array[StyleBox]([ExtResource("10_qaj7e"), ExtResource("11_l70i0"), ExtResource("15_y3y5n")])
+darkColorBoxes = Array[StyleBox]([ExtResource("2_1c06w"), ExtResource("1_5gbku"), ExtResource("3_k0te5"), ExtResource("13_5egg1"), ExtResource("7_byk0s")])
+transparentColorBoxes = Array[StyleBox]([ExtResource("8_la25p")])
+selectionStyleBox = ExtResource("3_xatuu")
+overlayBox = ExtResource("8_gxidw")
+buttonNormalBox = ExtResource("17_6uq0n")
+buttonHoveredBox = ExtResource("18_iimg7")
+buttonPressedBox = ExtResource("19_wwvrt")
 fieldPath = NodePath("PanelContainer/MarginContainer/Rightmost/FieldButton")
 fieldButtonPath = NodePath("PanelContainer/MarginContainer/Rightmost/FieldButton")
 selectionBoxPath = NodePath("SelectionBox")
@@ -144,10 +171,14 @@ theme_override_styles/panel = ExtResource("8_gxidw")
 [node name="RequiredParts" parent="." instance=ExtResource("9_phwoy")]
 visible = false
 layout_mode = 1
+offset_top = 100.0
+offset_bottom = -100.0
 
 [node name="Settings" parent="." instance=ExtResource("7_3acxu")]
 visible = false
 layout_mode = 1
+offset_top = 100.0
+offset_bottom = -100.0
 
 [node name="SaveDialog" parent="." instance=ExtResource("4_4ro5i")]
 mouse_filter = 2

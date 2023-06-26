@@ -1,6 +1,7 @@
-[gd_scene load_steps=34 format=3 uid="uid://bk3hpxa6tawec"]
+[gd_scene load_steps=35 format=3 uid="uid://bk3hpxa6tawec"]
 
 [ext_resource type="Script" path="res://src/ui/PartsList.cs" id="1_gq88v"]
+[ext_resource type="StyleBox" uid="uid://dwjnhtrvw2c3l" path="res://assets/ui/theme/panels/PartsListPanel.tres" id="1_im4ad"]
 [ext_resource type="PackedScene" uid="uid://dtfss217fk1ad" path="res://assets/ui/PartOptions/StandoffOption.tscn" id="2_0ij1x"]
 [ext_resource type="PackedScene" uid="uid://b4xyvfefa1bro" path="res://assets/ui/PartOptions/WheelOption.tscn" id="2_0iyy3"]
 [ext_resource type="PackedScene" uid="uid://lsxjn1ytuhc1" path="res://assets/ui/PartOptions/CChannelOption.tscn" id="2_4pe4e"]
@@ -46,6 +47,7 @@ offset_right = -32.0
 offset_bottom = -270.0
 grow_horizontal = 0
 grow_vertical = 0
+theme_override_styles/panel = ExtResource("1_im4ad")
 script = ExtResource("1_gq88v")
 partOptionsPath = NodePath("MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer")
 searchPath = NodePath("MarginContainer/VSplitContainer/Search")

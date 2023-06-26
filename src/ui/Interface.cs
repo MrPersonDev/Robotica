@@ -13,6 +13,22 @@ public partial class Interface : Godot.Control
     private Dictionary<int, Callable> fileCallables = new Dictionary<int, Callable>();
     private Dictionary<int, Callable> editCallables = new Dictionary<int, Callable>();
     private Dictionary<int, Callable> selectCallables = new Dictionary<int, Callable>();
+    
+    [ExportGroup("Themes")]
+    [Export]
+    private Theme globalTheme;
+
+    [ExportGroup("Color Themes")]
+    [Export]
+    private Theme darkTheme, lightTheme;
+    
+    [ExportGroup("Panels")]
+    [Export]
+    private Godot.Collections.Array<StyleBox> mainColorBoxes, hoveredColorBoxes, darkColorBoxes, transparentColorBoxes;
+    [Export]
+    private StyleBox selectionStyleBox, overlayBox;
+    [Export]
+    private StyleBox buttonNormalBox, buttonHoveredBox, buttonPressedBox;
 
     [ExportGroup("Node Paths")]
     [Export]
@@ -263,6 +279,69 @@ public partial class Interface : Godot.Control
             inQueue = false;
             CreatePart(queuedPartOption, queuedParameters);
         }
+    }
+    
+    public void SetTheme(String themeName)
+    {
+        World world = (World)GetTree().CurrentScene;
+        Grid grid = world.GetGridNode();
+        Theme theme;
+        if (themeName == "Dark")
+        {
+            theme = darkTheme;
+            world.SetBackgroundColor(World.BackgroundColor.Dark);
+            world.SetGridColor(Grid.GridColor.DarkTheme);
+        }
+        else if (themeName == "Light")
+        {
+            theme = lightTheme;
+            world.SetBackgroundColor(World.BackgroundColor.Light);
+            world.SetGridColor(Grid.GridColor.LightTheme);
+        }
+        else
+            throw new Exception("Invalid theme name");
+
+        Color panelMain = theme.GetColor("panel_main", "");
+        Color panelHovered = theme.GetColor("panel_hovered", "");
+        Color panelDark = theme.GetColor("panel_dark", "");
+        Color panelTransparent = theme.GetColor("panel_transparent", "");
+        Color accent = theme.GetColor("accent", "");
+        Color overlay = theme.GetColor("overlay", "");
+        Color buttonNormal = theme.GetColor("button_normal", "");
+        Color buttonHovered = theme.GetColor("button_hovered", "");
+        Color buttonPressed = theme.GetColor("button_pressed", "");
+        
+        foreach (StyleBoxFlat mainColorBox in mainColorBoxes)
+            mainColorBox.Set(StyleBoxFlat.PropertyName.BgColor, panelMain);
+        foreach (StyleBoxFlat hoveredColorBox in hoveredColorBoxes)
+            hoveredColorBox.Set(StyleBoxFlat.PropertyName.BgColor, panelHovered);
+        foreach (StyleBoxFlat darkColorBox in darkColorBoxes)
+            darkColorBox.Set(StyleBoxFlat.PropertyName.BgColor, panelDark);
+        foreach (StyleBoxFlat transparentColorBox in transparentColorBoxes)
+            transparentColorBox.Set(StyleBoxFlat.PropertyName.BgColor, panelTransparent);
+        
+        overlayBox.Set(StyleBoxFlat.PropertyName.BgColor, overlay);
+        
+        Color styleBoxBG = new Color(accent.R, accent.G, accent.B, ((Color)selectionStyleBox.Get(StyleBoxFlat.PropertyName.BgColor)).A);
+        selectionStyleBox.Set(StyleBoxFlat.PropertyName.BgColor, styleBoxBG);
+        selectionStyleBox.Set(StyleBoxFlat.PropertyName.BorderColor, accent);
+        
+        buttonNormalBox.Set(StyleBoxFlat.PropertyName.BgColor, buttonNormal);
+        buttonHoveredBox.Set(StyleBoxFlat.PropertyName.BgColor, buttonHovered);
+        buttonPressedBox.Set(StyleBoxFlat.PropertyName.BgColor, buttonPressed);
+        
+        Color font = theme.GetColor("font", "");
+        Color fontHovered = theme.GetColor("font_hovered", "");
+        foreach (String themeType in globalTheme.GetTypeList())
+        {
+            globalTheme.SetColor("font_color", themeType, font);
+            globalTheme.SetColor("font_focus_color", themeType, font);
+            globalTheme.SetColor("font_hover_color", themeType, fontHovered);
+            
+            if (themeType != "MenuButton")
+                globalTheme.SetColor("font_pressed_color", themeType, fontHovered);
+        } 
+        globalTheme.SetColor("font_placeholder_color", "LineEdit", fontHovered);
     }
 
     public void StartHotBoxing(Vector2 mousePos)

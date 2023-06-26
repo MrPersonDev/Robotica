@@ -4,6 +4,16 @@ using System.Collections.Generic;
 
 public partial class World : Node3D
 {
+    public enum BackgroundColor
+    {
+        Light,
+        Dark
+    }
+
+    [ExportGroup("Properties")]
+    [Export]
+    private Color lightBackground, darkBackground;
+
     [ExportGroup("Node Paths")]
     [Export]
     private NodePath pivotPath, gridPath, controlPath, partsPath, uiPath, worldEnvironmentPath, lightPath;
@@ -53,6 +63,28 @@ public partial class World : Node3D
             pivot.HideGrid();
         }
     }
+    
+    public void SetGridColor(Grid.GridColor color)
+    {
+        Color gridColor = grid.GetGridColor(color);
+        StandardMaterial3D gridMaterial = grid.GetGridMaterial();
+        StandardMaterial3D orthographicGridMaterial = pivot.GetGridMaterial();
+        gridMaterial.AlbedoColor = gridColor;
+        orthographicGridMaterial.AlbedoColor = gridColor;
+    }
+    
+    public void SetBackgroundColor(BackgroundColor color)
+    {
+        switch (color)
+        {
+            case BackgroundColor.Light:
+                worldEnvironment.Environment.BackgroundColor = lightBackground;
+                break;
+            case BackgroundColor.Dark:
+                worldEnvironment.Environment.BackgroundColor = darkBackground;
+                break;
+        }
+    }
 
     public Parts GetPartsNode()
     {
@@ -67,6 +99,11 @@ public partial class World : Node3D
     public Pivot GetPivotNode()
     {
         return pivot;
+    }
+
+    public Grid GetGridNode()
+    {
+        return grid;
     }
 
     public Godot.Environment GetEnvironment()

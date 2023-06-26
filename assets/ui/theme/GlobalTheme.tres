@@ -1,19 +1,51 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://cwkikht3340e5"]
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://b1t80nws1ecs3"]
 
 [ext_resource type="StyleBox" uid="uid://daog53om7jfxn" path="res://assets/ui/theme/panels/MenuButtonPanel.tres" id="1_5yld6"]
+[ext_resource type="StyleBox" uid="uid://boklvsym3jq81" path="res://assets/ui/theme/panels/ButtonNormalPanel.tres" id="1_muhtw"]
+[ext_resource type="StyleBox" uid="uid://bqqwj3f63mgxf" path="res://assets/ui/theme/panels/PopupMenuHoveredPanel.tres" id="2_gsywl"]
 [ext_resource type="StyleBox" uid="uid://ckbyk1ukq87g6" path="res://assets/ui/theme/panels/PopupMenuPanel.tres" id="2_pu6r6"]
+[ext_resource type="StyleBox" uid="uid://i2hq00lhuawe" path="res://assets/ui/theme/panels/ButtonHoveredPanel.tres" id="2_svkbq"]
+[ext_resource type="StyleBox" uid="uid://bpdr4ymeuy2rn" path="res://assets/ui/theme/panels/ButtonPressedPanel.tres" id="3_70jft"]
 [ext_resource type="FontFile" uid="uid://bcykwrfa772et" path="res://assets/ui/theme/fonts/OpenSans-Medium.ttf" id="3_f2fei"]
 
 [resource]
 default_font = ExtResource("3_f2fei")
-MenuButton/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/styles/disabled = ExtResource("3_70jft")
+Button/styles/focus = ExtResource("3_70jft")
+Button/styles/hover = ExtResource("2_svkbq")
+Button/styles/normal = ExtResource("1_muhtw")
+Button/styles/pressed = ExtResource("3_70jft")
+CheckBox/styles/disabled = ExtResource("1_muhtw")
+CheckBox/styles/focus = ExtResource("1_muhtw")
+CheckBox/styles/hover = ExtResource("2_svkbq")
+CheckBox/styles/hover_pressed = ExtResource("2_svkbq")
+CheckBox/styles/normal = ExtResource("1_muhtw")
+CheckBox/styles/pressed = ExtResource("1_muhtw")
+Label/colors/font_color = Color(1, 1, 1, 1)
+LineEdit/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+LineEdit/colors/font_placeholder_color = Color(0.875, 0.875, 0.875, 0.6)
+LineEdit/styles/focus = ExtResource("1_muhtw")
+LineEdit/styles/normal = ExtResource("1_muhtw")
+LineEdit/styles/read_only = ExtResource("1_muhtw")
 MenuButton/colors/font_pressed_color = Color(0.239216, 0.658824, 1, 1)
 MenuButton/styles/disabled = ExtResource("1_5yld6")
 MenuButton/styles/focus = ExtResource("1_5yld6")
 MenuButton/styles/hover = ExtResource("1_5yld6")
 MenuButton/styles/normal = ExtResource("1_5yld6")
 MenuButton/styles/pressed = ExtResource("1_5yld6")
+OptionButton/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+OptionButton/styles/disabled = ExtResource("1_muhtw")
+OptionButton/styles/disabled_mirrored = ExtResource("1_muhtw")
+OptionButton/styles/focus = ExtResource("1_muhtw")
+OptionButton/styles/hover = ExtResource("2_svkbq")
+OptionButton/styles/hover_mirrored = ExtResource("2_svkbq")
+OptionButton/styles/normal = ExtResource("1_muhtw")
+OptionButton/styles/normal_mirrored = ExtResource("1_muhtw")
+OptionButton/styles/pressed = ExtResource("3_70jft")
+OptionButton/styles/pressed_mirrored = ExtResource("3_70jft")
 PopupMenu/constants/item_end_padding = 20
 PopupMenu/constants/item_start_padding = 5
 PopupMenu/constants/v_separation = 5
+PopupMenu/styles/hover = ExtResource("2_gsywl")
 PopupMenu/styles/panel = ExtResource("2_pu6r6")

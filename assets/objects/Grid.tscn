@@ -23,6 +23,8 @@ distance_fade_max_distance = 30.0
 
 [node name="Grid" type="Node3D"]
 script = ExtResource("1_ofe4k")
+gridLightThemeColor = Color(0, 0.588235, 0.964706, 1)
+gridDarkThemeColor = Color(1, 1, 1, 1)
 gridLinesPath = NodePath("GridLines")
 xAxisPath = NodePath("XAxis")
 zAxisPath = NodePath("ZAxis")

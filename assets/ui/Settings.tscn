@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://tf7vsp27gqps"]
+[gd_scene load_steps=12 format=3 uid="uid://tf7vsp27gqps"]
 
 [ext_resource type="PackedScene" uid="uid://c6fpokgtiinai" path="res://assets/ui/Window.tscn" id="1_2k3xu"]
 [ext_resource type="Script" path="res://src/ui/Settings.cs" id="2_6p6kl"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://tx17m8bix6eo" path="res://assets/ui/SettingsPanels/EnvironmentPanel.tscn" id="7_gd5p7"]
 [ext_resource type="PackedScene" uid="uid://dpe3bkgr07x7f" path="res://assets/ui/SettingsPanels/KeybindsPanel.tscn" id="7_h5rv7"]
 [ext_resource type="PackedScene" uid="uid://c2dasaf85ruds" path="res://assets/ui/SettingsPanels/HotboxPanel.tscn" id="8_dypi8"]
+[ext_resource type="StyleBox" uid="uid://dp77jv8snfwt4" path="res://assets/ui/theme/panels/SettingsEditsPanel.tres" id="10_7b54b"]
 
 [node name="Settings" instance=ExtResource("1_2k3xu")]
 script = ExtResource("2_6p6kl")
@@ -63,6 +64,7 @@ theme_override_constants/margin_bottom = 8
 
 [node name="PanelContainer" type="PanelContainer" parent="VSplitContainer/HSplitContainer2/MarginContainer2" index="0"]
 layout_mode = 2
+theme_override_styles/panel = ExtResource("10_7b54b")
 
 [node name="SettingsPanelContainer" type="MarginContainer" parent="VSplitContainer/HSplitContainer2/MarginContainer2/PanelContainer" index="0"]
 layout_mode = 2

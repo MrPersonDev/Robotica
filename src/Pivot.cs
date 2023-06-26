@@ -206,6 +206,12 @@ public partial class Pivot : Node3D
     {
         canEnableGrid = value;
     }
+    
+    public StandardMaterial3D GetGridMaterial()
+    {
+        GeometryInstance3D gridGeometry = (GeometryInstance3D)orthographicGrid;
+        return (StandardMaterial3D)gridGeometry.MaterialOverride;
+    }
 
     private void SetCameraProjection(Camera3D.ProjectionType projectionType)
     {

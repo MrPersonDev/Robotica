@@ -3,11 +3,21 @@ using System;
 
 public partial class Grid : Node3D
 {
+    public enum GridColor
+    {
+        LightTheme,
+        DarkTheme
+    }
+
     private const float AXIS_WIDTH_SCALE = 0.2f;
     private const float AXIS_LENGTH_SCALE = 1000.0f;
     private const float MIN_AXIS_SCALE = 0.75f;
 
     private bool canEnableGrid = true;
+
+    [ExportGroup("Properties")]
+    [Export]
+    private Color gridLightThemeColor, gridDarkThemeColor;
 
     [ExportGroup("Node Paths")]
     [Export]
@@ -48,6 +58,25 @@ public partial class Grid : Node3D
         float lineLength = camPos.Length() * AXIS_LENGTH_SCALE;
         xAxis.Scale = new Vector3(xAxisWidth, lineLength, xAxisWidth);
         zAxis.Scale = new Vector3(zAxisWidth, lineLength, zAxisWidth);
+    }
+    
+    public Color GetGridColor(GridColor color)
+    {
+        switch (color)
+        {
+            case GridColor.LightTheme:
+                return gridLightThemeColor;
+            case GridColor.DarkTheme:
+                return gridDarkThemeColor;
+            default:
+                throw new Exception("Invalid grid color");
+        }
+    }
+    
+    public StandardMaterial3D GetGridMaterial()
+    {
+        GeometryInstance3D gridGeometry = (GeometryInstance3D)gridLines;
+        return (StandardMaterial3D)gridGeometry.MaterialOverride;
     }
 
     public void ShowGrid()

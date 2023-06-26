@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c6fpokgtiinai"]
+[gd_scene load_steps=6 format=3 uid="uid://c6fpokgtiinai"]
 
 [ext_resource type="StyleBox" uid="uid://cw8o2n74feuab" path="res://assets/ui/theme/panels/SettingsPanel.tres" id="1_3vi7e"]
 [ext_resource type="Script" path="res://src/ui/Window.cs" id="2_kb2d5"]
+[ext_resource type="StyleBox" uid="uid://c8vlqi5fkth6d" path="res://assets/ui/theme/panels/SettingsTitlePanel.tres" id="3_ivll1"]
 [ext_resource type="Theme" uid="uid://b2lbvr2j7vowb" path="res://assets/ui/theme/themes/WindowButton.tres" id="3_iybnp"]
 [ext_resource type="Texture2D" uid="uid://cpkg05qu3k7sq" path="res://assets/images/ExitIcon.svg" id="4_j1bkn"]
 
@@ -10,9 +11,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 300.0
-offset_top = 100.0
+offset_top = 99.0
 offset_right = -300.0
-offset_bottom = -100.0
+offset_bottom = -101.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = ExtResource("1_3vi7e")
@@ -28,6 +29,7 @@ dragger_visibility = 1
 [node name="PanelContainer" type="PanelContainer" parent="VSplitContainer"]
 layout_mode = 2
 size_flags_vertical = 0
+theme_override_styles/panel = ExtResource("3_ivll1")
 
 [node name="MarginContainer" type="MarginContainer" parent="VSplitContainer/PanelContainer"]
 layout_mode = 2

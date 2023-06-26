@@ -1,0 +1,14 @@
+[gd_resource type="Theme" format=3 uid="uid://bumvrpe0t5ry2"]
+
+[resource]
+/colors/accent = Color(1, 1, 1, 1)
+/colors/button_hovered = Color(0.196078, 0.196078, 0.196078, 0.745098)
+/colors/button_normal = Color(0.0980392, 0.0980392, 0.0980392, 0.705882)
+/colors/button_pressed = Color(0.0784314, 0.0784314, 0.0784314, 0.784314)
+/colors/font = Color(1, 1, 1, 1)
+/colors/font_hovered = Color(0.784314, 0.784314, 0.784314, 1)
+/colors/overlay = Color(0, 0, 0, 0.294118)
+/colors/panel_dark = Color(0.12549, 0.12549, 0.12549, 1)
+/colors/panel_hovered = Color(0.27451, 0.27451, 0.27451, 1)
+/colors/panel_main = Color(0.188235, 0.188235, 0.188235, 1)
+/colors/panel_transparent = Color(0.117647, 0.117647, 0.117647, 0.705882)
