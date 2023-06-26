@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dpmd61hdlk2n0"]
+[gd_scene load_steps=30 format=3 uid="uid://dpmd61hdlk2n0"]
 
 [ext_resource type="Script" path="res://src/ui/Interface.cs" id="1_0qpga"]
 [ext_resource type="StyleBox" uid="uid://daog53om7jfxn" path="res://assets/ui/theme/panels/MenuButtonPanel.tres" id="1_5gbku"]
@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://d2y3ko2wfcrqi" path="res://assets/ui/HotBox.tscn" id="5_88y0h"]
 [ext_resource type="PackedScene" uid="uid://w14vqfjtsojv" path="res://assets/ui/ErrorWrapper.tscn" id="5_tch3p"]
 [ext_resource type="Theme" uid="uid://b4tieat8xqh7f" path="res://assets/ui/theme/color_themes/LightColors.tres" id="6_8xvpm"]
-[ext_resource type="PackedScene" uid="uid://tf7vsp27gqps" path="res://assets/ui/Settings.tscn" id="7_3acxu"]
+[ext_resource type="PackedScene" uid="uid://bff4srr1xghv7" path="res://assets/ui/Settings.tscn" id="7_3acxu"]
 [ext_resource type="StyleBox" uid="uid://c8vlqi5fkth6d" path="res://assets/ui/theme/panels/SettingsTitlePanel.tres" id="7_byk0s"]
 [ext_resource type="StyleBox" uid="uid://blaaxkcagu3jf" path="res://assets/ui/theme/panels/OverlayPanel.tres" id="8_gxidw"]
 [ext_resource type="StyleBox" uid="uid://dwjnhtrvw2c3l" path="res://assets/ui/theme/panels/PartsListPanel.tres" id="8_la25p"]
@@ -25,7 +25,9 @@
 [ext_resource type="StyleBox" uid="uid://dp77jv8snfwt4" path="res://assets/ui/theme/panels/SettingsEditsPanel.tres" id="13_5egg1"]
 [ext_resource type="StyleBox" uid="uid://bqqwj3f63mgxf" path="res://assets/ui/theme/panels/PopupMenuHoveredPanel.tres" id="15_y3y5n"]
 [ext_resource type="StyleBox" uid="uid://boklvsym3jq81" path="res://assets/ui/theme/panels/ButtonNormalPanel.tres" id="17_6uq0n"]
+[ext_resource type="StyleBox" uid="uid://cosnrks2jguac" path="res://assets/ui/theme/panels/HotBoxIndicatorPanel.tres" id="18_ct5aj"]
 [ext_resource type="StyleBox" uid="uid://i2hq00lhuawe" path="res://assets/ui/theme/panels/ButtonHoveredPanel.tres" id="18_iimg7"]
+[ext_resource type="StyleBox" uid="uid://drxvdr2114qkg" path="res://assets/ui/theme/panels/HotBoxPanel.tres" id="19_qh3m8"]
 [ext_resource type="StyleBox" uid="uid://bpdr4ymeuy2rn" path="res://assets/ui/theme/panels/ButtonPressedPanel.tres" id="19_wwvrt"]
 
 [node name="Interface" type="Control"]
@@ -47,6 +49,8 @@ darkColorBoxes = Array[StyleBox]([ExtResource("2_1c06w"), ExtResource("1_5gbku")
 transparentColorBoxes = Array[StyleBox]([ExtResource("8_la25p")])
 selectionStyleBox = ExtResource("3_xatuu")
 overlayBox = ExtResource("8_gxidw")
+hotboxIndicatorBox = ExtResource("18_ct5aj")
+hotboxBox = ExtResource("19_qh3m8")
 buttonNormalBox = ExtResource("17_6uq0n")
 buttonHoveredBox = ExtResource("18_iimg7")
 buttonPressedBox = ExtResource("19_wwvrt")

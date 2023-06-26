@@ -26,7 +26,7 @@ public partial class Interface : Godot.Control
     [Export]
     private Godot.Collections.Array<StyleBox> mainColorBoxes, hoveredColorBoxes, darkColorBoxes, transparentColorBoxes;
     [Export]
-    private StyleBox selectionStyleBox, overlayBox;
+    private StyleBox selectionStyleBox, overlayBox, hotboxIndicatorBox, hotboxBox;
     [Export]
     private StyleBox buttonNormalBox, buttonHoveredBox, buttonPressedBox;
 
@@ -321,6 +321,11 @@ public partial class Interface : Godot.Control
             transparentColorBox.Set(StyleBoxFlat.PropertyName.BgColor, panelTransparent);
         
         overlayBox.Set(StyleBoxFlat.PropertyName.BgColor, overlay);
+        
+        Color hotboxIndicatorBG = new Color(accent.R, accent.G, accent.B, ((Color)hotboxIndicatorBox.Get(StyleBoxFlat.PropertyName.BgColor)).A);
+        hotboxIndicatorBox.Set(StyleBoxFlat.PropertyName.BorderColor, accent);
+        hotboxIndicatorBox.Set(StyleBoxFlat.PropertyName.BgColor, hotboxIndicatorBG);
+        hotboxBox.Set(StyleBoxFlat.PropertyName.BgColor, buttonNormal);
         
         Color styleBoxBG = new Color(accent.R, accent.G, accent.B, ((Color)selectionStyleBox.Get(StyleBoxFlat.PropertyName.BgColor)).A);
         selectionStyleBox.Set(StyleBoxFlat.PropertyName.BgColor, styleBoxBG);

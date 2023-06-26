@@ -8,6 +8,10 @@
 
 config_version=5
 
+[anti_aliasing]
+
+quality/use_debanding=false
+
 [application]
 
 config/name="Robotica"
