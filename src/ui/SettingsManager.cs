@@ -189,7 +189,7 @@ public static class SettingsManager
         String filePath = GetSavePath();
         if (!FileAccess.FileExists(filePath))
         {
-            filePath = GetSavePath(DEFAULT_SETTINGS_FILE_NAME);
+            filePath = "res://" + DEFAULT_SETTINGS_FILE_NAME;
             if (!FileAccess.FileExists(filePath))
             {
                 ui.Error("No user or default settings files were found");
