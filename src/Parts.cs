@@ -228,7 +228,8 @@ public partial class Parts : Node3D
 
     public async void DeletePart(Part part)
     {
-        await Task.Run(() => DeletePartTask(part));
+        // await Task.Run(() => DeletePartTask(part));
+        DeletePartTask(part);
     }
 
     public async void DeletePartTask(Part part)

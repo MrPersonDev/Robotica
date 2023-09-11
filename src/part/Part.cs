@@ -83,7 +83,8 @@ public partial class Part : Moveable
             return;
 
         HidePartMesh();
-        await Task.Run(() => SetMeshCutterSizeTask(length, height, width));
+        // await Task.Run(() => SetMeshCutterSizeTask(length, height, width));
+        SetMeshCutterSizeTask(length, height, width);
         ShowPartMesh();
     }
 
