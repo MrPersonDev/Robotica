@@ -130,6 +130,7 @@ public static class SettingsManager
         ProjectSettings.SetSetting("rendering/scaling_3d/mode", scalingModeIdx);
         ProjectSettings.SetSetting("rendering/scaling_3d/scale", (float)panelSettings["Scale"]);
         ProjectSettings.SetSetting("anti_aliasing/quality/use_debanding", (bool)panelSettings["Use Debanding"]);
+        ProjectSettings.SetSetting("application/run/max_fps", (int)panelSettings["Max FPS"]);
 
         ProjectSettings.SaveCustom("override.cfg");
     }

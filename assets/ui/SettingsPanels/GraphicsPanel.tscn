@@ -11,13 +11,19 @@
 layout_mode = 2
 name = "VSync"
 
-[node name="Scaling Mode" parent="ScrollContainer/SettingEdits" index="1" instance=ExtResource("3_afn7y")]
+[node name="Max FPS" parent="ScrollContainer/SettingEdits" index="1" instance=ExtResource("4_e6qs0")]
+layout_mode = 2
+max = 240.0
+name = "Max FPS"
+requiresRestart = true
+
+[node name="Scaling Mode" parent="ScrollContainer/SettingEdits" index="2" instance=ExtResource("3_afn7y")]
 layout_mode = 2
 values = ["Bilinear", "FSR"]
 name = "Scaling Mode"
 requiresRestart = true
 
-[node name="SettingEdit" parent="ScrollContainer/SettingEdits" index="2" instance=ExtResource("4_e6qs0")]
+[node name="SettingEdit" parent="ScrollContainer/SettingEdits" index="3" instance=ExtResource("4_e6qs0")]
 layout_mode = 2
 min = 0.3
 max = 2.0
@@ -25,64 +31,64 @@ step = 0.1
 name = "Scale"
 requiresRestart = true
 
-[node name="Antialiasing" parent="ScrollContainer/SettingEdits" index="3" instance=ExtResource("3_afn7y")]
+[node name="Antialiasing" parent="ScrollContainer/SettingEdits" index="4" instance=ExtResource("3_afn7y")]
 layout_mode = 2
 values = ["Disabled", "2x", "4x", "8x"]
 name = "Anti-Aliasing"
 
-[node name="Use Debanding" parent="ScrollContainer/SettingEdits" index="4" instance=ExtResource("2_a1c16")]
+[node name="Use Debanding" parent="ScrollContainer/SettingEdits" index="5" instance=ExtResource("2_a1c16")]
 layout_mode = 2
 name = "Use Debanding"
 requiresRestart = true
 
-[node name="Shadows" parent="ScrollContainer/SettingEdits" index="5" instance=ExtResource("2_a1c16")]
+[node name="Shadows" parent="ScrollContainer/SettingEdits" index="6" instance=ExtResource("2_a1c16")]
 layout_mode = 2
 name = "Shadows"
 
-[node name="Shadow Quality" parent="ScrollContainer/SettingEdits" index="6" instance=ExtResource("3_afn7y")]
+[node name="Shadow Quality" parent="ScrollContainer/SettingEdits" index="7" instance=ExtResource("3_afn7y")]
 layout_mode = 2
 values = ["Hard", "Soft Very Low", "Soft Low", "Soft Medium", "Soft High", "Soft Ultra"]
 name = "Shadow Quality"
 requiresRestart = true
 
-[node name="Glow" parent="ScrollContainer/SettingEdits" index="7" instance=ExtResource("2_a1c16")]
+[node name="Glow" parent="ScrollContainer/SettingEdits" index="8" instance=ExtResource("2_a1c16")]
 layout_mode = 2
 name = "Glow"
 
-[node name="Screen-Space Reflections" parent="ScrollContainer/SettingEdits" index="8" instance=ExtResource("2_a1c16")]
+[node name="Screen-Space Reflections" parent="ScrollContainer/SettingEdits" index="9" instance=ExtResource("2_a1c16")]
 layout_mode = 2
 name = "Screen-Space Reflections"
 
-[node name="Screen-Space Reflections Quality" parent="ScrollContainer/SettingEdits" index="9" instance=ExtResource("3_afn7y")]
+[node name="Screen-Space Reflections Quality" parent="ScrollContainer/SettingEdits" index="10" instance=ExtResource("3_afn7y")]
 layout_mode = 2
 values = ["Low", "Medium", "High"]
 name = "Screen-Space Reflections Quality"
 requiresRestart = true
 
-[node name="Screen-Space Ambient Occlusion" parent="ScrollContainer/SettingEdits" index="10" instance=ExtResource("2_a1c16")]
+[node name="Screen-Space Ambient Occlusion" parent="ScrollContainer/SettingEdits" index="11" instance=ExtResource("2_a1c16")]
 layout_mode = 2
 name = "Screen-Space Ambient Occlusion"
 
-[node name="Screen-Space Ambient Occlusion Quality" parent="ScrollContainer/SettingEdits" index="11" instance=ExtResource("3_afn7y")]
+[node name="Screen-Space Ambient Occlusion Quality" parent="ScrollContainer/SettingEdits" index="12" instance=ExtResource("3_afn7y")]
 layout_mode = 2
 values = ["Very Low", "Low", "Medium", "High"]
 name = "Screen-Space Ambient Occlusion Quality"
 requiresRestart = true
 
-[node name="Screen-Space Indirect Lighting" parent="ScrollContainer/SettingEdits" index="12" instance=ExtResource("2_a1c16")]
+[node name="Screen-Space Indirect Lighting" parent="ScrollContainer/SettingEdits" index="13" instance=ExtResource("2_a1c16")]
 layout_mode = 2
 name = "Screen-Space Indirect Lighting"
 
-[node name="Screen-Space Indirect Lighting Quality" parent="ScrollContainer/SettingEdits" index="13" instance=ExtResource("3_afn7y")]
+[node name="Screen-Space Indirect Lighting Quality" parent="ScrollContainer/SettingEdits" index="14" instance=ExtResource("3_afn7y")]
 layout_mode = 2
 values = ["Very Low", "Low", "Medium", "High"]
 name = "Screen-Space Indirect Lighting Quality"
 requiresRestart = true
 
-[node name="Outlines" parent="ScrollContainer/SettingEdits" index="14" instance=ExtResource("2_a1c16")]
+[node name="Outlines" parent="ScrollContainer/SettingEdits" index="15" instance=ExtResource("2_a1c16")]
 layout_mode = 2
 name = "Outlines"
 
-[node name="Grid" parent="ScrollContainer/SettingEdits" index="15" instance=ExtResource("2_a1c16")]
+[node name="Grid" parent="ScrollContainer/SettingEdits" index="16" instance=ExtResource("2_a1c16")]
 layout_mode = 2
 name = "Grid"
