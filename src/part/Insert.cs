@@ -49,7 +49,11 @@ public partial class Insert : Area3D
 
     public void SetLength(float length)
     {
+        if (!IsInstanceValid(collider))
+            return;
         CylinderShape3D shape = (CylinderShape3D)collider.Shape;
+        if (!IsInstanceValid(shape))
+            return;
         shape.Height = length;
     }
 
