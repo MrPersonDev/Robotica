@@ -48,7 +48,7 @@ public partial class Part : Moveable
 
     [ExportGroup("Node Paths")]
     [Export]
-    private NodePath partMeshPath, additionalMeshesPath, centerPath, holesPath, insertsPath, chainRotationPath, chainHolePath;
+    private NodePath partMeshPath, additionalMeshesPath, centerPath, holesPath, insertsPath, chainRotationPath = new NodePath(), chainHolePath = new NodePath();
 
     private MeshCutter partMesh;
     private Node3D additionalMeshes, center, holes, inserts, otherMeshes, chainRotation, chainHole;
@@ -60,9 +60,9 @@ public partial class Part : Moveable
         center = (Node3D)GetNode(centerPath);
         holes = (Node3D)GetNode(holesPath);
         inserts = (Node3D)GetNode(insertsPath);
-        if (!(chainRotationPath == null))
+        if (!(chainRotationPath == new NodePath()))
             chainRotation = (Node3D)GetNode(chainRotationPath);
-        if (!(chainHolePath == null))
+        if (!(chainHolePath == new NodePath()))
             chainHole = (Node3D)GetNode(chainHolePath);
 
         this.loaded = loaded;
