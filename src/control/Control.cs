@@ -790,6 +790,8 @@ public partial class Control : Node3D
             return axis;
         else if (moving && !rotating)
             return axis;
+        else if (transforming && rotating)
+            return pivot.GetCamNormal();
         else
             return pivot.GetCamNormal() * (Vector3.One - axis);
     }
