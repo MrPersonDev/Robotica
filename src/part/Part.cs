@@ -138,6 +138,11 @@ public partial class Part : Moveable
 
     public void SetInsertSize(float length)
     {
+        CallDeferred("SetInsertSizeDeferred", length);
+    }
+    
+    private void SetInsertSizeDeferred(float length)
+    {
         if (inserts.GetChildCount() != 1)
             throw new Exception("Incorrect number of inserts");
 
