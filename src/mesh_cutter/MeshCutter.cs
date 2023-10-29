@@ -58,7 +58,6 @@ public partial class MeshCutter : MeshInstance3D
         RemoveExcludedFaces(mdt, st);
 
         arrayMesh = st.Commit();
-        Mesh = arrayMesh;
 
         mdt = new MeshDataTool();
         mdt.CreateFromSurface(arrayMesh, 0);
@@ -67,7 +66,7 @@ public partial class MeshCutter : MeshInstance3D
         FixMeshHoles(mdt, st, arrayMesh);
 
         arrayMesh = st.Commit();
-        Mesh = arrayMesh;
+        CallDeferred("set_mesh", arrayMesh);
     }
 
     public void SetMaterial(StandardMaterial3D material)

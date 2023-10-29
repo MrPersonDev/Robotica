@@ -84,8 +84,8 @@ public partial class Part : Moveable
             return;
 
         HidePartMesh();
-        // await Task.Run(() => SetMeshCutterSizeTask(length, height, width));
-        SetMeshCutterSizeTask(length, height, width);
+        await Task.Run(() => SetMeshCutterSizeTask(length, height, width));
+        // SetMeshCutterSizeTask(length, height, width);
         ShowPartMesh();
     }
 
@@ -121,13 +121,9 @@ public partial class Part : Moveable
             return;
         }
 
-        HideExcludedHoles(this.width, this.height, this.length);
-
+        CallDeferred("HideExcludedHoles", this.width, this.height, this.length);
         CallDeferred("SetCollider");
-        Vector3 prevCenter = center.Position;
-        CallDeferred("SetCenter");
-        if (!loaded)
-            CallDeferred("MoveToNewCenter", prevCenter);
+        CallDeferred("UpdateCenter", loaded);
 
         cutting = false;
         if (queuedForCutting)
@@ -135,6 +131,14 @@ public partial class Part : Moveable
             queuedForCutting = false;
             SetMeshCutterSizeTask(queuedLength, queuedHeight, queuedWidth);
         }
+    }
+    
+    private void UpdateCenter(bool loaded)
+    {
+        Vector3 prevCenter = center.Position;
+        SetCenter();
+        if (!loaded)
+            MoveToNewCenter(prevCenter);
     }
 
     public void SetInsertSize(float length)
