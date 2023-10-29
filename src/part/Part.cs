@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 public partial class Part : Moveable
 {
-    private const int HOLES_PER_FRAME = 20;
+    // private const int HOLES_PER_FRAME = 20;
+    private const int HOLES_PER_FRAME = 5;
     private const float HOLE_OFFSET = 0.1f;
     private const int MAIN_MESH_LAYER = 1;
     private const int OUTLINE_MESH_LAYER = 2;
@@ -475,18 +476,19 @@ public partial class Part : Moveable
 
     private void AddHole(Hole hole)
     {
-        holes.CallDeferred("add_child", hole);
-        // holes.AddChild(hole);
-        if (hole.IsDefaultHole())
-            defaultHole = hole;
-        if (hole.IsNonInteractive())
-            shaftHole = hole;
-        if (hole.IsMotorHole())
+        Hole curHole = (Hole)hole.Duplicate();
+        holes.AddChild(curHole);
+        // holes.CallDeferred("add_child", curHole);
+        if (curHole.IsDefaultHole())
+            defaultHole = curHole;
+        if (curHole.IsNonInteractive())
+            shaftHole = curHole;
+        if (curHole.IsMotorHole())
         {
-            if (hole.IsHighStrength())
-                highStrengthMotorHole = hole;
+            if (curHole.IsHighStrength())
+                highStrengthMotorHole = curHole;
             else
-                motorHole = hole;
+                motorHole = curHole;
         }
     }
 
@@ -502,15 +504,14 @@ public partial class Part : Moveable
                 if (preparingToDelete || !IsInstanceValid(holes) || !IsInsideTree())
                     return;
 
-                Hole curHole = (Hole)holeList[j].Duplicate();
-                AddHole(curHole);
+                CallDeferred("AddHole", holeList[j]);
             }
 
             await ToSignal(GetTree(), SceneTree.SignalName.ProcessFrame);
         }
 
-        HideExcludedHoles(width, height, length);
-        DisableColliders(false);
+        CallDeferred("HideExcludedHoles", width, height, length);
+        CallDeferred("DisableColliders", false);
     }
 
     public void RemoveHoles()

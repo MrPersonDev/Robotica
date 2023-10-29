@@ -218,7 +218,8 @@ public partial class Parts : Node3D
 
         try
         {
-            await part.CreateHoles(new List<Hole>(holeList));
+            await Task.Run(() => part.CreateHoles(new List<Hole>(holeList)));
+            // await part.CreateHoles(new List<Hole>(holeList));
         }
         finally
         {
