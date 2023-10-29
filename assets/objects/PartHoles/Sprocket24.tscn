@@ -1,0 +1,156 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="1_nkmx2"]
+[ext_resource type="Script" path="res://src/part/TwoSidedHole.cs" id="2_rho6p"]
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="3_hcr6n"]
+
+[node name="" type="Node3D"]
+
+[node name="TwoSidedSquareHole" type="Node3D" parent="." instance=ExtResource("1_nkmx2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.93821, 1.94777, -0.314786)
+script = ExtResource("2_rho6p")
+length = 0.611
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+width = 0.75
+isDefaultHole = true
+
+[node name="TwoSidedCircleHole" type="Node3D" parent="." instance=ExtResource("3_hcr6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4388, 1.94833, -0.315658)
+script = ExtResource("2_rho6p")
+length = 0.169
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+
+[node name="TwoSidedCircleHole2" type="Node3D" parent="." instance=ExtResource("3_hcr6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9388, 2.44833, -0.315658)
+script = ExtResource("2_rho6p")
+length = 0.169
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+
+[node name="TwoSidedCircleHole3" type="Node3D" parent="." instance=ExtResource("3_hcr6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4388, 1.94833, -0.315658)
+script = ExtResource("2_rho6p")
+length = 0.169
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+
+[node name="TwoSidedCircleHole4" type="Node3D" parent="." instance=ExtResource("3_hcr6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9388, 1.44833, -0.315658)
+script = ExtResource("2_rho6p")
+length = 0.169
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+
+[node name="TwoSidedCircleHole5" type="Node3D" parent="." instance=ExtResource("3_hcr6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4388, 1.44833, -0.315658)
+script = ExtResource("2_rho6p")
+length = 0.169
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+
+[node name="TwoSidedCircleHole6" type="Node3D" parent="." instance=ExtResource("3_hcr6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9388, 0.948332, -0.315658)
+script = ExtResource("2_rho6p")
+length = 0.169
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+
+[node name="TwoSidedCircleHole7" type="Node3D" parent="." instance=ExtResource("3_hcr6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4388, 1.44833, -0.315658)
+script = ExtResource("2_rho6p")
+length = 0.169
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+
+[node name="TwoSidedCircleHole8" type="Node3D" parent="." instance=ExtResource("3_hcr6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.938803, 1.94833, -0.315658)
+script = ExtResource("2_rho6p")
+length = 0.169
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+
+[node name="TwoSidedCircleHole9" type="Node3D" parent="." instance=ExtResource("3_hcr6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4388, 2.44833, -0.315658)
+script = ExtResource("2_rho6p")
+length = 0.169
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+
+[node name="TwoSidedCircleHole10" type="Node3D" parent="." instance=ExtResource("3_hcr6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9388, 2.94833, -0.315658)
+script = ExtResource("2_rho6p")
+length = 0.169
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+
+[node name="TwoSidedCircleHole11" type="Node3D" parent="." instance=ExtResource("3_hcr6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4388, 2.44833, -0.315658)
+script = ExtResource("2_rho6p")
+length = 0.169
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+
+[node name="TwoSidedCircleHole12" type="Node3D" parent="." instance=ExtResource("3_hcr6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9388, 1.94833, -0.315658)
+script = ExtResource("2_rho6p")
+length = 0.169
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+
+[node name="TwoSidedCircleHole13" type="Node3D" parent="." instance=ExtResource("3_hcr6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9388, 2.44833, -0.315658)
+script = ExtResource("2_rho6p")
+length = 0.169
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+
+[node name="TwoSidedCircleHole14" type="Node3D" parent="." instance=ExtResource("3_hcr6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4388, 2.94833, -0.315658)
+script = ExtResource("2_rho6p")
+length = 0.169
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+
+[node name="TwoSidedCircleHole15" type="Node3D" parent="." instance=ExtResource("3_hcr6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4388, 2.94833, -0.315658)
+script = ExtResource("2_rho6p")
+length = 0.169
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+
+[node name="TwoSidedCircleHole16" type="Node3D" parent="." instance=ExtResource("3_hcr6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.938803, 2.44833, -0.315658)
+script = ExtResource("2_rho6p")
+length = 0.169
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+
+[node name="TwoSidedCircleHole17" type="Node3D" parent="." instance=ExtResource("3_hcr6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.938803, 1.44833, -0.315658)
+script = ExtResource("2_rho6p")
+length = 0.169
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+
+[node name="TwoSidedCircleHole18" type="Node3D" parent="." instance=ExtResource("3_hcr6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4388, 0.948332, -0.315658)
+script = ExtResource("2_rho6p")
+length = 0.169
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+
+[node name="TwoSidedCircleHole19" type="Node3D" parent="." instance=ExtResource("3_hcr6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4388, 0.948332, -0.315658)
+script = ExtResource("2_rho6p")
+length = 0.169
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+
+[node name="TwoSidedCircleHole20" type="Node3D" parent="." instance=ExtResource("3_hcr6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9388, 1.44833, -0.315658)
+script = ExtResource("2_rho6p")
+length = 0.169
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")

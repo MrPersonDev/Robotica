@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://src/part/Part.cs" id="1_21nsp"]
+[ext_resource type="PackedScene" path="res://assets/objects/Insert.tscn" id="2_l04vn"]
+[ext_resource type="Script" path="res://src/part/Insert.cs" id="3_0iw01"]
+[ext_resource type="PackedScene" path="res://assets/objects/MeshCutter.tscn" id="4_0ve8j"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Connector Pins/V5_Robot_Brain_Mounting_Flange__Short___276-4810-002_.obj" id="5_utkau"]
+[ext_resource type="Script" path="res://src/mesh_cutter/MeshCutter.cs" id="6_xaasy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j3iw3"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0)
+
+[node name="Part" type="Node3D"]
+script = ExtResource("1_21nsp")
+partMeshPath = NodePath("MeshCutter")
+additionalMeshesPath = NodePath("AdditionalMeshes")
+centerPath = NodePath("Center")
+holesPath = NodePath("Holes")
+insertsPath = NodePath("Inserts")
+
+[node name="Center" type="Node3D" parent="."]
+
+[node name="Holes" type="Node3D" parent="."]
+top_level = true
+visible = false
+
+[node name="Inserts" type="Node3D" parent="."]
+top_level = true
+
+[node name="Insert" type="Area3D" parent="Inserts" groups=["INSERT_COLLIDER"] instance=ExtResource("2_l04vn")]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.213315, 0.979257, -0.623066)
+script = ExtResource("3_0iw01")
+length = 0.213
+width = 0.1
+colliderPath = NodePath("CollisionShape3D")
+
+[node name="Insert2" type="Area3D" parent="Inserts" groups=["INSERT_COLLIDER"] instance=ExtResource("2_l04vn")]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.213315, 2.47926, -0.623066)
+script = ExtResource("3_0iw01")
+length = 0.213
+width = 0.1
+colliderPath = NodePath("CollisionShape3D")
+
+[node name="MeshCutter" type="MeshInstance3D" parent="." groups=["PART_COLLIDER"] instance=ExtResource("4_0ve8j")]
+visible = false
+material_overlay = SubResource("StandardMaterial3D_j3iw3")
+mesh = ExtResource("5_utkau")
+script = ExtResource("6_xaasy")
+
+[node name="AdditionalMeshes" type="Node3D" parent="." groups=["PART_COLLIDER"]]
+visible = false

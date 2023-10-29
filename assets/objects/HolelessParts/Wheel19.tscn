@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://src/part/Part.cs" id="1_bfe1y"]
+[ext_resource type="PackedScene" path="res://assets/objects/MeshCutter.tscn" id="2_y4afx"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Wheel/2_75_Anti-Static_Wheel_275 (220mm Travel) Anti-Static Wheel (276-8098).res" id="3_g4vuv"]
+[ext_resource type="Script" path="res://src/mesh_cutter/MeshCutter.cs" id="4_ideel"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kvbud"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0)
+
+[node name="Part" type="Node3D"]
+script = ExtResource("1_bfe1y")
+partMeshPath = NodePath("MeshCutter")
+additionalMeshesPath = NodePath("AdditionalMeshes")
+centerPath = NodePath("Center")
+holesPath = NodePath("Holes")
+insertsPath = NodePath("Inserts")
+
+[node name="Center" type="Node3D" parent="."]
+
+[node name="Holes" type="Node3D" parent="."]
+top_level = true
+visible = false
+
+[node name="Inserts" type="Node3D" parent="."]
+top_level = true
+
+[node name="MeshCutter" type="MeshInstance3D" parent="." groups=["PART_COLLIDER"] instance=ExtResource("2_y4afx")]
+visible = false
+material_overlay = SubResource("StandardMaterial3D_kvbud")
+mesh = ExtResource("3_g4vuv")
+script = ExtResource("4_ideel")
+
+[node name="AdditionalMeshes" type="Node3D" parent="." groups=["PART_COLLIDER"]]
+visible = false

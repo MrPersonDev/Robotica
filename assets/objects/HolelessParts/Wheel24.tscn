@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://src/part/Part.cs" id="1_o0x85"]
+[ext_resource type="PackedScene" path="res://assets/objects/MeshCutter.tscn" id="2_lebmt"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Wheel/4_Anti-Static_Wheel_4 (320mm Travel) Anti-Static Wheel (2-Pack) (276-8103).res" id="3_0ie7b"]
+[ext_resource type="Script" path="res://src/mesh_cutter/MeshCutter.cs" id="4_7nj1o"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Gear/Metal_Shaft_Inserts__276-3881-002_.obj" id="5_m0awc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8681q"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0)
+
+[node name="Part" type="Node3D"]
+script = ExtResource("1_o0x85")
+partMeshPath = NodePath("MeshCutter")
+additionalMeshesPath = NodePath("AdditionalMeshes")
+centerPath = NodePath("Center")
+holesPath = NodePath("Holes")
+insertsPath = NodePath("Inserts")
+
+[node name="Center" type="Node3D" parent="."]
+
+[node name="Holes" type="Node3D" parent="."]
+top_level = true
+visible = false
+
+[node name="Inserts" type="Node3D" parent="."]
+top_level = true
+
+[node name="MeshCutter" type="MeshInstance3D" parent="." groups=["PART_COLLIDER"] instance=ExtResource("2_lebmt")]
+visible = false
+material_overlay = SubResource("StandardMaterial3D_8681q")
+mesh = ExtResource("3_0ie7b")
+script = ExtResource("4_7nj1o")
+
+[node name="AdditionalMeshes" type="Node3D" parent="." groups=["PART_COLLIDER"]]
+visible = false
+
+[node name="CSGMesh3D" type="MeshInstance3D" parent="AdditionalMeshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.842, 1.086, -0.237397)
+mesh = ExtResource("5_m0awc")
+
+[node name="CSGMesh3D2" type="MeshInstance3D" parent="AdditionalMeshes"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.425, 1.086, -0.846251)
+mesh = ExtResource("5_m0awc")

@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://src/part/Part.cs" id="1_si04x"]
+[ext_resource type="PackedScene" path="res://assets/objects/MeshCutter.tscn" id="2_7pfm6"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Sprocket/40T_Sprocket__6P__276-8331_.obj" id="3_al22u"]
+[ext_resource type="Script" path="res://src/mesh_cutter/MeshCutter.cs" id="4_y1b74"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Gear/Metal_Shaft_Inserts__276-3881-002_.obj" id="5_d3vad"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1yhg2"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0)
+
+[node name="Part" type="Node3D"]
+script = ExtResource("1_si04x")
+partMeshPath = NodePath("MeshCutter")
+additionalMeshesPath = NodePath("AdditionalMeshes")
+centerPath = NodePath("Center")
+holesPath = NodePath("Holes")
+insertsPath = NodePath("Inserts")
+
+[node name="Center" type="Node3D" parent="."]
+
+[node name="Holes" type="Node3D" parent="."]
+top_level = true
+visible = false
+
+[node name="Inserts" type="Node3D" parent="."]
+top_level = true
+
+[node name="MeshCutter" type="MeshInstance3D" parent="." groups=["PART_COLLIDER"] instance=ExtResource("2_7pfm6")]
+visible = false
+material_overlay = SubResource("StandardMaterial3D_1yhg2")
+mesh = ExtResource("3_al22u")
+script = ExtResource("4_y1b74")
+
+[node name="AdditionalMeshes" type="Node3D" parent="." groups=["PART_COLLIDER"]]
+visible = false
+
+[node name="CSGMesh3D" type="MeshInstance3D" parent="AdditionalMeshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.146392, 0.154643, -0.0104019)
+mesh = ExtResource("5_d3vad")
+
+[node name="CSGMesh3D2" type="MeshInstance3D" parent="AdditionalMeshes"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.73089, 0.154642, -0.620301)
+mesh = ExtResource("5_d3vad")

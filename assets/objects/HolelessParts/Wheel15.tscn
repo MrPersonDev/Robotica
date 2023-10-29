@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://src/part/Part.cs" id="1_dlx8p"]
+[ext_resource type="PackedScene" path="res://assets/objects/MeshCutter.tscn" id="2_8q24k"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Wheel/5_Wheel_5 Wheel (276-1498).res" id="3_fn6n3"]
+[ext_resource type="Script" path="res://src/mesh_cutter/MeshCutter.cs" id="4_8iya3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tvgyn"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0)
+
+[node name="Part" type="Node3D"]
+script = ExtResource("1_dlx8p")
+partMeshPath = NodePath("MeshCutter")
+additionalMeshesPath = NodePath("AdditionalMeshes")
+centerPath = NodePath("Center")
+holesPath = NodePath("Holes")
+insertsPath = NodePath("Inserts")
+
+[node name="Center" type="Node3D" parent="."]
+
+[node name="Holes" type="Node3D" parent="."]
+top_level = true
+visible = false
+
+[node name="Inserts" type="Node3D" parent="."]
+top_level = true
+
+[node name="MeshCutter" type="MeshInstance3D" parent="." groups=["PART_COLLIDER"] instance=ExtResource("2_8q24k")]
+visible = false
+material_overlay = SubResource("StandardMaterial3D_tvgyn")
+mesh = ExtResource("3_fn6n3")
+script = ExtResource("4_8iya3")
+
+[node name="AdditionalMeshes" type="Node3D" parent="." groups=["PART_COLLIDER"]]
+visible = false

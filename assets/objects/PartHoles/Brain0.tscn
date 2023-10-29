@@ -1,0 +1,170 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/OneSidedCircleHole.tscn" id="1_so3jn"]
+[ext_resource type="Script" path="res://src/part/OneSidedHole.cs" id="2_w0th6"]
+
+[node name="" type="Node3D"]
+
+[node name="OneSidedCircleHole" type="Node3D" parent="." instance=ExtResource("1_so3jn")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.0359409, 1.22615, -4.32065)
+script = ExtResource("2_w0th6")
+bodyPath = NodePath("HoleBody")
+isFastener = true
+
+[node name="OneSidedCircleHole2" type="Node3D" parent="." instance=ExtResource("1_so3jn")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.0359411, 1.22615, -1.32065)
+script = ExtResource("2_w0th6")
+bodyPath = NodePath("HoleBody")
+isFastener = true
+
+[node name="OneSidedCircleHole3" type="Node3D" parent="." instance=ExtResource("1_so3jn")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.0359411, 2.72854, -1.32065)
+script = ExtResource("2_w0th6")
+bodyPath = NodePath("HoleBody")
+isFastener = true
+
+[node name="OneSidedCircleHole13" type="Node3D" parent="." instance=ExtResource("1_so3jn")]
+transform = Transform3D(1.91068e-15, -1, -4.37114e-08, -4.37114e-08, -4.37114e-08, 1, -1, 0, -4.37114e-08, 0.189428, 3.93535, -4.32065)
+script = ExtResource("2_w0th6")
+bodyPath = NodePath("HoleBody")
+isFastener = true
+
+[node name="OneSidedCircleHole14" type="Node3D" parent="." instance=ExtResource("1_so3jn")]
+transform = Transform3D(1.91068e-15, -1, -4.37114e-08, -4.37114e-08, -4.37114e-08, 1, -1, 0, -4.37114e-08, 0.189428, 3.93535, -3.82065)
+script = ExtResource("2_w0th6")
+bodyPath = NodePath("HoleBody")
+isFastener = true
+
+[node name="OneSidedCircleHole15" type="Node3D" parent="." instance=ExtResource("1_so3jn")]
+transform = Transform3D(1.91068e-15, -1, -4.37114e-08, -4.37114e-08, -4.37114e-08, 1, -1, 0, -4.37114e-08, 0.189428, 3.93535, -3.32065)
+script = ExtResource("2_w0th6")
+bodyPath = NodePath("HoleBody")
+isFastener = true
+
+[node name="OneSidedCircleHole16" type="Node3D" parent="." instance=ExtResource("1_so3jn")]
+transform = Transform3D(1.91068e-15, -1, -4.37114e-08, -4.37114e-08, -4.37114e-08, 1, -1, 0, -4.37114e-08, 0.189428, 3.93535, -2.82065)
+script = ExtResource("2_w0th6")
+bodyPath = NodePath("HoleBody")
+isFastener = true
+
+[node name="OneSidedCircleHole17" type="Node3D" parent="." instance=ExtResource("1_so3jn")]
+transform = Transform3D(1.91068e-15, -1, -4.37114e-08, -4.37114e-08, -4.37114e-08, 1, -1, 0, -4.37114e-08, 0.189428, 3.93535, -2.32065)
+script = ExtResource("2_w0th6")
+bodyPath = NodePath("HoleBody")
+isFastener = true
+
+[node name="OneSidedCircleHole18" type="Node3D" parent="." instance=ExtResource("1_so3jn")]
+transform = Transform3D(1.91068e-15, -1, -4.37114e-08, -4.37114e-08, -4.37114e-08, 1, -1, 0, -4.37114e-08, 0.189428, 3.93535, -1.82065)
+script = ExtResource("2_w0th6")
+bodyPath = NodePath("HoleBody")
+isFastener = true
+
+[node name="OneSidedCircleHole19" type="Node3D" parent="." instance=ExtResource("1_so3jn")]
+transform = Transform3D(1.91068e-15, -1, -4.37114e-08, -4.37114e-08, -4.37114e-08, 1, -1, 0, -4.37114e-08, 0.189428, 3.93535, -1.32065)
+script = ExtResource("2_w0th6")
+bodyPath = NodePath("HoleBody")
+isFastener = true
+
+[node name="OneSidedCircleHole20" type="Node3D" parent="." instance=ExtResource("1_so3jn")]
+transform = Transform3D(-5.73206e-15, 1, 1.31134e-07, 4.37114e-08, 1.31134e-07, -1, -1, 0, -4.37114e-08, 0.189428, 0.0165053, -4.32065)
+script = ExtResource("2_w0th6")
+bodyPath = NodePath("HoleBody")
+isFastener = true
+
+[node name="OneSidedCircleHole21" type="Node3D" parent="." instance=ExtResource("1_so3jn")]
+transform = Transform3D(-5.73206e-15, 1, 1.31134e-07, 4.37114e-08, 1.31134e-07, -1, -1, 0, -4.37114e-08, 0.189428, 0.0165053, -3.82065)
+script = ExtResource("2_w0th6")
+bodyPath = NodePath("HoleBody")
+isFastener = true
+
+[node name="OneSidedCircleHole22" type="Node3D" parent="." instance=ExtResource("1_so3jn")]
+transform = Transform3D(-5.73206e-15, 1, 1.31134e-07, 4.37114e-08, 1.31134e-07, -1, -1, 0, -4.37114e-08, 0.189428, 0.0165053, -3.32065)
+script = ExtResource("2_w0th6")
+bodyPath = NodePath("HoleBody")
+isFastener = true
+
+[node name="OneSidedCircleHole23" type="Node3D" parent="." instance=ExtResource("1_so3jn")]
+transform = Transform3D(-5.73206e-15, 1, 1.31134e-07, 4.37114e-08, 1.31134e-07, -1, -1, 0, -4.37114e-08, 0.189428, 0.0165053, -2.82065)
+script = ExtResource("2_w0th6")
+bodyPath = NodePath("HoleBody")
+isFastener = true
+
+[node name="OneSidedCircleHole24" type="Node3D" parent="." instance=ExtResource("1_so3jn")]
+transform = Transform3D(-5.73206e-15, 1, 1.31134e-07, 4.37114e-08, 1.31134e-07, -1, -1, 0, -4.37114e-08, 0.189428, 0.0165053, -2.32065)
+script = ExtResource("2_w0th6")
+bodyPath = NodePath("HoleBody")
+isFastener = true
+
+[node name="OneSidedCircleHole25" type="Node3D" parent="." instance=ExtResource("1_so3jn")]
+transform = Transform3D(-5.73206e-15, 1, 1.31134e-07, 4.37114e-08, 1.31134e-07, -1, -1, 0, -4.37114e-08, 0.189428, 0.0165053, -1.82065)
+script = ExtResource("2_w0th6")
+bodyPath = NodePath("HoleBody")
+isFastener = true
+
+[node name="OneSidedCircleHole26" type="Node3D" parent="." instance=ExtResource("1_so3jn")]
+transform = Transform3D(-5.73206e-15, 1, 1.31134e-07, 4.37114e-08, 1.31134e-07, -1, -1, 0, -4.37114e-08, 0.189428, 0.0165053, -1.32065)
+script = ExtResource("2_w0th6")
+bodyPath = NodePath("HoleBody")
+isFastener = true
+
+[node name="OneSidedCircleHole4" type="Node3D" parent="." instance=ExtResource("1_so3jn")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.0359409, 2.72854, -4.32065)
+script = ExtResource("2_w0th6")
+bodyPath = NodePath("HoleBody")
+isFastener = true
+
+[node name="OneSidedCircleHole5" type="Node3D" parent="." instance=ExtResource("1_so3jn")]
+transform = Transform3D(1, 0, 2.38419e-07, 0, 1, 0, -2.38419e-07, 0, 1, 0.190303, 2.72653, -0.111058)
+script = ExtResource("2_w0th6")
+bodyPath = NodePath("HoleBody")
+width = 0.975
+isFastener = true
+
+[node name="OneSidedCircleHole6" type="Node3D" parent="." instance=ExtResource("1_so3jn")]
+transform = Transform3D(1, 0, 2.38419e-07, 0, 1, 0, -2.38419e-07, 0, 1, 0.190303, 2.22653, -0.111058)
+script = ExtResource("2_w0th6")
+bodyPath = NodePath("HoleBody")
+width = 0.975
+isFastener = true
+
+[node name="OneSidedCircleHole7" type="Node3D" parent="." instance=ExtResource("1_so3jn")]
+transform = Transform3D(1, 0, 2.38419e-07, 0, 1, 0, -2.38419e-07, 0, 1, 0.190303, 1.72653, -0.111058)
+script = ExtResource("2_w0th6")
+bodyPath = NodePath("HoleBody")
+width = 0.975
+isFastener = true
+
+[node name="OneSidedCircleHole8" type="Node3D" parent="." instance=ExtResource("1_so3jn")]
+transform = Transform3D(1, 0, 2.38419e-07, 0, 1, 0, -2.38419e-07, 0, 1, 0.190303, 1.22653, -0.111058)
+script = ExtResource("2_w0th6")
+bodyPath = NodePath("HoleBody")
+width = 0.975
+isFastener = true
+
+[node name="OneSidedCircleHole9" type="Node3D" parent="." instance=ExtResource("1_so3jn")]
+transform = Transform3D(-1, 0, -3.25842e-07, 0, 1, 0, 3.25842e-07, 0, -1, 0.190303, 2.72653, -5.52799)
+script = ExtResource("2_w0th6")
+bodyPath = NodePath("HoleBody")
+width = 0.975
+isFastener = true
+
+[node name="OneSidedCircleHole10" type="Node3D" parent="." instance=ExtResource("1_so3jn")]
+transform = Transform3D(-1, 0, -3.25842e-07, 0, 1, 0, 3.25842e-07, 0, -1, 0.190303, 2.22653, -5.52799)
+script = ExtResource("2_w0th6")
+bodyPath = NodePath("HoleBody")
+width = 0.975
+isFastener = true
+
+[node name="OneSidedCircleHole11" type="Node3D" parent="." instance=ExtResource("1_so3jn")]
+transform = Transform3D(-1, 0, -3.25842e-07, 0, 1, 0, 3.25842e-07, 0, -1, 0.190303, 1.72653, -5.52799)
+script = ExtResource("2_w0th6")
+bodyPath = NodePath("HoleBody")
+width = 0.975
+isFastener = true
+
+[node name="OneSidedCircleHole12" type="Node3D" parent="." instance=ExtResource("1_so3jn")]
+transform = Transform3D(-1, 0, -3.25842e-07, 0, 1, 0, 3.25842e-07, 0, -1, 0.190303, 1.22653, -5.52799)
+script = ExtResource("2_w0th6")
+bodyPath = NodePath("HoleBody")
+width = 0.975
+isFastener = true

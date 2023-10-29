@@ -39,26 +39,22 @@ public partial class PartsList : PanelContainer
     {
         List<PartObject> partObjects = partOption.GetPartObjects();
 
-        foreach (PartObject partObject in partObjects)
-            GetHoleArrayFromPartObject(partOption, partObject);
+        for (int i = 0; i < partObjects.Count; i++)
+            GetHoleArrayFromPartObject(partOption, partObjects[i], i);
 
         Action buttonPressedAction = GetPartOptionClickedAction(partOption);
         partOption.Connect(Button.SignalName.Pressed, Callable.From(buttonPressedAction));
     }
-    
-    private String GetHashName(PartOption partOption, PartObject partObject) {
-        return partOption.GetName() + partObject.GetName();
-    }
 
-    private String GetHolelessPartPath(PartOption partOption, PartObject partObject) {
-        return holelessPartsPath + GetHashName(partOption, partObject) + ".tscn";
+    private String GetHolelessPartPath(PartOption partOption, PartObject partObject, int idx) {
+        return holelessPartsPath + partOption.GetName() + idx.ToString() + ".tscn";
     }
     
-    private String GetPartHolePath(PartOption partOption, PartObject partObject) {
-        return partHolesPath + GetHashName(partOption, partObject) + ".tscn";
+    private String GetPartHolePath(PartOption partOption, PartObject partObject, int idx) {
+        return partHolesPath + partOption.GetName() + idx.ToString() + ".tscn";
     }
     
-    private void GenerateHolelessPart(PartOption partOption, PartObject partObject)
+    private void GenerateHolelessPart(PartOption partOption, PartObject partObject, int idx)
     {
         Part part = (Part)partObject.Object.Instantiate();
 
@@ -82,20 +78,20 @@ public partial class PartsList : PanelContainer
         holeScene.Pack(holeParent);
         partObjectWithoutHoles.Pack(part);
         
-        String holePath = GetPartHolePath(partOption, partObject);
-        String holelessPath = GetHolelessPartPath(partOption, partObject);
+        String holePath = GetPartHolePath(partOption, partObject, idx);
+        String holelessPath = GetHolelessPartPath(partOption, partObject, idx);
         
         ResourceSaver.Save(holeScene, holePath);
         ResourceSaver.Save(partObjectWithoutHoles, holelessPath);
     }
     
-    private void GetHoleArrayFromPartObject(PartOption partOption, PartObject partObject)
+    private void GetHoleArrayFromPartObject(PartOption partOption, PartObject partObject, int idx)
     {
-        String holePath = GetPartHolePath(partOption, partObject);
-        String holelessPath = GetHolelessPartPath(partOption, partObject);
+        String holePath = GetPartHolePath(partOption, partObject, idx);
+        String holelessPath = GetHolelessPartPath(partOption, partObject, idx);
         
-        if (!Godot.FileAccess.FileExists(holePath) || !Godot.FileAccess.FileExists(holelessPath))
-            GenerateHolelessPart(partOption, partObject);
+        if (!ResourceLoader.Exists(holePath) || !ResourceLoader.Exists(holelessPath))
+            GenerateHolelessPart(partOption, partObject, idx);
 
         PackedScene holeScene = (PackedScene)ResourceLoader.Load(holePath);
         PackedScene partObjectWithoutHoles = (PackedScene)ResourceLoader.Load(holelessPath);

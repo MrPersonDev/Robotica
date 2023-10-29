@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://src/part/Part.cs" id="1_knpgh"]
+[ext_resource type="PackedScene" path="res://assets/objects/MeshCutter.tscn" id="2_y2c86"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Flex Wheel/4_inch_flex_wheel.obj" id="3_c8vql"]
+[ext_resource type="Script" path="res://src/mesh_cutter/MeshCutter.cs" id="4_kjyqg"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Flex Wheel/VersaHub_v2.obj" id="5_7asb1"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Flex Wheel/VersaHex.obj" id="6_ynacs"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Gear/Metal_Shaft_Inserts__276-3881-002_.obj" id="7_h1du5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hw0pa"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0)
+
+[node name="Part" type="Node3D"]
+script = ExtResource("1_knpgh")
+partMeshPath = NodePath("MeshCutter")
+additionalMeshesPath = NodePath("AdditionalMeshes")
+centerPath = NodePath("Center")
+holesPath = NodePath("Holes")
+insertsPath = NodePath("Inserts")
+
+[node name="Center" type="Node3D" parent="."]
+
+[node name="Holes" type="Node3D" parent="."]
+top_level = true
+visible = false
+
+[node name="Inserts" type="Node3D" parent="."]
+top_level = true
+
+[node name="MeshCutter" type="MeshInstance3D" parent="." groups=["PART_COLLIDER"] instance=ExtResource("2_y2c86")]
+visible = false
+material_overlay = SubResource("StandardMaterial3D_hw0pa")
+mesh = ExtResource("3_c8vql")
+script = ExtResource("4_kjyqg")
+
+[node name="AdditionalMeshes" type="Node3D" parent="." groups=["PART_COLLIDER"]]
+visible = false
+
+[node name="CSGMesh3D" type="MeshInstance3D" parent="AdditionalMeshes"]
+mesh = ExtResource("5_7asb1")
+
+[node name="CSGMesh3D2" type="MeshInstance3D" parent="AdditionalMeshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.369023)
+mesh = ExtResource("6_ynacs")
+
+[node name="CSGMesh3D3" type="MeshInstance3D" parent="AdditionalMeshes"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.00486, 0, -1.62948)
+mesh = ExtResource("6_ynacs")
+
+[node name="CSGMesh3D4" type="MeshInstance3D" parent="AdditionalMeshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.213414, 0.20859, 0.142539)
+mesh = ExtResource("7_h1du5")
+
+[node name="CSGMesh3D5" type="MeshInstance3D" parent="AdditionalMeshes"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.80164, 0.2137, -1.40285)
+mesh = ExtResource("7_h1du5")

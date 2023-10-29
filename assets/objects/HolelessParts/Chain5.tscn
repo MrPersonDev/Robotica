@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://src/part/Part.cs" id="1_d47gs"]
+[ext_resource type="PackedScene" path="res://assets/objects/MeshCutter.tscn" id="2_iunmw"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Chain/Medium_Conveyor-belt_Inserts__276-2214-002__Medium Conveyor-belt Inserts (276-2214-002).res" id="3_5o6mv"]
+[ext_resource type="Script" path="res://src/mesh_cutter/MeshCutter.cs" id="4_0fusc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vb1wy"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0)
+
+[node name="Part" type="Node3D"]
+script = ExtResource("1_d47gs")
+isChain = true
+partMeshPath = NodePath("MeshCutter")
+additionalMeshesPath = NodePath("AdditionalMeshes")
+centerPath = NodePath("Center")
+holesPath = NodePath("Holes")
+insertsPath = NodePath("Inserts")
+chainRotationPath = NodePath("RotationPosition")
+chainHolePath = NodePath("HolePosition")
+
+[node name="Center" type="Node3D" parent="."]
+
+[node name="Holes" type="Node3D" parent="."]
+top_level = true
+visible = false
+
+[node name="Inserts" type="Node3D" parent="."]
+top_level = true
+
+[node name="MeshCutter" type="MeshInstance3D" parent="." groups=["PART_COLLIDER"] instance=ExtResource("2_iunmw")]
+visible = false
+material_overlay = SubResource("StandardMaterial3D_vb1wy")
+mesh = ExtResource("3_5o6mv")
+script = ExtResource("4_0fusc")
+
+[node name="AdditionalMeshes" type="Node3D" parent="." groups=["PART_COLLIDER"]]
+visible = false
+
+[node name="RotationPosition" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.386159, 0.747037, 0.0081725)
+
+[node name="HolePosition" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.748, 0)

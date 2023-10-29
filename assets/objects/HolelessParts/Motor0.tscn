@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://src/part/Part.cs" id="1_rn5im"]
+[ext_resource type="PackedScene" path="res://assets/objects/MeshCutter.tscn" id="2_rjfrd"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Control System/V5_Smart_Motor__276-4840__V5 Smart Motor (276-4840)002.res" id="3_w6e8u"]
+[ext_resource type="Script" path="res://src/mesh_cutter/MeshCutter.cs" id="4_fmin8"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Control System/Cartridge_Indicator.obj" id="5_cmm5m"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dcskw"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0)
+
+[node name="Part" type="Node3D"]
+script = ExtResource("1_rn5im")
+isMotor = true
+partMeshPath = NodePath("MeshCutter")
+additionalMeshesPath = NodePath("AdditionalMeshes")
+centerPath = NodePath("Center")
+holesPath = NodePath("Holes")
+insertsPath = NodePath("Inserts")
+
+[node name="Center" type="Node3D" parent="."]
+
+[node name="Holes" type="Node3D" parent="."]
+top_level = true
+visible = false
+
+[node name="Inserts" type="Node3D" parent="."]
+top_level = true
+
+[node name="MeshCutter" type="MeshInstance3D" parent="." groups=["PART_COLLIDER"] instance=ExtResource("2_rjfrd")]
+visible = false
+material_overlay = SubResource("StandardMaterial3D_dcskw")
+mesh = ExtResource("3_w6e8u")
+script = ExtResource("4_fmin8")
+
+[node name="AdditionalMeshes" type="Node3D" parent="." groups=["PART_COLLIDER"]]
+visible = false
+
+[node name="Cartridge Indicator" type="MeshInstance3D" parent="AdditionalMeshes"]
+mesh = ExtResource("5_cmm5m")

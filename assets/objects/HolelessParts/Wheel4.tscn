@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://src/part/Part.cs" id="1_fcywp"]
+[ext_resource type="PackedScene" path="res://assets/objects/MeshCutter.tscn" id="2_si46k"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Wheel/3_25_Omni-Directional_Wheel_325 Omni-Directional Wheel (276-3526).res" id="3_div8d"]
+[ext_resource type="Script" path="res://src/mesh_cutter/MeshCutter.cs" id="4_4bs1t"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Gear/Metal_Shaft_Inserts__276-3881-002_.obj" id="5_xwxwb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v2rc5"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0)
+
+[node name="Part" type="Node3D"]
+script = ExtResource("1_fcywp")
+partMeshPath = NodePath("MeshCutter")
+additionalMeshesPath = NodePath("AdditionalMeshes")
+centerPath = NodePath("Center")
+holesPath = NodePath("Holes")
+insertsPath = NodePath("Inserts")
+
+[node name="Center" type="Node3D" parent="."]
+
+[node name="Holes" type="Node3D" parent="."]
+top_level = true
+visible = false
+
+[node name="Inserts" type="Node3D" parent="."]
+top_level = true
+
+[node name="MeshCutter" type="MeshInstance3D" parent="." groups=["PART_COLLIDER"] instance=ExtResource("2_si46k")]
+visible = false
+material_overlay = SubResource("StandardMaterial3D_v2rc5")
+mesh = ExtResource("3_div8d")
+script = ExtResource("4_4bs1t")
+
+[node name="AdditionalMeshes" type="Node3D" parent="." groups=["PART_COLLIDER"]]
+visible = false
+
+[node name="CSGMesh3D" type="MeshInstance3D" parent="AdditionalMeshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.842, 1.086, -0.239204)
+mesh = ExtResource("5_xwxwb")
+
+[node name="CSGMesh3D2" type="MeshInstance3D" parent="AdditionalMeshes"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.425, 1.086, -0.853083)
+mesh = ExtResource("5_xwxwb")

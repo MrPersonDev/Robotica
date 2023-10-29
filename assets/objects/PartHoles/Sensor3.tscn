@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="1_byawf"]
+[ext_resource type="Script" path="res://src/part/TwoSidedHole.cs" id="2_g11er"]
+
+[node name="" type="Node3D"]
+
+[node name="TwoSidedCircleHole" type="Node3D" parent="." instance=ExtResource("1_byawf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.44703, 1.13704, -0.284051)
+script = ExtResource("2_g11er")
+length = 0.428
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")

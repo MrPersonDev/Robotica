@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://src/part/Part.cs" id="1_bb03f"]
+[ext_resource type="PackedScene" path="res://assets/objects/MeshCutter.tscn" id="2_ped6t"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Gear/24T_High_Strength_Gear_v2__276-7572_.obj" id="3_4vyw5"]
+[ext_resource type="Script" path="res://src/mesh_cutter/MeshCutter.cs" id="4_dt33d"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Gear/Long_Shaft_Insert.obj" id="5_lo4ps"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5mhco"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0)
+
+[node name="Part" type="Node3D"]
+script = ExtResource("1_bb03f")
+partMeshPath = NodePath("MeshCutter")
+additionalMeshesPath = NodePath("AdditionalMeshes")
+centerPath = NodePath("Center")
+holesPath = NodePath("Holes")
+insertsPath = NodePath("Inserts")
+
+[node name="Center" type="Node3D" parent="."]
+
+[node name="Holes" type="Node3D" parent="."]
+top_level = true
+visible = false
+
+[node name="Inserts" type="Node3D" parent="."]
+top_level = true
+
+[node name="MeshCutter" type="MeshInstance3D" parent="." groups=["PART_COLLIDER"] instance=ExtResource("2_ped6t")]
+visible = false
+material_overlay = SubResource("StandardMaterial3D_5mhco")
+mesh = ExtResource("3_4vyw5")
+script = ExtResource("4_dt33d")
+
+[node name="AdditionalMeshes" type="Node3D" parent="." groups=["PART_COLLIDER"]]
+visible = false
+
+[node name="Converter" type="MeshInstance3D" parent="AdditionalMeshes"]
+mesh = ExtResource("5_lo4ps")

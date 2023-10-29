@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://src/part/Part.cs" id="1_w3o6q"]
+[ext_resource type="PackedScene" path="res://assets/objects/Insert.tscn" id="2_cigs5"]
+[ext_resource type="Script" path="res://src/part/Insert.cs" id="3_g4ba0"]
+[ext_resource type="PackedScene" path="res://assets/objects/MeshCutter.tscn" id="4_do37d"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Shaft/12_High_Strength_Shaft__276-3524_.obj" id="5_jed6n"]
+[ext_resource type="Script" path="res://src/mesh_cutter/MeshCutter.cs" id="6_q2jps"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lxhct"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0)
+
+[node name="Part" type="Node3D"]
+script = ExtResource("1_w3o6q")
+isHighStrengthShaft = true
+enableMeshCutter = true
+partMeshPath = NodePath("MeshCutter")
+additionalMeshesPath = NodePath("AdditionalMeshes")
+centerPath = NodePath("Center")
+holesPath = NodePath("Holes")
+insertsPath = NodePath("Inserts")
+
+[node name="Center" type="Node3D" parent="."]
+
+[node name="Holes" type="Node3D" parent="."]
+top_level = true
+visible = false
+
+[node name="Inserts" type="Node3D" parent="."]
+top_level = true
+
+[node name="Insert" type="Area3D" parent="Inserts" groups=["INSERT_COLLIDER"] instance=ExtResource("2_cigs5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125593, 0.121987, -6)
+script = ExtResource("3_g4ba0")
+length = 12.0
+width = 0.2
+colliderPath = NodePath("CollisionShape3D")
+
+[node name="MeshCutter" type="MeshInstance3D" parent="." groups=["PART_COLLIDER"] instance=ExtResource("4_do37d")]
+visible = false
+material_overlay = SubResource("StandardMaterial3D_lxhct")
+mesh = ExtResource("5_jed6n")
+script = ExtResource("6_q2jps")
+
+[node name="AdditionalMeshes" type="Node3D" parent="." groups=["PART_COLLIDER"]]
+visible = false

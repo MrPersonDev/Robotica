@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://src/part/Part.cs" id="1_buu31"]
+[ext_resource type="PackedScene" path="res://assets/objects/MeshCutter.tscn" id="2_cjnmr"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Sensor/Limit_Switch__276-2174__Limit Switch (276-2174).res" id="3_8gx4g"]
+[ext_resource type="Script" path="res://src/mesh_cutter/MeshCutter.cs" id="4_okkbb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k6jqg"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0)
+
+[node name="Part" type="Node3D"]
+script = ExtResource("1_buu31")
+partMeshPath = NodePath("MeshCutter")
+additionalMeshesPath = NodePath("AdditionalMeshes")
+centerPath = NodePath("Center")
+holesPath = NodePath("Holes")
+insertsPath = NodePath("Inserts")
+
+[node name="Center" type="Node3D" parent="."]
+
+[node name="Holes" type="Node3D" parent="."]
+top_level = true
+visible = false
+
+[node name="Inserts" type="Node3D" parent="."]
+top_level = true
+
+[node name="MeshCutter" type="MeshInstance3D" parent="." groups=["PART_COLLIDER"] instance=ExtResource("2_cjnmr")]
+visible = false
+material_overlay = SubResource("StandardMaterial3D_k6jqg")
+mesh = ExtResource("3_8gx4g")
+script = ExtResource("4_okkbb")
+
+[node name="AdditionalMeshes" type="Node3D" parent="." groups=["PART_COLLIDER"]]
+visible = false

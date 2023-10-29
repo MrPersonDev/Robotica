@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://src/part/Part.cs" id="1_ifueh"]
+[ext_resource type="PackedScene" path="res://assets/objects/Insert.tscn" id="2_tpl35"]
+[ext_resource type="Script" path="res://src/part/Insert.cs" id="3_utp4y"]
+[ext_resource type="PackedScene" path="res://assets/objects/MeshCutter.tscn" id="4_l0xpx"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Standoff/_8-32_x_1_000_Star_Drive_Coupler__276-4988_.obj" id="5_fpmgi"]
+[ext_resource type="Script" path="res://src/mesh_cutter/MeshCutter.cs" id="6_64ric"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b3bmy"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0)
+
+[node name="Part" type="Node3D"]
+script = ExtResource("1_ifueh")
+partMeshPath = NodePath("MeshCutter")
+additionalMeshesPath = NodePath("AdditionalMeshes")
+centerPath = NodePath("Center")
+holesPath = NodePath("Holes")
+insertsPath = NodePath("Inserts")
+
+[node name="Center" type="Node3D" parent="."]
+
+[node name="Holes" type="Node3D" parent="."]
+top_level = true
+visible = false
+
+[node name="Inserts" type="Node3D" parent="."]
+top_level = true
+
+[node name="Insert" type="Area3D" parent="Inserts" groups=["INSERT_COLLIDER"] instance=ExtResource("2_tpl35")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0822857, 0.0819304, -0.499696)
+script = ExtResource("3_utp4y")
+length = 1.0
+width = 0.1
+colliderPath = NodePath("CollisionShape3D")
+
+[node name="MeshCutter" type="MeshInstance3D" parent="." groups=["PART_COLLIDER"] instance=ExtResource("4_l0xpx")]
+visible = false
+material_overlay = SubResource("StandardMaterial3D_b3bmy")
+mesh = ExtResource("5_fpmgi")
+script = ExtResource("6_64ric")
+
+[node name="AdditionalMeshes" type="Node3D" parent="." groups=["PART_COLLIDER"]]
+visible = false
