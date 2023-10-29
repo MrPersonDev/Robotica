@@ -516,6 +516,8 @@ public partial class Control : Node3D
 
         if (selectedHoleBody != null)
             pivot.GlobalPosition = selectedHoleBody.GetPos();
+        else if (actualSelection.HasParts())
+            pivot.GlobalPosition = actualSelection.GetCenter();
         else if (selection.HasParts())
             pivot.GlobalPosition = selection.GetCenter();
     }
