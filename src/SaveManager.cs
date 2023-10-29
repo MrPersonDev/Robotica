@@ -172,6 +172,7 @@ public static class SaveManager
         }
 
         partOption.Setup(part, parameters);
+        parts.RequireUpdate(part);
     }
 
     private static void LoadManualPartGroupings(Godot.Collections.Array<Godot.Collections.Array<String>> partGroupingArrays, Parts parts)
