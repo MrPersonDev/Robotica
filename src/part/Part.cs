@@ -537,13 +537,16 @@ public partial class Part : Moveable
 
     public void PretendDelete()
     {
-        HidePartMesh();
-        DisableColliders(true);
-        DisableMeshCollider();
-        if (partGroup != null)
-            partGroup.RemovePart(this, true);
+        try {
+            HidePartMesh();
+            DisableColliders(true);
+            DisableMeshCollider();
+            if (partGroup != null)
+                partGroup.RemovePart(this, true);
 
-        deleted = true;
+            deleted = true;
+        }
+        catch (System.ObjectDisposedException) { return; }
     }
 
     public void Undelete()

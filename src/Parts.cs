@@ -229,8 +229,8 @@ public partial class Parts : Node3D
 
     public async void DeletePart(Part part)
     {
-        // await Task.Run(() => DeletePartTask(part));
-        DeletePartTask(part);
+        await Task.Run(() => DeletePartTask(part));
+        // DeletePartTask(part);
     }
 
     public async void DeletePartTask(Part part)
@@ -238,17 +238,13 @@ public partial class Parts : Node3D
         if (!IsInstanceValid(part))
             return;
 
-        try
-        {
-            part.PretendDelete();
-        }
-        catch (System.ObjectDisposedException) { return; }
+        part.CallDeferred("PretendDelete");
 
         await holeSemaphore.WaitAsync();
 
         try
         {
-            part.Delete();
+            part.CallDeferred("Delete");
         }
         finally
         {
