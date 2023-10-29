@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://src/part/Part.cs" id="1_j1s65"]
+[ext_resource type="PackedScene" path="res://assets/objects/MeshCutter.tscn" id="2_cclni"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Bearing/Low_Profile_Bearing_Flat__276-8023_.obj" id="3_s4h30"]
+[ext_resource type="Script" path="res://src/mesh_cutter/MeshCutter.cs" id="4_xvs4u"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gl2k4"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0)
+
+[node name="Part" type="Node3D"]
+script = ExtResource("1_j1s65")
+partMeshPath = NodePath("MeshCutter")
+additionalMeshesPath = NodePath("AdditionalMeshes")
+centerPath = NodePath("Center")
+holesPath = NodePath("Holes")
+insertsPath = NodePath("Inserts")
+
+[node name="Center" type="Node3D" parent="."]
+
+[node name="Holes" type="Node3D" parent="."]
+top_level = true
+visible = false
+
+[node name="Inserts" type="Node3D" parent="."]
+top_level = true
+
+[node name="MeshCutter" type="MeshInstance3D" parent="." groups=["PART_COLLIDER"] instance=ExtResource("2_cclni")]
+visible = false
+material_overlay = SubResource("StandardMaterial3D_gl2k4")
+mesh = ExtResource("3_s4h30")
+script = ExtResource("4_xvs4u")
+
+[node name="AdditionalMeshes" type="Node3D" parent="." groups=["PART_COLLIDER"]]
+visible = false

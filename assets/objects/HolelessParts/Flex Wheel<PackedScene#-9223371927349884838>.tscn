@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://src/part/Part.cs" id="1_6jonk"]
+[ext_resource type="PackedScene" path="res://assets/objects/MeshCutter.tscn" id="2_vvn37"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Flex Wheel/2_inch_flex_wheel.obj" id="3_5ydwa"]
+[ext_resource type="Script" path="res://src/mesh_cutter/MeshCutter.cs" id="4_k8fs4"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Flex Wheel/VersaHex.obj" id="5_v2rfk"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Gear/Metal_Shaft_Inserts__276-3881-002_.obj" id="6_rp8fq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cx16l"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0)
+
+[node name="Part" type="Node3D"]
+script = ExtResource("1_6jonk")
+partMeshPath = NodePath("MeshCutter")
+additionalMeshesPath = NodePath("AdditionalMeshes")
+centerPath = NodePath("Center")
+holesPath = NodePath("Holes")
+insertsPath = NodePath("Inserts")
+
+[node name="Center" type="Node3D" parent="."]
+
+[node name="Holes" type="Node3D" parent="."]
+top_level = true
+visible = false
+
+[node name="Inserts" type="Node3D" parent="."]
+top_level = true
+
+[node name="MeshCutter" type="MeshInstance3D" parent="." groups=["PART_COLLIDER"] instance=ExtResource("2_vvn37")]
+visible = false
+material_overlay = SubResource("StandardMaterial3D_cx16l")
+mesh = ExtResource("3_5ydwa")
+script = ExtResource("4_k8fs4")
+
+[node name="AdditionalMeshes" type="Node3D" parent="." groups=["PART_COLLIDER"]]
+visible = false
+
+[node name="CSGMesh3D2" type="MeshInstance3D" parent="AdditionalMeshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.000378519)
+mesh = ExtResource("5_v2rfk")
+
+[node name="CSGMesh3D3" type="MeshInstance3D" parent="AdditionalMeshes"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.00486, 0, -1.25388)
+mesh = ExtResource("5_v2rfk")
+
+[node name="CSGMesh3D4" type="MeshInstance3D" parent="AdditionalMeshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.213414, 0.20859, -0.226105)
+mesh = ExtResource("6_rp8fq")
+
+[node name="CSGMesh3D5" type="MeshInstance3D" parent="AdditionalMeshes"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.80164, 0.2137, -1.02725)
+mesh = ExtResource("6_rp8fq")

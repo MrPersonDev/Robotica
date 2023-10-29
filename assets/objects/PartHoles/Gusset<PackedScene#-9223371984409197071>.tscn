@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="1_ky53l"]
+[ext_resource type="Script" path="res://src/part/TwoSidedHole.cs" id="2_gorhx"]
+
+[node name="" type="Node3D"]
+
+[node name="TwoSidedSquareHole" type="Node3D" parent="." instance=ExtResource("1_ky53l")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.205711, 0.0180431, -0.27788)
+script = ExtResource("2_gorhx")
+length = 0.021
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+
+[node name="TwoSidedSquareHole3" type="Node3D" parent="." instance=ExtResource("1_ky53l")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.705711, 0.0180431, -0.27788)
+script = ExtResource("2_gorhx")
+length = 0.021
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+isDefaultHole = true
+
+[node name="TwoSidedSquareHole4" type="Node3D" parent="." instance=ExtResource("1_ky53l")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.20571, 0.0180431, -0.27788)
+script = ExtResource("2_gorhx")
+length = 0.021
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+
+[node name="TwoSidedSquareHole2" type="Node3D" parent="." instance=ExtResource("1_ky53l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.705711, 0.703865, -0.0196492)
+script = ExtResource("2_gorhx")
+length = 0.021
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")

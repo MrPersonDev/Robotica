@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://src/part/Part.cs" id="1_8uici"]
+[ext_resource type="PackedScene" path="res://assets/objects/MeshCutter.tscn" id="2_brsyk"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Wheel/2_75_Omni-Directional_Anti-Static_Wheel_275 (220mm Travel) Omni-Directional Anti-Static Wheel (276-810.res" id="3_6c2oq"]
+[ext_resource type="Script" path="res://src/mesh_cutter/MeshCutter.cs" id="4_471f8"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Gear/Metal_Shaft_Inserts__276-3881-002_.obj" id="5_6xt0c"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pgdik"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0)
+
+[node name="Part" type="Node3D"]
+script = ExtResource("1_8uici")
+partMeshPath = NodePath("MeshCutter")
+additionalMeshesPath = NodePath("AdditionalMeshes")
+centerPath = NodePath("Center")
+holesPath = NodePath("Holes")
+insertsPath = NodePath("Inserts")
+
+[node name="Center" type="Node3D" parent="."]
+
+[node name="Holes" type="Node3D" parent="."]
+top_level = true
+visible = false
+
+[node name="Inserts" type="Node3D" parent="."]
+top_level = true
+
+[node name="MeshCutter" type="MeshInstance3D" parent="." groups=["PART_COLLIDER"] instance=ExtResource("2_brsyk")]
+visible = false
+material_overlay = SubResource("StandardMaterial3D_pgdik")
+mesh = ExtResource("3_6c2oq")
+script = ExtResource("4_471f8")
+
+[node name="AdditionalMeshes" type="Node3D" parent="." groups=["PART_COLLIDER"]]
+visible = false
+
+[node name="CSGMesh3D" type="MeshInstance3D" parent="AdditionalMeshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.842, 1.086, -0.208768)
+mesh = ExtResource("5_6xt0c")
+
+[node name="CSGMesh3D2" type="MeshInstance3D" parent="AdditionalMeshes"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.425, 1.086, -0.822647)
+mesh = ExtResource("5_6xt0c")

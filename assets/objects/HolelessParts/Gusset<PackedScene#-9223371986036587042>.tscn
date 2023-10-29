@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://src/part/Part.cs" id="1_vlfjh"]
+[ext_resource type="PackedScene" path="res://assets/objects/MeshCutter.tscn" id="2_vi744"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Gussets/60_Degree_Flat_Gusset__276-7760-001_.obj" id="3_m62fe"]
+[ext_resource type="Script" path="res://src/mesh_cutter/MeshCutter.cs" id="4_lbv4d"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yu7n1"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0)
+
+[node name="Part" type="Node3D"]
+script = ExtResource("1_vlfjh")
+partMeshPath = NodePath("MeshCutter")
+additionalMeshesPath = NodePath("AdditionalMeshes")
+centerPath = NodePath("Center")
+holesPath = NodePath("Holes")
+insertsPath = NodePath("Inserts")
+
+[node name="Center" type="Node3D" parent="."]
+
+[node name="Holes" type="Node3D" parent="."]
+top_level = true
+visible = false
+
+[node name="Inserts" type="Node3D" parent="."]
+top_level = true
+
+[node name="MeshCutter" type="MeshInstance3D" parent="." groups=["PART_COLLIDER"] instance=ExtResource("2_vi744")]
+visible = false
+material_overlay = SubResource("StandardMaterial3D_yu7n1")
+mesh = ExtResource("3_m62fe")
+script = ExtResource("4_lbv4d")
+
+[node name="AdditionalMeshes" type="Node3D" parent="." groups=["PART_COLLIDER"]]
+visible = false

@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://src/part/Part.cs" id="1_lmlgj"]
+[ext_resource type="PackedScene" path="res://assets/objects/MeshCutter.tscn" id="2_eww0d"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Nut Retainer/1-Post_Hex_Nut_Retainer_w__Bearing_Flat__276-6481_.obj" id="3_2u53q"]
+[ext_resource type="Script" path="res://src/mesh_cutter/MeshCutter.cs" id="4_a6cfp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d6ea1"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0)
+
+[node name="Part" type="Node3D"]
+script = ExtResource("1_lmlgj")
+partMeshPath = NodePath("MeshCutter")
+additionalMeshesPath = NodePath("AdditionalMeshes")
+centerPath = NodePath("Center")
+holesPath = NodePath("Holes")
+insertsPath = NodePath("Inserts")
+
+[node name="Center" type="Node3D" parent="."]
+
+[node name="Holes" type="Node3D" parent="."]
+top_level = true
+visible = false
+
+[node name="Inserts" type="Node3D" parent="."]
+top_level = true
+
+[node name="MeshCutter" type="MeshInstance3D" parent="." groups=["PART_COLLIDER"] instance=ExtResource("2_eww0d")]
+visible = false
+material_overlay = SubResource("StandardMaterial3D_d6ea1")
+mesh = ExtResource("3_2u53q")
+script = ExtResource("4_a6cfp")
+
+[node name="AdditionalMeshes" type="Node3D" parent="." groups=["PART_COLLIDER"]]
+visible = false

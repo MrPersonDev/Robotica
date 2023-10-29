@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="1_b4jgg"]
+[ext_resource type="Script" path="res://src/part/TwoSidedHole.cs" id="2_wmy5m"]
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/TwoSidedSquareHole.tscn" id="3_gfgr0"]
+
+[node name="" type="Node3D"]
+
+[node name="TwoSidedCircleHole" type="Node3D" parent="." instance=ExtResource("1_b4jgg")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -0.206039, 0.290534, 0.0448311)
+script = ExtResource("2_wmy5m")
+length = 0.035
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+
+[node name="TwoSidedCircleHole3" type="Node3D" parent="." instance=ExtResource("1_b4jgg")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -1.20606, 0.290534, 0.0448311)
+script = ExtResource("2_wmy5m")
+length = 0.035
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+
+[node name="TwoSidedSquareHole" type="Node3D" parent="." instance=ExtResource("3_gfgr0")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -0.705752, 0.289139, 0.0448311)
+script = ExtResource("2_wmy5m")
+length = 0.035
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+width = 0.75
+isDefaultHole = true
+
+[node name="TwoSidedSquareHole2" type="Node3D" parent="." instance=ExtResource("3_gfgr0")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -0.931402, 0.289139, 0.0448311)
+script = ExtResource("2_wmy5m")
+length = 0.035
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+width = 0.75
+
+[node name="TwoSidedSquareHole3" type="Node3D" parent="." instance=ExtResource("3_gfgr0")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -0.481349, 0.289139, 0.0448311)
+script = ExtResource("2_wmy5m")
+length = 0.035
+topBodyPath = NodePath("TopBody")
+bottomBodyPath = NodePath("BottomBody")
+width = 0.75

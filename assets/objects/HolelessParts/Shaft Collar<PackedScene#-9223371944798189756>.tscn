@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://src/part/Part.cs" id="1_22kjh"]
+[ext_resource type="PackedScene" path="res://assets/objects/MeshCutter.tscn" id="2_ldjbp"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Shaft Collar/Metal_Shaft_Collar.obj" id="3_651lv"]
+[ext_resource type="Script" path="res://src/mesh_cutter/MeshCutter.cs" id="4_mu5qs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cmwsm"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0)
+
+[node name="Part" type="Node3D"]
+script = ExtResource("1_22kjh")
+partMeshPath = NodePath("MeshCutter")
+additionalMeshesPath = NodePath("AdditionalMeshes")
+centerPath = NodePath("Center")
+holesPath = NodePath("Holes")
+insertsPath = NodePath("Inserts")
+
+[node name="Center" type="Node3D" parent="."]
+
+[node name="Holes" type="Node3D" parent="."]
+top_level = true
+visible = false
+
+[node name="Inserts" type="Node3D" parent="."]
+top_level = true
+
+[node name="MeshCutter" type="MeshInstance3D" parent="." groups=["PART_COLLIDER"] instance=ExtResource("2_ldjbp")]
+visible = false
+material_overlay = SubResource("StandardMaterial3D_cmwsm")
+mesh = ExtResource("3_651lv")
+script = ExtResource("4_mu5qs")
+
+[node name="AdditionalMeshes" type="Node3D" parent="." groups=["PART_COLLIDER"]]
+visible = false

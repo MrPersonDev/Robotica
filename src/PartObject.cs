@@ -9,4 +9,8 @@ public class PartObject
     {
         this.Object = scene;
     }
+
+    public String GetName() {
+        return Object.ToString();
+    }
 }

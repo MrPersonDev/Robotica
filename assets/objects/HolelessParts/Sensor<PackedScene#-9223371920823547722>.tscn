@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://src/part/Part.cs" id="1_eie3h"]
+[ext_resource type="PackedScene" path="res://assets/objects/MeshCutter.tscn" id="2_dxy83"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Sensor/Line_Tracker__276-2154__Line Tracker (276-2154).res" id="3_t1t8r"]
+[ext_resource type="Script" path="res://src/mesh_cutter/MeshCutter.cs" id="4_ddlfn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qnvki"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0)
+
+[node name="Part" type="Node3D"]
+script = ExtResource("1_eie3h")
+partMeshPath = NodePath("MeshCutter")
+additionalMeshesPath = NodePath("AdditionalMeshes")
+centerPath = NodePath("Center")
+holesPath = NodePath("Holes")
+insertsPath = NodePath("Inserts")
+
+[node name="Center" type="Node3D" parent="."]
+
+[node name="Holes" type="Node3D" parent="."]
+top_level = true
+visible = false
+
+[node name="Inserts" type="Node3D" parent="."]
+top_level = true
+
+[node name="MeshCutter" type="MeshInstance3D" parent="." groups=["PART_COLLIDER"] instance=ExtResource("2_dxy83")]
+visible = false
+material_overlay = SubResource("StandardMaterial3D_qnvki")
+mesh = ExtResource("3_t1t8r")
+script = ExtResource("4_ddlfn")
+
+[node name="AdditionalMeshes" type="Node3D" parent="." groups=["PART_COLLIDER"]]
+visible = false

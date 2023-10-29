@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/OneSidedSquareHole.tscn" id="1_r6awe"]
+[ext_resource type="Script" path="res://src/part/OneSidedHole.cs" id="2_oky01"]
+
+[node name="" type="Node3D"]
+
+[node name="OneSidedHole" type="Node3D" parent="." instance=ExtResource("1_r6awe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.123049, 0.114048, -6.00495)
+script = ExtResource("2_oky01")
+bodyPath = NodePath("HoleBody")
+isDefaultHole = true
+isNonInteractive = true

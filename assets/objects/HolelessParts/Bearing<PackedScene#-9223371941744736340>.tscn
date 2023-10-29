@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://src/part/Part.cs" id="1_brynb"]
+[ext_resource type="PackedScene" path="res://assets/objects/MeshCutter.tscn" id="2_ckxd5"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Bearing/Lock_Bar__276-2016-002_.obj" id="3_sqv60"]
+[ext_resource type="Script" path="res://src/mesh_cutter/MeshCutter.cs" id="4_y7wuk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nd0mk"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0)
+
+[node name="Part" type="Node3D"]
+script = ExtResource("1_brynb")
+partMeshPath = NodePath("MeshCutter")
+additionalMeshesPath = NodePath("AdditionalMeshes")
+centerPath = NodePath("Center")
+holesPath = NodePath("Holes")
+insertsPath = NodePath("Inserts")
+
+[node name="Center" type="Node3D" parent="."]
+
+[node name="Holes" type="Node3D" parent="."]
+top_level = true
+visible = false
+
+[node name="Inserts" type="Node3D" parent="."]
+top_level = true
+
+[node name="MeshCutter" type="MeshInstance3D" parent="." groups=["PART_COLLIDER"] instance=ExtResource("2_ckxd5")]
+visible = false
+material_overlay = SubResource("StandardMaterial3D_nd0mk")
+mesh = ExtResource("3_sqv60")
+script = ExtResource("4_y7wuk")
+
+[node name="AdditionalMeshes" type="Node3D" parent="." groups=["PART_COLLIDER"]]
+visible = false

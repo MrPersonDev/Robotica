@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://src/part/Part.cs" id="1_3nt7u"]
+[ext_resource type="PackedScene" path="res://assets/objects/Insert.tscn" id="2_2lfv1"]
+[ext_resource type="Script" path="res://src/part/Insert.cs" id="3_68xrv"]
+[ext_resource type="PackedScene" path="res://assets/objects/MeshCutter.tscn" id="4_4eua4"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Screw/_8-32_x_7_8_Star_Drive_Screw__276-4995__#8-32 x 7_8 Star Drive Screw (276-4995).res" id="5_rbq3v"]
+[ext_resource type="Script" path="res://src/mesh_cutter/MeshCutter.cs" id="6_tfmlc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cvxax"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0)
+
+[node name="Screw0_875" type="Node3D"]
+script = ExtResource("1_3nt7u")
+partMeshPath = NodePath("MeshCutter")
+additionalMeshesPath = NodePath("AdditionalMeshes")
+centerPath = NodePath("Center")
+holesPath = NodePath("Holes")
+insertsPath = NodePath("Inserts")
+
+[node name="Center" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.156219, 0.156533, 0.543462)
+
+[node name="Holes" type="Node3D" parent="."]
+top_level = true
+visible = false
+
+[node name="Inserts" type="Node3D" parent="."]
+top_level = true
+
+[node name="Insert" type="Area3D" parent="Inserts" groups=["INSERT_COLLIDER"] instance=ExtResource("2_2lfv1")]
+transform = Transform3D(-1, -9.31761e-22, -8.74228e-08, 0, 1, -1.06581e-14, 8.74228e-08, -1.06581e-14, -1, 0.15832, 0.158793, -0.512866)
+script = ExtResource("3_68xrv")
+length = 0.875
+width = 0.1
+colliderPath = NodePath("CollisionShape3D")
+
+[node name="MeshCutter" type="MeshInstance3D" parent="." groups=["PART_COLLIDER"] instance=ExtResource("4_4eua4")]
+visible = false
+material_overlay = SubResource("StandardMaterial3D_cvxax")
+mesh = ExtResource("5_rbq3v")
+script = ExtResource("6_tfmlc")
+
+[node name="AdditionalMeshes" type="Node3D" parent="." groups=["PART_COLLIDER"]]
+visible = false
