@@ -26,7 +26,7 @@ public partial class MeshCutter : MeshInstance3D
             if (prevMesh == null)
                 prevMesh = Mesh;
             else
-                Mesh = prevMesh;
+                CallDeferred("set_mesh", prevMesh);
 
             if (width != NO_CUT)
                 SetMeshSize(width, Vector3.Right);
