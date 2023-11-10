@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://src/part/Part.cs" id="1_iafl4"]
+[ext_resource type="PackedScene" path="res://assets/objects/MeshCutter.tscn" id="2_un6dw"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Pneumatics/Pneumatic_Reservoir_Assembly_Pneumatic Reservoir Assembly.res" id="3_xh180"]
+[ext_resource type="Script" path="res://src/mesh_cutter/MeshCutter.cs" id="4_pk0cw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xq2qh"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0)
+
+[node name="Part" type="Node3D"]
+script = ExtResource("1_iafl4")
+partMeshPath = NodePath("MeshCutter")
+additionalMeshesPath = NodePath("AdditionalMeshes")
+centerPath = NodePath("Center")
+holesPath = NodePath("Holes")
+insertsPath = NodePath("Inserts")
+
+[node name="Center" type="Node3D" parent="."]
+
+[node name="Holes" type="Node3D" parent="."]
+top_level = true
+visible = false
+
+[node name="Inserts" type="Node3D" parent="."]
+top_level = true
+
+[node name="MeshCutter" type="MeshInstance3D" parent="." groups=["PART_COLLIDER"] instance=ExtResource("2_un6dw")]
+visible = false
+material_overlay = SubResource("StandardMaterial3D_xq2qh")
+mesh = ExtResource("3_xh180")
+script = ExtResource("4_pk0cw")
+
+[node name="AdditionalMeshes" type="Node3D" parent="." groups=["PART_COLLIDER"]]
+visible = false

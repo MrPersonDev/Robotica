@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqni5sy6minpr"]
+
+[ext_resource type="PackedScene" uid="uid://cl5en1o2r4bqq" path="res://assets/objects/Part.tscn" id="1_gxcdn"]
+[ext_resource type="PackedScene" uid="uid://ckikj6lchnhtx" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="2_2xb66"]
+[ext_resource type="ArrayMesh" uid="uid://b1aa11c3a5jl5" path="res://assets/models/Pneumatics/Pressure_Regulator_Pressure Regulator.res" id="2_kytcn"]
+
+[node name="Part" instance=ExtResource("1_gxcdn")]
+
+[node name="TwoSidedCircleHole" parent="Holes" index="0" instance=ExtResource("2_2xb66")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.499708, 1.89436, -0.522234)
+length = 0.97
+width = 0.929
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("2_kytcn")

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://4vbo61ejdneh"]
+
+[ext_resource type="PackedScene" uid="uid://cl5en1o2r4bqq" path="res://assets/objects/Part.tscn" id="1_3d7e7"]
+[ext_resource type="PackedScene" uid="uid://ckikj6lchnhtx" path="res://assets/objects/Holes/TwoSidedCircleHole.tscn" id="2_qxo4w"]
+[ext_resource type="PackedScene" uid="uid://c4reyv6extm5i" path="res://assets/objects/Holes/OneSidedCircleHole.tscn" id="3_4rimv"]
+[ext_resource type="ArrayMesh" uid="uid://ddbnb0x8j8dte" path="res://assets/models/Pneumatics/Manifold_Assembly_Manifold Assembly.res" id="4_prjeq"]
+
+[node name="Part" instance=ExtResource("1_3d7e7")]
+
+[node name="TwoSidedCircleHole" parent="Holes" index="0" instance=ExtResource("2_qxo4w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02764, 0.342893, -0.504127)
+length = 0.978
+width = 0.95
+
+[node name="TwoSidedCircleHole2" parent="Holes" index="1" instance=ExtResource("2_qxo4w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18429, 0.146978, -0.504127)
+length = 0.978
+width = 0.95
+
+[node name="OneSidedCircleHole" parent="Holes" index="2" instance=ExtResource("3_4rimv")]
+transform = Transform3D(4.37114e-08, 8.74228e-08, -1, -8.74228e-08, -1, -8.74228e-08, -1, 8.74228e-08, -4.37114e-08, 1.43317, 0.343927, -0.739189)
+width = 1.087
+isFastener = true
+
+[node name="OneSidedCircleHole2" parent="Holes" index="3" instance=ExtResource("3_4rimv")]
+transform = Transform3D(4.37114e-08, 8.74228e-08, -1, -8.74228e-08, -1, -8.74228e-08, -1, 8.74228e-08, -4.37114e-08, 1.43317, 0.343927, -0.269684)
+width = 1.087
+isFastener = true
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("4_prjeq")

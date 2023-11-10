@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://bk3hpxa6tawec"]
+[gd_scene load_steps=36 format=3 uid="uid://bk3hpxa6tawec"]
 
 [ext_resource type="Script" path="res://src/ui/PartsList.cs" id="1_gq88v"]
 [ext_resource type="StyleBox" uid="uid://dwjnhtrvw2c3l" path="res://assets/ui/theme/panels/PartsListPanel.tres" id="1_im4ad"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://gp15y75svpwk" path="res://assets/ui/PartOptions/ConnectorPinOption.tscn" id="2_dcgqj"]
 [ext_resource type="PackedScene" uid="uid://hchnmwkcaojg" path="res://assets/ui/PartOptions/SprocketOption.tscn" id="2_u0f2x"]
 [ext_resource type="PackedScene" uid="uid://vhi4waqhsujp" path="res://assets/ui/PartOptions/ScrewOption.tscn" id="3_i5gop"]
+[ext_resource type="PackedScene" uid="uid://bawgwp1lvnqko" path="res://assets/ui/PartOptions/PneumaticsOption.tscn" id="3_w7bex"]
 [ext_resource type="PackedScene" uid="uid://4fuuf7qxnph6" path="res://assets/ui/PartOptions/GearOption.tscn" id="4_7k8f6"]
 [ext_resource type="PackedScene" uid="uid://d0ivx1yekk6qf" path="res://assets/ui/PartOptions/RailOption.tscn" id="5_2jrlv"]
 [ext_resource type="PackedScene" uid="uid://tjwh4heqahhy" path="res://assets/ui/PartOptions/ShaftOption.tscn" id="5_roewl"]
@@ -155,6 +156,9 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="SensorOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("23_mn3ig")]
+layout_mode = 2
+
+[node name="PneumaticsOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("3_w7bex")]
 layout_mode = 2
 
 [node name="BrainOption" parent="MarginContainer/VSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("20_fcokv")]

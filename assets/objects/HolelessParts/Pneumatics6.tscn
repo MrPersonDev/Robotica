@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://src/part/Part.cs" id="1_jsl2s"]
+[ext_resource type="PackedScene" path="res://assets/objects/Insert.tscn" id="2_yw3ku"]
+[ext_resource type="Script" path="res://src/part/Insert.cs" id="3_dnr1c"]
+[ext_resource type="PackedScene" path="res://assets/objects/MeshCutter.tscn" id="4_1b7ch"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Pneumatics/Air_Flow_Valve_Fitting_Air Flow Valve Fitting.res" id="5_hbp6k"]
+[ext_resource type="Script" path="res://src/mesh_cutter/MeshCutter.cs" id="6_hhfpb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kdtyy"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0)
+
+[node name="Part" type="Node3D"]
+script = ExtResource("1_jsl2s")
+partMeshPath = NodePath("MeshCutter")
+additionalMeshesPath = NodePath("AdditionalMeshes")
+centerPath = NodePath("Center")
+holesPath = NodePath("Holes")
+insertsPath = NodePath("Inserts")
+
+[node name="Center" type="Node3D" parent="."]
+
+[node name="Holes" type="Node3D" parent="."]
+top_level = true
+visible = false
+
+[node name="Inserts" type="Node3D" parent="."]
+top_level = true
+
+[node name="Insert" type="Area3D" parent="Inserts" groups=["INSERT_COLLIDER"] instance=ExtResource("2_yw3ku")]
+transform = Transform3D(1, 1.86353e-21, 1.74846e-07, 0, 1, -1.06581e-14, -1.74846e-07, 1.06581e-14, 1, 0.801981, 0.223618, -0.083408)
+script = ExtResource("3_dnr1c")
+length = 0.17
+width = 0.1
+colliderPath = NodePath("CollisionShape3D")
+
+[node name="MeshCutter" type="MeshInstance3D" parent="." groups=["PART_COLLIDER"] instance=ExtResource("4_1b7ch")]
+visible = false
+material_overlay = SubResource("StandardMaterial3D_kdtyy")
+mesh = ExtResource("5_hbp6k")
+script = ExtResource("6_hhfpb")
+
+[node name="AdditionalMeshes" type="Node3D" parent="." groups=["PART_COLLIDER"]]
+visible = false

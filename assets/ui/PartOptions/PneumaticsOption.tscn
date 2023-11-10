@@ -1,0 +1,33 @@
+[gd_scene load_steps=16 format=3 uid="uid://bawgwp1lvnqko"]
+
+[ext_resource type="PackedScene" uid="uid://jra6u2riunsq" path="res://assets/ui/PartOption.tscn" id="1_7i17k"]
+[ext_resource type="Script" path="res://src/part_option/PneumaticsOption.cs" id="2_fr48v"]
+[ext_resource type="PackedScene" uid="uid://cnxwjen2ulej" path="res://assets/objects/Parts/Pneumatics/AirTank.tscn" id="3_mwipt"]
+[ext_resource type="PackedScene" uid="uid://dh7k0busovil" path="res://assets/objects/Parts/Pneumatics/ValveStem.tscn" id="4_iij84"]
+[ext_resource type="PackedScene" uid="uid://bqni5sy6minpr" path="res://assets/objects/Parts/Pneumatics/Regulator.tscn" id="5_owgm1"]
+[ext_resource type="PackedScene" uid="uid://bu71t0u443q1r" path="res://assets/objects/Parts/Pneumatics/RegulatorBracket.tscn" id="6_ba0ai"]
+[ext_resource type="PackedScene" uid="uid://b4yb66amgiy7b" path="res://assets/objects/Parts/Pneumatics/StraightMaleFitting.tscn" id="7_i75gg"]
+[ext_resource type="PackedScene" uid="uid://b4rtif4feo3sy" path="res://assets/objects/Parts/Pneumatics/ElbowFitting.tscn" id="8_6tjx1"]
+[ext_resource type="PackedScene" uid="uid://geulo5j36gak" path="res://assets/objects/Parts/Pneumatics/AirFlowValveFitting.tscn" id="9_3vmu3"]
+[ext_resource type="PackedScene" uid="uid://gwl8pilyo8ub" path="res://assets/objects/Parts/Pneumatics/TeeFitting.tscn" id="10_cwjpw"]
+[ext_resource type="PackedScene" uid="uid://f70dk7qo1ah6" path="res://assets/objects/Parts/Pneumatics/Piston25mm.tscn" id="11_jd7q0"]
+[ext_resource type="PackedScene" uid="uid://bf4qtybxdcfqq" path="res://assets/objects/Parts/Pneumatics/Piston50mm.tscn" id="12_a3g0y"]
+[ext_resource type="PackedScene" uid="uid://o1rs3liiw18y" path="res://assets/objects/Parts/Pneumatics/Piston75mm.tscn" id="13_t50mu"]
+[ext_resource type="PackedScene" uid="uid://hu7mjvemion8" path="res://assets/objects/Parts/Pneumatics/ShutOffValve.tscn" id="14_dq4fq"]
+[ext_resource type="PackedScene" uid="uid://4vbo61ejdneh" path="res://assets/objects/Parts/Pneumatics/Solenoid.tscn" id="15_avke2"]
+
+[node name="PneumaticsOption" instance=ExtResource("1_7i17k")]
+script = ExtResource("2_fr48v")
+airTankPartScene = ExtResource("3_mwipt")
+valveStemPartScene = ExtResource("4_iij84")
+regulatorPartScene = ExtResource("5_owgm1")
+regulatorBracketPartScene = ExtResource("6_ba0ai")
+straightMaleFittingPartScene = ExtResource("7_i75gg")
+elbowFittingPartScene = ExtResource("8_6tjx1")
+airFlowValveFittingPartScene = ExtResource("9_3vmu3")
+teeFittingPartScene = ExtResource("10_cwjpw")
+piston25mmPartScene = ExtResource("11_jd7q0")
+piston50mmPartScene = ExtResource("12_a3g0y")
+piston75mmPartScene = ExtResource("13_t50mu")
+shutOffValvePartScene = ExtResource("14_dq4fq")
+solenoidPartScene = ExtResource("15_avke2")

@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://src/part/Part.cs" id="1_0w3o4"]
+[ext_resource type="PackedScene" path="res://assets/objects/Insert.tscn" id="2_4bq8j"]
+[ext_resource type="Script" path="res://src/part/Insert.cs" id="3_k84jj"]
+[ext_resource type="PackedScene" path="res://assets/objects/MeshCutter.tscn" id="4_iyidq"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Pneumatics/Schrader_Valve_Schrader Valve.res" id="5_63ij7"]
+[ext_resource type="Script" path="res://src/mesh_cutter/MeshCutter.cs" id="6_iiudj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wm0ee"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0)
+
+[node name="Part" type="Node3D"]
+script = ExtResource("1_0w3o4")
+partMeshPath = NodePath("MeshCutter")
+additionalMeshesPath = NodePath("AdditionalMeshes")
+centerPath = NodePath("Center")
+holesPath = NodePath("Holes")
+insertsPath = NodePath("Inserts")
+
+[node name="Center" type="Node3D" parent="."]
+
+[node name="Holes" type="Node3D" parent="."]
+top_level = true
+visible = false
+
+[node name="Inserts" type="Node3D" parent="."]
+top_level = true
+
+[node name="Insert" type="Area3D" parent="Inserts" groups=["INSERT_COLLIDER"] instance=ExtResource("2_4bq8j")]
+transform = Transform3D(1, 1.86352e-21, 1.74846e-07, 0, 1, -1.06581e-14, -1.74846e-07, 1.06581e-14, 1, 0.201909, 0.24047, -0.10971)
+script = ExtResource("3_k84jj")
+length = 0.25
+width = 0.1
+colliderPath = NodePath("CollisionShape3D")
+
+[node name="MeshCutter" type="MeshInstance3D" parent="." groups=["PART_COLLIDER"] instance=ExtResource("4_iyidq")]
+visible = false
+material_overlay = SubResource("StandardMaterial3D_wm0ee")
+mesh = ExtResource("5_63ij7")
+script = ExtResource("6_iiudj")
+
+[node name="AdditionalMeshes" type="Node3D" parent="." groups=["PART_COLLIDER"]]
+visible = false

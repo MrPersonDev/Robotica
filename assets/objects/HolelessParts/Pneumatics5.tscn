@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://src/part/Part.cs" id="1_r0gw5"]
+[ext_resource type="PackedScene" path="res://assets/objects/Insert.tscn" id="2_m5i2x"]
+[ext_resource type="Script" path="res://src/part/Insert.cs" id="3_sivo1"]
+[ext_resource type="PackedScene" path="res://assets/objects/MeshCutter.tscn" id="4_p4hsm"]
+[ext_resource type="ArrayMesh" path="res://assets/models/Pneumatics/Elbow_Fitting_Elbow Fitting.res" id="5_ohx7u"]
+[ext_resource type="Script" path="res://src/mesh_cutter/MeshCutter.cs" id="6_0ae0d"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qnism"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0)
+
+[node name="Part" type="Node3D"]
+script = ExtResource("1_r0gw5")
+partMeshPath = NodePath("MeshCutter")
+additionalMeshesPath = NodePath("AdditionalMeshes")
+centerPath = NodePath("Center")
+holesPath = NodePath("Holes")
+insertsPath = NodePath("Inserts")
+
+[node name="Center" type="Node3D" parent="."]
+
+[node name="Holes" type="Node3D" parent="."]
+top_level = true
+visible = false
+
+[node name="Inserts" type="Node3D" parent="."]
+top_level = true
+
+[node name="Insert" type="Area3D" parent="Inserts" groups=["INSERT_COLLIDER"] instance=ExtResource("2_m5i2x")]
+transform = Transform3D(1, 1.86353e-21, 1.74846e-07, 0, 1, -1.06581e-14, -1.74846e-07, 1.06581e-14, 1, 0.231453, 0.22699, -0.083408)
+script = ExtResource("3_sivo1")
+length = 0.17
+width = 0.1
+colliderPath = NodePath("CollisionShape3D")
+
+[node name="MeshCutter" type="MeshInstance3D" parent="." groups=["PART_COLLIDER"] instance=ExtResource("4_p4hsm")]
+visible = false
+material_overlay = SubResource("StandardMaterial3D_qnism")
+mesh = ExtResource("5_ohx7u")
+script = ExtResource("6_0ae0d")
+
+[node name="AdditionalMeshes" type="Node3D" parent="." groups=["PART_COLLIDER"]]
+visible = false

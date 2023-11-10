@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/objects/Holes/OneSidedCircleHole.tscn" id="1_lj5ev"]
+[ext_resource type="Script" path="res://src/part/OneSidedHole.cs" id="2_7vqhh"]
+
+[node name="" type="Node3D"]
+
+[node name="OneSidedCircleHole" type="Node3D" parent="." instance=ExtResource("1_lj5ev")]
+transform = Transform3D(4.37114e-08, 8.74228e-08, -1, 3.82137e-15, -1, -8.74228e-08, -1, 0, -4.37114e-08, 0.0557684, 0.847128, -0.272866)
+script = ExtResource("2_7vqhh")
+bodyPath = NodePath("HoleBody")
+width = 0.9
+isFastener = true
+
+[node name="OneSidedCircleHole2" type="Node3D" parent="." instance=ExtResource("1_lj5ev")]
+transform = Transform3D(4.37114e-08, 8.74228e-08, -1, 3.82137e-15, -1, -8.74228e-08, -1, 0, -4.37114e-08, 0.0557684, 0.847128, -7.91774)
+script = ExtResource("2_7vqhh")
+bodyPath = NodePath("HoleBody")
+width = 0.9
+isFastener = true

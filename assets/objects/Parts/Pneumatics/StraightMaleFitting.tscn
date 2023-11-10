@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4yb66amgiy7b"]
+
+[ext_resource type="PackedScene" uid="uid://cl5en1o2r4bqq" path="res://assets/objects/Part.tscn" id="1_ohd6y"]
+[ext_resource type="PackedScene" uid="uid://bslvrhvh02lo3" path="res://assets/objects/Holes/OneSidedSquareHole.tscn" id="2_8onop"]
+[ext_resource type="ArrayMesh" uid="uid://32h420kk886f" path="res://assets/models/Pneumatics/Straight_Pneumatic_Fitting_Straight Pneumatic Fitting.res" id="2_e3ptq"]
+[ext_resource type="PackedScene" uid="uid://dj5paivfvdvt1" path="res://assets/objects/Insert.tscn" id="3_qcyke"]
+
+[node name="Part" instance=ExtResource("1_ohd6y")]
+
+[node name="OneSidedHole" parent="Holes" index="0" instance=ExtResource("2_8onop")]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0.230937, 0.2051, -0.143358)
+visible = false
+visible = false
+isDefaultHole = true
+isFastener = true
+
+[node name="Insert" parent="Inserts" index="0" instance=ExtResource("3_qcyke")]
+transform = Transform3D(1, 1.86353e-21, 1.74846e-07, 0, 1, -1.06581e-14, -1.74846e-07, 1.06581e-14, 1, 0.230666, 0.206535, -0.0864131)
+length = 0.17
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("2_e3ptq")

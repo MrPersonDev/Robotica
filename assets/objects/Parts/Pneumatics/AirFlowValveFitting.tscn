@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://geulo5j36gak"]
+
+[ext_resource type="PackedScene" uid="uid://cl5en1o2r4bqq" path="res://assets/objects/Part.tscn" id="1_dyrwl"]
+[ext_resource type="PackedScene" uid="uid://bslvrhvh02lo3" path="res://assets/objects/Holes/OneSidedSquareHole.tscn" id="2_tnsyv"]
+[ext_resource type="ArrayMesh" uid="uid://djdb6216n6n" path="res://assets/models/Pneumatics/Air_Flow_Valve_Fitting_Air Flow Valve Fitting.res" id="4_k322s"]
+[ext_resource type="PackedScene" uid="uid://dj5paivfvdvt1" path="res://assets/objects/Insert.tscn" id="4_xcjn3"]
+
+[node name="Part" instance=ExtResource("1_dyrwl")]
+
+[node name="OneSidedHole" parent="Holes" index="0" instance=ExtResource("2_tnsyv")]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0.802252, 0.222182, -0.140353)
+visible = false
+visible = false
+isDefaultHole = true
+isFastener = true
+
+[node name="Insert" parent="Inserts" index="0" instance=ExtResource("4_xcjn3")]
+transform = Transform3D(1, 1.86353e-21, 1.74846e-07, 0, 1, -1.06581e-14, -1.74846e-07, 1.06581e-14, 1, 0.801981, 0.223618, -0.083408)
+length = 0.17
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("4_k322s")

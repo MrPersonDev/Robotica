@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnxwjen2ulej"]
+
+[ext_resource type="PackedScene" uid="uid://cl5en1o2r4bqq" path="res://assets/objects/Part.tscn" id="1_sm6vv"]
+[ext_resource type="PackedScene" uid="uid://c4reyv6extm5i" path="res://assets/objects/Holes/OneSidedCircleHole.tscn" id="2_e0506"]
+[ext_resource type="ArrayMesh" uid="uid://bufojdkjld83m" path="res://assets/models/Pneumatics/Pneumatic_Reservoir_Assembly_Pneumatic Reservoir Assembly.res" id="2_w1jeu"]
+
+[node name="Part" instance=ExtResource("1_sm6vv")]
+
+[node name="OneSidedCircleHole" parent="Holes" index="0" instance=ExtResource("2_e0506")]
+transform = Transform3D(4.37114e-08, 8.74228e-08, -1, 3.82137e-15, -1, -8.74228e-08, -1, 0, -4.37114e-08, 0.0557684, 0.847128, -0.272866)
+width = 0.9
+isFastener = true
+
+[node name="OneSidedCircleHole2" parent="Holes" index="1" instance=ExtResource("2_e0506")]
+transform = Transform3D(4.37114e-08, 8.74228e-08, -1, 3.82137e-15, -1, -8.74228e-08, -1, 0, -4.37114e-08, 0.0557684, 0.847128, -7.91774)
+width = 0.9
+isFastener = true
+
+[node name="MeshCutter" parent="." index="3"]
+mesh = ExtResource("2_w1jeu")
